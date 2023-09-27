@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        @@include('../common/head.html')
+        <link rel="stylesheet" href="../assets/css/more.css"></link>
+    </head>
+    <body class="more">
+        @@include('../common/header_sub.html', {title: '스마트번호표 조회'})
+        <div class="container inner-padd">
+            <div class="my-ticket_list">
+                <div class="my-ticket_item">
+                    <h5 class="ticket-title">여권민원실 - 여권교부</h5>
+                    <ul class="ticket-info">
+                        <li>
+                            <label class="value-label">발권번호</label>
+                            <span class="value">125</span>
+                        </li>
+                        <li>
+                            <label class="value-label">대기인수</label>
+                            <span class="value">2</span>
+                        </li> 
+                        <li>
+                            <label class="value-label">발권일시</label>
+                            <span class="value date">2023-08-23 13:34</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="my-ticket_item">
+                    <h5 class="ticket-title">종합민원실 - 통합민원</h5>
+                    <ul class="ticket-info">
+                        <li>
+                            <label class="value-label">발권번호</label>
+                            <span class="value">702</span>
+                        </li>
+                        <li>
+                            <label class="value-label">대기인수</label>
+                            <span class="value">2</span>
+                        </li> 
+                        <li>
+                            <label class="value-label">발권일시</label>
+                            <span class="value date">2023-08-23 13:14</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="my-ticket_item">
+                    <h5 class="ticket-title">종합민원실 - 가족관계등록신고</h5>
+                    <ul class="ticket-info">
+                        <li>
+                            <label class="value-label">발권번호</label>
+                            <span class="value">55</span>
+                        </li>
+                        <li>
+                            <label class="value-label">대기인수</label>
+                            <span class="value">1</span>
+                        </li> 
+                        <li>
+                            <label class="value-label">발권일시</label>
+                            <span class="value date">2023-08-23 13:04</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="guide">
+                <ul>
+                    <li>스마트 번호표는 순번 발행기에서 발급되는 종이 번호표를 대신합니다.</li>
+                    <li>구청 업무시간 종료(오후5시) 이후 번호표는 삭제됩니다.</li>
+                    <li>차례가 지나면 번호표를 새로 발급받아야 합니다.</li>
+                </ul>
+            </div>
+        </div>
+
+        @@include('../common/script.html')
+        <script>
+        </script>
+    </body>
+</html>

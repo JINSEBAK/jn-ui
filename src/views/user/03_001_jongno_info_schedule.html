@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    @@include('../common/head.html')
+    <link rel="stylesheet" href="../assets/css/now.css"></link>
+  </head>
+  <body class="now">
+    @@include('../common/header_sub.html', { title: '종로안내'})
+    <div class="container">
+
+        <div class="tab-container">
+            <ul class="tab-list" role="tablist">
+                <li class="tab-item">
+                    <button type="button" class="tab-button" role="tab" tabindex="-1" aria-selected="false" aria-controls="tabContent1" id="tab1">조직도</button>
+                </li>
+                <li class="tab-item">
+                    <button type="button" class="tab-button" role="tab" tabindex="-1" aria-selected="false" aria-controls="tabContent2" id="tab2">직원검색</button>
+                </li>
+                <li class="tab-item active">
+                    <button type="button" class="tab-button" role="tab" aria-selected="true" aria-controls="tabContent3" id="tab3">행사안내</button>
+                </li>
+                <li class="tab-item">
+                    <button type="button" class="tab-button" role="tab" tabindex="-1" aria-selected="false" aria-controls="tabContent4" id="tab4">오시는 길</button>
+                </li>
+            </ul>
+        </div>
+
+        <div class="tab-contents">
+            <div class="tab-content" role="tabpanel" aria-labelledby="tab3" id="tabContent3" tabindex="0">
+                 <!-- filter -->
+                <div class="filter">
+                    <button type="button" class="btn btn-filter"  id="btnFilter">전체, 제목, 전체</button>
+                </div>
+
+                <!-- list -->
+                <div class="inner-full-padd">
+                    <ul class="brd-list">
+                        <li class="brd-list_item">
+                            <a href="#">
+                                <span class="brd-title">종로형 주민자체 모델 수립을 위한 공청회</span>
+                                <span class="brd-manager">교통행정과</span>
+                                <span class="brd-date">2023-08-24</span>
+                            </a>
+                        </li>
+                        <li class="brd-list_item">
+                            <a href="#">
+                                <span class="brd-title">[사직동 소식] 주민 친목 화합의 장 사직동에서 함께 느껴보세요!</span>
+                                <span class="brd-manager">교통행정과</span>
+                                <span class="brd-date">2023-08-21</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
+  </body>
+</html>

@@ -1,0 +1,254 @@
+@import "./_variables.scss";
+@import "./_mixins.scss";
+
+/**
+* 하이종로
+*/
+
+.maps {
+  .container {
+    padding: 0;
+    margin: 0;
+  }
+  .map-box {
+    width: 100%;
+    height: 100vh;
+    .sample {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+.course {
+  .container {
+    margin-bottom: 0;
+    padding-bottom: $bottom;
+  }
+}
+
+.place-search {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: $header;
+  padding-top: 1rem;
+  .input {
+    padding: 0 1rem;
+    margin-bottom: 0.25rem;
+    input[type="text"] {
+      border-radius: 50px;
+      box-shadow: 0 0 5px 3px rgba(0, 0, 0, 0.09);
+    }
+    .search {
+      position: absolute;
+      right: 2rem;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+  .filter {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    overflow-x: auto;
+    padding: 0.25rem 1rem;
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    .radio {
+      flex: 0 0 auto;
+    }
+  }
+}
+
+.my-location {
+  display: flex;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background-color: $btn-primary;
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.05);
+  position: fixed;
+  right: 1rem;
+  bottom: calc($bottom + 1rem);
+  .icon {
+    margin: auto;
+  }
+  &:active {
+    box-shadow: 0 0 2px 3px rgb(255, 218, 213);
+  }
+}
+
+// 코스상세
+.course {
+  &-photo {
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+  }
+  &-btns {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 0;
+    .like-count {
+      padding-right: 0.5rem;
+    }
+    .btn {
+      &:last-child {
+        margin-left: auto;
+      }
+    }
+  }
+  &-detail {
+    padding: 2rem 1rem 1rem;
+    .course {
+      &-title {
+        font-weight: bold;
+      }
+      &-content {
+        padding-top: 1rem;
+        p {
+          line-height: 1.5;
+        }
+        dl {
+          margin: 1rem 0;
+          dt {
+            font-weight: bold;
+            margin-bottom: 0.25rem;
+          }
+          dd {
+            line-height: 1.2;
+          }
+        }
+      }
+    }
+  }
+  &-map {
+    max-height: 300px;
+    overflow: hidden;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  &-points {
+    padding: 1rem;
+    .point {
+      &-list {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+      &-item {
+        border: 1px solid $border-basic;
+        border-radius: 0.5rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0 0.5rem;
+        .title {
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          gap: 0.25rem;
+          padding: 0.5rem 0;
+          .course-name {
+            flex: 1;
+            font-weight: bold;
+          }
+        }
+        .thumb-img {
+          margin-left: auto;
+          width: 100px;
+          img {
+            display: block;
+            width: 100%;
+            height: auto;
+          }
+        }
+        .btn-stamp {
+          font-size: 0.875rem;
+          padding: 1rem 0.5rem;
+          width: 5rem;
+          height: 4rem;
+        }
+      }
+    }
+  }
+}
+
+.under-fixed {
+  position: fixed;
+  bottom: -100%;
+  visibility: hidden;
+  left: 0;
+  right: 0;
+  transition: all 0.3s;
+  > .btn {
+    position: absolute;
+    right: 1rem;
+    bottom: $header;
+    transition: all 1s;
+    visibility: hidden;
+  }
+  &.active {
+    visibility: visible;
+    bottom: 0;
+    > .btn {
+      visibility: visible;
+    }
+  }
+}
+
+// course info
+.course-info {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  .course-thumb {
+    width: 128px;
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  .course-text {
+    line-height: 1.2;
+    opacity: 0.8;
+    font-size: 0.87rem;
+  }
+  .btns {
+    .btn {
+      font-size: 0.75rem;
+      padding: 0.25rem 1rem;
+      height: 24px;
+    }
+  }
+  dl {
+    padding-top: 0.25rem;
+  }
+}
+
+.course-point {
+  padding: 0 0 1rem 0;
+  .title {
+    font-weight: bold;
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+  }
+  .course-text {
+    font-size: 1rem;
+    color: $sub-text;
+    opacity: 1;
+  }
+}

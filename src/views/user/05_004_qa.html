@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    @@include('../common/head.html')
+    <link rel="stylesheet" href="../assets/css/more.css"></link>
+  </head>
+  <body class="more">
+    
+    @@include('../common/header_sub.html', {title: "1:1 문의"})
+    <div class="container inner-padd">
+      <div class="tab-container">
+        <ul class="tab-list" role="tablist">
+            <li class="tab-item active">
+                <button type="button" class="tab-button" role="tab" aria-selected="true" aria-controls="tabContent1" id="tab1">1:1 문의목록</button>
+            </li>
+            <li class="tab-item">
+                <button type="button" class="tab-button" role="tab" tabindex="-1" aria-selected="false" aria-controls="tabContent2" id="tab2">1:1 문의하기</button>
+            </li>
+        </ul>
+      </div>
+      <div class="tab-contents">
+          <!-- 1:1 문의목록 -->
+          <div class="tab-content" role="tabpanel" aria-labelledby="tab1" id="tabContent1" tabindex="0">
+              <!-- filter -->
+              <ul class="qa-list">
+                <li class="open">
+                  <div class="qa-item question">
+                    <div class="qa-item_head">
+                      <ul>
+                        <li>
+                          <span class="badge category">카테고리1</span>
+                          <span class="badge proceeding">문의중</span>
+                        </li>
+                        <li class="qa-item_title">1:1 문의 제목</li>
+                        <li class="qa-item_date">2023-09-15 10:30</li>
+                      </ul>
+                    </div>
+                    <div class="qa-item_content">
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="qa-item answer">
+                    <div class="answer-blank">
+                      조금만 기다려주세요 :)
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="qa-item question">
+                    <div class="qa-item_head">
+                      <ul>
+                        <li>
+                          <span class="badge category">카테고리1</span>
+                          <span class="badge completed">답변완료</span>
+                        </li>
+                        <li class="qa-item_title">문의 제목입니다.</li>
+                        <li class="qa-item_date">2023-09-10 10:30</li>
+                      </ul>
+                    </div>
+                    <div class="qa-item_content">
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="qa-item answer">
+                    <div class="qa-item_head">
+                      <ul>
+                        <li class="qa-item_title">답변</li>
+                        <li class="qa-item_date">2023-09-11 09:30</li>
+                      </ul>
+                    </div>
+                    <div class="qa-item_content">
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                      </p>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+          </div>
+
+          <!-- 1:1문의 등록 -->
+          <div class="tab-content" role="tabpanel" aria-labelledby="tab2" id="tabContent2" tabindex="0" hidden="true">
+              <form>
+                <div class="select">
+                  <button type="button" class="btn btn-select" data-target="selectBtm">카테고리 선택</button>
+                </div>
+                <div class="input">
+                  <label for="input" class="required"><span>제목</span></label>
+                  <input type="text" placeholder="30자 이내 입력" id="input" maxlength="30">
+                  <button type="button" class="btn btn-delete">
+                      <span class="sr-only">삭제 버튼</span>
+                  </button>
+                </div>
+                <div class="input">
+                  <label for="input" class="required"><span>문의내용</span></label>
+                  <div class="counter">
+                      <em class="current">0</em><span class="max">1,000</span>
+                  </div>
+                  <textarea name="" id="" cols="30" rows="8" maxlength="1000"></textarea>
+                </div>
+              </form>
+
+              <div class="guide">
+                <ul>
+                  <li>문의해주신 내용은 관리자가 확인하여 답변하여 드립니다.</li>
+                  <li>답변은 1:1 문의 목록에서 확인할 수 있습니다.</li>
+                </ul>
+              </div>
+
+              <!-- TODO: 유효성 체크 후 버튼 disabled 삭제 -->
+              <div class="btns under">
+                <button type="button" class="btn btn-primary" disabled>문의하기</button>
+              </div>
+          </div>
+      </div>
+    </div>
+
+    <aside id="aside" class="popup-bg popup-closable">
+      @@include("../popup/popup_select_bottom.html")
+    </aside>
+
+    @@include('../common/script.html')
+  </body>
+</html>

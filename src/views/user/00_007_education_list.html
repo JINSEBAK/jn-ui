@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    @@include('../common/head.html')
+    <link rel="stylesheet" href="../assets/css/home.css"></link>
+  </head>
+  <body class="more">
+    
+    @@include('../common/header_sub.html', {title: "종로 교육/강좌 예약 신청"})
+
+    <div class="container">
+
+        <!-- category -->
+        <div class="categories x-scroll">
+            <div class="radio">
+                <input type="radio" id="radio" name="sample-radio" value="1" checked>
+                <label for="radio" class="btn-radio"><span>종로구청 교육/강좌 소식</span></label>
+            </div>
+            <div class="radio">
+                <input type="radio" id="radio2" name="sample-radio" value="2">
+                <label for="radio2" class="btn-radio"><span>종로교육포털 평생교육</span></label>
+            </div>
+            <div class="radio">
+                <input type="radio" id="radio3" name="sample-radio" value="3">
+                <label for="radio3" class="btn-radio"><span>종로구 자치회관 교육 프로그램</span></label>
+            </div>
+            <div class="radio">
+                <input type="radio" id="radio4" name="sample-radio" value="4">
+                <label for="radio4" class="btn-radio"><span>종로구 구민 정보화 교육</span></label>
+            </div>
+        </div>
+
+        <!-- filter -->
+        <div class="filter">
+            <button type="button" class="btn btn-filter"  id="btnFilter">전체, 전체, 전체, 전체</button>
+        </div>
+
+        <!-- list -->
+        <div class="inner-full-padd">
+            <ul class="brd-list">
+                <li class="brd-list_item">
+                    <a href="#">
+                        <div class="badges">
+                            <span class="badge category">특강반</span>
+                            <span class="badge disabled">접수종료</span>
+                        </div>
+                        <span class="brd-title ellipsis">[비대면] (특강) 파워포인트 동영상 만들기</span>
+                        <span class="brd-date">2023-08-21 ~ 2023-08-27</span>
+                    </a>
+                </li>
+                <li class="brd-list_item">
+                    <a href="#">
+                        <div class="badges">
+                            <span class="badge category">특강반</span>
+                            <span class="badge disabled">접수마감</span>
+                        </div>
+                        <span class="brd-title ellipsis">[비대면] (특강) 스마트폰 정보 검색하기</span>
+                        <span class="brd-date">2023-08-21 ~ 2023-08-27</span>
+                    </a>
+                </li>
+                <li class="brd-list_item">
+                    <a href="#">
+                        <div class="badges">
+                            <span class="badge category">특강반</span>
+                            <span class="badge disabled">접수마감</span>
+                        </div>
+                        <span class="brd-title ellipsis">[비대면] (특강) 디지털 생활 체험하기 전연령 과정</span>
+                        <span class="brd-date">2023-08-21 ~ 2023-08-27</span>
+                    </a>
+                </li>
+                <li class="brd-list_item">
+                    <a href="#">
+                        <div class="badges">
+                            <span class="badge category">정규반</span>
+                            <span class="badge category">교육중</span>
+                        </div>
+                        <span class="brd-title ellipsis">[대면] 종로 디지털 트레이닝 2기</span>
+                        <span class="brd-date">2023-08-21 ~ 2023-08-27</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- popup -->
+    <aside id="aside" class="popup-bg popup-closable">
+        <div class="popup popup-slide" id="popupBtmSheet">
+            <div class="btm-sheet">
+                <div class="btm-sheet_head">
+                    <button type="button" class="btn btn-icon close">
+                    <img src="../assets/images/icon_x.svg" alt="팝업닫기" />
+                    </button>
+                </div>
+                <div class="btm-sheet_body">
+                    <div class="select">
+                        <label>대면 여부</label>
+                        <button type="button" class="btn btn-select" data-target="selectFilter" id="filter">전체</button>
+                    </div>
+                    <div class="select">
+                        <label>개설반</label>
+                        <button type="button" class="btn btn-select" data-target="selectFilter" id="filter2">전체</button>
+                    </div>
+                    <div class="select">
+                        <label>진행 상태</label>
+                        <button type="button" class="btn btn-select" data-target="selectFilter" id="filter3">전체</button>
+                    </div>
+                    <div class="input">
+                        <label>검색어</label>
+                        <input type="text" placeholder="검색어 입력">
+                    </div>
+                </div>
+                <div class="btm-sheet_tail">
+                    <button type="button" class="btn btn-primary">검색</button>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    @@include('../common/script.html')
+    <script>
+        const aside = document.getElementById('aside')
+        const popupBtmSheet = document.getElementById('popupBtmSheet')
+        const btnFilter = document.getElementById('btnFilter')
+
+        btnFilter.onclick = function() {
+            aside.classList.add('on')
+            popupBtmSheet.classList.add('show')
+        }
+       
+    </script>
+  </body>
+</html>

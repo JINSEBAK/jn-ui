@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    @@include('../common/head.html')
+    <link rel="stylesheet" href="../assets/css/more.css"></link>
+  </head>
+  <body class="more">
+    
+    @@include('../common/header_sub.html', {title: "자주하는 질문"})
+    <div class="container inner-padd">
+
+      <!-- filter -->
+      <div class="select">
+        <button type="button" class="btn btn-select" data-target="selectBtm">하단 슬라이드 셀렉트</button>
+      </div>
+
+      <ul class="qa-list faq">
+        <li>
+          <div class="qa-item question">
+            <div class="qa-item_head">
+              <ul>
+                <li>
+                  <span class="badge category">카테고리1</span>
+                </li>
+                <li class="qa-item_title">Q. 자주하는 질문의 예시 질문입니다.</li>
+              </ul>
+            </div>
+            <div class="qa-item_content">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </p>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="qa-item question">
+            <div class="qa-item_head">
+              <ul>
+                <li>
+                  <span class="badge category">카테고리1</span>
+                </li>
+                <li class="qa-item_title">Q. 문의 제목입니다.</li>
+              </ul>
+            </div>
+            <div class="qa-item_content">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </p>
+            </div>
+          </div>
+        </li>
+      </ul>
+
+    </div>
+
+    <aside id="aside" class="popup-bg popup-closable">
+      @@include("../popup/popup_select_bottom.html")
+    </aside>
+
+    @@include('../common/script.html')
+  </body>
+</html>

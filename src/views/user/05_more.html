@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    @@include('../common/head.html')
+    <link rel="stylesheet" href="../assets/css/more.css"></link>
+  </head>
+  <body class="more">
+    <header id="header" class="sub">
+      <div></div>
+      <a href="#" role="button" title="알림설정 하기" class="btn btn-icon">
+        <img src="../../assets/images/icon_top_setting.svg" alt="설정" />
+      </a>
+    </header>
+
+    <div class="container">
+      <section class="more-box user">
+        <h2 class="user-nick">Nickname</h2>
+        <div class="my-box">
+            <a href="#" role="button" title="나의 민원 대기표 발권 내역 보기">
+                <dl>
+                    <dt>스마트 번호표</dt>
+                    <dd>
+                        <em>1</em>
+                        <span>건</span>
+                    </dd>
+                </dl>
+            </a>
+        </div>
+      </section>
+
+      <section class="more-box emerge">
+        <h3 class="more-box_title">긴급신고 설정</h3>
+        <div class="emerge-info">
+            <span class="icon call s-large">
+                <span class="sr-only">긴급상황 알림</span>
+            </span>
+            <dl>
+                <dt>긴급 상황 신고 알림</dt>
+                <dd><strong>112</strong></dd>
+            </dl>
+        </div>
+      </section>
+
+      <section class="more-box cs">
+        <ul class="cs-list">
+            <li class="cs-list_item">
+                <a href="#" role="button" title="자주하는 질문 바로가기">
+                    <span class="icon user s-large">
+                        <span class="sr-only">FAQ</span>
+                    </span>
+                    <span>자주하는 질문</span>
+                </a>
+            </li>
+            <li class="cs-list_item">
+                <a href="#" role="button" title="1:1문의 바로가기">
+                    <span class="icon user s-large">
+                        <span class="sr-only">1:1 문의</span>
+                    </span>
+                    <span>1:1 문의</span>
+                </a>
+            </li>
+        </ul>
+      </section>
+
+      <section class="more-box notice">
+        <h3 class="more-box_title">공지사항</h3>
+        <div class="notice-box">
+            <ul class="notice-list">
+                <li class="notice-list_item">
+                    <span class="title">공지 제목입니다. 공지 제목입니다. 공지 제목입니다.</span>
+                    <span class="date">2023-09-14</span>
+                </li>
+                <li class="notice-list_item">
+                    <span class="title">공지 제목입니다. </span>
+                    <span class="date">2023-09-10</span>
+                </li>
+                <li class="notice-list_item">
+                    <span class="title">공지 제목입니다. </span>
+                    <span class="date">2023-09-01</span>
+                </li>
+            </ul>
+        </div>
+      </section>
+
+      <section class="more-box banners">
+        <a href="#" title="배너 설명" class="banner">
+            <h4 class="banner-title">I LOVE 북촌</h4>
+            <img src="../../assets/images/sample/sample_02.webp" alt="남산타워가 보이는 북촌한옥마을 사진">
+        </a>
+        <a href="#" title="배너 설명" class="banner">
+            <h4 class="banner-title">나는, 홍대보다 익선동!</h4>
+            <img src="../../assets/images/sample/sample_03.jpeg" alt="익선동 포차거리에서 사람들이 술을 마시고 있다.">
+        </a>
+        <a href="#" title="배너 설명" class="banner" style="background-color:#ffe87a;border:5px solid #f1db6b;">
+            <h4 class="banner-title">누구나 즐거운 종로</h4>
+        </a>
+      </section>
+      <section class="more-box">
+        <a href="#" title="이용약관 보기">
+            <span class="icon document">
+                <span class="sr-only">약관보기</span>
+            </span>
+            <span>이용약관 확인</span>
+        </a>
+      </section>
+    </div>
+
+    <!-- navigation bar -->
+    @@include('../common/navigation.html')
+  </body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        @@include('../common/head.html')
+        <link rel="stylesheet" href="../assets/css/now.css"></link>
+    </head>
+    <body class="now">
+        @@include('../common/header_sub.html', { title: "종로안내" })
+        <div class="container">
+            
+            <div class="tab-container">
+                <ul class="tab-list" role="tablist">
+                    <li class="tab-item active">
+                        <button type="button" class="tab-button" role="tab" aria-selected="true" aria-controls="tabContent1" id="tab1">조직도</button>
+                    </li>
+                    <li class="tab-item">
+                        <button type="button" class="tab-button" role="tab" tabindex="-1" aria-selected="false" aria-controls="tabContent2" id="tab2">직원검색</button>
+                    </li>
+                    <li class="tab-item">
+                        <button type="button" class="tab-button" role="tab" tabindex="-1" aria-selected="false" aria-controls="tabContent2" id="tab3">행사안내</button>
+                    </li>
+                    <li class="tab-item">
+                        <button type="button" class="tab-button" role="tab" tabindex="-1" aria-selected="false" aria-controls="tabContent2" id="tab4">오시는 길</button>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="tab-contents inner-padd">
+                <div class="tab-content" role="tabpanner" aria-labelledby="tab1" id="tabContent1" tabindex="0">
+                    <h3 class="title">조직도</h3>
+                    <div class="guide">
+                        <ul>
+                            <li>해당 부서/동주민센터 선택 시 소속 직원 검색 결과를 표시합니다.</li>
+                        </ul>
+                    </div>
+                </div>
+                    
+            </div>
+
+           
+        </div>
+    </body>
+</html>

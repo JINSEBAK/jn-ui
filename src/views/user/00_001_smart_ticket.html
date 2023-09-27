@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    @@include('../common/head.html')
+    <link rel="stylesheet" href="../assets/css/home.css"></link>
+  </head>
+  <body class="more">
+    @@include('../common/header_sub.html', {title: '스마트 번호표 발급'})
+    <div class="container inner-padd">
+
+      <div class="num-ticket_hd">
+        <h2>
+          <span>대기없이 바로바로!!</span>
+          스마트 번호표 발급 받으세요.
+        </h2>
+        <button type="button" class="btn btn-default">번호표 확인</button>
+      </div>
+
+      <div>
+        <!-- 부동산 정보과 -->
+        <div class="num-ticket_box">
+          <div class="num-ticket_info">
+            <h3 class="title">종로구청 부동산 정보과</h3>
+            <p>부동산등기/도시재생/재개발/생활불편 신고</p>
+            <label class="label">창구 15</label>
+            <ul class="ticket-status">
+              <li>
+                <span class="status-title">호출번호</span>
+                <span class="status-current"><strong>210</strong>번</span>
+              </li>
+              <li>
+                <span class="status-title">대기인 수</span>
+                <span class="status-current"><strong>2</strong>명</span>
+              </li>
+            </ul>
+          </div>
+          <div class="num-ticket_issue">
+            <p>휴대폰 번호를 입력하고 번호표를 발행하세요.</p>
+            <button type="button" class="btn btn-primary">번호표 발행</button>
+          </div>
+        </div>
+
+        <!-- 평창동 주민센터 -->
+        <div class="num-ticket_box">
+          <div class="num-ticket_info">
+            <h3 class="title">평창동 주민센터</h3>
+            <p>등초본/인감/전입신고/가족관계증명서/전입세대열람</p>
+            <label class="label">창구 3</label>
+            <ul class="ticket-status">
+              <li>
+                <span class="status-title">호출번호</span>
+                <span class="status-current"><strong>52</strong>번</span>
+              </li>
+              <li>
+                <span class="status-title">대기인 수</span>
+                <span class="status-current"><strong>0</strong>명</span>
+              </li>
+            </ul>
+          </div>
+          <div class="num-ticket_issue">
+            <p>휴대폰 번호를 입력하고 번호표를 발행하세요.</p>
+            <button type="button" class="btn btn-primary" disabled>번호표 발행</button>
+          </div>
+        </div>
+
+        <!-- 삼청동 주민센터 -->
+        <div class="num-ticket_box">
+          <div class="num-ticket_info">
+            <h3 class="title">삼청동 주민센터</h3>
+            <p>등초본/인감/전입신고/가족관계증명서/전입세대열람</p>
+            <label class="label">창구 3</label>
+            <ul class="ticket-status">
+              <li>
+                <span class="status-title">호출번호</span>
+                <span class="status-current"><strong>84</strong>번</span>
+              </li>
+              <li>
+                <span class="status-title">대기인 수</span>
+                <span class="status-current"><strong>3</strong>명</span>
+              </li>
+            </ul>
+          </div>
+          <div class="num-ticket_issue">
+            <p>휴대폰 번호를 입력하고 번호표를 발행하세요.</p>
+            <button type="button" class="btn btn-primary">번호표 발행</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="guide">
+        <ul>
+          <li>번호표 발급 시간: 평일 오전 10시 ~ 오후 5시 (토.일.공휴일 휴무)</li>
+          <li>스마트 번호표는 순번 발행기에서 발급되는 종이 번호표를 대신합니다.</li>
+          <li>차례가 지나면 번호표를 새로 발급 받아야 합니다.</li>
+          <li>조회된 대기 인원 및 번호는 실제와 차이가 있을 수 있습니다.</li>
+          <li>예약 정보는 카카오톡으로 전송됩니다.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- popup -->
+    <aside id="aside" class="popup-bg popup-closable">
+      <div class="popup popup-slide" id="popupBtmSheet">
+        <div class="btm-sheet">
+          <div class="btm-sheet_head">
+            <h3 class="title">휴대폰 번호를 입력해주세요.</h3>
+            <button type="button" class="btn btn-icon close">
+              <img src="../assets/images/icon_x.svg" alt="팝업닫기" />
+            </button>
+          </div>
+          <div class="btm-sheet_body">
+            <div class="tel-num">
+              <div class="tel-num_format">
+                <input type="tel" value="010" maxlength="3">
+                <span>-</span>
+                <input type="tel" maxlength="4">
+                <span>-</span>
+                <input type="tel" maxlength="4">
+                <div class="guide error">가이드 메세지 영역</div>
+              </div>
+              <p class="guide">
+                휴대폰 번호 입력을 통해 예약된 정보는<br>카카오톡으로 전송됩니다.<br>카카오톡을 반드시 확인해주세요.
+              </p>
+            </div>
+          </div>
+          <div class="btm-sheet_tail">
+            <button type="button" class="btn btn-sub">취소</button>
+            <button type="button" class="btn btn-primary" disabled>확인</button>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    @@include('../common/script.html')
+
+    <script>
+      // 동작 예시
+      const aside = document.getElementById('aside')
+      const popupBtmSheet = document.getElementById('popupBtmSheet')
+      const btns = document.querySelectorAll('.btn-primary')
+      btns.forEach((btn)=> {
+        btn.onclick=function(e) {
+          aside.classList.add('on')
+          popupBtmSheet.classList.add('show')
+        }
+      })
+      </script>
+    
+  </body>
+</html>

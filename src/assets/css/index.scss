@@ -1,0 +1,261 @@
+/**
+* author: PSJ
+* index page 용 css으로 실제 프로젝트에서 사용하지 않음
+**/
+
+html,
+body {
+  font-size: 16px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+h2 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.todo {
+  color: rgb(160, 0, 160);
+  font-weight: bold;
+}
+
+.tb-lined {
+  border: 1px solid #5e5e5e;
+  border-collapse: collapse;
+  // table-layout: fixed;
+  width: 100%;
+  font-size: 0.875rem;
+  caption {
+    font-size: 0;
+  }
+  thead {
+    th {
+      background-color: #f2f3f6;
+      padding: 0.5rem 1rem;
+      border-right: 1px solid #fff;
+      &:last-child {
+        border: none;
+      }
+    }
+  }
+  tbody {
+    td {
+      border-top: 1px solid #ddd;
+      border-bottom: 1px solid #ddd;
+      border-right: 1px solid #f9f9f9;
+      text-align: center;
+      padding: 0.75rem 1rem;
+      &:nth-child(1) {
+        font-style: italic;
+        color: #999;
+        width: 50px;
+      }
+      &:nth-child(2) {
+        width: 100px;
+      }
+      &:nth-child(3),
+      &:nth-child(4),
+      &:nth-child(5),
+      &:nth-child(6) {
+        width: 8%;
+        text-align: left;
+      }
+      &:nth-child(7) {
+        text-align: left;
+      }
+      &:last-child {
+        width: auto;
+        text-align: left;
+        opacity: 0.8;
+        border-right: none;
+      }
+      .percent {
+        display: inline-block;
+        padding-left: 0.25rem;
+        font-size: 0.75rem;
+        width: 40px;
+      }
+      em {
+        font-style: normal;
+        background-image: linear-gradient(
+          to top,
+          rgb(38, 255, 204) 70%,
+          transparent 30%
+        );
+      }
+    }
+    tr {
+      &:hover {
+        background-color: #ecfdff;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .tb-lined {
+    thead {
+      display: none;
+    }
+    tbody {
+      tr {
+        overflow: hidden;
+        border-bottom: 1px solid #5e5e5e;
+        &:hover {
+          background-color: transparent;
+        }
+      }
+      td {
+        display: block;
+        float: left;
+        min-height: 43px;
+        border: none;
+        &:hover {
+          background-color: rgb(193, 255, 240) !important;
+        }
+        &:nth-child(1) {
+          width: 60px;
+        }
+        &:nth-child(2) {
+          width: calc(100% - 60px);
+          text-align: left;
+        }
+        &:nth-child(3),
+        &:nth-child(4),
+        &:nth-child(5),
+        &:nth-child(6) {
+          width: 25%;
+          background-color: #f2f3f6;
+        }
+        &:nth-child(7),
+        &:nth-child(8) {
+          width: 50%;
+        }
+        &:last-child {
+          width: 100%;
+          border-top: 1px solid #ddd;
+          padding: 1rem;
+          ul {
+            padding: 0 1rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+progress {
+  -webkit-appearance: none;
+}
+::-webkit-progress-bar {
+  height: 8px;
+  background-color: #dadada;
+}
+::-webkit-progress-value {
+  background-color: rgb(178, 255, 69);
+}
+progress[value="50"]::-webkit-progress-value {
+  background-color: rgb(109, 238, 208);
+}
+progress[value="60"]::-webkit-progress-value {
+  background-color: rgb(185, 124, 238);
+}
+progress[value="70"]::-webkit-progress-value {
+  background-color: rgb(244, 154, 81);
+}
+progress[value="90"]::-webkit-progress-value {
+  background-color: rgb(242, 108, 64);
+}
+progress[value="100"]::-webkit-progress-value {
+  background-color: rgb(228, 18, 18);
+}
+
+a {
+  text-decoration: none;
+  color: #6969c8;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.pd-inner {
+  padding: 1rem;
+}
+
+.el-items {
+  margin-bottom: 2rem;
+  dt {
+    font-size: 0.875rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    text-indent: 0.5rem;
+  }
+  dd {
+    border: 1px solid #cdcdcd;
+    border-radius: 0.25rem;
+    padding: 1rem;
+  }
+}
+
+.d-flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.search-top {
+  position: absolute;
+  top: 0.5rem;
+  right: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  .per {
+    span {
+      color: #ff0000;
+      &::after {
+        content: "%";
+        color: #000;
+      }
+    }
+  }
+  input[type="text"] {
+    width: 20rem;
+    border: 1px solid #d9d9d9;
+    border-radius: 0.25rem;
+    padding: 0.5rem 1rem;
+  }
+  button {
+    border: none;
+    background-color: transparent;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    width: 2rem;
+    height: 2rem;
+    transform: translateY(-50%);
+    &:hover,
+    &:active {
+      background-color: rgba(0, 0, 0, 0.05);
+    }
+  }
+}
+
+input[type="text"]:focus {
+  outline: none;
+  border-color: rgb(0, 199, 152);
+  box-shadow: 0 0 0 3px rgb(231, 255, 250);
+}
+
+.audio-player {
+  max-width: 400px;
+}

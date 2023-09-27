@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    @@include('../common/head.html')
+    <link rel="stylesheet" href="../assets/css/home.css"></link>
+  </head>
+  <body class="more" style="margin-bottom: 0">
+    @@include('../common/header_sub.html', {title: '실내 공기질 현황'})
+    <div class="container">
+        <div class="one-maps">
+            <div class="info">
+                사용자의 위치를 기반으로 실내 공기질 측정 장소를 표시합니다.<br>선택 시, 해당 장소의 실내 공기질을 확인할 수 있습니다.
+            </div>
+            <div></div>
+            <!-- TODO: 개발시에는 지도 반영 -->
+            <!-- TODO: 지도 사이즈에 따라 height 조정 필요 -->
+            <button type="button" class="btn btn-icon" id="btnMarker" style="position:absolute;left: 50%;top:50%;z-index:10;transform:scale(1.5)">
+                <span class="icon map">
+                    <span class="sr-only">샘플 마커</span>
+                </span>
+            </button>
+            <img src="../../assets/images/sample/sample_05.png" alt="샘플 지도 이미지" style="position: absolute;left: 0;width: 100%;z-index:9">
+        </div>
+    </div>
+
+    <aside id="aside" class="popup-bg popup-closable on">
+        <div class="popup popup-slide show" id="popupBtmSheet">
+            <div class="btm-sheet">
+                <div class="btm-sheet_head">
+                    <h3 class="title">어린이집/유치원 06</h3>
+                    <button type="button" class="btn btn-icon close">
+                    <img src="../assets/images/icon_x.svg" alt="팝업닫기" />
+                    </button>
+                </div>
+                <div class="btm-sheet_body">
+
+                    <!-- 미세먼지 -->
+                    <section class="air-content">
+                        <div class="air-summary">
+                            <h3 class="title">미세먼지 (PM-2.5)</h3>
+                            <div class="value">4 <span class="unit">㎍/㎥</span></div>
+                            <span class="badge category"> :) 좋음</span>
+                        </div>
+                        <div class="air-forecast">
+                            <canvas id="chart1" height="90" aria-label="시간대별 미세먼지 농도 차트" role="img">
+                                <p>미세먼지 농도에 대한 설명 텍스트</p>
+                            </canvas>
+                        </div>
+                    </section>
+
+                    <!-- 초미세먼지 -->
+                    <section class="air-content">
+                        <div class="air-summary">
+                            <h3 class="title">초미세먼지 (PM-10)</h3>
+                            <div class="value">12 <span class="unit">㎍/㎥</span></div>
+                            <span class="badge category"> :) 좋음</span>
+                        </div>
+                        <div class="air-forecast">
+                            <canvas id="chart2" height="90" aria-label="시간대별 초 미세먼지 농도 차트" role="img">
+                                <p>초 미세먼지 농도에 대한 설명 텍스트</p>
+                            </canvas>
+                        </div>
+                    </section>
+                </div>
+             </div>
+        </div>
+    </aside>
+
+    @@include('../common/script.html')
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        const btnMarker = document.getElementById('btnMarker')
+        const aside = document.getElementById('aside')
+        const popupBtmSheet = document.getElementById('popupBtmSheet')
+
+        btnMarker.onclick = function() {
+            aside.classList.add('on')
+            popupBtmSheet.classList.add('show')
+        }
+    </script>
+  </body>
+</html>

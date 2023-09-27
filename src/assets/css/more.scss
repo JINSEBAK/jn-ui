@@ -1,0 +1,278 @@
+@import "./_variables.scss";
+@import "./_mixins.scss";
+
+// 더보기
+.more {
+  .container {
+    padding-bottom: $bottom;
+    .more-box {
+      margin-top: 3rem;
+      padding: 0 1rem;
+      &.user {
+        margin-top: calc(56px + 2rem);
+      }
+      &_title {
+        font-weight: bold;
+        margin-bottom: 0.75rem;
+      }
+    }
+  }
+}
+
+.more-box {
+  &.user {
+    .user-nick {
+      font-size: 1.25rem;
+      font-weight: bold;
+      margin-bottom: 0.75rem;
+    }
+    .my-box {
+      border-radius: 0.5rem;
+      background-color: #f2f3f6;
+      padding: 2rem 0.5rem;
+      dl {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        dd {
+          em {
+            font-weight: bold;
+          }
+        }
+      }
+    }
+  }
+  &.emerge {
+    .emerge-info {
+      border-radius: 0.5rem;
+      padding: 1rem 0.5rem;
+      background-color: #ffefeb;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      dl {
+        dt {
+          font-size: 0.875rem;
+          margin-bottom: 0.5rem;
+        }
+        dd {
+          strong {
+            font-size: 1.5rem;
+            font-weight: bold;
+          }
+        }
+      }
+    }
+  }
+  &.notice {
+    .notice-box {
+      background-color: #f2f3f6;
+      border-radius: 0.5rem;
+      padding: 0.5rem;
+    }
+    .notice-list {
+      &_item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        gap: 0.25rem;
+        .title,
+        .date {
+          display: block;
+          padding: 0.5rem 0;
+        }
+        .title {
+          flex: 1;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+        .date {
+          flex-basis: 0 0 104px;
+          font-size: 0.875rem;
+          color: #666;
+        }
+      }
+    }
+  }
+
+  .cs-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    border: 1px solid $border-basic;
+    border-radius: 0.5rem;
+    padding: 1rem 0;
+    &_item {
+      flex: 1;
+      a {
+        width: 100%;
+        max-width: 120px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.25rem;
+        padding: 0.5rem;
+      }
+    }
+  }
+}
+
+// 문의
+.qa-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  .qa-item {
+    border: 1px solid $border-basic;
+    border-radius: 0.5rem;
+    &.question {
+    }
+    &.answer {
+      margin-top: 0.5rem;
+      display: none;
+      overflow: hidden;
+      .answer-blank {
+        padding: 2rem 0;
+        text-align: center;
+        background-color: #f2f3f6;
+      }
+    }
+    &_head {
+      padding: 1rem;
+      .qa-item {
+        &_title {
+          padding: 0.5rem 0 0.25rem;
+          font-weight: bold;
+        }
+        &_date {
+          font-size: 0.875rem;
+          color: #999;
+        }
+      }
+    }
+    &_content {
+      padding: 1rem;
+      border-top: 1px solid $border-basic;
+      display: none;
+      p {
+        line-height: 1.2;
+      }
+    }
+  }
+  .open {
+    .qa-item.answer,
+    .qa-item_content {
+      display: block;
+    }
+  }
+  &.faq {
+    > li {
+      position: relative;
+      .qa-item_head {
+        position: relative;
+        &::after {
+          position: absolute;
+          right: 1rem;
+          top: 50%;
+          transform: translateY(-50%);
+          content: "";
+          display: block;
+          width: 1.5rem;
+          height: 1.5rem;
+          background: transparent url(../images/icon_dropdown.svg) center
+            no-repeat;
+          background-size: 100%;
+          transition: all 0.3s;
+        }
+      }
+      &.open {
+        .qa-item_head {
+          &::after {
+            transform: translateY(-50%) rotate(-180deg);
+          }
+        }
+      }
+    }
+  }
+}
+
+// 알림설정
+.setting-box {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  .switch-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    .guide {
+      width: 100%;
+    }
+    .agree-date {
+      @include textDate;
+      margin-top: 1rem;
+    }
+  }
+  & + .setting-box {
+    margin-top: 1rem;
+    &::before {
+      content: "";
+      display: block;
+      width: calc(100% + 2rem);
+      height: 1px;
+      background-color: $border-basic;
+      margin-left: -1rem;
+      margin-right: -1rem;
+    }
+  }
+}
+
+.my-ticket {
+  &_list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  &_item {
+    border: 1px solid $border-basic;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    .ticket {
+      &-title {
+        font-weight: bold;
+      }
+      &-info {
+        margin-top: 0.5rem;
+        li {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 0.25rem 0;
+          .date {
+            @include textDate;
+          }
+        }
+      }
+    }
+  }
+}
+
+.terms-detail {
+  font-size: 0.875rem;
+  line-height: 1.3;
+  strong {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 1rem;
+  }
+  p {
+    margin: 1rem 0;
+  }
+}

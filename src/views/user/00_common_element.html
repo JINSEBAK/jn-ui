@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <link rel="stylesheet" href="../assets/css/index.css"></link>
+    @@include('../common/head.html')
+  </head>
+  <body>
+    <div class="container">
+        <!-- header -->
+        <header id="header" class="sub">
+            <button type="button" class="btn btn-icon">
+                <img src="../assets/images/icon_back.svg" alt="뒤로가기">
+                <span class="sr-only">back button</span>
+            </button>
+            <h2 class="title"><span>Title</span></h2>
+            <button type="button" class="btn btn-icon">
+                <img src="../assets/images/icon_more.svg" alt="더보기">
+                <span class="sr-only">more button</span>
+            </button>
+        </header>
+        <div class="pd-inner" id="content">
+
+            <!-- icons -->
+            <dl class="el-items">
+                <dt>Icons</dt>
+                <dd class="d-flex">
+                    <span class="icon user">
+                        <span class="sr-only">강아지 멍멍</span>
+                    </span>
+                    <span class="icon cart">
+                        <span class="sr-only">쇼핑카트로 이동</span>
+                    </span>
+                    <span class="icon call">
+                        <span class="sr-only">전화걸기</span>
+                    </span>
+                    <span class="icon faq">
+                        <span class="sr-only">자주하는질문</span>
+                    </span>
+                    <span class="icon search">
+                        <span class="sr-only">검색</span>
+                    </span>
+                    <span class="icon calendar">
+                        <span class="sr-only">달력</span>
+                    </span>
+                    <span class="icon info">
+                        <span class="sr-only">정보보기</span>
+                    </span>
+                    <span class="icon map">
+                        <span class="sr-only">마커</span>
+                    </span>
+                    <span class="icon location" style="background-color:#ccc">
+                        <span class="sr-only">위치정보</span>
+                    </span>
+                    <span class="icon like">
+                        <span class="sr-only">좋아요</span>
+                    </span>
+                    <span class="icon like like-fill">
+                        <span class="sr-only">좋아요</span>
+                    </span>
+                    <span class="icon share">
+                        <span class="sr-only">공유하기</span>
+                    </span>
+                    <span class="icon play">
+                        <span class="sr-only">재생하기</span>
+                    </span>
+                    <span class="icon pause">
+                        <span class="sr-only">일시정지</span>
+                    </span>
+                    <span class="icon volume">
+                        <span class="sr-only">볼륨끄기</span>
+                    </span>
+                    <span class="icon muted">
+                        <span class="sr-only">볼륨켜기</span>
+                    </span>
+                    <span class="icon close">
+                        <span class="sr-only">닫기</span>
+                    </span>
+                    <span class="icon lost">
+                        <span class="sr-only">찾지못함</span>
+                    </span>
+                    
+                </dd>
+            </dl>
+
+            <!-- audio player -->
+            <dl class="el-items">
+                <dt>Audio player</dt>
+                <dd>
+                    <audio id="audioFile" preload="metadata">
+                        <source src="../../assets/files/sample_sound_1.mp3">
+                    </audio>
+                    <div class="audio-player">
+                        <button type="button" class="btn btn-icon icon play" id="btnPlay">
+                            <span class="sr-only">재생</span>
+                        </button>
+                        <div class="timeline">
+                            <span class="time-current" id="timeCurrent">0:00</span>
+                            <input type="range" min="0" max="100" value="0" id="timeProgress">
+                            <div class="progress">
+                                <span class="gage" style="width:40%"></span>
+                            </div>
+                            <span class="time-duration" id="timeDuration"></span>
+                        </div>
+                        <button type="button" class="btn btn-icon icon volume" id="btnVolume">
+                            <span class="sr-only">볼륨끄기</span>
+                        </button>
+                    </div>
+                </dd>
+            </dl>
+
+            <!-- label -->
+            <dl class="el-items">
+                <dt>Badge</dt>
+                <dd class="d-flex">
+                    <span class="badge category">카테고리</span>
+                    <span class="badge proceeding">문의중</span>
+                    <span class="badge completed">답변완료</span>
+                    <span class="badge disabled">마감</span>
+                </dd>
+            </dl>
+
+            <!-- buttons -->
+            <dl class="el-items">
+                <dt>Buttons</dt>
+                <dd class="d-flex">
+                    <button type="button" class="btn btn-primary">.btn-primary</button>
+                    <button type="button" class="btn btn-default">.btn-default</button>
+                    <button type="button" class="btn btn-sub">.btn-sub</button>
+                    <button type="button" class="btn" disabled>disabled</button>
+                    <a href="#" role="button" class="btn btn-text">text button</a>
+                </dd>
+            </dl>
+            <dl class="el-items">
+                <dt>Small Buttons</dt>
+                <dd class="d-flex">
+                    <button type="button" class="btn btn-primary small">.btn-primary</button>
+                    <button type="button" class="btn btn-default small">.btn-default</button>
+                    <button type="button" class="btn btn-sub small">.btn-sub</button>
+                    <button type="button" class="btn small" disabled>disabled</button>
+                    <a href="#" role="button" class="btn btn-text small">text button</a>
+                </dd>
+            </dl>
+
+            <dl class="el-items">
+                <dt>하단 버튼</dt>
+                <dd>
+                    <div class="btns">
+                        <button type="button" class="btn btn-default">하단 버튼 1</button>
+                        <button type="button" class="btn btn-primary">하단 버튼 2</button>
+                    </div>
+                    <div class="btns">
+                        <button type="button" class="btn btn-sub">하단 버튼 3</button>
+                    </div>
+                    <div class="btns under">
+                        <button type="button" class="btn btn-primary">하단 고정 버튼</button>
+                    </div>
+                </dd>
+            </dl>
+
+            <!-- checkbox -->
+            <dl class="el-items">
+                <dt>Checkbox</dt>
+                <dd>
+                    <div class="checkbox">
+                        <input type="checkbox" id="checkbox" name="" value="1">
+                        <label for="checkbox"><span>라벨 1</span></label>
+                    </div>
+                    <div class="checkbox">
+                        <input type="checkbox" id="checkbox2" name="" value="2">
+                        <label for="checkbox2"><span>라벨 2</span></label>
+                    </div>
+                    <div class="checkbox">
+                        <input type="checkbox" id="checkbox3" name="" value="3">
+                        <label for="checkbox3"><span>라벨 3</span></label>
+                    </div>
+                    <div class="checkbox">
+                        <input type="checkbox" id="checkbox4" name="" value="4">
+                        <label for="checkbox4"><span>라벨 4</span></label>
+                    </div>
+                </dd>
+            </dl>
+            <dl class="el-items">
+                <dt>Checkbox 2</dt>
+                <dd>
+                    <div class="checkbox">
+                        <input type="checkbox" id="checkbox9" name="" value="1">
+                        <label for="checkbox9" class="btn-check"><span>라벨 1</span></label>
+                    </div>
+                    <div class="checkbox">
+                        <input type="checkbox" id="checkbox8" name="" value="2">
+                        <label for="checkbox8" class="btn-check"><span>라벨 2</span></label>
+                    </div>
+                    <div class="checkbox">
+                        <input type="checkbox" id="checkbox7" name="" value="3">
+                        <label for="checkbox7" class="btn-check"><span>라벨 3</span></label>
+                    </div>
+                </dd>
+            </dl>
+
+            <!-- radio button -->
+            <dl class="el-items">
+                <dt>Radio button</dt>
+                <dd>
+                    <div class="radio">
+                        <input type="radio" id="radio" name="sample-radio" value="1">
+                        <label for="radio"><span>라벨 1</span></label>
+                    </div>
+                    <div class="radio">
+                        <input type="radio" id="radio2" name="sample-radio" value="2">
+                        <label for="radio2"><span>라벨 2</span></label>
+                    </div>
+                    <div class="radio">
+                        <input type="radio" id="radio3" name="sample-radio" value="2">
+                        <label for="radio3"><span>라벨 3</span></label>
+                    </div>
+                </dd>
+            </dl>
+            <dl class="el-items">
+                <dt>Radio button 2</dt>
+                <dd>
+                    <div class="radio">
+                        <input type="radio" id="radio9" name="sample-radio2" value="1">
+                        <label for="radio9" class="btn-radio"><span>라벨 1</span></label>
+                    </div>
+                    <div class="radio">
+                        <input type="radio" id="radio8" name="sample-radio2" value="2">
+                        <label for="radio8" class="btn-radio"><span>라벨 2</span></label>
+                    </div>
+                    <div class="radio">
+                        <input type="radio" id="radio7" name="sample-radio2" value="2">
+                        <label for="radio7" class="btn-radio"><span>라벨 3</span></label>
+                    </div>
+                </dd>
+            </dl>
+            <dl class="el-items">
+                <dt>Switch 토글버튼</dt>
+                <dd>
+                    <div class="switch">
+                        <span class="label">미체크</span>
+                        <input type="checkbox" id="switch" name="switch" value="" class="sr-only">
+                        <label for="switch" class="btn-switch"></label>
+                        <span class="label">체크</span>
+                    </div>
+                </dd>
+            </dl>
+
+            <!-- form element -->
+            <dl class="el-items">
+                <dt>입력창</dt>
+                <dd>
+                    <div class="input">
+                        <label for="input" class="required"><span>Label</span></label>
+                        <input type="text" placeholder="placeholder" id="input" maxlength="80">
+                        <button type="button" class="btn btn-delete">
+                            <span class="sr-only">삭제 버튼</span>
+                        </button>
+                    </div>
+                    <br>
+                    <div class="input">
+                        <label for="input2" class="required"><span>Label</span></label>
+                        <input type="text" placeholder="placeholder" id="input2" maxlength="80">
+                        <button type="button" class="btn btn-delete">
+                            <span class="sr-only">삭제 버튼</span>
+                        </button>
+                        <span class="guide">가이드를 입력해주세요.</span>
+                    </div>
+                    <br>
+                    <div class="input">
+                        <label for="input3" class="required"><span>Label</span></label>
+                        <input type="text" placeholder="placeholder" id="input3" maxlength="80">
+                        <button type="button" class="btn btn-delete">
+                            <span class="sr-only">삭제 버튼</span>
+                        </button>
+                        <span class="guide error">에러내용을 입력해주세요.</span>
+                    </div>
+                    <br>
+                    <div class="input inline">
+                        <label for="input4" class="required"><span>Label</span></label>
+                        <input type="text" placeholder="placeholder" id="input4" maxlength="80">
+                        <button type="button" class="btn btn-delete">
+                            <span class="sr-only">삭제 버튼</span>
+                        </button>
+                        <button type="button" class="btn btn-default">버튼명</button>
+                        <span class="guide error">에러내용을 입력해주세요.</span>
+                    </div>
+                    <br>
+                    <div class="input">
+                        <label for="input5" class="required"><span>Label</span></label>
+                        <div class="counter">
+                            <em class="current">0</em><span class="max">100</span>
+                        </div>
+                        <textarea name="" id="input5" cols="30" rows="8"></textarea>
+                    </div>
+                </dd>
+            </dl>
+
+            <dl class="el-items">
+                <dt>검색창</dt>
+                <dd>
+                    <div class="search-keyword">
+                        <label for="searchInput" class="sr-only">검색어 입력</label>
+                        <input type="search" class="input-keyword" id="searchInput">
+                        <button type="button" class="btn btn-delete">
+                            <span class="sr-only">삭제버튼</span>
+                        </button>
+                        <button type="button" class="btn btn-icon btn-search">
+                            <span class="icon search">
+                                <span class="sr-only">돋보기</span>
+                            </span>
+                        </button>
+                    </div>
+                </dd>
+            </dl>
+            <dl class="el-items">
+                <dt>셀렉트박스</dt>
+                <dd>
+                    <!-- general selectbox -->
+                    <select>
+                        <option value="">선택하세요.</option>
+                        <option value="">1</option>
+                        <option value="">2</option>
+                        <option value="">3</option>
+                    </select>
+                    <br><br>
+                    <!-- bottomsheet selectbox -->
+                    <div class="select">
+                        <button type="button" class="btn btn-select" data-target="selectBtm">하단 슬라이드 셀렉트</button>
+                    </div>
+                    <br>
+                    <div class="select">
+                        <button type="button" class="btn btn-select" data-target="selectCnt">중앙 팝업 셀렉트</button>
+                    </div>
+                </dd>
+            </dl>
+
+            <!-- file attachment -->
+            <dl class="el-items">
+                <dt>파일첨부</dt>
+                <dd>
+                    <div class="file">
+                        <label for="file1">
+                            <input type="file" id="file1" class="sr-only">
+                            <span class="search">파일찾기</span>
+                        </label>
+                        <ul class="file-list">
+                            <li class="file-list_item">
+                                <span>종로구청_인사말.pdf</span>
+                                <button type="button" class="btn btn-delete">
+                                    <span class="sr-only">첨부파일 삭제</span>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                    <br>
+                    <div class="file">
+                        <label for="file2" class="attachment">
+                            <input type="file" id="file2" class="sr-only" accept="image/*">
+                            <span>사진 첨부하기</span>
+                        </label>
+                        <div class="preview">
+                            <!-- <div class="preview-item"></div> -->
+                            <div class="preview-item">
+                                <img src="../../assets/images/sample/sample_01.png" alt="미리보기이미지">
+                                <button type="button" class="btn btn-delete">
+                                    <span class="sr-only">미리보기 삭제</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                </dd>
+            </dl>
+
+            <!-- popup -->
+            <dl class="el-items">
+                <dt>팝업</dt>
+                <dd class="d-flex">
+                    <button type="button" class="btn btn-popup" data-target="messageAlert">메시지 알럿</button>
+                    <button type="button" class="btn btn-popup" data-target="messageConfirm">메시지 컨펌</button>
+                    <button type="button" class="btn btn-popup" data-target="popupBtmSheet">보텀시트 호출</button>
+                </dd>
+            </dl>
+
+            <!-- tab -->
+            <dl class="el-items">
+                <dt>탭</dt>
+                <dd>
+                    <div class="tab-container">
+                        <ul class="tab-list" role="tablist">
+                            <li class="tab-item active">
+                                <button type="button" class="tab-button" role="tab" aria-selected="true" aria-controls="tabContent1" id="tab1">tab1</button>
+                            </li>
+                            <li class="tab-item">
+                                <button type="button" class="tab-button" role="tab" tabindex="-1" aria-selected="false" aria-controls="tabContent2" id="tab2">tab2</button>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents">
+                        <div class="tab-content" role="tabpanel" aria-labelledby="tab1" id="tabContent1" tabindex="0">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        </div>
+                        <div class="tab-content" role="tabpanel" aria-labelledby="tab2" id="tabContent2" tabindex="0" hidden="true">
+                            동해물과 백두산이 마르고 닳도록<br>
+                            하느님이 보우하사 우리나라 만세<br>
+                            무궁화 삼천리 화려강산<br>
+                            대한사람 대한으로 기리 보전하세
+                        </div>
+                    </div>
+                </dd>
+            </dl>
+            
+        </div>
+    </div>
+    <!-- popup -->
+    <!-- confirm, alert은 popup-closable 삭제하고 사용 -->
+    <aside id="aside" class="popup-bg popup-closable">
+        @@include("../popup/popup_select_bottom.html")
+        @@include("../popup/popup_select_center.html")
+        @@include("../popup/popup_message.html")
+        @@include("../popup/popup_bottom_sheet.html")
+    </aside>
+
+    @@include("../common/script.html")
+    <script src="../../assets/js/audio.js"></script>
+  </body>
+
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    @@include('../common/head.html')
+    <link rel="stylesheet" href="../assets/css/more.css"></link>
+  </head>
+  <body class="more">
+    
+    @@include('../common/header_sub.html', {title: "알림설정"})
+    <div class="container inner-padd">
+      <section class="setting-box">
+        <div class="switch-item">
+          <h5>Push 알림 수신 설정</h5>
+          <div class="switch">
+            <input type="checkbox" id="switch" name="whole-switch" value="" class="sr-only">
+            <label for="switch" class="btn-switch">
+              <span class="sr-only">푸시알림 수신설정</span>
+            </label>
+          </div>
+          <div class="guide">
+            수신 동의 시 앱 서비스 알림을 받을 수 있습니다.
+          </div>
+          <div class="agree-date">
+            처리일자: <span>2023-09-11</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="setting-box">
+        <!-- alarm item -->
+        <div class="switch-item">
+          <h5>스마트 번호표</h5>
+          <div class="switch">
+            <input type="checkbox" id="switch1" name="switch" value="" class="sr-only">
+            <label for="switch1" class="btn-switch">
+              <span class="sr-only">스마트 번호표 알림 수신설정</span>
+            </label>
+          </div>
+          <div class="guide">
+            스마트 번호표 발권 및 번호 알림을 발송합니다.
+          </div>
+        </div>
+        <!-- alarm item -->
+        <div class="switch-item">
+          <h5>알림 1</h5>
+          <div class="switch">
+            <input type="checkbox" id="switch2" name="switch" value="" class="sr-only">
+            <label for="switch2" class="btn-switch">
+              <span class="sr-only">알림 1 수신 설정</span>
+            </label>
+          </div>
+          <div class="guide">
+            알림 1 수신에 대한 설명입니다.
+          </div>
+        </div>
+        <!-- alarm item -->
+        <div class="switch-item">
+          <h5>알림 2</h5>
+          <div class="switch">
+            <input type="checkbox" id="switch3" name="switch" value="" class="sr-only">
+            <label for="switch3" class="btn-switch">
+              <span class="sr-only">알림 2 수신 설정</span>
+            </label>
+          </div>
+          <div class="guide">
+            알림 2 수신에 대한 설명입니다.
+          </div>
+        </div>
+      </section>
+    </div>
+
+    @@include('../common/script.html')
+
+    <script>
+      const allCheck = document.querySelector('#switch')
+      const switches = document.getElementsByName('switch');
+      
+      allCheck.addEventListener('click', function() {
+        switches.forEach((checkbox) => {
+          checkbox.checked = allCheck.checked
+        })
+      })
+
+      switches.forEach((checkbox) => {
+        checkbox.addEventListener('click', lengthCheck)
+      })
+      
+      function lengthCheck() {
+        let checkedLen = 0;
+        switches.forEach((checkbox) => {
+          if (checkbox.checked) {
+            checkedLen++;
+          }
+          if (checkedLen === switches.length) {
+            allCheck.checked = true
+          } 
+        })
+      }
+    </script>
+  </body>
+</html>

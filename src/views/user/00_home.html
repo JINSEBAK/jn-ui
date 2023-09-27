@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    @@include('../common/head.html')
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="../assets/css/home.css"></link>
+  </head>
+  <body class="home">
+    @@include('../common/header_home.html')
+    <div class="container">
+
+      <!-- main banner -->
+      <section>
+        <div class="swiper main-visual" id="mainSwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="../assets/images/sample/sample_51.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+              <img src="../assets/images/sample/sample_52.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+              <img src="../assets/images/sample/sample_53.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+              <img src="../assets/images/sample/sample_54.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+              <img src="../assets/images/sample/sample_55.jpg" alt="">
+            </div>
+          </div>
+          <!-- pagination fraction -->
+          <div class="swiper-pagination"></div>
+          <!-- play / pause -->
+          <button type="button" class="btn btn-icon icon pause" >
+            <span class="sr-only">일시정지</span>
+          </button>
+          <button type="button" class="btn btn-icon icon play" style="display:none">
+            <span class="sr-only">재생</span>
+          </button>
+        </div>
+      </section>
+
+      <!-- 산책코스 -->
+      <section class="content-box"> 
+        <h3 class="content-title">추천 종로 산책 코스</h3>
+        <div class="x-scroll">
+          <ul class="recommend-list">
+            <li>
+              <div class="recommend-item">
+                <div class="img-thumb"><img src="../../assets/images/sample/sample_07.jpeg" alt="이미지설명"></div>
+                <div class="course-title">종로 골목길</div>
+              </div>
+            </li>
+            <li>
+              <div class="recommend-item">
+                <div class="img-thumb"><img src="../../assets/images/sample/sample_07.jpeg" alt="이미지설명"></div>
+                <div class="course-title">과거와 현재</div>
+              </div>
+            </li>
+            <li>
+              <div class="recommend-item">
+                <div class="img-thumb"><img src="../../assets/images/sample/sample_07.jpeg" alt="이미지설명"></div>
+                <div class="course-title">함께 성곽길</div>
+              </div>
+            </li>
+            <li>
+              <div class="recommend-item">
+                <div class="img-thumb"><img src="../../assets/images/sample/sample_07.jpeg" alt="이미지설명"></div>
+                <div class="course-title">함께 성곽길2</div>
+              </div>
+            </li>
+            <li>
+              <div class="recommend-item">
+                <div class="img-thumb"><img src="../../assets/images/sample/sample_07.jpeg" alt="이미지설명"></div>
+                <div class="course-title">함께 3</div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- 스마트 민원 -->
+      <section class="content-box">
+        <h3 class="content-title">스마트 민원</h3>
+        <div class="quick-link">
+          <a href="#" class="quick-link_item"><img src="../assets/images/sample/sample_icon.svg" alt=""><span>스마트번호표</span></a>
+          <a href="#" class="quick-link_item"><img src="../assets/images/sample/sample_icon.svg" alt=""><span>종합 민원<br>통합 신청</span></a>
+          <a href="#" class="quick-link_item"><img src="../assets/images/sample/sample_icon.svg" alt=""><span>대형 생활<br>폐기물 신고</span></a>
+          <a href="#" class="quick-link_item"><img src="../assets/images/sample/sample_icon.svg" alt=""><span>스마트 제설함</span></a>
+          <a href="#" class="quick-link_item"><img src="../assets/images/sample/sample_icon.svg" alt=""><span>교통 과태료<br>조회</span></a>
+          <a href="#" class="quick-link_item"><img src="../assets/images/sample/sample_icon.svg" alt=""><span>스마트 비대면<br>환급 신청</span></a>
+          <a href="#" class="quick-link_item"><img src="../assets/images/sample/sample_icon.svg" alt=""><span>정화조 청소<br>예약 신청</span></a>
+          <a href="#" class="quick-link_item"><img src="../assets/images/sample/sample_icon.svg" alt=""><span>종로 교육/강좌<br>예약 신청</span></a>
+        </div>
+      </section>
+
+      <!-- 미세먼지 -->
+      <section class="content-box">
+        <h3 class="content-title">미세먼지 현황</h3>
+        <div style="background-color: #f2f3f6;min-height:400px"></div>
+      </section>
+
+      <!-- 서비스 연결 -->
+      <section class="content-box">
+        <h3 class="content-title">서비스 연결</h3>
+        <div class="link-list">
+          <a href="#" class="link-item" title="종로핫라인 바로가기">
+            <img src="../assets/images/logo_hotline.png">
+          </a>
+          <a href="#" class="link-item" title="종로구청 홈페이지 바로가기">
+            <img src="../assets/images/logo.png">
+          </a>
+          <a href="#" class="link-item" title="정부24 사이트 바로가기">
+            <img src="../assets/images/logo_gov_v.jpg">
+          </a>
+        </div>
+      </section>
+
+    </div>
+    @@include('../common/navigation.html')
+    @@include('../common/script.html')
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script>
+      const slide = new Swiper('#mainSwiper', {
+        slidesPerView: 'auto',
+        spaceBetween: 0,
+        loop:false,
+        loopAdditionalSlides:1,
+        keyboard: {
+          enables: true
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          type: "fraction"
+        },
+        autoplay: {
+          delay: 3000,
+          desableOnInteraction:false
+        }
+      })
+
+      const btnPause = document.querySelector('.btn.pause')
+      const btnPlay = document.querySelector('.btn.play')
+
+      btnPause.onclick = function() {
+        slide.autoplay.stop();
+        btnPause.style.display = 'none'
+        btnPlay.style.display = 'block'
+      }
+      btnPlay.onclick = function() {
+        slide.autoplay.start();
+        btnPlay.style.display = 'none'
+        btnPause.style.display = 'block'
+      }
+    </script>
+  </body>
+</html>

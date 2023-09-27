@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        @@include('../common/head.html')
+        <link rel="stylesheet" href="../assets/css/search.css"></link>
+    </head>
+    <body class="search place">
+        @@include('../common/header_sub.html', { title: '장소 검색'})
+        <div class="container">
+            <section class="search-box">
+                <div class="search-keyword">
+                    <input type="search" class="input-keyword" placeholder="검색어 입력" >
+                    <button type="button" class="btn btn-delete">
+                        <span class="sr-only">삭제버튼</span>
+                    </button>
+                    <button type="button" class="btn btn-icon btn-search" id="btnSearch">
+                        <span class="icon search">
+                            <span class="sr-only">검색</span>
+                        </span>
+                    </button>
+                </div>
+            </section>
+
+            <section class="search-result">
+                <!-- 최근 검색어 -->
+                <div class="recent" id="recentSearchKeywords" >
+                    <h3 class="title">
+                        <span>최근 검색</span>
+                        <button type="button" class="btn btn-default small" id="btnDeleteAll">전체 삭제</button>
+                    </h3>
+                    <ul class="search-history" id="searchHistory">
+                        <!--  아래쪽 스크립트 체크
+                        <li class="search-history_item">
+                            <span class="icon map">
+                                <span class="sr-only">장소검색</span>
+                            </span>
+                            <span class="keyword">종로구청</span>
+                            <span class="date">08.30</span>
+                            <button type="button" class="btn btn-text small">삭제</button>
+                        </li>
+                         -->
+                    </ul>
+                </div>
+
+                <ul class="place-list">
+                    <li class="place-item">
+                        <span class="icon map">
+                            <span class="sr-only">장소</span> 
+                        </span>
+                        <dl>
+                            <dt><em class="equal">종로구청</em></dt>
+                            <dd>
+                                <span class="address">서울특별시 종로구 종로1길 36 대림빌딩</span>
+                                <span class="distance">5km</span>
+                            </dd>
+                        </dl>
+                    </li>
+                    <li class="place-item">
+                        <span class="icon map">
+                            <span class="sr-only">장소</span> 
+                        </span>
+                        <dl>
+                            <dt><em class="equal">종로구청</em> 민원여권과</dt>
+                            <dd>
+                                <span class="address">서울특별시 종로구 종로1길 36 대림빌딩</span>
+                                <span class="distance">5km</span>
+                            </dd>
+                        </dl>
+                    </li>
+                    <li class="place-item">
+                        <span class="icon map">
+                            <span class="sr-only">장소</span> 
+                        </span>
+                        <dl>
+                            <dt>CU <em class="equal">종로구청</em>점</dt>
+                            <dd>
+                                <span class="address">서울특별시 종로구 삼봉로 56 호수빌딩 (서울특별시 종로구 삼봉로 56 호수빌딩)</span>
+                                <span class="distance">5km</span>
+                            </dd>
+                        </dl>
+                    </li>
+                </ul>
+            </section>
+        </div>
+        @@include('../common/script.html')
+
+        <script>
+            const btnDeleteAll = document.getElementById('btnDeleteAll')
+            const btnSearch = document.getElementById('btnSearch')
+            const input = document.querySelector('.input-keyword')
+            const _target = document.getElementById('recentSearchKeywords')
+
+            let words = []
+
+            window.onload = function() {
+                // 최근 목록 가져오기
+                reloadRecentKeywords();
+
+                // 전체 삭제 이벤트
+                btnDeleteAll.addEventListener('click', function() {
+                    removeRecentKeywords();
+                })
+            }
+
+            // 한글 엔터 입력 시 두번실행되는 버그 있음 keydown 사용, 
+            input.addEventListener('keydown', function(e) {
+                if (e.isComposing || e.keyCode === 229) return; 
+                if (e.key==='Enter') {
+                    // 검색 실행 및 키워드 로컬 스토리지 저장
+                    // 배열 형태로 관리 -> 저장 시 string
+                    const searchDate = new Date();
+                    words.unshift({ time: searchDate, keyword: input.value})
+                    localStorage.setItem('keywords', JSON.stringify(words))
+                    reloadRecentKeywords();
+                }
+            })
+           
+            // 최근 검색어 목록 만들기
+            function reloadRecentKeywords() {
+                let _temp = JSON.parse(localStorage.getItem('keywords'))
+                let _str = '';
+
+                if (_temp.length === 0) {
+                    btnDeleteAll.style.display = 'none'
+                    document.getElementById('searchHistory').replaceChildren();  // 자식노드 모두 삭제 
+                    emptyMessage({target: 'recentSearchKeywords', message: '최근 검색한 기록이 없습니다.'})
+                    return
+                }
+
+                const notFoundMsg = document.querySelector('.not-found')
+                if (notFoundMsg) {
+                    notFoundMsg.remove();
+                }
+
+                btnDeleteAll.style.display = 'block'
+                _temp.forEach((t) => {
+                    _str += '<li class="search-history_item" data-key="' + t.time + '">'
+                            + '<span class="icon map">'
+                            + '<span class="sr-only">장소검색</span>'
+                            + '</span>'
+                            + '<span class="keyword" role="button">' + t.keyword + '</span>'
+                            + '<span class="date">' + dateToShortFormat(t.time) + '</span>'
+                            + '<button type="button" class="btn btn-text small">삭제</button>'
+                            + '</li>';
+                })
+                const searchHistory = document.getElementById('searchHistory')
+                searchHistory.innerHTML = '';
+                searchHistory.innerHTML = _str
+
+                // 동적 이벤트 바인딩 
+                searchHistory.onclick = function(e) {
+                    console.log(e.target);
+                    if (e.target.classList.contains('keyword')) {
+                        // 검색 재실행
+                        const newKeyword = e.target.innerText;
+                        input.value = newKeyword
+
+                        reloadRecentKeywords();
+
+                    } else if (e.target.classList.contains('btn-text')) {
+                        // 키워드 삭제
+                        e.target.parentNode.remove();
+                        // TODO: 로컬스토리지 처리
+
+                    } else {
+
+                    }
+                }
+            }
+
+            // 최근 검색어 전체 삭제
+            function removeRecentKeywords() {
+                localStorage.setItem('keywords', JSON.stringify([]))
+                btnDeleteAll.style.display = 'none'
+                // 화면 다시 그리기 
+                reloadRecentKeywords();
+            }
+        </script>
+
+    </body>
+</html>

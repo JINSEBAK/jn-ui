@@ -1,0 +1,1033 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/index.css"></head>
+    <title>종로 스마트시티 모바일앱 퍼블리싱</title>
+  </head>
+  <body>
+    <div class="pd-inner">
+      <h2>종로 스마트시티 모바일앱 퍼블리싱</h2>
+
+      <div class="search-top">
+        <div class="per">
+          <span id="currentPer">0</span> / 100%
+        </div>
+        <input type="text" placeholder="검색" id="search">
+        <button type="button" id="btnDeleteKeyword" class="hidden">
+          <img src="../assets/images/icon_kwd_delete.svg" alt="검색 키워드 삭제">
+        </button>
+      </div>
+      
+      <table class="tb-lined">
+        <caption>인덱스, 화면ID, 페이지명, 파일명, 수정일, 진척률 정보가 있습니다.</caption>
+        <thead>
+          <tr>
+            <th>번호</th>
+            <th>화면ID</th>
+            <th colspan="4">페이지</th>
+            <th>파일명</th>
+            <th>작업일</th>
+            <th>진척률</th>
+            <th>비고</th>
+          </tr>
+        </thead>
+        <tbody id="workList">
+          <tr>
+            <td class="idx"></td>
+            <td></td>
+            <td>공통 엘리먼트</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td><a href="user/00_common_element.html" target="_blank">00_common_element.html</a></td>
+            <td>2023-09-14</td>
+            <td>
+              <progress value="70" max="100"></progress>
+            </td>
+            <td>
+              <ul>
+                <li>9/12: 버튼, 하단버튼, 체크박스, 라디오버튼, 입력폼, 셀렉트박스, 파일첨부, 팝업 추가 </li>
+                <li>9/14: 탭 추가</li>
+                <li>9/19: 오디오플레이어 추가</li>
+              </ul>
+            </td>
+          </tr>
+          
+          <!-- 홈 ------------------------------------------------------------------------->
+          <tr style="background-color: #fffceb;">
+            <td class="idx"></td>
+            <td>SCE_001</td>
+            <td>홈</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td><a href="user/00_home.html" target="_blank">00_home.html</a></td>
+            <td>2023-09-21</td>
+            <td>
+              <progress value="40" max="100"></progress>
+            </td>
+            <td>
+              <ul>
+                <li>9/21: 기본 페이지 작업(중)</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td class="idx"></td>
+            <td></td>
+            <td></td>
+            <td>스마트번호표</td>
+            <td></td>
+            <td></td>
+            <td><a href="user/00_001_smart_ticket.html" target="_blank">00_001_smart_ticket.html</a></td>
+            <td>2023-09-21</td>
+            <td>
+              <progress value="60" max="100"></progress>
+            </td>
+            <td>
+              <ul>
+                <li>9/21: 기본 마크업 </li>
+                <li>9/22: 휴대폰번호 입력 팝업 추가 </li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td class="idx"></td>
+            <td></td>
+            <td></td>
+            <td>통합신청</td>
+            <td></td>
+            <td></td>
+            <td><a href="user/00_001_integrated_app.html" target="_blank">00_001_integrated_app.html</a></td>
+            <td>2023-09-26</td>
+            <td>
+              <progress value="50" max="100"></progress>
+            </td>
+            <td>
+              <ul>
+                <li>9/26: 기본 마크업</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td class="idx"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>상세</td>
+            <td></td>
+            <td><a href="user/00_001_integrated_app_detail.html" target="_blank">00_001_integrated_app_detail.html</a></td>
+            <td>2023-09-26</td>
+            <td>
+              <progress value="50" max="100"></progress>
+            </td>
+            <td>
+              <ul>
+                <li>9/26: 기본 마크업</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td class="idx"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>결과</td>
+            <td><a href="user/00_001_integrated_app_result.html" target="_blank">00_001_integrated_app_result.html</a></td>
+            <td>2023-09-26</td>
+            <td>
+              <progress value="50" max="100"></progress>
+            </td>
+            <td>
+              <ul>
+                <li>9/26: 기본 마크업</li>
+              </ul>
+            </td>
+          </tr>
+          <tr style="background-color: #f2f3f6;">
+            <td class="idx"></td>
+            <td></td>
+            <td></td>
+            <td>대형폐기물 신고</td>
+            <td></td>
+            <td></td>
+            <td>외부페이지 연동</td>
+            <td></td>
+            <td>
+              <progress value="0" max="100"></progress>
+            </td>
+            <td></td>
+          </tr>
+          <tr style="background-color: #f2f3f6;">
+            <td class="idx"></td>
+            <td></td>
+            <td></td>
+            <td>교통 과태료 조회</td>
+            <td></td>
+            <td></td>
+            <td>외부페이지 연동</td>
+            <td></td>
+            <td>
+              <progress value="0" max="100"></progress>
+            </td>
+            <td></td>
+          </tr>
+          <tr style="background-color: #f2f3f6;">
+            <td class="idx"></td>
+            <td></td>
+            <td></td>
+            <td>스마트 비대면 환급신청</td>
+            <td></td>
+            <td></td>
+            <td>외부페이지 연동</td>
+            <td></td>
+            <td>
+              <progress value="0" max="100"></progress>
+            </td>
+            <td> </td>
+          </tr>
+
+          <!-- 정화조 청소 신청 -->
+          <tr>
+            <td class="idx"></td>
+            <td></td>
+            <td></td>
+            <td>정화조 청소 예약신청</td>
+            <td></td>
+            <td></td>
+            <td><a href="user/00_006_clean_reserve.html" target="_blank">00_006_clean_reserve.html</a></td>
+            <td>2023-09-18</td>
+            <td>
+              <progress value="50" max="100"></progress>
+            </td>
+            <td>
+              <ul>
+                <li>9/18: 기본 마크업</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td class="idx"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>정보입력</td>
+            <td></td>
+            <td><a href="user/00_006_clean_reserve_input.html" target="_blank">00_006_clean_reserve_input.html</a></td>
+            <td>2023-09-18</td>
+            <td>
+              <progress value="50" max="100"></progress>
+            </td>
+            <td>
+              <ul>
+                <li>9/18: 기본 마크업</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td class="idx"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>신청완료</td>
+            <td><a href="user/00_006_clean_reserve_completed.html" target="_blank">00_006_clean_reserve_completed.html</a></td>
+            <td>2023-09-18</td>
+            <td>
+              <progress value="50" max="100"></progress>
+            </td>
+            <td>
+              <ul>
+                <li>9/18: 기본 마크업</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td class="idx"></td>
+            <td></td>
+            <td></td>
+            <td>교육/강좌 예약</td>
+            <td></td>
+            <td></td>
+            <td><a href="user/00_007_education_list.html" target="_blank">00_007_education_list.html</a></td>
+            <td>2023-09-26</td>
+            <td>
+              <progress value="50" max="100"></progress>
+            </td>
+            <td>
+              <ul>
+                <li>9/26: 기본 마크업</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td class="idx"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>상세</td>
+            <td></td>
+            <td><a href="user/00_007_education_detail.html" target="_blank">00_007_education_detail.html</a></td>
+            <td>2023-09-26</td>
+            <td>
+              <progress value="50" max="100"></progress>
+            </td>
+            <td>
+              <ul>
+                <li>9/26: 기본 마크업</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td class="idx"></td>
+            <td></td>
+            <td></td>
+            <td>미세먼지 현황</td>
+            <td></td>
+            <td></td>
+            <td><a href="user/00_008_outdoor_air_status.html" target="_blank">00_008_outdoor_air_status.html</a></td>
+            <td>2023-09-26</td>
+            <td>
+              <progress value="50" max="100"></progress>
+            </td>
+            <td>
+              <ul>
+                <li>9/26: 기본 마크업, 차트 예제 추가</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td class="idx"></td>
+            <td></td>
+            <td></td>
+            <td>실내공기질</td>
+            <td></td>
+            <td></td>
+            <td><a href="user/00_008_indoor_air_status.html" target="_blank">00_008_indoor_air_status.html</a></td>
+            <td>2023-09-26</td>
+            <td>
+              <progress value="50" max="100"></progress>
+            </td>
+            <td>
+              <ul>
+                <li>9/26: 기본 마크업</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td class="idx"></td>
+            <td></td>
+            <td></td>
+            <td>날씨</td>
+            <td></td>
+            <td></td>
+            <td><a href="user/00_009_weather_detail.html" target="_blank">00_009_weather_detail.html</a></td>
+            <td>2023-09-26</td>
+            <td>
+              <progress value="50" max="100"></progress>
+            </td>
+            <td>
+              <ul>
+                <li>9/26: 기본 마크업</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td class="idx"></td>
+            <td></td>
+            <td></td>
+            <td>알림내역</td>
+            <td></td>
+            <td></td>
+            <td><a href="user/00_010_alarm_history.html" target="_blank">00_010_alarm_history.html</a></td>
+            <td>2023-09-18</td>
+            <td>
+              <progress value="50" max="100"></progress>
+            </td>
+            <td>
+              <ul>
+                <li>9/18: 기본 마크업</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td class="idx"></td>
+            <td></td>
+            <td></td>
+            <td>전체메뉴</td>
+            <td></td>
+            <td></td>
+            <td><a href="user/00_011_all_menu.html" target="_blank">00_011_all_menu.html</a></td>
+            <td>2023-09-18</td>
+            <td>
+              <progress value="50" max="100"></progress>
+            </td>
+            <td>
+              <ul>
+                <li>9/18: 기본 마크업 및 클릭 이벤트</li>
+              </ul>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="idx"></td>
+            <td></td>
+            <td></td>
+            <td>종로핫라인</td>
+            <td></td>
+            <td></td>
+            <td><a href="user/00_012_jongno_hotline.html" target="_blank">00_012_jongno_hotline.html</a></td>
+            <td>2023-09-27</td>
+            <td>
+              <progress value="40" max="100"></progress>
+            </td>
+            <td>
+              <ul>
+                <li>9/27: 기본 마크업</li>
+              </ul>
+            </td>
+          </tr>
+          <tr style="background-color: #f2f3f6;">
+            <td class="idx"></td>
+            <td></td>
+            <td></td>
+            <td>구청홈페이지</td>
+            <td></td>
+            <td></td>
+            <td>외부페이지 연동</td>
+            <td></td>
+            <td>
+              <progress value="0" max="100"></progress>
+            </td>
+            <td></td>
+          </tr>
+          <tr style="background-color: #f2f3f6;">
+            <td class="idx"></td>
+            <td></td>
+            <td></td>
+            <td>정부24</td>
+            <td></td>
+            <td></td>
+            <td>외부페이지 연동</td>
+            <td></td>
+            <td>
+              <progress value="0" max="100"></progress>
+            </td>
+            <td>
+            </td>
+          </tr>
+
+
+          <!-- 하이종로 01 ------------------------------------------------------------------------->
+          <tr style="background-color: #fffceb;">
+            <td class="idx"></td>
+            <td></td>
+            <td>하이종로</td>
+            <td>메인</td>
+            <td></td>
+            <td></td>
+            <td><a href="user/01_map.html" target="_blank">01_map.html</a></td>
+            <td>2023-09-19</td>
+            <td>
+              <progress value="50" max="100"></progress>
+            </td>
+            <td>
+              <ul>
+                <li>9/19: 기본 마크업</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td class="idx"></td>
+            <td></td>
+            <td></td>
+            <td>종로산책</td>
+            <td>거점기준 코스목록</td>
+            <td></td>
+            <td><a href="user/01_001_road_course_list.html" target="_blank">01_001_road_course_list.html</a></td>
+            <td>2023-09-20</td>
+            <td>
+              <progress value="50" max="100"></progress>
+            </td>
+            <td>
+              <ul>
+                <li>9/20: 기본 마크업</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td class="idx"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>코스 상세</td>
+            <td></td>
+            <td><a href="user/01_001_road_course_detail.html" target="_blank">01_001_road_course_detail.html</a></td>
+            <td>2023-09-19</td>
+            <td>
+              <progress value="60" max="100"></progress>
+            </td>
+            <td>
+              <ul>
+                <li>9/19: 기본 마크업</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td class="idx"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>종로산책 추천코스</td>
+            <td></td>
+            <td><a href="user/01_001_road_course_recommend.html" target="_blank">01_001_road_course_recommend.html</a></td>
+            <td>2023-09-20</td>
+            <td>
+              <progress value="50" max="100"></progress>
+            </td>
+            <td>
+              <ul>
+                <li>9/20: 기본 마크업</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td class="idx"></td>
+            <td></td>
+            <td></td>
+            <td>장소 검색</td>
+            <td></td>
+            <td></td>
+            <td><a href="user/01_012_place_search.html" target="_blank">01_012_place_search.html</a></td>
+            <td>2023-09-20</td>
+            <td>
+              <progress value="50" max="100"></progress>
+            </td>
+            <td>
+              <ul>
+                <li>9/20: 기본 마크업</li>
+                <li class="todo">TODO: 로컬스토리지 처리</li>
+              </ul>
+            </td>
+          </tr>
+
+          <!-- 나우종로 02------------------------------------------------------------------------->
+          <tr style="background-color: #fffceb;">
+            <td class="idx"></td>
+            <td></td>
+            <td>나우종로</td>
+            <td>메인</td>
+            <td></td>
+            <td></td>
+            <td><a href="user/03_now.html" target="_blank">03_now.html</a></td>
+            <td>2023-09-27</td>
+            <td>
+              <progress value="50" max="100"></progress>
+            </td>
+            <td>
+              <ul>
+                <li>9/27: 기본 마크업</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td class="idx"></td>
+            <td></td>
+            <td></td>
+            <td>종로안내</td>
+            <td>조직도</td>
+            <td></td>
+            <td><a href="user/03_001_jongno_info.html" target="_blank">03_001_jongno_info.html</a></td>
+            <td></td>
+            <td>
+              <progress value="0" max="100"></progress>
+            </td>
+            <td>
+              <ul>
+                <li>9/27: 기본 마크업</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td class="idx"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>직원안내</td>
+            <td></td>
+            <td><a href="user/03_001_jongno_info.html" target="_blank">03_001_jongno_info.html</a></td>
+            <td></td>
+            <td>
+              <progress value="0" max="100"></progress>
+            </td>
+            <td>
+              <ul>
+                <li></li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td class="idx"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>행사안내</td>
+            <td>목록</td>
+            <td><a href="user/03_001_jongno_info_schedule.html" target="_blank">03_001_jongno_info_schedule.html</a></td>
+            <td>2023-09-27</td>
+            <td>
+              <progress value="50" max="100"></progress>
+            </td>
+            <td>
+              <ul>
+                <li>9/27: 기본 마크업</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td class="idx"></td>
+            <td></td>
+            <td></td>
+            <td>보도자료</td>
+            <td></td>
+            <td></td>
+            <td><a href="#" target="_blank"></a></td>
+            <td></td>
+            <td>
+              <progress value="0" max="100"></progress>
+            </td>
+            <td>
+              <ul>
+                <li></li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td class="idx"></td>
+            <td></td>
+            <td></td>
+            <td>수어상담</td>
+            <td></td>
+            <td></td>
+            <td><a href="user/02_003_sign_language_counseling.html" target="_blank">02_003_sign_language_counseling.html</a></td>
+            <td>2023-09-21</td>
+            <td>
+              <progress value="0" max="100"></progress>
+            </td>
+            <td>
+              <ul>
+                <li>9/21: 기본 마크업</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td class="idx"></td>
+            <td></td>
+            <td></td>
+            <td>설문조사</td>
+            <td></td>
+            <td></td>
+            <td><a href="user/02_003_poll_list.html" target="_blank">02_003_poll_list.html</a></td>
+            <td></td>
+            <td>
+              <progress value="0" max="100"></progress>
+            </td>
+            <td>
+              <ul>
+                <li>9/21: 기본 마크업</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td class="idx"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>상세</td>
+            <td></td>
+            <td><a href="#" target="_blank"></a></td>
+            <td></td>
+            <td>
+              <progress value="0" max="100"></progress>
+            </td>
+            <td>
+              <ul>
+                <li></li>
+              </ul>
+            </td>
+          </tr>
+
+          <!-- 검색 04 ------------------------------------------------------------------------->
+          <tr style="background-color: #fffceb;">
+            <td class="idx"></td>
+            <td></td>
+            <td>검색</td>
+            <td>메인</td>
+            <td></td>
+            <td></td>
+            <td><a href="user/04_search.html" target="_blank">04_search.html</a></td>
+            <td></td>
+            <td>
+              <progress value="50" max="100"></progress>
+            </td>
+            <td>
+              <ul>
+                <li>9/15: 기본 마크업</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td class="idx"></td>
+            <td></td>
+            <td></td>
+            <td>검색 중</td>
+            <td></td>
+            <td></td>
+            <td><a href="#" target="_blank"></a></td>
+            <td></td>
+            <td>
+              <progress value="0" max="100"></progress>
+            </td>
+            <td>
+              <ul>
+                <li></li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td class="idx"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>검색결과</td>
+            <td></td>
+            <td><a href="#" target="_blank"></a></td>
+            <td></td>
+            <td>
+              <progress value="0" max="100"></progress>
+            </td>
+            <td>
+              <ul>
+                <li></li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td class="idx"></td>
+            <td></td>
+            <td></td>
+            <td>전입자 안내가이드</td>
+            <td></td>
+            <td></td>
+            <td><a href="user/04_002_movin_guide.html" target="_blank">04_002_movin_guide.html</a></td>
+            <td>2023-09-21</td>
+            <td>
+              <progress value="10" max="100"></progress>
+            </td>
+            <td>
+              <ul>
+                <li>9/21: 뼈대만</li>
+              </ul>
+            </td>
+          </tr>
+
+          <!-- 더보기 05 ------------------------------------------------------------------------->
+          <tr style="background-color: #fffceb;">
+            <td class="idx"></td>
+            <td></td>
+            <td>더보기</td>
+            <td>메인</td>
+            <td></td>
+            <td></td>
+            <td><a href="user/05_more.html" target="_blank">05_more.html</a></td>
+            <td>2023-09-14</td>
+            <td>
+              <progress value="50" max="100"></progress>
+            </td>
+            <td>
+              <ul>
+                <li>9/14: 기본 마크업</li>
+              </ul>
+            </td>
+          </tr>
+          <tr style="background-color: #f2f3f6;">
+            <td class="idx"></td>
+            <td></td>
+            <td></td>
+            <td>긴급신고</td>
+            <td></td>
+            <td></td>
+            <td>네이티브 영역</td>
+            <td></td>
+            <td>
+              <progress value="0" max="100"></progress>
+            </td>
+            <td>
+            </td>
+          </tr>
+          <tr>
+            <td class="idx"></td>
+            <td></td>
+            <td></td>
+            <td>스마트번호표 발권 이력</td>
+            <td></td>
+            <td></td>
+            <td><a href="user/05_001_waiting_list.html" target="_blank">05_001_waiting_list.html</a></td>
+            <td>2023-09-21</td>
+            <td>
+              <progress value="50" max="100"></progress>
+            </td>
+            <td>
+              <ul>
+                <li>9/21: 기본 마크업</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td class="idx"></td>
+            <td></td>
+            <td></td>
+            <td>가이드 북</td>
+            <td></td>
+            <td></td>
+            <td><a href="user/05_002_guide_book.html" target="_blank">05_002_guide_book.html</a></td>
+            <td>2023-09-21</td>
+            <td>
+              <progress value="30" max="100"></progress>
+            </td>
+            <td>
+              <ul>
+                <li>9/21: 뼈대만</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td class="idx"></td>
+            <td></td>
+            <td></td>
+            <td>자주하는 질문</td>
+            <td></td>
+            <td></td>
+            <td><a href="user/05_003_faq.html" target="_blank">05_003_faq.html</a></td>
+            <td>2023-09-15</td>
+            <td>
+              <progress value="50" max="100"></progress>
+            </td>
+            <td>
+              <ul>
+                <li>9/15: 기본 마크업</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td class="idx"></td>
+            <td></td>
+            <td></td>
+            <td>1:1문의</td>
+            <td></td>
+            <td></td>
+            <td><a href="user/05_004_qa.html" target="_blank">05_004_qa.html</a></td>
+            <td>2023-09-14</td>
+            <td>
+              <progress value="50" max="100"></progress>
+            </td>
+            <td>
+              <ul>
+                <li>9/14: 기본 마크업</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td class="idx"></td>
+            <td></td>
+            <td></td>
+            <td>공지사항</td>
+            <td></td>
+            <td></td>
+            <td><a href="user/05_005_notice_list.html" target="_blank">05_005_notice_list.html</a></td>
+            <td>2023-09-15</td>
+            <td>
+              <progress value="50" max="100"></progress>
+            </td>
+            <td>
+              <ul>
+                <li>9/15: 기본 마크업</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td class="idx"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>상세</td>
+            <td></td>
+            <td><a href="user/05_005_notice_detail.html" target="_blank">05_005_notice_detail.html</a></td>
+            <td>2023-09-15</td>
+            <td>
+              <progress value="50" max="100"></progress>
+            </td>
+            <td>
+              <ul>
+                <li>9/15: 기본 마크업</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td class="idx"></td>
+            <td></td>
+            <td></td>
+            <td>이용약관</td>
+            <td></td>
+            <td></td>
+            <td><a href="user/05_006_terms_list.html" target="_blank">05_006_terms_list.html</a></td>
+            <td>2023-09-21</td>
+            <td>
+              <progress value="50" max="100"></progress>
+            </td>
+            <td>
+              <ul>
+                <li>9/21: 기본 마크업</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td class="idx"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>상세</td>
+            <td></td>
+            <td><a href="user/05_006_terms_detail.html" target="_blank">05_006_terms_detail.html</a></td>
+            <td>2023-09-21</td>
+            <td>
+              <progress value="50" max="100"></progress>
+            </td>
+            <td>
+              <ul>
+                <li>9/21: 기본 마크업</li>
+                <li class="todo">TODO: 약관 등록 시 에디터 적용 여부 확인</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td class="idx"></td>
+            <td></td>
+            <td></td>
+            <td>알림설정</td>
+            <td></td>
+            <td></td>
+            <td><a href="user/05_007_alarm_setting.html" target="_blank">05_007_alarm_setting.html</a></td>
+            <td>2023-09-15</td>
+            <td>
+              <progress value="50" max="100"></progress>
+            </td>
+            <td>
+              <ul>
+                <li>9/15: 기본 마크업</li>
+              </ul>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </body>
+
+  <script>
+    const arrs = document.querySelectorAll('.idx');
+    const bars = document.querySelectorAll('progress')
+    const input = document.querySelector('#search')
+    const dBtn = document.getElementById('btnDeleteKeyword')
+    const wList = document.getElementById('workList')
+    const trList = document.querySelectorAll('tbody tr')
+    let searchResult = new Array()
+
+    // row index 채번
+    arrs.forEach((arr, index) => {
+      arr.innerHTML = index + 1
+      arr.parentElement.dataset.index = index
+    })
+
+    // progress value to text
+    bars.forEach((bar, index) => {
+      const val = bar.getAttribute('value')
+      bar.innerHTML = `${val}%`
+
+      let el = document.createElement('span')
+      el.classList.add('percent')
+      el.appendChild(document.createTextNode(`${val}%`))
+      bar.after(el)
+    })
+
+    // 검색
+    input.addEventListener('keydown', function(e) {
+      if (e.isComposing || e.keyCode === 229) return; 
+
+      const len = input.value.length;
+      if (len > 0) {
+        dBtn.classList.remove('hidden')
+      } else {
+        dBtn.classList.add('hidden')
+      }
+      
+      if (e.key==='Enter') {
+        // 검색 실행
+        const keyword = input.value;
+        const cells = document.querySelectorAll('td')
+        cells.forEach((cell, index) => {
+          let txt = cell.innerHTML;
+          if (txt.indexOf(keyword) >-1) {
+            // 일치 문자열 있음 
+            const regex = new RegExp(keyword, "gi")
+            txt = txt.replace(regex, "<em>" + keyword + '</em>')
+            cell.innerHTML = txt
+            // 부모노드 인덱스 저장
+            searchResult.push(cell.parentElement.getAttribute('data-index'));
+          }
+        })
+        console.log(searchResult)
+        toggleTableRow();
+      }
+    })
+
+    // 키워드 삭제 
+    dBtn.addEventListener('click', function() {
+      input.value = ''
+      dBtn.classList.add('hidden')
+      // 하이라이트 삭제
+      const cells = document.querySelectorAll('td')
+      cells.forEach((cell, index) => {
+        const chd = cell.querySelectorAll('em')
+        if (chd.length > 0) {
+          let txt = cell.innerHTML;
+          txt = txt.replace(/(<([^>]+)>)/gi, "");
+          cell.innerHTML = txt;
+          cell.parentNode.style.display = "none"
+        }
+      })
+
+      searchResult = []
+      toggleTableRow();
+    })
+
+    function toggleTableRow() {
+      if (searchResult.length === 0) {
+        trList.forEach((item) => {
+          item.style.display = 'table-row'
+        })
+        return
+      }
+      trList.forEach((item) => {
+        const targetIndex = item.getAttribute('data-index')
+        item.style.display = 'none'
+        if (searchResult.indexOf(targetIndex)> -1) {
+          item.style.display = 'table-row'
+        }
+      })
+    }
+  </script>
+
+</html>

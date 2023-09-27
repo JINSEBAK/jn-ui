@@ -1,0 +1,16 @@
+// 반응형웹 breakpoints
+$breakpoint-mobile: 320px;
+$breakpoint-tablet: 767px;
+$breakpoint-desktop: 1024px;
+$breakpoint-wide: 1281px;
+
+@mixin flexCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin textDate {
+  color: #666;
+  font-size: 0.875rem;
+}

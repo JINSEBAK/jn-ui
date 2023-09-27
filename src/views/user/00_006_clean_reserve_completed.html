@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    @@include('../common/head.html')
+    <link rel="stylesheet" href="../assets/css/home.css"></link>
+  </head>
+  <body class="home">
+    
+    @@include('../common/header_sub.html', {title: "정화조 청소 예약 신청 완료"})
+
+    <div class="container inner-padd">
+     
+        <section class="pre-guide">
+            <div class="reserve-completed">
+                <h3>정화조 청소 예약 신청이 완료되었습니다.</h3>
+                <p>
+                    예약 정보는 하단에 표시된<br>
+                    거주지역 담당 청소 업체로 전달되며,<br>
+                    원활한 업무 진행을 위해, 담당 청소 업체에서<br>
+                    신청자에게 전화로 연락하여 안내를 드립니다. 
+                </p>
+                <ul class="reserve-info">
+                    <li>
+                        <span class="label">청소 일정 및 시간</span>
+                        <span class="data">2023-08-26 오후 2:30</span>
+                    </li>
+                    <li>
+                        <span class="label">신청자명</span>
+                        <span class="data">OOO</span>
+                    </li>
+                    <li>
+                        <span class="label">휴대폰번호</span>
+                        <span class="data">000-0000-0000</span>
+                    </li>
+                    <li>
+                        <span class="label">거주지역(동)</span>
+                        <span class="data">공평동</span>
+                    </li>
+                    <li>
+                        <span class="label">청소업체명</span>
+                        <span class="data">종복환경개발(주)</span>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <div class="btns under">
+            <a href="./00_home.html" role="button" class="btn btn-primary">확인</a>
+        </div>
+      
+    </div>
+
+    @@include('../common/script.html')
+    <script>
+        $(document).ready(function() {
+        })
+    </script>
+  </body>
+</html>

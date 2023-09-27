@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    @@include('../common/head.html')
+    <link rel="stylesheet" href="../assets/css/home.css"></link>
+  </head>
+  <body class="more">
+    @@include('../common/header_sub.html', {title: '날씨'})
+    <div class="container inner-padd">
+
+        <section>
+            <div class="w-current">
+                <img src="../assets/images/icon_weather_lightning.svg" alt="">
+                <ul class="w-current_info">
+                    <li>종로구 익선동</li>
+                    <li>
+                        <strong>20 °C</strong>
+                    </li>
+                    <li>
+                        최고 32 °C  / 최저 15 °C 
+                    </li>
+                    <li>
+                        <em>맑음</em>
+                    </li>
+                </ul>
+            </div>
+
+            <ul class="extra-w-info">
+                <li class="w-info">
+                    <img src="../assets/images/icon_weather_lightning.svg" alt="">
+                    <div class="w-info_item">
+                        <span class="w-info_title">바람</span>
+                        <span class="w-info_value">
+                            <strong>10</strong>
+                            <span class="unit">Km/h</span>
+                        </span>
+                    </div>
+                </li>
+                <li class="w-info">
+                    <img src="../assets/images/icon_weather_lightning.svg" alt="">
+                    <div class="w-info_item">
+                        <span class="w-info_title">습도</span>
+                        <span class="w-info_value">
+                            <strong>53</strong>
+                            <span class="unit">%</span>
+                        </span>
+                    </div>
+                </li>
+                <li class="w-info">
+                    <img src="../assets/images/icon_weather_lightning.svg" alt="">
+                    <div class="w-info_item">
+                        <span class="w-info_title">강우확률</span>
+                        <span class="w-info_value">
+                            <strong>10</strong>
+                            <span class="unit">%</span>
+                        </span>
+                    </div>
+                </li>
+                <li class="w-info">
+                    <img src="../assets/images/icon_weather_lightning.svg" alt="">
+                    <div class="w-info_item">
+                        <span class="w-info_title">자외선</span>
+                        <span class="w-info_value">
+                            <strong>좋음</strong>
+                        </span>
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+       
+       
+    </div>
+
+    @@include('../common/script.html')
+    
+  </body>
+</html>

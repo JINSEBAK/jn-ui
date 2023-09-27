@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    @@include('../common/head.html')
+    <link rel="stylesheet" href="../assets/css/home.css"></link>
+  </head>
+  <body class="more">
+    @@include('../common/header_sub.html', {title: '실외 미세먼지 현황'})
+    <div class="container inner-padd">
+        <!-- 미세먼지 -->
+        <section class="air-content">
+            <div class="air-summary">
+                <h3 class="title">미세먼지 (PM-2.5)</h3>
+                <div class="value">4 <span class="unit">㎍/㎥</span></div>
+                <span class="badge category"> :) 좋음</span>
+            </div>
+            <div class="air-forecast">
+                <canvas id="chart1" aria-label="시간대별 미세먼지 농도 차트" role="img">
+                    <p>미세먼지 농도에 대한 설명 텍스트</p>
+                </canvas>
+            </div>
+        </section>
+
+        <!-- 초미세먼지 -->
+        <section class="air-content">
+            <div class="air-summary">
+                <h3 class="title">초미세먼지 (PM-10)</h3>
+                <div class="value">12 <span class="unit">㎍/㎥</span></div>
+                <span class="badge category"> :) 좋음</span>
+            </div>
+            <div class="air-forecast">
+                <canvas id="chart2" aria-label="시간대별 초 미세먼지 농도 차트" role="img">
+                    <p>초 미세먼지 농도에 대한 설명 텍스트</p>
+                </canvas>
+            </div>
+        </section>
+    </div>
+
+    @@include('../common/script.html')
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+       document.addEventListener('DOMContentLoaded', function() {
+            const ctx = document.getElementById('chart1')
+            const myChart = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: ['01시','02시','03시','04시', '05시'],
+                    datasets: [{
+                        label: '',
+                        data: [2, 1, 3, 4, 1],
+                        borderWidth: 2,
+                        borderColor: '#ff0000'
+                    }]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            })
+
+            const ctx2 = document.getElementById('chart2')
+            const myChart2 = new Chart(ctx2, {
+                type: 'line',
+                data: {
+                    labels: ['01시','02시','03시','04시', '05시'],
+                    datasets: [{
+                        label: '',
+                        data: [2, 1.3, 1.2, 2.2, 1],
+                        borderWidth: 2,
+                        borderColor: '#ff9e40'
+                    }]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            })
+        })
+    </script>
+  </body>
+</html>

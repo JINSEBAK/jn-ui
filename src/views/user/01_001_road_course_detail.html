@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        @@include('../common/head.html')
+        <link rel="stylesheet" href="../assets/css/map.css"></link>
+    </head>
+    <body class="course">
+        @@include('../common/header_sub.html', {title: '코스 상세 보기'})
+        <div class="container">
+
+            <!-- photo area -->
+            <div class="course-photo">
+                <img src="../../assets/images/sample/sample_07.jpeg" alt="대체텍스트">
+            </div>
+
+            <!-- text contents -->
+            <div class="course-detail">
+                <h3 class="course-title">낙원/익선동 낭만코스</h3>
+                <div class="course-btns">
+                    <button type="button" class="btn btn-icon" id="btnLike">
+                        <span class="icon like">
+                            <span class="sr-only">코스 좋아요</span>
+                        </span>
+                    </button>
+                    <span class="like-count" id="likeCount">2,311</span>
+                    <button type="button" class="btn btn-icon">
+                        <span class="icon share">
+                            <span class="sr-only">공유하기</span>
+                        </span>
+                    </button>
+                    <!-- 구청홈페이지 url 사용? -->
+                    <a href="#" role="button" class="btn btn-icon" download>
+                        <span class="icon download">
+                            <span class="sr-only">리플릿 다운로드</span>
+                        </span>
+                    </a>
+                </div>
+                <div class="course-content">
+                    <p>
+                        레트로 감성의  서울 여행 낭만 끝판왕!
+                        음악의 성지 낙원동과 최근 핫플레이스로 떠오른 익선동에서 낭만을 느껴 보세요.
+                        <br><br>
+                        아구찜으로 유명한 낙원동 아구찜 거리, 국내 최대 악기 종합 상가인 낙원 상가와 함께, 
+                        레트로 감성을 한 가득 느낄 수 있는 익선동 골목길과 요즘 핫플레이스로 떠오르고 있는 
+                        익선동 맛집거리에서 맛있는 길거리 음식과 함께 종로 산책의 색다른 감성을 느낄 수 있을 것입니다.
+                    </p>
+                    <dl>
+                        <dt>운영정보</dt>
+                        <dd>5월 ~ 10월 둘째, 넷째주 금요일 오후 4시<br>3.5km 2시간 30분 코스</dd>
+                    </dl>
+                    <dl>
+                        <dt>코스</dt>
+                        <dd>
+                            낙원동 아구찜거리 - 낙원악기상가 - 익선동 골목길 - 익선동 맛집거리
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+
+            <!-- map -->
+            <div class="course-map">
+                <img src="../../assets/images/sample/sample_05.png" alt="sample image / map 영역">
+            </div>  
+
+            <!-- point -->
+            <div class="course-points">
+                <ol class="point-list">
+                    <li>
+                        <div class="point-item">
+                            <div class="title">
+                                <h5 class="course-name">낙원동 아구찜거리</h5>
+                                <button type="button" class="btn btn-icon btn-audio">
+                                    <span class="icon play">
+                                        <span class="sr-only">오디오파일 재생</span>
+                                    </span>
+                                </button>
+                            </div>
+                            <div class="thumb-img">
+                                <img src="../../assets/images/sample/sample_07.jpeg" alt="거점 이미지 소개">
+                            </div>
+                            <button type="button" class="btn btn-stamp completed" disabled>스탬프<br>획득!</button>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="point-item">
+                            <div class="title">
+                                <h5 class="course-name">낙원 악기상가</h5>
+                                <button type="button" class="btn btn-icon btn-audio">
+                                    <span class="icon play">
+                                        <span class="sr-only">오디오파일 재생</span>
+                                    </span>
+                                </button>
+                            </div>
+                            <div class="thumb-img">
+                                <img src="../../assets/images/sample/sample_07.jpeg" alt="거점 이미지 소개">
+                            </div>
+                            <button type="button" class="btn btn-stamp">스탬프<br>받기</button>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="point-item">
+                            <div class="title">
+                                <h5 class="course-name">익선동 골목길</h5>
+                                <button type="button" class="btn btn-icon btn-audio">
+                                    <span class="icon play">
+                                        <span class="sr-only">오디오파일 재생</span>
+                                    </span>
+                                </button>
+                            </div>
+                            <div class="thumb-img">
+                                <img src="../../assets/images/sample/sample_07.jpeg" alt="거점 이미지 소개">
+                            </div>
+                            <button type="button" class="btn btn-stamp">스탬프<br>받기</button>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="point-item">
+                            <div class="title">
+                                <h5 class="course-name">익선동 맛집거리</h5>
+                                <button type="button" class="btn btn-icon btn-audio">
+                                    <span class="icon play">
+                                        <span class="sr-only">오디오파일 재생</span>
+                                    </span>
+                                </button>
+                            </div>
+                            <div class="thumb-img">
+                                <img src="../../assets/images/sample/sample_07.jpeg" alt="거점 이미지 소개">
+                            </div>
+                            <button type="button" class="btn btn-stamp">스탬프<br>받기</button>
+                        </div>
+                    </li>
+                </ol>
+            </div>
+        </div>
+        <audio id="audioFile" preload="metadata">
+            <source src="../../assets/files/sample_sound_1.mp3">
+        </audio>
+        <div class="under-fixed" id="audioPlayerBox">
+            <div class="audio-player">
+                <button type="button" class="btn btn-icon icon play" id="btnPlay">
+                    <span class="sr-only">재생</span>
+                </button>
+                <div class="timeline">
+                    <span class="time-current" id="timeCurrent">0:00</span>
+                    <input type="range" min="0" max="100" value="0" id="timeProgress">
+                    <div class="progress">
+                        <span class="gage" style="width:40%"></span>
+                    </div>
+                    <span class="time-duration" id="timeDuration"></span>
+                </div>
+                <button type="button" class="btn btn-icon icon volume" id="btnVolume">
+                    <span class="sr-only">볼륨끄기</span>
+                </button>
+            </div>
+            <button type="button" class="btn btn-icon" id="btnCloseAudio">
+                <span class="icon close">
+                    <span class="sr-only">닫기</span>
+                </span>
+            </button>
+        </div>
+        
+        
+        @@include('../common/script.html')
+
+        <script>
+            const btnLike = document.getElementById('btnLike')
+            const likeCount = document.getElementById('likeCount')
+            const likeIcon = document.getElementsByClassName('like')[0]
+            btnLike.addEventListener('click', function() {
+                let cnt = likeCount.innerText.replace(/,/g , '');
+                if (!likeIcon.classList.contains('like-fill'))  {
+                    likeCount.innerText = comma(Number(cnt) + 1)
+                    likeIcon.classList.add("like-fill")
+                } else {
+                    likeCount.innerText = comma(Number(cnt) - 1)
+                    likeIcon.classList.remove("like-fill")
+                }
+            })
+
+            // 오디오 재생 이벤트 
+            const audioBtns = document.querySelectorAll('.btn-audio')
+            const audioPlayerBox = document.getElementById('audioPlayerBox')
+            const btnCloseAudio = document.getElementById('btnCloseAudio')
+            audioBtns.forEach((btn) => {
+                btn.addEventListener('click', function() {
+                    audioPlayerBox.classList.add('active')
+                })
+            });
+            btnCloseAudio.addEventListener('click', function() {
+                // 재생 정지
+                roadAudio.pause();
+                roadAudio.currentTime = 0;
+                audioPlayerBox.classList.remove('active')
+            })
+        </script>
+        <script src="../../assets/js/audio.js"></script>
+    </body>
+</html>
