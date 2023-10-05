@@ -1,9 +1,17 @@
 @import "./_variables.scss";
 @import "./_mixins.scss";
 
+// @font-face {
+//   font-family: "SCDream";
+//   src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff")
+//     format("woff");
+//   font-weight: normal;
+//   font-style: normal;
+// }
+
 @font-face {
-  font-family: "SCDream";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff")
+  font-family: "IBMPlexSansKR-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/IBMPlexSansKR-Regular.woff")
     format("woff");
   font-weight: normal;
   font-style: normal;
@@ -29,7 +37,7 @@ html {
 
 html,
 body {
-  font-family: "SCDream";
+  font-family: "IBMPlexSansKR-Regular";
   font-size: 16px;
 }
 
@@ -38,7 +46,7 @@ input,
 textarea,
 select {
   transition: all 0.3s;
-  font-family: "SCDream";
+  font-family: "IBMPlexSansKR-Regular";
 }
 
 a {
@@ -74,10 +82,24 @@ a {
   }
 }
 
+.good {
+  color: $safty-text;
+}
+
+.bad {
+  color: $warning-text;
+}
+
 .flex {
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  &.between {
+    justify-content: space-between;
+  }
+  &.end {
+    justify-content: flex-end;
+  }
 }
 
 .ellipsis {
@@ -152,6 +174,8 @@ hr.full-line {
   height: $header;
   &.main {
     gap: 0.5rem;
+    background-color: transparent;
+    border-bottom-color: transparent;
     .logo {
       img {
         height: 2rem;
@@ -185,7 +209,9 @@ hr.full-line {
 #footer {
   border-top: 1px solid $border-basic;
   background-color: #fff;
+  box-shadow: -5px 3px 10px rgba(0, 0, 0, 0.5);
   position: fixed;
+  z-index: 1000;
   bottom: 0;
   left: 0;
   right: 0;
@@ -209,6 +235,46 @@ hr.full-line {
         &:active {
           background-color: rgba(0, 0, 0, 0.03);
         }
+      }
+    }
+  }
+}
+
+.gnb {
+  .icon {
+    &.menu1 {
+      background-image: url(../images/icon_gnb_menu01.svg);
+    }
+    &.menu2 {
+      background-image: url(../images/icon_gnb_menu02.svg);
+    }
+    &.menu3 {
+      background-image: url(../images/icon_gnb_menu03.svg);
+    }
+    &.menu4 {
+      background-image: url(../images/icon_gnb_menu04.svg);
+    }
+    &.menu5 {
+      background-image: url(../images/icon_gnb_menu05.svg);
+    }
+  }
+  .on {
+    color: #ad2a4b !important;
+    .icon {
+      &.menu1 {
+        background-image: url(../images/icon_gnb_menu01_on.svg);
+      }
+      &.menu2 {
+        background-image: url(../images/icon_gnb_menu02_on.svg);
+      }
+      &.menu3 {
+        background-image: url(../images/icon_gnb_menu03_on.svg);
+      }
+      &.menu4 {
+        background-image: url(../images/icon_gnb_menu04_on.svg);
+      }
+      &.menu5 {
+        background-image: url(../images/icon_gnb_menu05_on.svg);
       }
     }
   }
@@ -1106,8 +1172,7 @@ select {
   border-radius: 20px;
   font-size: 0.75rem;
   color: #fff !important;
-  padding: 0.5rem 0.5rem 0.35rem;
-  line-height: 1;
+  padding: 0.5rem;
   &.category {
     background-color: $badge-category;
   }
@@ -1120,6 +1185,18 @@ select {
   &.disabled {
     background-color: $sub-text;
     color: rgba(255, 255, 255, 0.5) !important;
+  }
+  &.new {
+    background-color: $em-text;
+    padding: 0;
+    width: 1rem;
+    height: 1rem;
+    font-size: 0.5rem;
+    display: inline-flex;
+    &::after {
+      content: "N";
+      margin: auto;
+    }
   }
 }
 
@@ -1402,6 +1479,24 @@ select {
   }
 }
 
+// swiper
+.swiper-pagination {
+  &.custom {
+    transform: translate3d(0, 0, 0);
+  }
+  &-bullet {
+    border: 1px solid #9696a2;
+    background: transparent !important;
+    opacity: 1 !important;
+    margin: 0 3px !important;
+    &.swiper-pagination-bullet-active {
+      background: #9696a2 !important;
+      width: 1rem;
+      border-radius: 4px;
+    }
+  }
+}
+
 .icon {
   width: 2rem;
   height: 2rem;
@@ -1480,6 +1575,15 @@ select {
   }
   &.lost {
     background-image: url(../../assets/images/icon_not_found.svg);
+  }
+  &.next {
+    background-image: url(../../assets/images/icon_chevron_right_w.svg);
+  }
+  &.target {
+    background-image: url(../../assets/images/icon_target.svg);
+  }
+  &.sunny {
+    background-image: url(../../assets/images/icon_w_sunny.svg);
   }
 }
 
