@@ -10,7 +10,7 @@
     <div class="container">
 
       <!-- main banner -->
-      <section>
+      <section class="content-box visual">
         <div class="swiper main-visual" id="mainSwiper">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
@@ -68,13 +68,11 @@
         </div>
       </section>
 
-  
       
-      <!-- 스마트 민원 -->
+      <!-- 스마트 민원 대기표 -->
       <section class="content-box">
-        
         <div class="banners">
-          <div class="banner">
+          <div class="banner banner-ticket">
             <a href="#">
               <dl>
                 <dt>스마트 번호표</dt>
@@ -82,38 +80,50 @@
                   어디서든 편리하게 신청!<br>언제나 신속하게 처리!
                 </dd>
               </dl>
-              <img src="../../assets/images/sample/sample_04.jpg" alt="배경이미지">
+              <img src="../../assets/images/icon_banner__ticket.svg" alt="스마트 번호표 이미지" class="banner-img">
             </a>
           </div>
         </div>
-
+      </section>
+      
+      <!-- 스마트 민원 -->
+      <section class="content-box">
         <h3 class="content-title">편리한 민원</h3>
         <div class="quick-link">
-          <a href="#" class="quick-link_item"><div class="img-wrap"><img src="../assets/images/sample/sample_icon.svg" alt=""></div><span>스마트번호표</span></a>
-          <a href="#" class="quick-link_item"><div class="img-wrap"><img src="../assets/images/sample/sample_icon.svg" alt=""></div><span>종합 민원<br>통합 신청</span></a>
-          <a href="#" class="quick-link_item"><div class="img-wrap"><img src="../assets/images/sample/sample_icon.svg" alt=""></div><span>대형 생활<br>폐기물 신고</span></a>
-          <a href="#" class="quick-link_item"><div class="img-wrap"><img src="../assets/images/sample/sample_icon.svg" alt=""></div><span>스마트 제설함</span></a>
-          <a href="#" class="quick-link_item"><div class="img-wrap"><img src="../assets/images/sample/sample_icon.svg" alt=""></div><span>교통 과태료<br>조회</span></a>
-          <a href="#" class="quick-link_item"><div class="img-wrap"><img src="../assets/images/sample/sample_icon.svg" alt=""></div><span>스마트 비대면<br>환급 신청</span></a>
-          <a href="#" class="quick-link_item"><div class="img-wrap"><img src="../assets/images/sample/sample_icon.svg" alt=""></div><span>정화조 청소<br>예약 신청</span></a>
-          <a href="#" class="quick-link_item"><div class="img-wrap"><img src="../assets/images/sample/sample_icon.svg" alt=""></div><span>종로 교육/강좌<br>예약 신청</span></a>
+          <a href="#" class="quick-link_item"><div class="img-wrap"><img src="../assets/images/icon_compl_01.svg" alt=""></div><span>종합 민원<br>통합 신청</span></a>
+          <a href="#" class="quick-link_item"><div class="img-wrap"><img src="../assets/images/icon_compl_02.svg" alt=""></div><span>대형 생활<br>폐기물 신고</span></a>
+          <a href="#" class="quick-link_item"><div class="img-wrap"><img src="../assets/images/icon_compl_03.svg" alt=""></div><span>교통 과태료<br>조회</span></a>
+          <a href="#" class="quick-link_item"><div class="img-wrap"><img src="../assets/images/icon_compl_04.svg" alt=""></div><span>지방세<br>환급 신청</span></a>
+          <a href="#" class="quick-link_item"><div class="img-wrap"><img src="../assets/images/icon_compl_05.svg" alt=""></div><span>건강이랑<br>서비스 신청</span></a>
+          <a href="#" class="quick-link_item"><div class="img-wrap"><img src="../assets/images/icon_compl_06.svg" alt=""></div><span>정화조 청소<br>예약 신청</span></a>
         </div>
+        <div class="quick-link type-b">
+          <a href="#" class="quick-link_item"><div class="img-wrap"><img src="../assets/images/icon_compl_07.svg" alt=""></div><span>실시간<br>공영주차장</span></a>
+          <!-- TODO: app 명칭 변경 -->
+          <a href="#" class="quick-link_item"><div class="img-wrap"><img src="../assets/images/icon_compl_08.svg" alt=""></div><span>종로ONE<br>긴급신고 안내</span></a>
+        </div>
+      </section>
 
-        <!-- 제설함 배너는 동절기에만 노출 -->
+      <!-- 제설함 배너는 동절기에만 노출 -->
+      <section class="content-box">
         <div class="banners">
-          <div class="banner">
+          <div class="banner banner-edu">
             <a href="#">
               <dl>
                 <dt>종로 교육/강좌</dt>
                 <dd>
-                  평생/혁신교육, 진로 직업체험 교육 서비스
+                  평생/혁신교육, 진로 직업체험<br>교육 서비스
                 </dd>
               </dl>
-              <img src="../../assets/images/sample/sample_04.jpg" alt="배경이미지">
+              <img src="../../assets/images/icon_banner_edu.svg" alt="종로 교육강좌 이미지" class="banner-img">
             </a>
           </div>
+        </div>
+      </section>
 
-          <div class="banner">
+      <section class="content-box">
+        <div class="banners">
+          <div class="banner banner-snow">
             <a href="#">
               <dl>
                 <dt>스마트 제설함</dt>
@@ -121,14 +131,14 @@
                   눈이와도 안전하게! 우리동네 제설함
                 </dd>
               </dl>
-              <img src="../../assets/images/sample/sample_04.jpg" alt="배경이미지">
+              <img src="../../assets/images/icon_banner_snow.svg" alt="스마트 제설함 이미지" class="banner-img">
             </a>
           </div>
         </div>
       </section>
 
       <!-- 종로알림 -->
-      <section class="content-box filled-a">
+      <section class="content-box filled-swiper filled-a">
         <h3 class="content-title">
           새소식
           <a href="#" role="button" class="btn btn-more">전체보기</a>
@@ -160,7 +170,7 @@
       </section>
 
       <!-- 채용공고 -->
-      <section class="content-box filled-b">
+      <section class="content-box filled-swiper filled-b">
         <h3 class="content-title">
           일자리
           <a href="#" role="button" class="btn btn-more">전체보기</a>
@@ -222,7 +232,7 @@
           <ul class="recommend-list">
             <li>
               <div class="recommend-item">
-                <div class="img-thumb"><img src="../../assets/images/sample/sample_07.jpeg" alt="이미지설명"></div>
+                <div class="img-thumb"><img src="../../assets/images/sample/sample_course.png" alt="이미지설명"></div>
                 <div class="course-title">
                   <div class="course-title">
                     <p class="course-title_name">세종마을</p>
@@ -233,7 +243,7 @@
             </li>
             <li>
               <div class="recommend-item">
-                <div class="img-thumb"><img src="../../assets/images/sample/sample_07.jpeg" alt="이미지설명"></div>
+                <div class="img-thumb"><img src="../../assets/images/sample/sample_course_2.png" alt="이미지설명"></div>
                 <div class="course-title">
                   <div class="course-title">
                     <p class="course-title_name">인왕산자락<br>예술가길</p>
@@ -244,7 +254,7 @@
             </li>
             <li>
               <div class="recommend-item">
-                <div class="img-thumb"><img src="../../assets/images/sample/sample_07.jpeg" alt="이미지설명"></div>
+                <div class="img-thumb"><img src="../../assets/images/sample/sample_course_3.png" alt="이미지설명"></div>
                 <div class="course-title">
                   <p class="course-title_name">광장시장</p>
                   <p class="course-title_exp">조선의 역사와 전설</p>
@@ -253,7 +263,7 @@
             </li>
             <li>
               <div class="recommend-item">
-                <div class="img-thumb"><img src="../../assets/images/sample/sample_07.jpeg" alt="이미지설명"></div>
+                <div class="img-thumb"><img src="../../assets/images/sample/sample_course.png" alt="이미지설명"></div>
                 <div class="course-title">
                   <p class="course-title_name">세종마을</p>
                   <p class="course-title_exp">조선의 역사와 전설</p>
@@ -262,7 +272,7 @@
             </li>
             <li>
               <div class="recommend-item">
-                <div class="img-thumb"><img src="../../assets/images/sample/sample_07.jpeg" alt="이미지설명"></div>
+                <div class="img-thumb"><img src="../../assets/images/sample/sample_course_2.png" alt="이미지설명"></div>
                 <div class="course-title">
                   <p class="course-title_name">세종마을</p>
                   <p class="course-title_exp">조선의 역사와 전설</p>
@@ -311,10 +321,10 @@
             <img src="../assets/images/logo_hotline.png">
           </a>
           <a href="#" class="link-item" title="종로구청 홈페이지 바로가기">
-            <img src="../assets/images/logo.png">
+            <img src="../assets/images/logo_jn.png">
           </a>
           <a href="#" class="link-item" title="정부24 사이트 바로가기">
-            <img src="../assets/images/logo_gov.svg">
+            <img src="../assets/images/logo_gov.png">
           </a>
           <a href="#" class="link-item" title="전체메뉴 보기">
             전체 메뉴

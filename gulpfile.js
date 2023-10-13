@@ -128,6 +128,13 @@ gulp.task("browserSync", function () {
   });
 });
 
+gulp.task("mapCopy", function () {
+  return new Promise((resolve) => {
+    gulp.src("map/**/*.*").pipe(gulp.dest("dist/map"));
+    resolve();
+  });
+});
+
 // run gulp
 gulp.task(
   "default",
@@ -140,6 +147,7 @@ gulp.task(
     "filesCopy",
     "imagesCopy",
     "scriptCopy",
+    "mapCopy",
     "browserSync",
     "watch"
   ])

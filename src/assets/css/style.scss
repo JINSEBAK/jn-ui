@@ -1,6 +1,8 @@
 @import "./_variables.scss";
 @import "./_mixins.scss";
 
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@200;300;400;500;600&display=swap");
+
 // @font-face {
 //   font-family: "SCDream";
 //   src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff")
@@ -8,14 +10,15 @@
 //   font-weight: normal;
 //   font-style: normal;
 // }
+// src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/IBMPlexSansKR-Regular.woff")
+//   format("woff");
 
-@font-face {
-  font-family: "IBMPlexSansKR-Regular";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/IBMPlexSansKR-Regular.woff")
-    format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
+// @font-face {
+//   font-family: "IBMPlexSansKR-Regular";
+//   src: url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@200;300;400;500;600&display=swap");
+//   font-weight: normal;
+//   font-style: normal;
+// }
 
 @font-face {
   font-family: "GangwonState";
@@ -37,7 +40,7 @@ html {
 
 html,
 body {
-  font-family: "IBMPlexSansKR-Regular";
+  font-family: "IBM Plex Sans KR", sans-serif;
   font-size: 16px;
 }
 
@@ -46,7 +49,8 @@ input,
 textarea,
 select {
   transition: all 0.3s;
-  font-family: "IBMPlexSansKR-Regular";
+  font-family: "IBM Plex Sans KR", sans-serif;
+  line-height: 1.2;
 }
 
 a {
@@ -174,7 +178,6 @@ hr.full-line {
   height: $header;
   &.main {
     gap: 0.5rem;
-    background-color: transparent;
     border-bottom-color: transparent;
     .logo {
       img {
@@ -229,8 +232,12 @@ hr.full-line {
           flex-direction: column;
           align-items: center;
           gap: 0.25rem;
-          font-size: 0.875rem;
+          font-size: 10px;
           color: $gnb-text;
+          .icon {
+            width: 1.5rem;
+            height: 1.5rem;
+          }
         }
         &:active {
           background-color: rgba(0, 0, 0, 0.03);
@@ -391,11 +398,12 @@ hr.full-line {
     background-size: 1.25rem;
   }
   &-more {
-    font-size: 0.75rem;
-    padding: 0.25rem 1rem 0.25rem 0.5rem;
+    font-size: 13px;
+    color: #3f3f45;
+    padding: 0.25rem 1.5rem 0.25rem 0.5rem;
     background: transparent url(../images/icon_chevron_right.svg) right center
       no-repeat;
-    background-size: 1rem;
+    background-size: 1.5rem;
   }
   &:disabled {
     cursor: auto;
@@ -1169,10 +1177,12 @@ select {
 
 .badge {
   display: inline-block;
-  border-radius: 20px;
+  border-radius: 24px;
   font-size: 0.75rem;
+  height: 22px;
+  line-height: 22px;
   color: #fff !important;
-  padding: 0.5rem;
+  padding: 0 0.5rem;
   &.category {
     background-color: $badge-category;
   }
@@ -1189,12 +1199,14 @@ select {
   &.new {
     background-color: $em-text;
     padding: 0;
-    width: 1rem;
-    height: 1rem;
-    font-size: 0.5rem;
+    width: 14px;
+    height: 14px;
+    font-weight: bold;
+    line-height: 16px;
     display: inline-flex;
     &::after {
       content: "N";
+      font-size: 8px;
       margin: auto;
     }
   }
@@ -1206,10 +1218,9 @@ select {
   gap: 1rem;
   .banner {
     display: block;
-    border-radius: 0.5rem;
+    border-radius: 0.625rem;
     overflow: hidden;
     position: relative;
-    min-height: 120px;
     &-title {
       font-family: "GangwonState";
       position: absolute;
@@ -1218,34 +1229,28 @@ select {
       top: 50%;
       transform: translateY(-50%);
       font-size: 7vw;
-      font-weight: 900;
       color: #fff;
       text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
     }
-    img {
-      display: block;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
     a {
-      display: block;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      overflow: hidden;
+      padding: 1rem 1.5rem 1rem 1rem;
       dl {
-        position: absolute;
-        color: #fff;
-        font-weight: bold;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-        width: 100%;
-        padding: 0 1rem;
+        position: relative;
+        z-index: 20;
+        flex: 1;
         dt {
-          font-size: 1.25rem;
-          text-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
+          font-size: 1.125rem;
+          font-weight: 500;
           margin-bottom: 0.5rem;
         }
         dd {
           line-height: 1.2;
+          color: #282d38;
+          font-size: 13px;
           span {
             display: block;
             text-align: right;
@@ -1255,12 +1260,49 @@ select {
         }
       }
     }
+    &-img {
+      width: 5rem;
+      height: 5rem;
+      position: relative;
+      z-index: 20;
+      &_bg {
+        // 배경이미지
+        position: absolute;
+        display: block;
+        z-index: 10;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        object-fit: cover;
+      }
+    }
     &.ban00 {
       background-color: #c43e10;
       height: 148px;
     }
     &.ban01 {
       background-color: #000;
+    }
+    &-ticket {
+      background-color: rgba(229, 206, 145, 0.3);
+    }
+    &-edu {
+      background-color: rgba(228, 94, 99, 0.3);
+    }
+    &-snow {
+      background: rgba(157, 176, 244, 0.3) url(../images/bg_banner_snow.svg)
+        right center no-repeat;
+    }
+    &-sign {
+      background-color: $bg-primary;
+      a {
+        dl {
+          dt,
+          dd {
+            color: #fff;
+          }
+        }
+      }
     }
   }
 }
@@ -1482,15 +1524,15 @@ select {
 // swiper
 .swiper-pagination {
   &.custom {
-    transform: translate3d(0, 0, 0);
+    transform: translate3d(0, -180%, 0);
   }
   &-bullet {
-    border: 1px solid #9696a2;
+    border: 1px solid #9696a3;
     background: transparent !important;
     opacity: 1 !important;
     margin: 0 3px !important;
     &.swiper-pagination-bullet-active {
-      background: #9696a2 !important;
+      background: #9696a3 !important;
       width: 1rem;
       border-radius: 4px;
     }
@@ -1580,7 +1622,7 @@ select {
     background-image: url(../../assets/images/icon_chevron_right_w.svg);
   }
   &.target {
-    background-image: url(../../assets/images/icon_target.svg);
+    background-image: url(../../assets/images/icon_map_current.svg);
   }
   &.sunny {
     background-image: url(../../assets/images/icon_w_sunny.svg);

@@ -189,13 +189,13 @@ a {
 
 .el-items {
   margin-bottom: 2rem;
-  dt {
+  > dt {
     font-size: 0.875rem;
     font-weight: bold;
     margin-bottom: 0.5rem;
     text-indent: 0.5rem;
   }
-  dd {
+  > dd {
     border: 1px solid #cdcdcd;
     border-radius: 0.25rem;
     padding: 1rem;
@@ -256,6 +256,14 @@ input[type="text"]:focus {
   box-shadow: 0 0 0 3px rgb(231, 255, 250);
 }
 
-.audio-player {
+.audio-player,
+.banner {
   max-width: 400px;
+}
+
+.banners {
+  h5 {
+    font-size: 0.875rem;
+    font-weight: bold;
+  }
 }
