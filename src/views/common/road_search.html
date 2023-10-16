@@ -1,14 +1,23 @@
 <!-- search -->
 <div class="place-search">
   <div class="input">
-    <input type="text" placeholder="장소 검색" />
-    <span class="icon search">
+    <input type="text" placeholder="종로에서 찾고 싶은 곳은?" />
+    <span class="icon srch">
       <span class="sr-only">장소검색</span>
     </span>
   </div>
-  <div class="filter">
+  <div class="place-filter">
     <div class="radio">
-      <input type="radio" id="radio" name="sample-radio" value="1" checked />
+      <input type="radio" id="radio0" name="sample-radio" value="0" checked />
+      <label for="radio0" class="btn-radio radio-all">
+        <span class="icon all-menu">
+          <span class="sr-only">모두보기</span>
+        </span>
+      </label>
+    </div>
+
+    <div class="radio">
+      <input type="radio" id="radio" name="sample-radio" value="1" />
       <label for="radio" class="btn-radio"><span>종로산책</span></label>
     </div>
     <div class="radio">

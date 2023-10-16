@@ -19,6 +19,25 @@
       object-fit: cover;
     }
   }
+  .btn-recommend {
+    position: absolute;
+    bottom: 78px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: lazyup 0.8s ease forwards;
+  }
+}
+
+@keyframes lazyup {
+  0% {
+    bottom: -78px;
+  }
+  60% {
+    bottom: 92px;
+  }
+  100% {
+    bottom: 78px;
+  }
 }
 
 .course {
@@ -32,34 +51,64 @@
   position: absolute;
   left: 0;
   right: 0;
-  top: $header;
-  padding-top: 1rem;
+  top: 74px;
   .input {
-    padding: 0 1rem;
-    margin-bottom: 0.25rem;
+    padding: 0 1.25rem;
+    margin-bottom: 1rem;
+    position: relative;
     input[type="text"] {
       border-radius: 50px;
       box-shadow: 0 0 5px 3px rgba(0, 0, 0, 0.09);
     }
-    .search {
+    .srch {
       position: absolute;
       right: 2rem;
       top: 50%;
       transform: translateY(-50%);
     }
   }
-  .filter {
-    display: flex;
-    align-items: center;
-    gap: 0.25rem;
-    overflow-x: auto;
-    padding: 0.25rem 1rem;
-    scrollbar-width: none;
-    &::-webkit-scrollbar {
-      display: none;
+}
+
+.place-filter {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  overflow-x: auto;
+  padding: 0.125rem 1.25rem;
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  .radio {
+    flex: 0 0 auto;
+    input[type="radio"] {
+      & + label {
+        border-color: transparent;
+        color: #18181a;
+        font-size: 13px;
+        padding: 0 12px;
+        line-height: 1.2;
+        height: 28px;
+        box-shadow: 1px 3px 2px rgba(0, 0, 0, 0.1);
+        span {
+          padding: 0;
+        }
+        &.radio-all {
+          padding: 0;
+          width: 2rem;
+          height: 2rem;
+          .icon {
+            background-size: 1.25rem;
+          }
+        }
+      }
+      &:checked + label {
+        background-color: #ffffff;
+        box-shadow: 1px 3px 2px rgba(0, 0, 0, 0.1);
+      }
     }
-    .radio {
-      flex: 0 0 auto;
+    & + .radio {
+      margin-left: 0;
     }
   }
 }
@@ -69,16 +118,28 @@
   width: 2.5rem;
   height: 2.5rem;
   border-radius: 50%;
-  background-color: $btn-primary;
-  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.05);
+  background-color: #fff;
+  box-shadow: 1px 4px 10px rgba(0, 0, 0, 0.3);
   position: fixed;
   right: 1rem;
-  bottom: calc($bottom + 1rem);
+  bottom: calc($bottom + 80px);
+  animation: fadeIn 0.5s 1s ease forwards;
+  animation-delay: 1s;
+  opacity: 0;
   .icon {
     margin: auto;
   }
   &:active {
     box-shadow: 0 0 2px 3px rgb(255, 218, 213);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 

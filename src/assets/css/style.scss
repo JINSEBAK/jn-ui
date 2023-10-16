@@ -122,6 +122,10 @@ a {
 
 .x-scroll {
   overflow-x: auto !important;
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 .new-alarm {
@@ -196,6 +200,10 @@ hr.full-line {
     justify-content: space-between;
   }
   &.location {
+    height: 50px;
+    .icon.map {
+      background-size: 100%;
+    }
     .btn {
       margin-left: auto;
     }
@@ -404,6 +412,17 @@ hr.full-line {
     background: transparent url(../images/icon_chevron_right.svg) right center
       no-repeat;
     background-size: 1.5rem;
+  }
+  &-recommend {
+    background-color: rgba(119, 49, 71, 0.9);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 1px 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 40px;
+    width: calc(100% - 40px);
+    height: 50px;
   }
   &:disabled {
     cursor: auto;
@@ -1639,6 +1658,12 @@ select {
   }
   &.sunny {
     background-image: url(../../assets/images/icon_w_sunny.svg);
+  }
+  &.recommend {
+    background-image: url(../../assets/images/icon_recommend.svg);
+  }
+  &.all-menu {
+    background-image: url(../../assets/images/icon_all_cate.svg);
   }
 }
 
