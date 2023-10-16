@@ -3,9 +3,10 @@
 
 // 검색
 .search {
+  background-color: $bg;
   .container {
-    padding-bottom: calc($header + 2rem);
     margin-top: 0;
+    padding: 1.5rem 1.25rem;
   }
   &.place {
     .container {
@@ -14,26 +15,34 @@
   }
 }
 .search-box {
-  padding: 2rem 1rem;
+  padding: 0;
+  margin-bottom: 1.5rem;
   position: relative;
   h2 {
     font-size: 1.25rem;
     font-weight: bold;
     margin-bottom: 0.5rem;
   }
-  .float-text {
-    position: absolute;
-    right: 1rem;
-    top: 2rem;
-    font-size: 0.75rem;
-    padding: 0;
-    &.date {
-      @include textDate;
-    }
-  }
   &_title {
     font-weight: bold;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
+    position: relative;
+    .btn-text {
+      position: absolute;
+      right: 0;
+      top: 0;
+      font-size: 13px;
+      padding: 0;
+      line-height: 1.2;
+      color: #9696a3;
+      font-weight: normal;
+    }
+    .date {
+      color: #9696a3;
+      font-weight: normal;
+      font-size: 11px;
+      margin-left: 0.5rem;
+    }
   }
   &.quick {
     background-color: #f2f3f6;
@@ -76,13 +85,18 @@
   gap: 0.5rem;
   flex-wrap: wrap;
   .keyword {
-    border: 1px solid $border-basic;
+    border: 1px solid #dcdcdc;
     border-radius: 10rem;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
-    padding: 0.5rem;
+    padding: 0.25rem 0.75rem;
+    background-color: #fff;
+    .btn-keyword {
+      font-size: 13px;
+      color: #3f3f45;
+    }
   }
 }
 
@@ -91,12 +105,21 @@
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  max-height: 236px;
-  padding: 0 0 0 2rem;
+  max-height: 150px;
+  padding: 0 0 0 1.5rem;
   gap: 0.5rem;
   li {
     width: 50%;
-    padding: 0.5rem 0;
+    padding: 0;
+    .btn-keyword {
+      color: #3f3f45;
+      font-size: 0.875rem;
+      line-height: 1.1;
+    }
+    &::marker {
+      font-size: 0.875rem;
+      font-family: "IBM Plex Sans KR";
+    }
   }
 }
 
@@ -105,9 +128,10 @@
   gap: 0.5rem;
   .quick-search {
     flex: 1;
-    background-color: #fff;
-    border-radius: 0.5rem;
-    padding: 1rem 0.5rem;
+    border: 1px solid #dcdcec;
+    background-color: #f1f1f9;
+    border-radius: 10px;
+    padding: 1rem;
   }
   .keywords {
     display: flex;

@@ -836,7 +836,7 @@ select {
   .btn {
     z-index: 1000;
     position: absolute;
-    right: 0.5rem;
+    right: 1rem;
     top: 50%;
     transform: translateY(-50%);
     &.btn-delete {
@@ -846,8 +846,11 @@ select {
   }
   input[type="search"] {
     width: 100%;
-    border-radius: 3rem;
-    padding: 0.75rem 2rem 0.75rem 1rem;
+    height: 50px;
+    border-radius: 4px;
+    padding: 0.75rem 3rem 0.75rem 1rem;
+    border-color: #dcdcec;
+    box-shadow: 1px 3px 10px rgba(0, 0, 0, 0.1);
   }
 }
 
@@ -1238,26 +1241,29 @@ select {
       gap: 1rem;
       overflow: hidden;
       padding: 1rem 1.5rem 1rem 1rem;
-      dl {
-        position: relative;
-        z-index: 20;
-        flex: 1;
-        dt {
-          font-size: 1.125rem;
-          font-weight: 500;
-          margin-bottom: 0.5rem;
-        }
-        dd {
-          line-height: 1.2;
-          color: #282d38;
-          font-size: 13px;
-          span {
-            display: block;
-            text-align: right;
-            font-size: 0.75rem;
-            margin-top: 1rem;
-          }
-        }
+    }
+    dl {
+      position: relative;
+      z-index: 20;
+      flex: 1;
+    }
+    dt {
+      font-size: 1.125rem;
+      font-weight: 500;
+      margin-bottom: 0.5rem;
+      em {
+        color: $banner-em;
+      }
+    }
+    dd {
+      line-height: 1.2;
+      color: #282d38;
+      font-size: 13px;
+      span {
+        display: block;
+        text-align: right;
+        font-size: 0.75rem;
+        margin-top: 1rem;
       }
     }
     &-img {
@@ -1302,6 +1308,13 @@ select {
             color: #fff;
           }
         }
+      }
+    }
+    &-movin {
+      background-color: #ad2a4b;
+      dt,
+      dd {
+        color: #fff;
       }
     }
   }
@@ -1564,7 +1577,7 @@ select {
   &.faq {
     background-image: url(../../assets/images/icon_faq.svg);
   }
-  &.search {
+  &.srch {
     background-image: url(../../assets/images/icon_search.svg);
   }
   &.calendar {

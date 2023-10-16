@@ -11,7 +11,7 @@
         <div class="search-keyword">
           <input type="search" placeholder="검색어 입력" id="inputSearch">
           <button type="button" class="btn btn-icon">
-            <span class="icon search">
+            <span class="icon srch">
               <span class="sr-only">검색</span>
             </span>
           </button>
@@ -26,9 +26,13 @@
         </div>
       </section>
 
+      <!-- 최근 검색어 -->
       <section class="search-box">
-        <h3 class="search-box_title">최근 검색어</h3>
-        <button type="button" class="btn btn-text float-text">전체 삭제</button>
+        <h3 class="search-box_title">
+          최근 검색어
+          <button type="button" class="btn btn-text">전체 삭제</button>
+        </h3>
+        <!-- TODO: localStorage 관리 -->
         <div class="history-keyword">
           <div class="keyword">
             <button type="button" class="btn btn-keyword">광화문 주차</button>
@@ -43,7 +47,7 @@
             </button>
           </div>
           <div class="keyword">
-            <button type="button" class="btn btn-keyword">대형생활폐기물 신고</button>
+            <button type="button" class="btn btn-keyword">쓰레기 배출</button>
             <button type="button" class="btn btn-delete">
               <span class="sr-only">삭제 버튼</span>
             </button>
@@ -55,7 +59,7 @@
             </button>
           </div>
           <div class="keyword">
-            <button type="button" class="btn btn-keyword">종로 공영 주차장</button>
+            <button type="button" class="btn btn-keyword">교보문고</button>
             <button type="button" class="btn btn-delete">
               <span class="sr-only">삭제 버튼</span>
             </button>
@@ -64,8 +68,10 @@
       </section>
 
       <section class="search-box">
-        <h3 class="search-box_title">인기 검색어</h3>
-        <span class="float-text date">2023-09-10 12:00 기준</span>
+        <h3 class="search-box_title">
+          인기 검색어
+          <span class="date">2023-09-10 12:00 기준</span>
+        </h3>
         <ol class="rank-keyword">
           <li><button type="button" class="btn btn-keyword">주정차 과태료</button></li>
           <li><button type="button" class="btn btn-keyword">북촌 한옥마을</button></li>
@@ -105,23 +111,23 @@
         </div>
       </section>
 
+      <!-- 전입자 배너 -->
       <section class="search-box">
         <div class="banners">
-          <div class="banner move-in">
+          <div class="banner banner-movin">
             <a href="#">
               <dl>
-                <dt>종로구 전입자 안내 가이드</dt>
+                <dt>종로구 <em>전입자 안내 가이드</em></dt>
                 <dd>
-                  종로구로 이사오셨어요?<br>
-                  종로구민이 되신 것을 축하드립니다.
-                  <span>바로가기</span>
+                  종로구 생활에 필요한 정보를<br>안내합니다.
                 </dd>
               </dl>
-              <img src="../../assets/images/sample/sample_04.jpg" alt="배경이미지" class="banner-img_bg">
+              <img src="../../assets/images/icon_banner_movin.png" alt="" class="banner-img">
             </a>
           </div>
         </div>
       </section>
+
     </div>
     @@include('../common/navigation.html')
     @@include('../common/script.html')
