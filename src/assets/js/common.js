@@ -53,7 +53,7 @@ $(document).ready(function () {
   });
 
   // bottom sheet 닫기
-  $(".btm-sheet_head .close").on("click", function () {
+  $(".btm-sheet .close").on("click", function () {
     popupClose(this);
   });
 

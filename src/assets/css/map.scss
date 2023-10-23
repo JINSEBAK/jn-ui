@@ -19,24 +19,76 @@
       object-fit: cover;
     }
   }
-  .btn-recommend {
+
+  .map-footer {
     position: absolute;
-    bottom: 78px;
-    left: 50%;
-    transform: translateX(-50%);
-    animation: lazyup 0.8s ease forwards;
+    bottom: -78px;
+    width: 100%;
+    padding: 0 1.25rem 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 1rem;
+    animation: down 0.5s ease forwards;
+    .btn-recommend {
+      transform: translateX(0%);
+      width: 100%;
+      opacity: 0;
+    }
+    .my-location {
+      display: flex;
+      width: 2.5rem;
+      height: 2.5rem;
+      border-radius: 50%;
+      background-color: #fff;
+      box-shadow: 1px 4px 10px rgba(0, 0, 0, 0.3);
+      position: absolute;
+      opacity: 0;
+      transform: translateY(-140%);
+      animation: fadeIn 0.5s ease forwards;
+      animation-delay: 1s;
+      .icon {
+        margin: auto;
+      }
+      &:active {
+        box-shadow: 0 0 2px 3px rgb(255, 218, 213);
+      }
+    }
+    &.course {
+      animation: lazyup 0.8s ease forwards;
+      .btn-recommend {
+        opacity: 1;
+      }
+    }
+  }
+}
+@keyframes down {
+  0% {
+    bottom: 10px;
+  }
+  100% {
+    bottom: -78px;
   }
 }
 
 @keyframes lazyup {
   0% {
-    bottom: -78px;
+    bottom: -150px;
   }
   60% {
-    bottom: 92px;
+    bottom: 16px;
   }
   100% {
-    bottom: 78px;
+    bottom: 0;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 
@@ -52,6 +104,7 @@
   left: 0;
   right: 0;
   top: 74px;
+  z-index: 900;
   .input {
     padding: 0 1.25rem;
     margin-bottom: 1rem;
@@ -103,43 +156,13 @@
         }
       }
       &:checked + label {
-        background-color: #ffffff;
+        background-color: $bg-primary;
         box-shadow: 1px 3px 2px rgba(0, 0, 0, 0.1);
       }
     }
     & + .radio {
       margin-left: 0;
     }
-  }
-}
-
-.my-location {
-  display: flex;
-  width: 2.5rem;
-  height: 2.5rem;
-  border-radius: 50%;
-  background-color: #fff;
-  box-shadow: 1px 4px 10px rgba(0, 0, 0, 0.3);
-  position: fixed;
-  right: 1rem;
-  bottom: calc($bottom + 80px);
-  animation: fadeIn 0.5s 1s ease forwards;
-  animation-delay: 1s;
-  opacity: 0;
-  .icon {
-    margin: auto;
-  }
-  &:active {
-    box-shadow: 0 0 2px 3px rgb(255, 218, 213);
-  }
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
   }
 }
 

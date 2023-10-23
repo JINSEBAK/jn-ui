@@ -332,6 +332,35 @@
         </div>
       </section>
     </div>
+
+    <aside id="aside" class="popup-bg popup-closable on">
+      <div class="popup popup-slide show" id="popupBtmSheet">
+        <div class="btm-sheet btm-sheet-notice">
+          <div class="btm-sheet_body">
+            <div class="swiper" id="noticeSwiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img src="../../assets/images/sample/sample_01.png" alt="공지공지">
+                </div>
+                <div class="swiper-slide">
+                  <img src="../../assets/images/sample/sample_02.webp" alt="공지공지">
+                </div>
+                <div class="swiper-slide">
+                  <img src="../../assets/images/sample/sample_03.jpeg" alt="공지공지">
+                </div>
+              </div>
+            </div>
+            <div class="swiper-pagination custom" id="noticeSwiperPagination"></div>
+          </div>
+          <div class="btm-sheet_tail">
+            <button type="button" class="btn btn-text close">오늘 그만보기</button>
+            <button type="button" class="btn btn-text close">닫기</button>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+
     @@include('../common/navigation.html', {activeMenu: "on"})
     @@include('../common/script.html')
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
@@ -397,6 +426,24 @@
         },
         pagination: {
           el: "#jobSwiperPagination",
+        },
+        autoplay: {
+          delay: 4500,
+          desableOnInteraction:false
+        }
+      })
+
+      // notice
+      const noticeSlide = new Swiper('#noticeSwiper', {
+        slidesPerView: 1,
+        spaceBetween: 0,
+        loop:false,
+        loopAdditionalSlides:1,
+        keyboard: {
+          enables: true
+        },
+        pagination: {
+          el: "#noticeSwiperPagination"
         },
         autoplay: {
           delay: 4500,
