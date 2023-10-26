@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    @@include('../common/head.html')
+    <link rel="stylesheet" href="../assets/css/home.css"></link>
+  </head>
+  <body class="home">
+
+    @@include('../common/header_sub.html', {title: "건강이랑 서비스 신청"})
+
+    <div class="container inner-full-padd">
+
+    <section class="info-input">
+
+        <h4 class="info-input_title">건강이랑 서비스 신청</h4>
+
+        <div class="input">
+            <label for="input" class="required"><span>신청자명</span></label>
+            <input type="text" placeholder="이름" id="" maxlength="30">
+        </div>
+
+        <div class="input inline">
+            <label for="input" class="required"><span>생년월일</span></label>
+            <div class="d-flex">
+                <input type="text" placeholder="8자리 숫자 입력">
+                <button type="button" class="btn btn-default">연령확인</button>
+            </div>
+        </div>
+
+        <div class="input">
+            <label for="input" class="required"><span>휴대폰번호</span></label>
+            <input type="tel" placeholder="-없이 휴대폰번호 입력" id="" maxlength="30" value="" >
+        </div>
+
+        <div class="input inline">
+            <label for="input" class="required"><span>주소</span></label>
+            <div class="d-flex">
+                <input type="text" placeholder="우편번호" readonly>
+                <button type="button" class="btn btn-default">주소검색</button>
+            </div>
+            <input type="text" placeholder="주소" readonly>
+            <input type="text" placeholder="상세주소">
+        </div>
+
+        <div class="input inline-r">
+            <label for="input" class="required"><span>병의원 진료 여부</span></label>
+            <div class="radio">
+                <input type="radio" id="radio" name="sample-radio" value="1">
+                <label for="radio"><span>예</span></label>
+            </div>
+            <div class="radio">
+                <input type="radio" id="radio2" name="sample-radio" value="2">
+                <label for="radio2"><span>아니오</span></label>
+            </div>
+        </div>
+
+        <div class="input inline-r">
+            <label for="input" class="required"><span>가구 형태</span></label>
+            <div class="radio">
+                <input type="radio" id="radio3" name="sample-radio2" value="1">
+                <label for="radio3"><span>1.2인 가구</span></label>
+            </div>
+            <div class="radio">
+                <input type="radio" id="radio4" name="sample-radio2" value="2">
+                <label for="radio4"><span>다인가구</span></label>
+            </div>
+        </div>
+
+        <div class="divided"></div>
+
+        <h4 class="info-input_title">대리 신청</h4>
+
+        <div class="input inline-r">
+            <label for="input" class="required"><span>신청자와 대상자의 관계</span></label>
+            <div class="radio">
+                <input type="radio" id="radio5" name="sample-radio3" value="1">
+                <label for="radio5"><span>본인</span></label>
+            </div>
+            <div class="radio">
+                <input type="radio" id="radio6" name="sample-radio3" value="2">
+                <label for="radio6"><span>자녀</span></label>
+            </div>
+            <div class="radio">
+                <input type="radio" id="radio7" name="sample-radio7" value="3">
+                <label for="radio7"><span>이웃</span></label>
+            </div>
+            <div class="radio">
+                <input type="radio" id="radio8" name="sample-radio8" value="4">
+                <label for="radio8"><span>기타</span></label>
+            </div>
+        </div>
+
+        <div class="input">
+            <label for="input" class="required"><span>대리 신청자명</span></label>
+            <input type="text" placeholder="이름" id="" maxlength="30" disabled>
+        </div>
+
+        <div class="input">
+            <label for="input" class="required"><span>대리 신청자 휴대폰번호</span></label>
+            <input type="tel" placeholder="-없이 휴대폰번호 입력" id="" maxlength="30" disabled>
+        </div>
+
+        <div class="divided"></div>
+
+
+        <h4 class="info-input_title">설문</h4>
+
+        <div class="select">
+            <label for="select" class="required"><span>건강이랑 서비스를 알게 된 경로</span></label>
+            <select id="select">
+                <option value="">지역활동가</option>
+                <option value="">홍보물 리플릿</option>
+                <option value="">지인소개</option>
+                <option value="">기타</option>
+            </select>
+        </div>
+
+        <div class="input inline-r">
+            <label for="input" class="required"><span>보건소 또는 각 권역내소 가능 여부</span></label>
+            <div class="radio">
+                <input type="radio" id="radio9" name="sample-radio3" value="1">
+                <label for="radio9"><span>예</span></label>
+            </div>
+            <div class="radio">
+                <input type="radio" id="radio10" name="sample-radio3" value="2">
+                <label for="radio10"><span>아니오</span></label>
+            </div>
+        </div>
+
+        <div class="divided"></div>
+
+        <div class="terms-agree">
+            <div class="checkbox">
+                <input type="checkbox" id="checkbox" name="" value="1">
+                <label for="checkbox"><span>[필수] 개인정보의 제 3자 제공 동의</span></label>
+            </div>
+            <a href="#" role="button" class="link-detail">자세히</a>
+        </div>
+
+    </section>
+
+    <div class="btns under">
+        <button type="button" class="btn btn-primary" id="btnReserve">건강이랑 서비스 신청</button>
+    </div>
+
+
+    </div>
+
+  </body>
+</html>

@@ -290,6 +290,9 @@
       font-weight: bold;
       display: block;
       color: #000;
+      &.tit {
+        font-size: 1rem;
+      }
     }
     & + .pre-guide_cont {
       margin-top: 1.5rem;
@@ -300,6 +303,10 @@
 .info-input {
   .input {
     margin-bottom: 1.5rem;
+  }
+  &_title {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
   }
 }
 
@@ -317,7 +324,7 @@
     font-size: 0.875rem;
     margin: 1rem auto;
   }
-  img.done-clean {
+  img.done-img {
     width: 110px;
     margin: 0 auto;
   }
@@ -337,7 +344,7 @@
       .label {
         font-size: 13px;
         color: $guide-text;
-        min-width: 80px;
+        width: 92px;
       }
     }
   }
