@@ -351,6 +351,23 @@
         font-weight: bold;
         font-size: 1rem;
       }
+      &.col {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.25rem;
+        .label {
+          width: 100%;
+        }
+      }
+      &.seperator {
+        &::before {
+          content: "";
+          display: block;
+          width: 100%;
+          height: 1px;
+          background-color: #dcdcec;
+        }
+      }
     }
   }
   .pre-guide_cont {
