@@ -4,39 +4,59 @@
     @@include('../common/head.html')
     <link rel="stylesheet" href="../assets/css/home.css"></link>
   </head>
-  <body class="more">
-    @@include('../common/header_sub.html', {title: '스마트 번호표 발급'})
+
+  <body class="more no-btm">
+    @@include('../common/header_sub.html', {title: '스마트 번호표'})
     <div class="container inner-padd">
 
       <div class="num-ticket_hd">
         <h2>
-          <span>대기없이 바로바로!!</span>
-          스마트 번호표 발급 받으세요.
+          <span>대기 없이 바로바로!!</span>
+          <em>스마트 번호표</em>를 발급 받으세요.
         </h2>
-        <button type="button" class="btn btn-default">번호표 확인</button>
       </div>
 
       <div>
+        <!-- 종합민원실 / 여권민원실 -->
+        <div class="num-ticket_leg">
+          <div class="num-ticket_info">
+            <h3 class="title">종합민원실</h3>
+            <p>등,초본/인감/가족관계증명서/전입세대열람/출생/사망/혼인/개명/등록부 정정신고 등</p>
+          </div>
+          <div class="num-ticket_issue">
+            <a href="#" class="btn">발급</a>
+          </div>
+        </div>
+
+        <div class="num-ticket_leg">
+          <div class="num-ticket_info">
+            <h3 class="title">여권민원실</h3>
+            <p>신규/여권수령/재발급/사증란 추가/ 사실증명</p>
+          </div>
+          <div class="num-ticket_issue">
+            <a href="#" class="btn">발급</a>
+          </div>
+        </div>
+
         <!-- 부동산 정보과 -->
         <div class="num-ticket_box">
           <div class="num-ticket_info">
             <h3 class="title">종로구청 부동산 정보과</h3>
-            <p>부동산등기/도시재생/재개발/생활불편 신고</p>
-            <label class="label">창구 15</label>
+            <p class="sub-txt">부동산등기/도시재생/재개발/생활불편 신고</p>
+            <label class="label">창구 <strong>2-7</strong></label>
             <ul class="ticket-status">
               <li>
                 <span class="status-title">호출번호</span>
-                <span class="status-current"><strong>210</strong>번</span>
+                <span class="status-current">24</span>
               </li>
               <li>
-                <span class="status-title">대기인 수</span>
-                <span class="status-current"><strong>2</strong>명</span>
+                <span class="status-title">대기인수</span>
+                <span class="status-current">8</span>
               </li>
             </ul>
           </div>
           <div class="num-ticket_issue">
-            <p>휴대폰 번호를 입력하고 번호표를 발행하세요.</p>
-            <button type="button" class="btn btn-primary">번호표 발행</button>
+            <button type="button" class="btn">번호표 발급</button>
           </div>
         </div>
 
@@ -45,21 +65,20 @@
           <div class="num-ticket_info">
             <h3 class="title">평창동 주민센터</h3>
             <p>등초본/인감/전입신고/가족관계증명서/전입세대열람</p>
-            <label class="label">창구 3</label>
+            <label class="label">창구 <strong>2</strong></label>
             <ul class="ticket-status">
               <li>
                 <span class="status-title">호출번호</span>
-                <span class="status-current"><strong>52</strong>번</span>
+                <span class="status-current">21</span>
               </li>
               <li>
                 <span class="status-title">대기인 수</span>
-                <span class="status-current"><strong>0</strong>명</span>
+                <span class="status-current zero">0</span>
               </li>
             </ul>
           </div>
           <div class="num-ticket_issue">
-            <p>휴대폰 번호를 입력하고 번호표를 발행하세요.</p>
-            <button type="button" class="btn btn-primary" disabled>번호표 발행</button>
+            <button type="button" class="btn">번호표 발급</button>
           </div>
         </div>
 
@@ -68,28 +87,33 @@
           <div class="num-ticket_info">
             <h3 class="title">삼청동 주민센터</h3>
             <p>등초본/인감/전입신고/가족관계증명서/전입세대열람</p>
-            <label class="label">창구 3</label>
+            <label class="label">창구 <strong>3</strong></label>
             <ul class="ticket-status">
+              <!-- 로그인 사용자 -->
+              <li class="my-ticket">
+                <span class="status-title">발권번호</span>
+                <span class="status-current">15</span>
+              </li>
               <li>
                 <span class="status-title">호출번호</span>
-                <span class="status-current"><strong>84</strong>번</span>
+                <span class="status-current">10</span>
               </li>
               <li>
                 <span class="status-title">대기인 수</span>
-                <span class="status-current"><strong>3</strong>명</span>
+                <span class="status-current">5</span>
               </li>
             </ul>
           </div>
           <div class="num-ticket_issue">
-            <p>휴대폰 번호를 입력하고 번호표를 발행하세요.</p>
-            <button type="button" class="btn btn-primary">번호표 발행</button>
+            <button type="button" class="btn">번호표 발급</button>
           </div>
         </div>
       </div>
 
-      <div class="guide">
+      <div class="ticket-issue_guide">
+        <h4 class="title">발급 안내 사항</h4>
         <ul>
-          <li>번호표 발급 시간: 평일 오전 10시 ~ 오후 5시 (토.일.공휴일 휴무)</li>
+          <li>번호표 발급 시간: 평일 오전 10시 ~ 오후 5시<br>(토.일.공휴일 휴무)</li>
           <li>스마트 번호표는 순번 발행기에서 발급되는 종이 번호표를 대신합니다.</li>
           <li>차례가 지나면 번호표를 새로 발급 받아야 합니다.</li>
           <li>조회된 대기 인원 및 번호는 실제와 차이가 있을 수 있습니다.</li>

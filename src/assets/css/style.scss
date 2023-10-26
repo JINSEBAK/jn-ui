@@ -42,7 +42,6 @@ html,
 body {
   font-family: "IBM Plex Sans KR", sans-serif;
   font-size: 16px;
-  color: $primary-text;
 }
 
 button,
@@ -63,6 +62,12 @@ a {
   &.link-detail {
     color: $primary-text;
     text-decoration: underline;
+  }
+}
+
+.no-btm {
+  .container {
+    margin-bottom: 0 !important;
   }
 }
 
@@ -142,6 +147,10 @@ a {
   line-height: 1.25rem;
 }
 
+.sub-txt {
+  color: $guide-text;
+}
+
 .new-alarm {
   display: block;
   background-color: $btn-primary;
@@ -196,6 +205,10 @@ hr.full-line {
   height: 0.5rem;
   background-color: $bg-content-box2;
   margin: 1.5rem 0;
+}
+
+strong {
+  font-weight: bold !important;
 }
 
 // header
