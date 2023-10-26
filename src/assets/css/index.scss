@@ -3,6 +3,8 @@
 * index page 용 css으로 실제 프로젝트에서 사용하지 않음
 **/
 
+@import "./_variables.scss";
+
 html,
 body {
   font-size: 16px;
@@ -265,5 +267,32 @@ input[type="text"]:focus {
   h5 {
     font-size: 0.875rem;
     font-weight: bold;
+  }
+}
+
+.color {
+  &-chip {
+    width: 3.5rem;
+    height: 3.5rem;
+    &.primary1 {
+      background-color: $primary1;
+    }
+    &.primary2 {
+      background-color: $primary2;
+    }
+    &.primary3 {
+      background-color: $primary3;
+    }
+    &.primary4 {
+      background-color: $primary4;
+    }
+    &.primary5 {
+      background-color: $primary5;
+    }
+  }
+  .hex-code {
+    margin-top: 0.25rem;
+    font-size: 0.75rem;
+    text-align: center;
   }
 }

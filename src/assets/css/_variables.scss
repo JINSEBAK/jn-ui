@@ -1,13 +1,21 @@
 $btn-primary: #773147;
-$btn-sub: #929292;
+$btn-sub: #9696a3;
 $btn-stamp: rgb(113, 27, 184);
+$btn-second: #282d38;
 
 $checkbox: #ff0000;
 $shadow: #eee;
 
-$border-basic: #eee;
+$border-basic: #c8c8d7;
+$border-light: #dcdcdc;
 $border-dark: #aeaeae;
 $border-focus: #ff0000;
+
+$primary1: #3c1063;
+$primary2: #e31e30;
+$primary3: #773147;
+$primary4: #e1dd00;
+$primary5: #8dcb8d;
 
 $bg: #f7f7fd;
 $bg-primary: #773147;
@@ -20,9 +28,11 @@ $sub-text: #676771;
 $gnb-text: #222;
 $gnb-text-active: #ff0000;
 $date-text: #666;
-$guide-text: #898989;
+$guide-text: #5f5f67;
 $warning-text: #ff6262;
 $safty-text: #0000ff;
+$primary-text: #3f3f45;
+$title-text: #000;
 
 $input-focus: #ffd7d7;
 
@@ -33,7 +43,8 @@ $badge-completed: rgb(162, 107, 145);
 $badge-proceeding: rgb(97, 170, 177);
 
 // size
-$header: 56px;
+$header: 50px;
 $bottom: 70px;
 $form-bottom: 1rem;
 $common-margin: 1rem;
+$btn-height: 46px;

@@ -42,6 +42,7 @@ html,
 body {
   font-family: "IBM Plex Sans KR", sans-serif;
   font-size: 16px;
+  color: $primary-text;
 }
 
 button,
@@ -56,6 +57,13 @@ select {
 a {
   text-decoration: none;
   color: #000;
+  &:visited {
+    color: #000;
+  }
+  &.link-detail {
+    color: $primary-text;
+    text-decoration: underline;
+  }
 }
 
 // screen reader only
@@ -80,6 +88,7 @@ a {
   > span {
     &::after {
       content: "*";
+      display: inline-block;
       color: $em-text;
       padding-left: 0.25rem;
     }
@@ -128,6 +137,11 @@ a {
   }
 }
 
+.ctx {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
 .new-alarm {
   display: block;
   background-color: $btn-primary;
@@ -140,9 +154,10 @@ a {
 }
 
 .guide {
-  font-size: 0.75rem;
+  font-size: 13px;
   padding-top: 0.25rem 0;
   color: $guide-text;
+  line-height: 1.5;
   &.error {
     color: $warning-text;
   }
@@ -159,6 +174,16 @@ a {
   color: $em-text;
 }
 
+.d-flex {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  width: 100%;
+  input[type="text"] {
+    flex: 1;
+  }
+}
+
 hr.full-line {
   height: 1px;
   border: 0;
@@ -171,7 +196,6 @@ hr.full-line {
 #header {
   display: flex;
   align-items: center;
-  border-bottom: 1px solid $border-basic;
   background-color: #fff;
   padding: 0.5rem 1rem;
   position: fixed;
@@ -180,6 +204,7 @@ hr.full-line {
   left: 0;
   right: 0;
   height: $header;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   &.main {
     gap: 0.5rem;
     border-bottom-color: transparent;
@@ -197,7 +222,7 @@ hr.full-line {
     }
   }
   &.sub {
-    justify-content: space-between;
+    gap: 0.25rem;
   }
   &.location {
     height: 50px;
@@ -226,6 +251,7 @@ hr.full-line {
   bottom: 0;
   left: 0;
   right: 0;
+  padding: 0 0 calc(0 + env(safe-area-inset-bottom));
   nav {
     .gnb {
       display: flex;
@@ -312,7 +338,7 @@ hr.full-line {
 }
 
 .inner-full-padd {
-  padding: 1rem;
+  padding: 1.5rem 1rem;
 }
 
 // buttons
@@ -327,7 +353,7 @@ hr.full-line {
     left: 0;
     right: 0;
     bottom: 0;
-    padding: 0.5rem 1rem;
+    padding: 1rem;
     margin: 0;
     z-index: 1000;
     background-color: #fff;
@@ -338,25 +364,34 @@ hr.full-line {
 }
 .btn {
   border: 1px solid transparent;
-  border-radius: 0.25rem;
+  border-radius: 6px;
   padding: 0.75rem 1rem;
   cursor: pointer;
   display: inline-block;
   position: relative;
   overflow: hidden;
+  height: $btn-height;
   line-height: 1rem;
   font-size: 1rem;
   color: #000;
   text-align: center;
   &-primary {
-    background-color: $btn-primary;
-    border-color: $btn-primary;
+    background-color: $primary3;
+    border-color: $primary3;
     color: #fff;
+    &:visited {
+      color: #fff;
+    }
   }
   &-default {
     background-color: #fff;
-    border-color: $btn-primary;
-    color: $btn-primary;
+    border-color: $btn-sub;
+    color: #000;
+  }
+  &-second {
+    background-color: $btn-second;
+    border-color: $btn-second;
+    color: #fff;
   }
   &-sub {
     background-color: $btn-sub;
@@ -365,13 +400,15 @@ hr.full-line {
   }
   &-icon {
     padding: 0;
-    width: 2rem;
-    height: 2rem;
+    width: 1.5rem;
+    height: 1.5rem;
     background-color: transparent;
     display: flex;
+    justify-content: center;
+    align-items: center;
     img {
-      margin: auto;
       position: relative;
+      display: block;
       z-index: 1;
       width: 24px;
       height: 24px;
@@ -482,16 +519,13 @@ hr.full-line {
       position: relative;
       z-index: 10;
       font-size: 0.875rem;
+      color: #000;
       &::before {
         content: "";
         display: block;
-        border: 1px solid $checkbox;
-        background-color: #fff;
-        width: 1rem;
-        height: 1rem;
-      }
-      span {
-        padding-top: 3px;
+        background: url(../images/btn_check.svg) center no-repeat;
+        width: 1.5rem;
+        height: 1.5rem;
       }
       // 버튼형 체크박스
       &.btn-check {
@@ -635,7 +669,8 @@ select:focus {
 }
 
 input::placeholder {
-  color: #cfcfcf;
+  color: #9696a3;
+  font-size: 0.875rem;
   font-weight: 100;
 }
 
@@ -651,8 +686,9 @@ input[type="email"] {
   border: 1px solid $border-basic;
   background-color: #fff;
   padding: 0.75rem 1rem;
-  font-size: 1rem;
-  border-radius: 0.25rem;
+  font-size: 0.875rem;
+  border-radius: 6px;
+  height: 46px;
 }
 
 textarea:focus,
@@ -682,9 +718,10 @@ input::-webkit-search-results-decoration {
 }
 
 input:disabled {
-  color: #999;
+  color: #5f5f67;
+  background-color: #f2f3f9;
   &:active {
-    border: 1px solid transparent;
+    border: 1px solid #dcdcec;
   }
 }
 
@@ -778,6 +815,7 @@ select {
   &.inline {
     flex-direction: row;
     flex-wrap: wrap;
+    gap: 0.5rem;
     label {
       width: 100%;
     }
@@ -785,13 +823,16 @@ select {
     input[type="tel"] {
       flex: 1;
     }
+    .btn {
+      font-size: 0.875rem;
+    }
   }
 
   label {
-    font-size: 0.875rem;
-    text-indent: 0.25rem;
+    font-size: 13px;
     display: flex;
     align-items: center;
+    line-height: 22px;
   }
   input[type="search"],
   input[type="text"] {
@@ -813,13 +854,19 @@ select {
         content: " / ";
       }
     }
+    &.time {
+      color: $em-text;
+      top: 50%;
+      right: 10px;
+      font-size: 13px;
+      transform: translateY(-50%);
+    }
   }
   .btn-delete {
     visibility: hidden;
     position: absolute;
     right: 0.5rem;
     top: 50%;
-
     &.active {
       visibility: visible;
     }
@@ -836,9 +883,14 @@ select {
     gap: 0.5rem;
     position: relative;
     input[type="date"],
-    select {
+    .select {
       width: 50%;
       height: 45px;
+      margin-bottom: 0;
+      .btn {
+        height: 100%;
+        font-size: 0.875rem;
+      }
     }
     .calendar {
       position: absolute;
@@ -972,7 +1024,7 @@ select {
     color: #000;
     text-align: left;
     border: 1px solid $border-basic;
-    background: transparent url(../images/icon_select.svg) right 1rem center
+    background: transparent url(../images/icon_select.svg) right 10px center
       no-repeat;
     &:active {
       border-color: $border-focus;
@@ -1019,7 +1071,7 @@ select {
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.6);
   z-index: 2000;
   overflow: hidden;
   opacity: 0;
@@ -1028,6 +1080,7 @@ select {
   align-items: center;
   justify-content: center;
   transition: all ease 0.3s;
+  box-shadow: 0 -3px 6px rgba(0, 0, 0, 0.1);
   &.on {
     visibility: visible;
     opacity: 1;
@@ -1088,6 +1141,9 @@ select {
 }
 
 .btm-sheet {
+  .btn {
+    font-size: 0.875rem !important;
+  }
   &_head {
     display: flex;
     align-items: center;
@@ -1108,15 +1164,29 @@ select {
   &_body {
     padding: 1rem;
     line-height: 1.2;
+    .section-title {
+      margin-bottom: 0.5rem;
+    }
+    .ctx {
+      margin-bottom: 1rem;
+    }
+    .input {
+      margin-bottom: 0.5rem;
+    }
   }
   &_tail {
-    padding: 0 1rem 1rem;
+    padding: 1.5rem 1rem 1rem;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
     .btn {
-      flex: 1;
+      &.close {
+        width: 100px !important;
+      }
+      &:not(.close) {
+        flex: 1;
+      }
     }
   }
   &-notice {
@@ -1381,8 +1451,8 @@ select {
 .terms-agree {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   font-size: 0.875rem;
+  gap: 0.5rem;
 }
 
 .audio-player {

@@ -165,6 +165,7 @@
     gap: 0.5rem;
     padding: 1rem;
     border: none;
+    color: #000;
     .img-wrap {
       background-color: #fff;
       border-radius: 50%;
@@ -268,28 +269,46 @@
 }
 
 .pre-guide {
-  border: 1px solid $border-basic;
-  border-radius: 0.5rem;
-  background-color: #f2f3f6;
-  padding: 1rem;
   margin-bottom: 2rem;
-  display: flex;
-  min-height: 10rem;
-  > * {
-    margin: auto;
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 1.5rem;
+  }
+  &_title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    line-height: 28px;
+    margin-bottom: 0.5rem;
+    color: #000;
+  }
+  &_cont {
+    line-height: 1.25rem;
+    font-size: 0.875rem;
+    em {
+      font-weight: bold;
+      display: block;
+      color: #000;
+    }
+    & + .pre-guide_cont {
+      margin-top: 1.5rem;
+    }
   }
 }
 
 .info-input {
   .input {
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
   }
 }
 
 .reserve-completed {
+  padding: 0 14px;
   h3 {
     font-weight: bold;
     text-align: center;
+    margin: 1.25rem 0;
   }
   p {
     text-align: center;
@@ -298,19 +317,34 @@
     font-size: 0.875rem;
     margin: 1rem auto;
   }
+  img.done-clean {
+    width: 110px;
+    margin: 0 auto;
+  }
   .reserve-info {
     flex: 1;
+    border: 1px solid $border-light;
+    border-radius: 10px;
+    padding: 1.2rem 1.25rem;
     li {
       display: flex;
-      justify-content: space-between;
       align-items: center;
       gap: 1rem;
       padding: 0.5rem 0;
+      font-size: 0.875rem;
+      color: #000;
+      line-height: 1.2;
       .label {
-        font-weight: bold;
-        font-size: 0.875rem;
+        font-size: 13px;
+        color: $guide-text;
+        min-width: 80px;
       }
     }
+  }
+  .pre-guide_cont {
+    text-align: left;
+    line-height: 1.4;
+    font-size: 13px;
   }
 }
 

@@ -8,17 +8,18 @@
     
     @@include('../common/header_sub.html', {title: "정화조 청소 예약 신청"})
 
-    <div class="container inner-padd">
+    <div class="container inner-full-padd">
      
         <!-- 정보 입력 -->
         <section class="info-input">
-            <h3 class="section-title">예약 신청</h3>
-            <!-- 입력창 + 버튼 구성의 경우 .inline 추가 -->
             <div class="input">
-                <label for="input" class="required"><span>청소 일정/시간</span></label>
+                <label for="input" class="required"><span>청소 신청일</span></label>
                 <div class="input-date">
                     <input type="date" class="" placeholder="날짜 선택">
-                    <select>
+                    <div class="select">
+                        <button type="button" class="btn btn-select" data-target="selectBtm">오전 9:00</button>
+                    </div>
+                    <!-- <select>
                         <option>오전 9:00</option>
                         <option>오전 10:00</option>
                         <option>오전 11:00</option>
@@ -29,12 +30,12 @@
                         <option>오후 4:00</option>
                         <option>오후 5:00</option>
                         <option>오후 6:00</option>
-                    </select>
+                    </select> -->
                 </div>
             </div>
             <div class="input">
                 <label for="input" class="required"><span>신청자명</span></label>
-                <input type="text" placeholder="신청자명 입력" id="" maxlength="30">
+                <input type="text" placeholder="이름" id="" maxlength="30">
                 <button type="button" class="btn btn-delete">
                     <span class="sr-only">삭제 버튼</span>
                 </button>
@@ -43,37 +44,33 @@
                 <label for="input" class="required"><span>휴대폰 번호</span></label>
                 <input type="tel" placeholder="휴대전화번호 입력" id="" maxlength="30" value="01012341234" disabled>
             </div>
+
             <!-- 법정동 별로 관리 업체가 다름 -->
             <div class="input inline">
-                <label for="input" class="required"><span>거주 지역(동)</span>
-                    <button type="button" class="btn btn-icon">
-                        <span class="icon info">
-                            <span class="sr-only">정보보기</span>
-                        </span>
-                    </button>
-                </label>
-                <input type="text" placeholder="동 입력" maxlength="11">
-                <button type="button" class="btn btn-delete">
-                    <span class="sr-only">삭제 버튼</span>
-                </button>
-                <button type="button" class="btn btn-sub">거주 지역 확인</button>
-                <span class="guide error">에러내용을 입력해주세요.</span>
+                <label for="input" class="required"><span>주소</span></label>
+                <div class="d-flex">
+                    <input type="text" placeholder="우편번호" readonly>
+                    <button type="button" class="btn btn-default">주소검색</button>
+                </div>
+                <input type="text" placeholder="주소" readonly>
+                <input type="text" placeholder="상세주소">
             </div>
+
             <div class="input">
-                <label for="input"><span>청소 업체명</span></label>
+                <label for="input"><span>청소업체</span></label>
                 <input type="text" value="종복환경개발(주)" disabled>
             </div>
 
             <div class="terms-agree">
                 <div class="checkbox">
                     <input type="checkbox" id="checkbox" name="" value="1">
-                    <label for="checkbox"><span>개인정보의 제 3자 제공 동의</span></label>
+                    <label for="checkbox"><span>[필수] 개인정보의 제 3자 제공 동의</span></label>
                 </div>
-                <a href="#" role="button">[약관보기]</a>
+                <a href="#" role="button" class="link-detail">자세히</a>
             </div>
         </section>  
         <div class="btns under">
-            <button type="button" class="btn btn-primary" disabled id="btnReserve">예약 신청</button>
+            <button type="button" class="btn btn-primary" id="btnReserve">예약 신청</button>
         </div>
     </div>
     <!-- time select -->
