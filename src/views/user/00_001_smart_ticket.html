@@ -56,7 +56,7 @@
             </ul>
           </div>
           <div class="num-ticket_issue">
-            <button type="button" class="btn">번호표 발급</button>
+            <button type="button" class="btn btn-popup" data-target="popupBtmSheet">번호표 발급</button>
           </div>
         </div>
 
@@ -78,7 +78,7 @@
             </ul>
           </div>
           <div class="num-ticket_issue">
-            <button type="button" class="btn">번호표 발급</button>
+            <button type="button" class="btn btn-popup" data-target="popupBtmSheet">번호표 발급</button>
           </div>
         </div>
 
@@ -105,7 +105,7 @@
             </ul>
           </div>
           <div class="num-ticket_issue">
-            <button type="button" class="btn">번호표 발급</button>
+            <button type="button" class="btn btn-popup" data-target="popupBtmSheet">번호표 발급</button>
           </div>
         </div>
       </div>
@@ -124,32 +124,20 @@
 
     <!-- popup -->
     <aside id="aside" class="popup-bg popup-closable">
+
       <div class="popup popup-slide" id="popupBtmSheet">
         <div class="btm-sheet">
-          <div class="btm-sheet_head">
-            <h3 class="title">휴대폰 번호를 입력해주세요.</h3>
-            <button type="button" class="btn btn-icon close">
-              <img src="../assets/images/icon_x.svg" alt="팝업닫기" />
-            </button>
-          </div>
+          <div class="btm-sheet_head"></div>
           <div class="btm-sheet_body">
-            <div class="tel-num">
-              <div class="tel-num_format">
-                <input type="tel" value="010" maxlength="3">
-                <span>-</span>
-                <input type="tel" maxlength="4">
-                <span>-</span>
-                <input type="tel" maxlength="4">
-                <div class="guide error">가이드 메세지 영역</div>
-              </div>
-              <p class="guide">
-                휴대폰 번호 입력을 통해 예약된 정보는<br>카카오톡으로 전송됩니다.<br>카카오톡을 반드시 확인해주세요.
-              </p>
+            <h3 class="section-title">스마트 번호표 발급</h3>
+            <p class="ctx">스마트 번호표 발급을 위해 휴대폰번호를 입력해주세요.</p>
+            <div class="input">
+              <input type="tel" placeholder="-없이 휴대폰번호 입력" aria-label="하이픈없이 휴대포번호를 입력해주세요." id="telNumber" maxlength="11">
             </div>
           </div>
           <div class="btm-sheet_tail">
-            <button type="button" class="btn btn-sub">취소</button>
-            <button type="button" class="btn btn-primary" disabled>확인</button>
+            <button type="button" class="btn btn-second close">닫기</button>
+            <button type="button" class="btn btn-primary">확인</button>
           </div>
         </div>
       </div>
