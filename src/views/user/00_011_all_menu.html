@@ -353,7 +353,7 @@
         const screenHeight = window.screen.height;
         const btnTop = document.getElementById('btnTop')
         window.addEventListener('scroll', function() {
-            if (window.scrollY >= screenHeight / 2) {
+            if (window.scrollY >= screenHeight) {
                 btnTop.classList.add('active')
             } else {
                 btnTop.classList.remove('active')

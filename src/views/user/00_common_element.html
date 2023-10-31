@@ -140,10 +140,12 @@
             <dl class="el-items">
                 <dt>Badge</dt>
                 <dd class="d-flex">
+                    <span class="badge basic">기본</span>
+                    <span class="badge end">마감</span>
                     <span class="badge category">카테고리</span>
                     <span class="badge proceeding">문의중</span>
                     <span class="badge completed">답변완료</span>
-                    <span class="badge disabled">마감</span>
+                    <span class="badge disabled">Disabled</span>
                 </dd>
             </dl>
 
@@ -320,6 +322,18 @@
                             <em class="current">0</em><span class="max">100</span>
                         </div>
                         <textarea name="" id="input5" cols="30" rows="8"></textarea>
+                    </div>
+                    <br>
+                    <div class="input input-search">
+                        <label for="input6" class="required"><span>Label</span></label>
+                        <div class="inline">
+                            <div class="select">
+                                <button type="button" class="btn btn-select" data-target="selectCnt">조건</button>
+                            </div>
+                            <div class="input">
+                                <input type="text" placeholder="검색어 입력" id="input6" maxlength="80">
+                            </div>
+                        </div>
                     </div>
                 </dd>
             </dl>

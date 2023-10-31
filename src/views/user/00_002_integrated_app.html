@@ -6,20 +6,37 @@
   </head>
   <body class="more">
     @@include('../common/header_sub.html', {title: '종합민원 통합신청'})
-    <div class="container">
+
+    <div class="container inner-full-padd">
         
         <!-- filter -->
         <div class="filter">
-            <button type="button" class="btn btn-filter"  id="btnFilter">전체, 제목, 전체</button>
+            <div class="condition">
+                <ul class="key-search">
+                    <li>
+                        <strong>접수현황</strong>
+                        <span>전체</span>
+                    </li>
+                    <li>
+                        <strong>검색어</strong>
+                        <span class="ellipsis">종로 행목 아카데미 나만의 아카데미 나만의 재미있는 아카테미</span>
+                    </li>
+                </ul>
+            </div>
+            <button type="button" class="btn btn-icon"  id="btnFilter">
+                <span class="icon srch">
+                    <span class="sr-only">검색 필터</span>
+                </span>
+            </button>
         </div>
 
         <!-- list -->
-        <div class="inner-full-padd">
+        <div>
             <ul class="brd-list">
                 <li class="brd-list_item">
                     <a href="#">
                         <!-- TODO: 디자인에 따라 상태값 추가 -->
-                        <span class="badge category">진행중</span>
+                        <span class="badge basic">진행중</span>
                         <!-- NOTICE: 타이틀 한줄 처리 시 .ellipsis 적용, 두줄: .ellipsis2 -->
                         <span class="brd-title ellipsis">2023 종로 행복 아카데미 - 나만의 행복 정원 (테라리움) 만들기</span>
                         <span class="brd-date">2023-08-21 09:00 ~ 2023-08-27 18:00</span>
@@ -27,21 +44,21 @@
                 </li>
                 <li class="brd-list_item">
                     <a href="#">
-                        <span class="badge category">진행중</span>
+                        <span class="badge basic">진행중</span>
                         <span class="brd-title ellipsis">종로구, 「걸어서 지구 한 바퀴」 프로그램 운영 관련 모집 안내</span>
                         <span class="brd-date">2023-08-21 09:00 ~ 2023-08-27 18:00</span>
                     </a>
                 </li>
                 <li class="brd-list_item">
                     <a href="#">
-                        <span class="badge category">진행중</span>
+                        <span class="badge basic">진행중</span>
                         <span class="brd-title ellipsis">종로싱글홈케어(종로구 1인가구 지원 신청) 모집 안내</span>
                         <span class="brd-date">2023-08-21 09:00 ~ 2023-08-27 18:00</span>
                     </a>
                 </li>
                 <li class="brd-list_item">
                     <a href="#">
-                        <span class="badge disabled">마감</span>
+                        <span class="badge end">마감</span>
                         <span class="brd-title ellipsis">프로그램명</span>
                         <span class="brd-date">YYYY-MM-DD hh:mm ~ YYYY-MM-DD hh:mm</span>
                     </a>
@@ -52,30 +69,29 @@
 
     <!-- popup -->
     <!-- aside내에 팝업 2개 이상 띄워야하는 경우 .popup-multi 추가 -->
-    <aside id="aside" class="popup-bg popup-closable on">
-        <div class="popup popup-slide show" id="popupBtmSheet">
+    <aside id="aside" class="popup-bg popup-closable">
+        <div class="popup popup-slide" id="popupBtmSheet">
             <div class="btm-sheet">
-                <div class="btm-sheet_head">
-                    <button type="button" class="btn btn-icon close">
-                    <img src="../assets/images/icon_x.svg" alt="팝업닫기" />
-                    </button>
-                </div>
                 <div class="btm-sheet_body">
+                    <div class="btns">
+                        <button type="button" class="btn btn-text reset">초기화</button>
+                        <button type="button" class="btn btn-text">확인</button>
+                    </div>
                     <div class="select">
-                        <label>진행상태</label>
+                        <label>접수상태</label>
                         <button type="button" class="btn btn-select" data-target="selectFilter" id="filter">전체</button>
                     </div>
-                    <div class="select">
-                        <label>검색 선택</label>
-                        <button type="button" class="btn btn-select" data-target="selectFilter" id="filter2">전체</button>
+                    <div class="input input-search">
+                        <label for=""><span>검색</span></label>
+                        <div class="inline">
+                            <div class="select">
+                                <button type="button" class="btn btn-select" data-target="selectFilter" id="filter2">전체</button>
+                            </div>
+                            <div class="input">
+                                <input type="text" placeholder="검색어 입력">
+                            </div>
+                        </div>
                     </div>
-                    <div class="input">
-                        <label>검색어</label>
-                        <input type="text" placeholder="검색어 입력">
-                    </div>
-                </div>
-                <div class="btm-sheet_tail">
-                    <button type="button" class="btn btn-primary">검색</button>
                 </div>
             </div>
         </div>
@@ -91,10 +107,9 @@
         // TODO: 필터 옵션은 다음과 같은 형식으로 인자를 넘긴다.
         const selOptions = [
             { key:1, text:'전체', value: 0},
-            { key:2, text:'접수중', value: 1},
-            { key:3, text:'접수마감', value: 2},
-            { key:4, text:'교육중', value: 3},
-            { key:5, text:'교육마감', value: 4},
+            { key:2, text:'접수예정', value: 1},
+            { key:3, text:'진행중', value: 2},
+            { key:4, text:'마감', value: 3},
         ]
 
         window.onload = function() {

@@ -256,7 +256,7 @@ function getFilterOptions(options, cb) {
   if (options.length === 0) return;
 
   // dom structure
-  const _html = `
+  const _html2 = `
     <aside class="popup-bg popup-closable">
       <div class="popup popup-cnt popup-filter" id="selectFilter">
           <div class="filter-close">
@@ -269,6 +269,14 @@ function getFilterOptions(options, cb) {
     </aside>
   `;
 
+  const _html = `
+    <aside class="popup-bg popup-closable">
+      <div class="popup popup-filter" id="selectFilter">
+          <ul class="select-options"></ul>
+      </div>
+    </aside>
+  `;
+
   const dom = new DOMParser().parseFromString(_html, "text/html");
   const _popup = dom.querySelector("aside");
   const _select = dom.querySelector(".select-options");
@@ -276,30 +284,28 @@ function getFilterOptions(options, cb) {
   // dynamic filter option
   document.body.appendChild(_popup);
 
+  let _opts = "";
   options.forEach((option) => {
-    const _li = document.createElement("li");
-    const _btn = document.createElement("button");
+    _opts +=
+      '<li class="select-options_item">' +
+      '<div class="radio">' +
+      '<input type="radio" id="radio' +
+      option.key +
+      '" name="opt-status" value="' +
+      option.value +
+      '">' +
+      '<label for="' +
+      option.key +
+      '"><span>' +
+      option.text +
+      "</span></label>" +
+      "</div>" +
+      "</li>";
 
-    // dynamic button 처리
-    _btn.setAttribute("type", "button");
-    _btn.setAttribute("data-value", option.value);
-    _btn.innerText = option.text;
-    _btn.onclick = function (e) {
-      const _value = e.target.dataset.value;
-      cb({ value: _value, text: option.text });
-
-      // 팝업 닫기
-      _popup.classList.remove("on");
-      _popup.childNodes(".popup-filter").classList.remove("show");
-    };
-
-    _li.classList.add("select-options_item");
-    _li.appendChild(_btn);
-
-    _select.appendChild(_li);
+    _select.innerHTML = _opts;
   });
 
-  _popup.querySelector(".btn.close").addEventListener("click", function () {
-    document.body.removeChild(_popup);
+  _select.addEventListener("click", function (e) {
+    console.log(e.target);
   });
 }

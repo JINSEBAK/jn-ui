@@ -379,7 +379,7 @@ strong {
   margin-top: $header;
   margin-bottom: $header;
   .more & {
-    margin-top: calc($header + 1rem);
+    margin-top: $header;
   }
 }
 
@@ -692,8 +692,7 @@ strong {
     &:checked + label {
       &::before {
         content: ""; //background-image 처리해도 접근성 문제 없는 듯?
-        border-color: $checkbox;
-        background-color: $checkbox;
+        background-image: url(../images/btn_radio_on.svg);
         color: #fff;
         text-align: center;
         // box-shadow: 0px 0px 0px 3px $shadow;
@@ -1000,6 +999,23 @@ select {
   }
 }
 
+.input-search {
+  .inline {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    > * {
+      margin: 0 !important;
+    }
+    .select {
+      flex: 1 0 100px;
+    }
+    .input {
+      flex: 1 1 100%;
+    }
+  }
+}
+
 .search-keyword {
   position: relative;
   z-index: 100;
@@ -1122,6 +1138,7 @@ select {
     width: 100%;
     color: #000;
     text-align: left;
+    font-size: 0.875rem;
     border: 1px solid $border-basic;
     background: transparent url(../images/icon_select.svg) right 10px center
       no-repeat;
@@ -1136,9 +1153,11 @@ select {
 }
 
 .select-options {
-  padding: 0.5rem 0;
   position: relative;
   z-index: 500;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
   &_item {
     button {
       border: none;
@@ -1156,11 +1175,26 @@ select {
 }
 
 .filter {
-  border-bottom: 1px solid $border-basic;
-  padding: 0 1rem 1rem;
+  border-bottom: 1px solid $border-light;
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  padding: 0 0.25rem 10px;
+  gap: 10px;
+  .condition {
+    font-size: 0.75rem;
+    width: calc(100% - 1.5rem - 10px);
+  }
+  .key-search {
+    li {
+      display: flex;
+      gap: 0.25rem;
+      align-items: center;
+      line-height: 18px;
+      span {
+        flex: 1 1 80%;
+      }
+    }
+  }
 }
 
 // modal, popup
@@ -1232,6 +1266,10 @@ select {
 }
 
 .popup-filter {
+  width: 85%;
+  background-color: #fff;
+  border-radius: 6px;
+  padding: 1.5rem 1rem;
   .filter-close {
     text-align: right;
     padding: 0.5rem;
@@ -1265,8 +1303,19 @@ select {
 }
 
 .btm-sheet {
-  .btn {
-    font-size: 0.875rem !important;
+  .btns {
+    justify-content: flex-end;
+    gap: 1.5rem;
+    margin: 0 0 1.5rem 0;
+    .btn {
+      font-size: 0.875rem !important;
+      flex: none;
+      padding: 0;
+      height: auto;
+      &.reset {
+        color: $guide-text;
+      }
+    }
   }
   &_head {
     display: flex;
@@ -1286,7 +1335,7 @@ select {
     }
   }
   &_body {
-    padding: 1rem;
+    padding: 2rem 1.25rem;
     line-height: 1.2;
     .section-title {
       margin-bottom: 0.5rem;
@@ -1433,6 +1482,9 @@ select {
   line-height: 22px;
   color: #fff !important;
   padding: 0 0.5rem;
+  &.basic {
+    background-color: $badge-basic;
+  }
   &.category {
     background-color: $badge-category;
   }
@@ -1445,6 +1497,10 @@ select {
   &.disabled {
     background-color: $sub-text;
     color: rgba(255, 255, 255, 0.5) !important;
+  }
+  &.end {
+    background-color: $badge-end;
+    color: #fff;
   }
   &.new {
     background-color: $em-text;
@@ -1655,7 +1711,30 @@ select {
 }
 
 // 공지사항 등 보드형태
-.brd-list,
+.brd-list {
+  &_item {
+    border-bottom: 1px solid $border-light;
+    padding: 1rem 0.25rem;
+    a {
+      display: block;
+      .badge {
+        margin-bottom: 0.5rem;
+      }
+    }
+    .brd {
+      &-title {
+        display: block;
+        font-weight: bold;
+        line-height: 1.25rem;
+        font-size: 0.875rem;
+      }
+      &-date {
+        display: block;
+        @include textDate;
+      }
+    }
+  }
+}
 .brd-detail {
   &_item {
     border: 1px solid $border-basic;
@@ -1700,24 +1779,47 @@ select {
 }
 
 .brd-info {
-  dt {
-    font-weight: bold;
-    padding: 0.25rem 1rem 0;
-    font-weight: bold;
-    font-size: 0.875rem;
-  }
-  dd {
-    padding: 1rem;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-  }
   .title {
     font-weight: bold;
     line-height: 1.2;
+    padding-bottom: 1rem;
+    span:last-child {
+      display: block;
+      margin-top: 0.5rem;
+    }
+  }
+  dl {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem 0.5rem;
+    padding: 1rem 0;
+    border-top: 1px solid $border-light;
+    dt {
+      font-size: 13px;
+      width: 25%;
+      color: $guide-text;
+    }
+    dd {
+      display: flex;
+      font-size: 0.875rem;
+      align-items: center;
+      gap: 0.5rem;
+      flex: 0 1 70%;
+    }
+    &.files {
+      dt {
+        width: 100%;
+      }
+      dd {
+        flex: 1;
+      }
+    }
   }
   .content {
-    border-top: 1px solid $border-basic;
+    border-top: 1px solid $border-light;
+    font-size: 0.875rem;
+    line-height: 1.5;
     p {
       white-space: pre-wrap;
       line-height: 1.2;
