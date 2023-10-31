@@ -65,6 +65,37 @@ a {
   }
 }
 
+#loader {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 3000;
+  display: flex;
+  &::after {
+    content: "";
+    display: block;
+    margin: auto;
+    width: 2rem;
+    height: 2rem;
+    border: 3px solid #fff;
+    border-top-color: transparent;
+    border-radius: 50%;
+    animation: loader 1s linear infinite;
+  }
+}
+
+@keyframes loader {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 .no-btm {
   .container {
     margin-bottom: 0 !important;
@@ -223,7 +254,7 @@ strong {
   left: 0;
   right: 0;
   height: $header;
-  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
   &.main {
     gap: 0.5rem;
     border-bottom-color: transparent;
@@ -353,11 +384,11 @@ strong {
 }
 
 .inner-padd {
-  padding: 0 1rem;
+  padding: 0 1.25rem;
 }
 
 .inner-full-padd {
-  padding: 1.5rem 1rem;
+  padding: 1.5rem 1.25rem;
 }
 
 // buttons
@@ -490,6 +521,34 @@ strong {
     margin-top: 0.5rem;
     background: #fff url(../images/icon_more_s.svg) right 1rem center no-repeat;
   }
+  &-top {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 0.75rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    position: fixed;
+    right: $basic-padding;
+    bottom: $basic-padding;
+    z-index: 1000;
+    display: none;
+    &::before {
+      content: "";
+      display: block;
+      width: 1rem;
+      height: 1rem;
+      background: url(../images/icon_top.svg) center no-repeat;
+    }
+    &.active {
+      display: flex;
+    }
+  }
   &:disabled {
     cursor: auto;
     border-color: #ddd;
@@ -574,7 +633,7 @@ strong {
         background-color: $checkbox;
         color: #fff;
         text-align: center;
-        box-shadow: 0px 0px 0px 3px $shadow;
+        // box-shadow: 0px 0px 0px 3px $shadow;
       }
       &.btn-check {
         background-color: $checkbox;
@@ -637,12 +696,12 @@ strong {
         background-color: $checkbox;
         color: #fff;
         text-align: center;
-        box-shadow: 0px 0px 0px 3px $shadow;
+        // box-shadow: 0px 0px 0px 3px $shadow;
       }
       &.btn-radio {
         background-color: $checkbox;
         color: #fff;
-        box-shadow: 0 0 0 3px $shadow;
+        // box-shadow: 0 0 0 3px $shadow;
         &::before {
           content: none;
         }
@@ -1185,6 +1244,15 @@ select {
   width: 100%;
   height: 100%;
   background-color: #fff;
+  overflow-y: auto;
+  visibility: hidden;
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+  &.show {
+    //visibility: visible;
+    animation: show_pop 0.3s forwards;
+  }
   .popup {
     &-hd {
       padding: 13px;
@@ -1702,13 +1770,29 @@ select {
 
 .categories {
   display: flex;
-  justify-content: flex-start;
-  padding: 0 1rem 1rem;
+  flex-wrap: wrap;
+  padding: 0 1.25rem 1.5rem;
   gap: 0.5rem;
   .radio {
-    flex: 1 0 160px;
-    label {
-      width: 100% !important;
+    input[type="radio"] {
+      & + label {
+        width: 100% !important;
+        color: #000;
+        font-size: 0.875rem;
+        padding: 6px 1.25rem;
+        border-color: $border-basic;
+        span {
+          padding: 0;
+          line-height: 1.25rem;
+        }
+      }
+      &:checked + label {
+        color: #000;
+        background-color: $bg-content-box2;
+      }
+    }
+    & + .radio {
+      margin-left: 0;
     }
   }
 }
@@ -1769,6 +1853,10 @@ select {
         color: $guide-text;
         font-size: 0.875rem;
         flex: 1;
+        span {
+          font-size: 13px;
+          display: block;
+        }
       }
       &-2 {
         background-color: #5c89e0;
@@ -1800,10 +1888,16 @@ select {
 
 // table
 .tb {
-  border: 1px solid $tb-border;
-  border-top-color: transparent;
   font-size: 0.875rem;
   margin-top: 0.5rem;
+  border-collapse: collapse;
+  width: 100%;
+  caption {
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    overflow: hidden;
+  }
   th,
   td {
     border: 1px solid $tb-border;
