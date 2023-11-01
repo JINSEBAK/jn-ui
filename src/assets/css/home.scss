@@ -582,7 +582,7 @@
 
 .num-ticket {
   &_hd {
-    padding: 1rem 1rem 0 0.25rem;
+    padding: 1.5rem 1rem 0 0.25rem;
     margin-bottom: 2rem;
     position: relative;
     h2 {
@@ -816,5 +816,30 @@
   p {
     font-size: 0.875rem;
     margin-top: 1rem;
+  }
+}
+
+.edu-categories {
+  margin-left: -1.25rem;
+  margin-right: -1.25rem;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  padding: 0 1.25rem;
+  .btn-edu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 0.875rem;
+    border-color: transparent;
+    background-color: $bg;
+    border-radius: 6px;
+    padding: 0.75rem 0;
+    color: #000;
+    flex: 1 0 130px;
+    &.active {
+      background-color: #f8f0f3;
+      color: $primary3;
+    }
   }
 }

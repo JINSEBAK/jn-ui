@@ -8,10 +8,10 @@
     
     @@include('../common/header_sub.html', {title: "전체메뉴"})
 
-    <div class="container">
+    <div class="container inner-full-padd">
         
         <!-- tab area -->
-        <div class="categories x-scroll">
+        <div class="categories">
             <div class="radio">
                 <input type="radio" id="radio9" name="site-category" value="1" checked>
                 <label for="radio9" class="btn-radio"><span>행정 민원</span></label>
@@ -57,7 +57,7 @@
                 <label for="radio-1" class="btn-radio"><span>환경설정</span></label>
             </div>
         </div>
-        <div class="site-maps inner-padd">
+        <div class="site-maps">
             <section class="site-map" id="menu1">
                 <h3 class="map-category">
                     <span class="icon">
@@ -345,7 +345,7 @@
                 console.log($('#menu' + $(this).val()).offset());
                 if($(this).is(':checked')) {
                     $('html, body').animate({
-                        scrollTop: $('#menu' + $(this).val()).offset().top - 56 - 16 // header 높이만큼, 여백 -
+                        scrollTop: $('#menu' + $(this).val()).offset().top - 50 // header 높이만큼, 여백 -
                     }, 1000)
                 }
             })

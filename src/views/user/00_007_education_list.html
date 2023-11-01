@@ -4,30 +4,30 @@
     @@include('../common/head.html')
     <link rel="stylesheet" href="../assets/css/home.css"></link>
   </head>
-  <body class="more">
+  <body class="more no-btm">
     
-    @@include('../common/header_sub.html', {title: "종로 교육/강좌 예약 신청"})
+    @@include('../common/header_sub.html', {title: "종로 교육/강좌 신청"})
 
-    <div class="container">
+    <div class="container inner-full-padd">
 
         <!-- category -->
-        <div class="categories x-scroll">
-            <div class="radio">
-                <input type="radio" id="radio" name="sample-radio" value="1" checked>
-                <label for="radio" class="btn-radio"><span>종로구청 교육/강좌 소식</span></label>
-            </div>
-            <div class="radio">
-                <input type="radio" id="radio2" name="sample-radio" value="2">
-                <label for="radio2" class="btn-radio"><span>종로교육포털 평생교육</span></label>
-            </div>
-            <div class="radio">
-                <input type="radio" id="radio3" name="sample-radio" value="3">
-                <label for="radio3" class="btn-radio"><span>종로구 자치회관 교육 프로그램</span></label>
-            </div>
-            <div class="radio">
-                <input type="radio" id="radio4" name="sample-radio" value="4">
-                <label for="radio4" class="btn-radio"><span>종로구 구민 정보화 교육</span></label>
-            </div>
+        <div class="edu-categories x-scroll">
+            <button type="button" class="btn-edu active">
+                <img src="../../assets/images/icon_edu1.svg">
+                <span>종로구청<br>교육/강좌 소식</span>
+            </button>
+            <button type="button" class="btn-edu">
+                <img src="../../assets/images/icon_edu2.svg">
+                <span>종로교육포털<br>평생교육</span>
+            </button>
+            <button type="button" class="btn-edu">
+                <img src="../../assets/images/icon_edu3.svg">
+                <span>종로구 자치회관<br>교육 프로그램</span>
+            </button>
+            <button type="button" class="btn-edu">
+                <img src="../../assets/images/icon_edu4.svg">
+                <span>종로구 구민<br>정보화 교육</span>
+            </button>
         </div>
 
         <!-- filter -->
@@ -36,46 +36,72 @@
         </div>
 
         <!-- list -->
-        <div class="inner-full-padd">
+        <div>
             <ul class="brd-list">
                 <li class="brd-list_item">
                     <a href="#">
                         <div class="badges">
-                            <span class="badge category">특강반</span>
-                            <span class="badge disabled">접수종료</span>
+                            <span class="badge category">평생교육</span>
+                            <span class="badge pre">교육예정</span>
                         </div>
-                        <span class="brd-title ellipsis">[비대면] (특강) 파워포인트 동영상 만들기</span>
-                        <span class="brd-date">2023-08-21 ~ 2023-08-27</span>
+                        <span class="brd-title ellipsis">[마감] 운종가 철학학교 '철학자의 삶과 죽음'</span>
+                        <span class="brd-num">신청자/모집인원 : <em>10</em><span class="total">/20</span></span>
+                        <span class="brd-date">2023-08-21 09:00 ~ 2023-08-27 18:00</span>
                     </a>
                 </li>
                 <li class="brd-list_item">
                     <a href="#">
                         <div class="badges">
-                            <span class="badge category">특강반</span>
-                            <span class="badge disabled">접수마감</span>
+                            <span class="badge category">평생교육</span>
+                            <span class="badge end">접수마감</span>
                         </div>
-                        <span class="brd-title ellipsis">[비대면] (특강) 스마트폰 정보 검색하기</span>
-                        <span class="brd-date">2023-08-21 ~ 2023-08-27</span>
+                        <span class="brd-title ellipsis">2023년 경제 아카데미</span>
+                        <span class="brd-num">신청자/모집인원 : <em>10</em><span class="total">/20</span></span>
+                        <span class="brd-date">2023-08-21 09:00 ~ 2023-08-27 18:00</span>
                     </a>
                 </li>
                 <li class="brd-list_item">
                     <a href="#">
                         <div class="badges">
-                            <span class="badge category">특강반</span>
-                            <span class="badge disabled">접수마감</span>
+                            <span class="badge category">동네배움터</span>
+                            <span class="badge basic">교육진행</span>
                         </div>
-                        <span class="brd-title ellipsis">[비대면] (특강) 디지털 생활 체험하기 전연령 과정</span>
-                        <span class="brd-date">2023-08-21 ~ 2023-08-27</span>
+                        <span class="brd-title ellipsis">[동아시아 아카데미] 동아시아 회화사2-옛 그림을 만나는 즐거운 시간</span>
+                        <span class="brd-num">신청자/모집인원 : <em>10</em><span class="total">/20</span></span>
+                        <span class="brd-date">2023-08-21 09:00 ~ 2023-08-27 18:00</span>
                     </a>
                 </li>
                 <li class="brd-list_item">
                     <a href="#">
                         <div class="badges">
-                            <span class="badge category">정규반</span>
-                            <span class="badge category">교육중</span>
+                            <span class="badge category">동네배움터</span>
+                            <span class="badge end">접수마감</span>
                         </div>
-                        <span class="brd-title ellipsis">[대면] 종로 디지털 트레이닝 2기</span>
-                        <span class="brd-date">2023-08-21 ~ 2023-08-27</span>
+                        <span class="brd-title ellipsis">[동아시아 아카데미] 동아시아 회화사1-유구한 전통과 멋</span>
+                        <span class="brd-num">신청자/모집인원 : <em>10</em><span class="total">/20</span></span>
+                        <span class="brd-date">2023-08-21 09:00 ~ 2023-08-27 18:00</span>
+                    </a>
+                </li>
+                <li class="brd-list_item">
+                    <a href="#">
+                        <div class="badges">
+                            <span class="badge category">평생교육</span>
+                            <span class="badge ing">접수중</span>
+                        </div>
+                        <span class="brd-title ellipsis">2023 종로 행복 아카데미–나만의 행복 정원</span>
+                        <span class="brd-num">신청자/모집인원 : <em>10</em><span class="total">/20</span></span>
+                        <span class="brd-date">2023-08-21 09:00 ~ 2023-08-27 18:00</span>
+                    </a>
+                </li>
+                <li class="brd-list_item">
+                    <a href="#">
+                        <div class="badges">
+                            <span class="badge category">평생교육</span>
+                            <span class="badge pre">교육예정</span>
+                        </div>
+                        <span class="brd-title ellipsis">2023 종로 행복 아카데미–나만의 행복 정원</span>
+                        <span class="brd-num">신청자/모집인원 : <em>10</em><span class="total">/20</span></span>
+                        <span class="brd-date">2023-08-21 09:00 ~ 2023-08-27 18:00</span>
                     </a>
                 </li>
             </ul>
@@ -127,6 +153,15 @@
             popupBtmSheet.classList.add('show')
         }
        
+        const btnEdues = document.querySelectorAll('.btn-edu');
+        btnEdues.forEach((btnEdu) => {
+            btnEdu.addEventListener('click', function() {
+                btnEdues.forEach((b) => {
+                    b.classList.remove('active');
+                });
+                btnEdu.classList.add('active')
+            })
+        })
     </script>
-  </body>
+  </body>   
 </html>

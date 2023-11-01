@@ -294,7 +294,7 @@ function getFilterOptions(options, cb) {
       '" name="opt-status" value="' +
       option.value +
       '">' +
-      '<label for="' +
+      '<label for="radio' +
       option.key +
       '"><span>' +
       option.text +

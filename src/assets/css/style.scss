@@ -388,7 +388,8 @@ strong {
 }
 
 .inner-full-padd {
-  padding: 1.5rem 1.25rem;
+  //padding: 1.5rem 1.25rem;
+  padding: 1.5rem 1.25rem 40px;
 }
 
 // buttons
@@ -475,6 +476,7 @@ strong {
   }
   &-text {
     background-color: transparent;
+    height: auto;
     &:hover {
       text-decoration: none;
       background-color: rgba(0, 0, 0, 0.03);
@@ -484,6 +486,7 @@ strong {
     padding: 0.125rem 0;
     background-color: transparent;
     border: none;
+    height: auto;
   }
   &-filter {
     font-size: 0.875rem;
@@ -1335,7 +1338,7 @@ select {
     }
   }
   &_body {
-    padding: 2rem 1.25rem;
+    padding: 1.5rem 1rem;
     line-height: 1.2;
     .section-title {
       margin-bottom: 0.5rem;
@@ -1348,7 +1351,7 @@ select {
     }
   }
   &_tail {
-    padding: 1.5rem 1rem 1rem;
+    padding: 0 1rem 1rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1391,20 +1394,22 @@ select {
 }
 
 .msg-popup {
-  width: 92%;
+  width: 90%;
+  max-width: 280px;
   background-color: #fff;
   border-radius: 0.5rem;
   position: absolute;
   visibility: hidden;
+  padding: 1rem;
   &.show {
     visibility: visible;
   }
   .message {
-    padding: 2rem;
+    padding: 0.5rem 0 1.5rem;
+    font-size: 0.875rem;
     .title {
-      text-align: center;
       font-weight: 700;
-      margin-bottom: 1rem;
+      margin-bottom: 0.5rem;
     }
     p {
       line-height: 1.2;
@@ -1413,22 +1418,20 @@ select {
   .msg-btns {
     display: flex;
     align-items: center;
-    justify-content: center;
-    border-top: 1px solid $border-basic;
+    justify-content: flex-end;
+    gap: 1.5rem;
     button {
-      flex: 1;
       border-color: transparent;
       background-color: transparent;
-      padding: 0.75rem 1rem;
-      font-size: 1rem;
-      color: #000;
+      font-size: 0.875rem;
+      color: $guide-text;
       &:hover,
       &:active {
         background-color: rgba(0, 0, 0, 0.05);
       }
       &.confirm {
-        color: $em-text;
-        border-left: 1px solid $border-basic;
+        color: $second1;
+        font-weight: bold;
       }
     }
   }
@@ -1485,6 +1488,15 @@ select {
   &.basic {
     background-color: $badge-basic;
   }
+  &.pre {
+    background-color: $badge-pre;
+  }
+  &.end {
+    background-color: $badge-end;
+  }
+  &.ing {
+    background-color: $badge-ing;
+  }
   &.category {
     background-color: $badge-category;
   }
@@ -1497,10 +1509,6 @@ select {
   &.disabled {
     background-color: $sub-text;
     color: rgba(255, 255, 255, 0.5) !important;
-  }
-  &.end {
-    background-color: $badge-end;
-    color: #fff;
   }
   &.new {
     background-color: $em-text;
@@ -1728,6 +1736,20 @@ select {
         line-height: 1.25rem;
         font-size: 0.875rem;
       }
+      &-num {
+        display: block;
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+        color: $guide-text;
+        padding-bottom: 6px;
+        em {
+          color: $em-text;
+          font-weight: bold;
+        }
+        .total {
+          color: #000;
+        }
+      }
       &-date {
         display: block;
         @include textDate;
@@ -1755,6 +1777,7 @@ select {
   .brd-title {
     line-height: 1.2;
   }
+
   .brd-date {
     @include textDate;
   }
@@ -1873,7 +1896,7 @@ select {
 .categories {
   display: flex;
   flex-wrap: wrap;
-  padding: 0 1.25rem 1.5rem;
+  padding: 0 0 1.5rem;
   gap: 0.5rem;
   .radio {
     input[type="radio"] {
