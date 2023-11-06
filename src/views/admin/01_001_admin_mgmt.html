@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ko">
+  @@include('./common/head.html')
+  <body>
+    @@include('./common/header.html')
+    @@include('./common/navigation.html')
+    <main class="main">
+        @@include('./common/page_title.html', { title: '관리자 설정', path: {"p1":"관리자관리",  "p2":"관리자설정"}, description: ''})
+        <div class="content">
+          
+          <!-- .search start -->
+          <div class="search">
+
+            <div class="item item-col-5">
+              <div class="label">
+                <label for="">키워드</label>
+              </div>
+              <div class="inline">
+                <select class="select">
+                  <option value="">ID</option>
+                  <option value="">이름</option>
+                  <option value="">이메일</option>
+                </select>
+                <input type="text" class="input" placeholder="입력">
+              </div>
+            </div>
+
+            <div class="item item-col-5">
+              <div class="label">
+                <label for="">상태</label>
+              </div>
+              <div class="inline">
+                <div class="radio">
+                  <input type="radio" name="status" value="1" id="status1">
+                  <label for="status1">전체</label>
+                </div>
+                <div class="radio">
+                  <input type="radio" name="status" value="2" id="status2" checked>
+                  <label for="status2">활동</label>
+                </div>
+                <div class="radio">
+                  <input type="radio" name="status" value="3" id="status3">
+                  <label for="status3">해지</label>
+                </div>
+              </div>
+            </div>
+
+            @@include('./common/search_period.html')
+
+          </div>
+          <div class="search-btn">
+            <button type="button" class="btn btn-third small">초기화</button>
+            <button type="button" class="btn btn-second small">검색</button>
+          </div>
+          <!-- .search end -->
+
+
+          <div class="list">
+            <div class="list-head">
+              <div class="total">
+                Total <em>100</em>
+              </div>
+            </div>
+            <div class="list-body">
+              <table class="tb-data" summary="번호,아이디,이름,이메일,권한그룹,상태,계정생성일,최근로그인으로 구분되는 표">
+                <caption>번호 아이디 이름 이메일 권한그룹 상태 계정생성일 최근로그인</caption>
+                <thead>
+                  <tr>
+                    <th scope="col">번호</th>
+                    <th scope="col">ID</th>
+                    <th scope="col">이름</th>
+                    <th scope="col">이메일</th>
+                    <th scope="col">권한그룹</th>
+                    <th scope="col">상태</th>
+                    <th scope="col">계정생성일</th>
+                    <th scope="col">최근로그인</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>10</td>
+                    <td>id</td>
+                    <td>OOO</td>
+                    <td>xxxx@xxx.co.kr</td>
+                    <td>관리자</td>
+                    <td>활동</td>
+                    <td>yyyy-mm-dd</td>
+                    <td>yyyy-mm-dd hh:mm</td>
+                  </tr>
+                  <tr>
+                    <td>9</td>
+                    <td>id</td>
+                    <td>OOO</td>
+                    <td>xxxx@xxx.co.kr</td>
+                    <td>관리자</td>
+                    <td>활동</td>
+                    <td>yyyy-mm-dd</td>
+                    <td>yyyy-mm-dd hh:mm</td>
+                  </tr>
+                  <tr>
+                    <td>8</td>
+                    <td>id</td>
+                    <td>OOO</td>
+                    <td>xxxx@xxx.co.kr</td>
+                    <td>관리자</td>
+                    <td>활동</td>
+                    <td>yyyy-mm-dd</td>
+                    <td>yyyy-mm-dd hh:mm</td>
+                  </tr>
+                  <tr>
+                    <td>7</td>
+                    <td>id</td>
+                    <td>OOO</td>
+                    <td>xxxx@xxx.co.kr</td>
+                    <td>관리자</td>
+                    <td>활동</td>
+                    <td>yyyy-mm-dd</td>
+                    <td>yyyy-mm-dd hh:mm</td>
+                  </tr>
+                  <tr>
+                    <td>6</td>
+                    <td>id</td>
+                    <td>OOO</td>
+                    <td>xxxx@xxx.co.kr</td>
+                    <td>관리자</td>
+                    <td>활동</td>
+                    <td>yyyy-mm-dd</td>
+                    <td>yyyy-mm-dd hh:mm</td>
+                  </tr>
+                  <tr>
+                    <td>5</td>
+                    <td>id</td>
+                    <td>OOO</td>
+                    <td>xxxx@xxx.co.kr</td>
+                    <td>관리자</td>
+                    <td>활동</td>
+                    <td>yyyy-mm-dd</td>
+                    <td>yyyy-mm-dd hh:mm</td>
+                  </tr>
+                  <tr>
+                    <td>4</td>
+                    <td>id</td>
+                    <td>OOO</td>
+                    <td>xxxx@xxx.co.kr</td>
+                    <td>관리자</td>
+                    <td>활동</td>
+                    <td>yyyy-mm-dd</td>
+                    <td>yyyy-mm-dd hh:mm</td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>id</td>
+                    <td>OOO</td>
+                    <td>xxxx@xxx.co.kr</td>
+                    <td>관리자</td>
+                    <td>활동</td>
+                    <td>yyyy-mm-dd</td>
+                    <td>yyyy-mm-dd hh:mm</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>id</td>
+                    <td>OOO</td>
+                    <td>xxxx@xxx.co.kr</td>
+                    <td>관리자</td>
+                    <td>활동</td>
+                    <td>yyyy-mm-dd</td>
+                    <td>yyyy-mm-dd hh:mm</td>
+                  </tr>
+                  <tr>
+                    <td>1</td>
+                    <td>id</td>
+                    <td>OOO</td>
+                    <td>xxxx@xxx.co.kr</td>
+                    <td>관리자</td>
+                    <td>활동</td>
+                    <td>yyyy-mm-dd</td>
+                    <td>yyyy-mm-dd hh:mm</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          @@include('./common/pagination.html')
+
+
+          <div class="btns">
+            <a href="./01_001_admin_create.html" class="btn btn-second">계정 생성</a>
+          </div>
+        </div>
+    </main>
+
+    @@include('./common/admin_scripts.html')
+  </body>
+</html>

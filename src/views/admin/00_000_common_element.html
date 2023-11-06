@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../assets/css/index.css">
+    <link rel="stylesheet" href="../assets/css/admin.css">
+    <title>Common Elements</title>
+</head>
+<body>
+    <div class="container">
+
+        <div class="pd-inner" id="content">
+
+            <dl class="el-items">
+                <dt>버튼</dt>
+                <dd class="d-flex">
+                    <button type="button" class="btn btn-primary">.btn-primary</button>
+                    <button type="button" class="btn btn-second">.btn-second</button>
+                    <button type="button" class="btn btn-third">.btn-third</button>
+                    <button type="button" class="btn btn-default">.btn-default</button>
+                    <button type="button" class="btn btn-text">.btn-text</button>
+                </dd>
+            </dl>
+
+            <dl class="el-items">
+                <dt>팝업</dt>
+                <dd class="d-flex">
+                    <button type="button" class="btn btn-default btn-popup" data-target="alert">메시지 알럿</button>
+                    <button type="button" class="btn btn-default btn-popup" data-target="confirm">메시지 컨펌</button>
+                </dd>
+            </dl>
+        </div>
+    </div>
+
+    <!-- popup -->
+
+    @@include('./common/admin_scripts.html')
+</body>
+</html>

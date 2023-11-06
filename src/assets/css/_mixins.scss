@@ -15,3 +15,8 @@ $breakpoint-wide: 1281px;
   font-size: 13px;
   line-height: 18px;
 }
+
+@mixin pageTitle {
+  font-weight: bold;
+  font-size: 1.25rem;
+}
