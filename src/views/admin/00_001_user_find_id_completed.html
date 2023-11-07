@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+  @@include('./common/head.html')
+<body>
+    <div class="container login">
+        <div class="login-form">
+          <div class="login-form_head">
+            <h1 class="logo">아이디 찾기</h1>
+            <p>입력한 정보와 일치하는 아이디를 찾았습니다.</p>
+          </div>
+          <div class="content">
+            <div class="login-result">
+              회원님의 아이디는 <em>[master_01]</em>입니다.
+            </div>
+            <a href="./00_001_user_login.html" class="btn btn-primary" id="btnLogin">로그인 화면으로</a>
+          </div>
+        
+        </div>
+      </div>
+
+    <!-- popup -->
+
+    @@include('./common/admin_scripts.html')
+    <script>
+        const btnLogin = document.getElementById('btnLogin')
+        btnLogin.addEventListener('click', function() {
+            message.alert({
+                title: '로그인에 실패했습니다.',
+                message: '문제가 계속될 경우 관리자에게 문의해주세요.'
+            })
+        })
+    </script>
+</body>
+</html>

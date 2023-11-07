@@ -18,6 +18,7 @@ $border-input: #dcdcdc;
 
 $guide-text: #5f5f67;
 $em-text: #e45e63;
+$info-text: #319b31;
 
 html, body {
     padding: 0;
@@ -37,10 +38,22 @@ html, body {
     }
 }
 
-.error {
-    color: $em-text;
+.msg {
     font-size: 0.875rem;
     width: 100%;
+    padding: 0.5rem 0;
+    &.info {
+        color: $info-text;
+    }
+    &.error {
+        color: $em-text;
+    }
+}
+
+.d-flex {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
 }
 
 
@@ -153,6 +166,18 @@ html, body {
     border-radius: 2px;
 }
 
+.textarea {
+    width: 100%;
+    resize: none;
+    padding: 0.5rem;
+    border-radius: 2px;
+    border: 1px solid $border-input;
+}
+
+.input:disabled, .select:disabled {
+    background-color: #f2f3f9;
+}
+
 .btns {
     padding: 1rem 0;
     display: flex;
@@ -166,6 +191,11 @@ html, body {
     }
     &.detail {
         justify-content: space-between;
+        .btn {
+            &:first-child {
+                margin-right: auto;
+            }
+        }
     }
 }
 
@@ -213,6 +243,62 @@ html, body {
         padding: 0.25rem 1rem;
     }
 }
+
+.switch {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    position: relative;
+    input[type="checkbox"] {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 1px;
+      height: 1px;
+      opacity: 0;
+      & + .btn-switch {
+        width: 56px;
+        height: 28px;
+        border-radius: 50px;
+        display: block;
+        background-color: #ddd;
+        position: relative;
+        &::before {
+          content: "";
+          display: block;
+          width: 22px;
+          height: 22px;
+          background-color: #fff;
+          border-radius: 50%;
+          position: absolute;
+          left: 3px;
+          top: 3px;
+          transition: all 0.5s;
+          box-shadow: 0 0 2px 3px rgba(0, 0, 0, 0.03);
+        }
+        &::after {
+            content: 'OFF';
+            color: #fff;
+            font-size: 0.75rem;
+            position: absolute;
+            top: 50%;
+            left: auto;
+            right: 0.5rem;
+            transform: translateY(-50%);
+        }
+      }
+      &:checked + .btn-switch {
+        background-color: $clr-primary;
+        &::before {
+          transform: translateX(28px);
+        }
+        &::after {
+            content: 'ON';
+            left: 0.5rem;
+        }
+      }
+    }
+  }
 
 
 .icon {
@@ -329,6 +415,16 @@ html, body {
     display: flex;
     flex-wrap: wrap;
     font-size: 0.875rem;
+    &_title {
+        font-size: 0.875rem;
+        font-weight: bold;
+        background-color: #000;
+        color: #fff;
+        padding: 0.5rem;
+    }
+    & + .lik-tb_title {
+        margin-top: 2rem;
+    }
     li {
         flex: 0 1 35%;
         padding: 0.5rem;
@@ -571,6 +667,14 @@ html, body {
     }
   }
 
+  .cnt {
+    flex: 1;
+    position: relative;
+    .input {
+        width: 100%;
+    }
+  }
+
   .login {
     border: 1px solid green;
     width: 100vw;
@@ -579,34 +683,63 @@ html, body {
     &-form {
         margin: auto;
         width: 50%;
-        max-width: 420px;
+        max-width: 500px;
         .logo {
             font-size: 1.5rem;
             font-weight: bold;
             text-align: center;
-            margin: 0 0 5rem 0;
+        }
+        &_head {
+            margin: 0 0 4rem 0;
+            p {
+                line-height: 1.2;
+                margin-top: 0.5rem;
+                text-align: center;
+            }
         }
         &_item {
             display: flex;
             flex-direction: column;
             gap: 0.25rem;
+            position: relative;
             label {
                 color: $guide-text;
                 font-size: 0.875rem;
             }
             .input {
-                height: 46px;
+                height: 43px;
+                max-width: 100% !important;
+            }
+            .counter {
+                color: $em-text;
+                position: absolute;
+                right: 1rem;
+                font-size: 0.875rem;
+                bottom: 0.875rem;
             }
             & + .login-form_item {
                 margin-top: $base-px;
             }
         }
     }
-    .error {
-        margin: 0.5rem 0 2rem;  
+    &-result {
+        text-align: center;
+        background-color: $bg-th;
+        padding: 3rem 0;
+        margin: -2rem 0 2rem;
+        em {
+            color: $em-text;
+            font-weight: bold;
+        }
+        strong {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 1rem;
+        }
     }
-    .btn {
+    .btn-primary {
         width: 100%;
+        margin-top: 2rem;
     }
     .find {
         @include flexCenter;
@@ -635,3 +768,69 @@ html, body {
         }
     }
   }
+
+  .area {
+    flex: 1;
+    &-title {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0.5rem;
+        min-height: 28px;
+        .title {
+            font-weight: bold;
+            margin-right: auto;
+        }
+    }
+    &-cont {
+        margin-top: 0.5rem;
+        padding: 1rem;
+        min-height: 400px;
+        border: 1px solid $border-basic;
+    }
+  }
+
+  .menu-info {
+    &_lb {
+        margin-bottom: 0.5rem;
+        .title {
+            font-weight: bold;
+            display: block;
+        }
+        span:not(.title) {
+            line-height: 1.5;
+            font-size: 0.875rem;
+        }
+    }
+    &_ct {
+        display: flex;
+        gap: 0.5rem;
+        margin-bottom: 1.5rem;
+        .input {
+            flex: 1;
+        }
+    }
+  }
+
+  .menu-list {
+    li {
+        padding: 0.5rem 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        cursor: default;
+        &:hover {
+            background-color: rgba(0,0,0,0.1);
+        }
+        &.selected {
+            background-color: $bg-th;
+        }
+    }
+    .status {
+        font-size: 0.75rem;
+        &.off {
+            opacity: 0.6;
+        }
+    }
+  }
+

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+  @@include('./common/head.html')
+  <body>
+    @@include('./common/header.html')
+    @@include('./common/navigation.html')
+    <main class="main">
+        @@include('./common/page_title.html', { title: '신청 상세', path: { "p1": "", "p2": ""}, description: ''})
+        <div class="content">
+
+            <div class="detail">
+                <div class="lik-tb_title">신청 정보</div>
+                <ul class="lik-tb">
+                    <li class="lb">성함</li>
+                    <li>박성웅</li>
+                    <li class="lb">신청자</li>
+                    <li>자녀</li>
+                    <li class="lb">생년월일</li>
+                    <li>1968-02-15</li>
+                    <li class="lb">연락처</li>
+                    <li>010-1234-5678</li>
+                    <li class="lb lb-one">주소</li>
+                    <li>[23563] 서울 종로구 혜화동 452번지 혜화빌라 302호</li> 
+                    <li class="lb">가구 형태</li>
+                    <li>1,2인</li>
+                    <li class="lb">담당</li>
+                    <li>1권역 종로구보건소</li>
+                    <li class="lb">상태</li>
+                    <li>대기</li>
+                    <li class="lb">병의원 진료여부</li>
+                    <li>예</li>
+                </ul>
+
+                <div class="lik-tb_title">대리자 정보</div>
+                <ul class="lik-tb">
+                    <li class="lb">성함</li>
+                    <li>황정민</li>
+                    <li class="lb">연락처</li>
+                    <li>010-9999-9999</li>
+                </ul>
+
+                <ul class="lik-tb">
+                    <li class="lb">최종 수정일시</li>
+                    <li>2023-10-30 11:33</li>
+                    <li class="lb">최종 수정자</li>
+                    <li>master_01</li>
+                </ul>
+
+            </div>
+
+            <div class="btns detail">
+                <button type="button" class="btn btn-default">목록</button>
+                <button type="button" class="btn btn-second">수정</button>
+            </div>
+
+
+        </div>
+    </main>
+
+    @@include('./common/admin_scripts.html')
+  </body>
+</html>

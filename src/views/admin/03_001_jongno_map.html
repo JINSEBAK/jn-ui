@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+  @@include('./common/head.html')
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+  <body>
+    @@include('./common/header.html')
+    @@include('./common/navigation.html')
+    <main class="main">
+        @@include('./common/page_title.html', { title: '종로맵 메뉴', path: {"p1":"",  "p2":""}, description: ''})
+        <div class="content">
+
+            <div class="d-flex">
+                <div class="area lf">
+                    <div class="area-title">
+                        <h3 class="title">목록</h3>
+                    </div>
+                    <div class="area-cont">
+                        <ul class="menu-list" id="menuList">
+                            <li class="">종로 산책</li>
+                            <li class="">공영 주차장
+                                <span class="status off">OFF</span>
+                            </li>
+                            <li class="">CCTV</li>
+                            <li class="">스마트 제설함</li>
+                            <li class="">공공 WIFI</li>
+                            <li class="">무더위 쉼터</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="area rt">
+                    <div class="area-title">
+                        <h3 class="title">메뉴 정보</h3>
+                    </div>
+                    <div class="area-cont">
+
+                        <div class="menu-info">
+                            <div class="menu-info_lb">
+                                <span class="title">메뉴 이름</span>
+                            </div>
+                            <div class="menu-info_ct">
+                                <input type="text" class="input" value="무더위 쉼터">
+                            </div>
+
+                            <!-- 종로맵 카테고리인데 외부 연결 URL은 뭐지 -->
+                            <div class="menu-info_lb">
+                                <span class="title">연결 URL</span>
+                            </div>
+                            <div class="menu-info_ct">
+                                <input type="text" class="input" value="메인>행정 민원>스마트번호표 발권" disabled>
+                                <button type="button" class="btn btn-third small">링크 검색</button>
+                            </div>
+
+
+                            <div class="menu-info_lb">
+                                <span class="title">메뉴 노출</span>
+                                <span>설정 해제할 경우 사용자에게 노출되지 않습니다.</span>
+                            </div>
+                            <div class="menu-info_ct">
+                                <div class="switch">
+                                    <input type="checkbox" id="switch" name="switch" value="" class="sr-only">
+                                    <label for="switch" class="btn-switch"></label>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="btns center">
+                <button type="button" class="btn btn-third">초기화</button>
+                <button type="button" class="btn btn-second">저장 </button>
+            </div>
+
+        </div>
+    </main>
+
+    @@include('./common/admin_scripts.html')
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+
+    <script>
+        $(function() {
+            $('#menuList').sortable({
+                placeholder: "ui-state-highlight"
+            });
+        })
+    </script>
+  </body>
+</html>
