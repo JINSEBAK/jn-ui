@@ -69,6 +69,15 @@ html, body {
     gap: 1rem;
 }
 
+.ellipsis {
+    width: 100%;
+    max-width: 400px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    text-align: left;
+}
+
 
 /** header */
 #header {
@@ -504,7 +513,7 @@ html, body {
     }
     .detail & {
         flex:1;
-        .input:not(input[type=date]), .select {
+        .input:not(input[type=date]) {
             max-width: 100%;
         }
     }
@@ -724,7 +733,6 @@ html, body {
   .tab-contents {
     margin-top: 1rem;
     .tab-content {
-        border: 1px solid gray;
     }
   }
 
@@ -888,7 +896,9 @@ html, body {
   }
 
  .thumb-img {
-    max-width: 120px;
+    max-width: 240px;
+    display: flex;
+    flex-wrap: wrap;
     img {
         width: 100%;
         height: 100%;
@@ -897,13 +907,16 @@ html, body {
     }
     .btn-viewer {
         border: none;
-        width: 100%;
+        flex:1;
         cursor: pointer;
         background-color: $clr-third;
         color: #fff;
         font-size: 0.875rem;
         padding: 0.5rem;
         text-align: center;
+        & + .btn-viewer {
+            border-left: 1px solid rgba(255,255,255,0.5);
+        }
     }
  }
 

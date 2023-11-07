@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+  @@include('./common/head.html')
+  <body>
+    @@include('./common/header.html')
+    @@include('./common/navigation.html')
+    <main class="main">
+        @@include('./common/page_title.html', { title: '공지사항 상세', path: {"p1":"",  "p2":""}, description: ''})
+        <div class="content">
+
+            <div class="detail">
+                <ul class="lik-tb">
+                    <li class="lb lb-one">구분</li>
+                    <li>
+                        시스템
+                        <label class="badge badge-imp">중요</label>
+                    </li>
+                    <li class="lb lb-one">제목</li>
+                    <li>10월 3일 (목) 시스템 점검 안내입니다.</li>
+                    <li class="lb lb-one">내용</li>
+                    <li>
+                        <div class="pre">
+10월 3일 (목) 전체 시스템 점검으로
+서비스 이용이 잠시 중단 됩니다.
+
+불편을 드려 죄송합니다.
+                        </div>
+                    </li>
+                    <li class="lb lb-one">첨부파일</li>
+                    <li>
+                        <span>시스템_안내.pdf</span><span class="unit">(2.4MB)</span>
+                        <a href="#" class="btn btn-third small">다운로드</a>
+                    </li>
+                </ul>
+
+                <ul class="lik-tb">
+                    <li class="lb">팝업</li>
+                    <li>적용</li>
+                    <li class="lb">팝업 종류</li>
+                    <li>텍스트</li>
+                    <li class="lb lb-one">팝업 내용</li>
+                    <li>
+                        <div class="pre">
+10월 3일 (목) 전체 시스템 점검으로
+서비스 이용이 잠시 중단 됩니다.
+불편을 드려 죄송합니다.
+                        </div>
+                    </li>
+                    <li class="lb lb-one">팝업 노출 기간</li>
+                    <li>2023-10-30 ~ 2023-12-31</li>
+                    <li class="lb">등록일시</li>
+                    <li>2023-10-29 10:30</li>
+                    <li class="lb">등록자</li>
+                    <li>master_01</li>
+                </ul>
+
+                <ul class="lik-tb">
+                    <li class="lb">최종 수정일시</li>
+                    <li>2023-10-29 10:30</li>
+                    <li class="lb">최종 수정자</li>
+                    <li>master_01</li>
+                </ul>
+            </div>
+
+            <div class="btns detail">
+                <a href="./07_001_notice_mgmt.html" class="btn btn-default">목록</a>
+                <button type="button" class="btn btn-third">삭제</button>
+                <button type="button" class="btn btn-second">수정</button>
+            </div>
+
+        </div>
+    </main>
+
+    @@include('./common/admin_scripts.html')
+    <script>
+       
+    </script>
+  </body>
+</html>

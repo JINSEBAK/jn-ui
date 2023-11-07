@@ -33,7 +33,7 @@
                     <li>
                         <div class="attach-img">
                             <label>
-                                <img src="" id="previewImg">
+                                <img src="" id="previewImg" style="display:none">
                                 <input type="file" id="attachImg" accept="image/*">
                                 <span>추가</span>
                             </label>
@@ -159,6 +159,7 @@
                 const reader = new FileReader();
                 reader.onload = function(e) {
                     document.getElementById('previewImg').src = e.target.result;
+                    document.getElementById('previewImg').style.display = 'block'
                 }
                 reader.readAsDataURL(_input.files[0])
             } else {
