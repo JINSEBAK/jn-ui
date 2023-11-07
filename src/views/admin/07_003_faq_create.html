@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+  @@include('./common/head.html')
+  <body>
+    @@include('./common/header.html')
+    @@include('./common/navigation.html')
+    <main class="main">
+        @@include('./common/page_title.html', { title: 'FAQ 등록', path: {"p1":"",  "p2":""}, description: ''})
+        <div class="content">
+
+            <div class="detail">
+                <ul class="lik-tb">
+                    <li class="lb lb-one">카테고리</li>
+                    <li>
+                        <select class="select">
+                            <option value="">가입/로그인</option>
+                        </select>
+                    </li>
+                    <li class="lb lb-one">질문</li>
+                    <li>
+                        <div class="inline">
+                            <input type="text" class="input" placeholder="제목을 입력해 주세요. (최대 50자)" maxlength="50">
+                        </div>
+                    </li>
+                    <li class="lb lb-one">답변</li>
+                    <li>
+                        Editor
+                    </li>
+                    <li class="lb">노출 상태</li>
+                    <li>
+                        <div class="inline">
+                            <div class="radio">
+                                <input type="radio" name="useYn" value="1" id="useYn1" checked>
+                                <label for="useYn1">미노출</label>
+                            </div>
+                            <div class="radio">
+                                <input type="radio" name="useYn" value="2" id="useYn2">
+                                <label for="useYn2">노출</label>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="lb">TOP10</li>
+                    <li>
+                        <div class="inline">
+                            <div class="radio">
+                                <input type="radio" name="top10" value="1" id="top101" checked disabled>
+                                <label for="top101">미설정</label>
+                            </div>
+                            <div class="radio">
+                                <input type="radio" name="useYn" value="2" id="top102" disabled>
+                                <label for="top102">설정</label>
+                            </div>
+                        </div>
+                    </li>
+                    
+                </ul>
+
+                <!-- NOTICE: 최종 수정자 정보 분리된 UI와 합쳐진 UI가 다 있음 - 통일 필요 -->
+
+            </div>
+
+            <div class="btns detail">
+                <a href="./07_003_faq_mgmt.html" class="btn btn-default">목록</a>
+                <button type="button" class="btn btn-third">삭제</button>
+                <button type="button" class="btn btn-second">수정</button>
+            </div>
+
+        </div>
+    </main>
+
+    @@include('./common/admin_scripts.html')
+    <script>
+       $(function() {
+        $('input[name=useYn]').on('change', function() {
+            if ($(this).val() === "1") {
+                $('input[name=top10]').attr('disabled', true);
+            } else {
+                $('input[name=top10]').attr('disabled', false);
+            }
+        })
+       })
+    </script>
+  </body>
+</html>

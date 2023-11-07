@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+  @@include('./common/head.html')
+  <body>
+    @@include('./common/header.html')
+    @@include('./common/navigation.html')
+    <main class="main">
+        @@include('./common/page_title.html', { title: 'FAQ 상세', path: {"p1":"",  "p2":""}, description: ''})
+        <div class="content">
+
+            <div class="detail">
+                <ul class="lik-tb">
+                    <li class="lb lb-one">카테고리</li>
+                    <li>가입/로그인</li>
+                    <li class="lb lb-one">질문</li>
+                    <li>앱이 안 켜질 때는 어떻게 하나요?</li>
+                    <li class="lb lb-one">답변</li>
+                    <li>
+                        <div class="pre">
+앱이 안 켜질 때는 디바이스의 전원을 종료 했다가 재시작해주세요.
+그 후에도 계속 문제가 발생할 시에는 1:1 문의를 접수해 주세요.
+                        </div>
+                    </li>
+                    <li class="lb">노출 상태</li>
+                    <li>노출</li>
+                    <li class="lb">TOP10</li>
+                    <li>미설정</li>
+                    <li class="lb">등록일시</li>
+                    <li>2023-10-30 10:30</li>
+                    <li class="lb">등록자</li>
+                    <li>master_01</li>
+                    <li class="lb">최종 수정일시</li>
+                    <li>2023-10-30 10:30</li>
+                    <li class="lb">최종 수정자</li>
+                    <li>master_01</li>
+                </ul>
+
+                <!-- NOTICE: 최종 수정자 정보 분리된 UI와 합쳐진 UI가 다 있음 - 통일 필요 -->
+
+            </div>
+
+            <div class="btns detail">
+                <a href="./07_003_faq_mgmt.html" class="btn btn-default">목록</a>
+                <button type="button" class="btn btn-third">삭제</button>
+                <button type="button" class="btn btn-second">수정</button>
+            </div>
+
+        </div>
+    </main>
+
+    @@include('./common/admin_scripts.html')
+    <script>
+       
+    </script>
+  </body>
+</html>

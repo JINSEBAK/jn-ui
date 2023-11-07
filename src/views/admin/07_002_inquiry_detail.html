@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+  @@include('./common/head.html')
+  <body>
+    @@include('./common/header.html')
+    @@include('./common/navigation.html')
+    <main class="main">
+        @@include('./common/page_title.html', { title: '1:1문의 상세', path: {"p1":"",  "p2":""}, description: ''})
+        <div class="content">
+
+            <div class="detail">
+                <ul class="lik-tb">
+                    <li class="lb">ID</li>
+                    <li>user id</li>
+                    <li class="lb">이메일</li>
+                    <li>abc@gmail.com</li>
+                    <li class="lb">문의 등록일</li>
+                    <li>2023-10-30</li>
+                    <li class="lb">상태</li>
+                    <li>답변대기</li>
+                    <li class="lb lb-one">제목</li>
+                    <li>
+                        <div class="pre">
+일반 회원가입을 하려면 어떻게 해야 하나요?
+
+iOS 14.4 버전에서 작성됨
+앱 버전: 1.0.2
+                        </div>
+                    </li>
+                </ul>
+
+                <ul class="lik-tb">
+                    <li class="lb lb-one">답변</li>
+                    <li>
+                        <textarea class="textarea" name="" id="" cols="30" rows="10" placeholder="답변을 입력해주세요."></textarea>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="btns center">
+                <button type="button" class="btn btn-second">답변 등록</button>
+            </div>
+
+        </div>
+    </main>
+
+    @@include('./common/admin_scripts.html')
+    <script>
+       
+    </script>
+  </body>
+</html>

@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="ko">
+  @@include('./common/head.html')
+  <body>
+    @@include('./common/header.html')
+    @@include('./common/navigation.html')
+    <main class="main">
+        @@include('./common/page_title.html', { title: 'FAQ 관리', path: {"p1":"",  "p2":""}, description: ''})
+        <div class="content">
+
+          <!-- search -->
+          <div class="search">
+
+            <div class="item item-col-5">
+              <div class="label">
+                  <label for="">카테고리</label>
+              </div>
+              <div class="inline">
+                  <select class="select">
+                      <option value="">전체</option>
+                  </select>
+              </div>
+           </div>
+
+           <div class="item item-col-5">
+              <div class="label">
+                  <label for="">키워드</label>
+              </div>
+              <div class="inline">
+                  <select class="select">
+                      <option value="">제목</option>
+                      <option value="">내용</option>
+                      <option value="">등록자</option>
+                      <option value="">최종 수정자</option>
+                  </select>
+                  <input type="text" class="input" placeholder="입력">
+              </div>
+            </div>
+
+            <div class="item item-col-5">
+              <div class="label">
+                  <label for="">노출 상태</label>
+              </div>
+              <div class="inline">
+                <div class="radio">
+                    <input type="radio" name="status" value="1" id="status1" checked>
+                    <label for="status1">전체</label>
+                </div>
+                <div class="radio">
+                    <input type="radio" name="status" value="2" id="status2">
+                    <label for="status2">미노출</label>
+                </div>
+                <div class="radio">
+                    <input type="radio" name="status" value="3" id="status3">
+                    <label for="status3">노출</label>
+                </div>
+              </div>
+            </div>
+
+            <div class="item item-col-5">
+              <div class="label">
+                  <label for="">TOP 10</label>
+              </div>
+              <div class="inline">
+                <div class="radio">
+                    <input type="radio" name="top10" value="1" id="top101" checked>
+                    <label for="top101">미설정</label>
+                </div>
+                <div class="radio">
+                    <input type="radio" name="top10" value="2" id="top102">
+                    <label for="top102">설정</label>
+                </div>
+              </div>
+            </div>
+
+            @@include('./common/search_period.html')
+
+
+          </div>
+        </div>
+
+          </div>
+          <div class="search-btn">
+            <button type="button" class="btn btn-third small">초기화</button>
+            <button type="button" class="btn btn-second small">검색</button>
+          </div>
+          <!-- search end -->
+            
+          <div class="list">
+            <div class="list-head">
+              <div class="total">
+                Total <em>100</em>
+              </div>
+            </div>
+            <div class="list-body">
+              <table class="tb-data" summary="번호, 순위, 카테고리, 제목, 상태, TOP10, 최종수정자, 최종 수정일시로 구분되는 표">
+                <caption>번호 순위 카테고리 제목 상태 TOP10 최종수정자 최종수정일시</caption>
+                <thead>
+                  <tr>
+                    <th scope="col">번호</th>
+                    <th scope="col">순위</th>
+                    <th scope="col">카테고리</th>
+                    <th scope="col">제목</th>
+                    <th scope="col">상태</th>
+                    <th scope="col">TOP10</th>
+                    <th scope="col">최종 수정자</th>
+                    <th scope="col">최종 수정일시</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>10</td>
+                    <td>1</td>
+                    <td>가입/로그인</td>
+                    <td>
+                      <div class="ellipsis">
+                        회원가입은 어떻게 하나요?
+                      </div>
+                    </td>
+                    <td>노출</td>
+                    <td>설정</td>
+                    <td>admin_id</td>
+                    <td>yyyy-mm-dd hh:mm</td>
+                  </tr>
+                  <tr>
+                    <td>9</td>
+                    <td>1</td>
+                    <td>가입/로그인</td>
+                    <td>
+                      <div class="ellipsis">
+                        회원가입은 어떻게 하나요?
+                      </div>
+                    </td>
+                    <td>노출</td>
+                    <td>설정</td>
+                    <td>admin_id</td>
+                    <td>yyyy-mm-dd hh:mm</td>
+                  </tr>
+                  <tr>
+                    <td>8</td>
+                    <td>1</td>
+                    <td>가입/로그인</td>
+                    <td>
+                      <div class="ellipsis">
+                        회원가입은 어떻게 하나요?
+                      </div>
+                    </td>
+                    <td>노출</td>
+                    <td>설정</td>
+                    <td>admin_id</td>
+                    <td>yyyy-mm-dd hh:mm</td>
+                  </tr>
+                  <tr>
+                    <td>7</td>
+                    <td>1</td>
+                    <td>가입/로그인</td>
+                    <td>
+                      <div class="ellipsis">
+                        회원가입은 어떻게 하나요?
+                      </div>
+                    </td>
+                    <td>노출</td>
+                    <td>설정</td>
+                    <td>admin_id</td>
+                    <td>yyyy-mm-dd hh:mm</td>
+                  </tr>
+                  <tr>
+                    <td>6</td>
+                    <td>1</td>
+                    <td>가입/로그인</td>
+                    <td>
+                      <div class="ellipsis">
+                        회원가입은 어떻게 하나요?
+                      </div>
+                    </td>
+                    <td>노출</td>
+                    <td>설정</td>
+                    <td>admin_id</td>
+                    <td>yyyy-mm-dd hh:mm</td>
+                  </tr>
+                  <tr>
+                    <td>5</td>
+                    <td>1</td>
+                    <td>가입/로그인</td>
+                    <td>
+                      <div class="ellipsis">
+                        회원가입은 어떻게 하나요?
+                      </div>
+                    </td>
+                    <td>노출</td>
+                    <td>설정</td>
+                    <td>admin_id</td>
+                    <td>yyyy-mm-dd hh:mm</td>
+                  </tr>
+                  <tr>
+                    <td>4</td>
+                    <td>1</td>
+                    <td>가입/로그인</td>
+                    <td>
+                      <div class="ellipsis">
+                        회원가입은 어떻게 하나요?
+                      </div>
+                    </td>
+                    <td>노출</td>
+                    <td>설정</td>
+                    <td>admin_id</td>
+                    <td>yyyy-mm-dd hh:mm</td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>1</td>
+                    <td>가입/로그인</td>
+                    <td>
+                      <div class="ellipsis">
+                        회원가입은 어떻게 하나요?
+                      </div>
+                    </td>
+                    <td>노출</td>
+                    <td>설정</td>
+                    <td>admin_id</td>
+                    <td>yyyy-mm-dd hh:mm</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>1</td>
+                    <td>가입/로그인</td>
+                    <td>
+                      <div class="ellipsis">
+                        회원가입은 어떻게 하나요?
+                      </div>
+                    </td>
+                    <td>노출</td>
+                    <td>설정</td>
+                    <td>admin_id</td>
+                    <td>yyyy-mm-dd hh:mm</td>
+                  </tr>
+                  <tr>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>가입/로그인</td>
+                    <td>
+                      <div class="ellipsis">
+                        회원가입은 어떻게 하나요?
+                      </div>
+                    </td>
+                    <td>노출</td>
+                    <td>설정</td>
+                    <td>admin_id</td>
+                    <td>yyyy-mm-dd hh:mm</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          @@include('./common/pagination.html')
+
+
+          <div class="btns">
+            <button type="button" class="btn btn-third" id="btnTop10">TOP10 관리</button>
+            <a href="./07_003_faq_create.html" class="btn btn-second">등록</a>
+          </div>
+        </div>
+    </main>
+
+    <!-- popup -->
+    <aside id="aside" class="popup-bg popup-closable">
+      <div class="popup">
+        <div class="popup-head">
+          <h4 class="title">TOP10 관리</h4>
+          <button type="button" class="btn btn-icon" id="btnClose">CLOSE</button>
+        </div>
+        <div class="popup-body">
+          <div>
+            <table class="tb-data" summary="이동, 순위, 카테고리, 제목, 상세이동 버튼으로 구분되는 표">
+              <caption>이동 순위 카테고리 제목 상세</caption>
+              <thead>
+                <tr>
+                  <th scope="col">이동</th>
+                  <th scope="col">순위</th>
+                  <th scope="col">카테고리</th>
+                  <th scope="col">제목</th>
+                  <th scope="col">상세</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td></td>
+                  <td>1</td>
+                  <td>가입/로그인</td>
+                  <td>
+                    <div class="ellipsis">회원가입은 어떻게 하나요?</div>
+                  </td>
+                  <td>
+                    <button type="button" class="btn btn-third small">상세</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>2</td>
+                  <td>나우종로</td>
+                  <td>
+                    <div class="ellipsis">나우종로 서비스는 어떻게 사용하나요?</div>
+                  </td>
+                  <td>
+                    <button type="button" class="btn btn-third small">상세</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>3</td>
+                  <td>가입/로그인</td>
+                  <td>
+                    <div class="ellipsis">회원가입은 어떻게 하나요?</div>
+                  </td>
+                  <td>
+                    <button type="button" class="btn btn-third small">상세</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>4</td>
+                  <td>가입/로그인</td>
+                  <td>
+                    <div class="ellipsis">회원가입은 어떻게 하나요?</div>
+                  </td>
+                  <td>
+                    <button type="button" class="btn btn-third small">상세</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>5</td>
+                  <td>가입/로그인</td>
+                  <td>
+                    <div class="ellipsis">회원가입은 어떻게 하나요?</div>
+                  </td>
+                  <td>
+                    <button type="button" class="btn btn-third small">상세</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>6</td>
+                  <td>가입/로그인</td>
+                  <td>
+                    <div class="ellipsis">회원가입은 어떻게 하나요?</div>
+                  </td>
+                  <td>
+                    <button type="button" class="btn btn-third small">상세</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>7</td>
+                  <td>가입/로그인</td>
+                  <td>
+                    <div class="ellipsis">회원가입은 어떻게 하나요?</div>
+                  </td>
+                  <td>
+                    <button type="button" class="btn btn-third small">상세</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>8</td>
+                  <td>가입/로그인</td>
+                  <td>
+                    <div class="ellipsis">회원가입은 어떻게 하나요?</div>
+                  </td>
+                  <td>
+                    <button type="button" class="btn btn-third small">상세</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>9</td>
+                  <td>가입/로그인</td>
+                  <td>
+                    <div class="ellipsis">회원가입은 어떻게 하나요?</div>
+                  </td>
+                  <td>
+                    <button type="button" class="btn btn-third small">상세</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>10</td>
+                  <td>가입/로그인</td>
+                  <td>
+                    <div class="ellipsis">회원가입은 어떻게 하나요?</div>
+                  </td>
+                  <td>
+                    <button type="button" class="btn btn-third small">상세</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="popup-tail">
+          <button type="button" class="btn btn-third">초기화</button>
+          <button type="button" class="btn btn-second">저장</button>
+        </div>
+      </div>
+    </aside>
+
+    @@include('./common/admin_scripts.html')
+    <script>
+      const btnTop10 = document.getElementById('btnTop10');
+      const btnClose = document.getElementById('btnClose');
+      const aside = document.getElementById('aside');
+
+      btnTop10.addEventListener('click', function() {
+        aside.classList.add('on')
+        aside.querySelector('.popup').classList.add('show')
+      })
+
+      btnClose.addEventListener('click', function() {
+        aside.classList.remove('on')
+        aside.querySelector('.popup').classList.remove('show')
+      })
+    </script>
+  </body>
+</html>

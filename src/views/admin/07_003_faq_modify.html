@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+  @@include('./common/head.html')
+  <body>
+    @@include('./common/header.html')
+    @@include('./common/navigation.html')
+    <main class="main">
+        @@include('./common/page_title.html', { title: 'FAQ 등록', path: {"p1":"",  "p2":""}, description: ''})
+        <div class="content">
+
+            <div class="detail">
+                <ul class="lik-tb">
+                    <li class="lb lb-one">카테고리</li>
+                    <li>
+                        <select class="select">
+                            <option value="">가입/로그인</option>
+                        </select>
+                    </li>
+                    <li class="lb lb-one">질문</li>
+                    <li>
+                        <div class="inline">
+                            <input type="text" class="input" placeholder="제목을 입력해 주세요. (최대 50자)" maxlength="50" value="앱이 안 켜질 때는 어떻게 하나요?">
+                        </div>
+                    </li>
+                    <li class="lb lb-one">답변</li>
+                    <li>
+                        Editor
+                    </li>
+                    <li class="lb">노출 상태</li>
+                    <li>
+                        <div class="inline">
+                            <div class="radio">
+                                <input type="radio" name="useYn" value="1" id="useYn1">
+                                <label for="useYn1">미노출</label>
+                            </div>
+                            <div class="radio">
+                                <input type="radio" name="useYn" value="2" id="useYn2" checked>
+                                <label for="useYn2">노출</label>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="lb">TOP10</li>
+                    <li>
+                        <div class="inline">
+                            <div class="radio">
+                                <input type="radio" name="top10" value="1" id="top101" >
+                                <label for="top101">미설정</label>
+                            </div>
+                            <div class="radio">
+                                <input type="radio" name="useYn" value="2" id="top102" checked>
+                                <label for="top102">설정</label>
+                            </div>
+                        </div>
+                    </li>
+                    
+                </ul>
+
+                <!-- NOTICE: 수정모드에서 등록일시/최종수정일시 정보 보여주는 화면과 안 보여주는 화면이 있음 -->
+
+            </div>
+
+            <div class="btns center">
+                <button type="button" class="btn btn-third">취소</button>
+                <button type="button" class="btn btn-second">저장</button>
+            </div>
+
+        </div>
+    </main>
+
+    @@include('./common/admin_scripts.html')
+    <script>
+       $(function() {
+        $('input[name=useYn]').on('change', function() {
+            if ($(this).val() === "1") {
+                $('input[name=top10]').attr('disabled', true);
+            } else {
+                $('input[name=top10]').attr('disabled', false);
+            }
+        })
+       })
+    </script>
+  </body>
+</html>
