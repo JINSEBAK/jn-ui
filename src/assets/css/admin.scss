@@ -50,6 +50,19 @@ html, body {
     }
 }
 
+.guide {
+    color: $guide-text;
+    display: block;
+    width: 100%;
+    > li {
+        opacity: 0.6;
+        line-height: 1.3;
+        &::before {
+            content: '- '
+        }
+    }
+}
+
 .d-flex {
     display: flex;
     align-items: flex-start;
@@ -425,7 +438,7 @@ html, body {
     & + .lik-tb_title {
         margin-top: 2rem;
     }
-    li {
+    > li {
         flex: 0 1 35%;
         padding: 0.5rem;
         border-top: 1px solid $border-basic;
@@ -491,7 +504,7 @@ html, body {
     }
     .detail & {
         flex:1;
-        .input, .select {
+        .input:not(input[type=date]), .select {
             max-width: 100%;
         }
     }
@@ -675,6 +688,46 @@ html, body {
     }
   }
 
+  .tabs {
+    display: flex;
+    align-items: center;
+    position: relative;
+    &::after {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 1px;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        background-color: $border-basic;
+    }
+    .tab {
+        border: 1px solid $border-basic;
+        border-bottom-color: $border-basic;
+        padding: 0.75rem 1.5rem;
+        margin-right: -1px;
+        position: relative;
+        z-index: 1;
+        cursor: pointer;
+        &.active {
+            border-color:#000;
+            border-bottom-color: #fff;
+            z-index: 2;
+        }
+        &:hover {
+            background-color: rgba(0,0,0,0.05);
+        }
+    }
+  }
+
+  .tab-contents {
+    margin-top: 1rem;
+    .tab-content {
+        border: 1px solid gray;
+    }
+  }
+
   .login {
     border: 1px solid green;
     width: 100vw;
@@ -834,3 +887,55 @@ html, body {
     }
   }
 
+ .thumb-img {
+    max-width: 120px;
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+    .btn-viewer {
+        border: none;
+        width: 100%;
+        cursor: pointer;
+        background-color: $clr-third;
+        color: #fff;
+        font-size: 0.875rem;
+        padding: 0.5rem;
+        text-align: center;
+    }
+ }
+
+ .attach-img {
+    border: 1px solid $border-basic;
+    width: 140px;
+    height: 100px;
+    position: relative;
+    background-color: $bg-th;
+    input[type=file] {
+        width: 1px;
+        height: 1px;
+        position: absolute;
+        opacity: 0;
+    }
+    label {
+        width: 100%;
+        height: 100%;
+        @include flexCenter;
+        span {
+            position: relative;
+            z-index: 99;
+            &::before {
+                content: "+"
+            }
+        }
+        img {
+            position: absolute;
+            z-index: 100;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+ }

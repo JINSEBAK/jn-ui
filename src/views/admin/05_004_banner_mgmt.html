@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+  @@include('./common/head.html')
+  <body>
+    @@include('./common/header.html')
+    @@include('./common/navigation.html')
+    <main class="main">
+        @@include('./common/page_title.html', { title: '배너 관리', path: {"p1":"",  "p2":""}, description: ''})
+        <div class="content">
+
+            <div class="tabs" role="tablist">
+                <div class="tab active" role="tab" aria-selected="true" aria-controls="tabContent1" id="tab1">
+                    <span>메인</span>
+                </div>
+                <div class="tab" role="tab" role="tab" aria-selected="false" aria-controls="tabContent2" id="tab2">
+                    <span>서브 </span>
+                </div>
+            </div>
+
+            <div class="tab-contents">
+                <div class="tab-content" role="tabpanel" aria-labelledby="tab1" id="tabContent1" tabIndex="0">
+                    1
+                </div>
+                <div class="tab-content" role="tabpanel" aria-labelledby="tab2" id="tabContent2" tabIndex="0" hidden="true">
+                    2
+                </div>
+            </div>
+        </div>
+    </main>
+
+    @@include('./common/admin_scripts.html')
+    <script>
+        $(function() {
+            // tab 이벤트
+            $(".tab").on("click", function () {
+                // 보여줄 tab-content id 가져오기
+                const target = $(this).attr("aria-controls");
+
+                // 탭 활성화 처리
+                $(".tab").removeClass("active");
+                $(this).addClass("active");
+
+                // 다른 탭은 키보드 탭으로 접근하지 않게 해줌 (tabindex=-1)
+                $(".tab").attr("tabindex", -1);
+                $(this).removeAttr("tabindex");
+
+                $(".tab-content").attr("hidden", true);
+                $("#" + target).removeAttr("hidden");
+            });
+        })
+    </script>
+  </body>
+</html>

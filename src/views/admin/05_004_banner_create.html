@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ko">
+  @@include('./common/head.html')
+  <body>
+    @@include('./common/header.html')
+    @@include('./common/navigation.html')
+    <main class="main">
+        @@include('./common/page_title.html', { title: '배너 등록', path: {"p1":"",  "p2":""}, description: ''})
+        <div class="content">
+
+            <div class="detail">
+                <ul class="lik-tb">
+                    <li class="lb lb-one required">배너 종류</li>
+                    <li>
+                        <div class="inline">
+                            <div class="radio">
+                                <input type="radio" name="type" value="1" id="type1" checked>
+                                <label for="type1">메인</label>
+                            </div>
+                            <div class="radio">
+                                <input type="radio" name="type" value="2" id="type2">
+                                <label for="type2">서브</label>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="lb lb-one required">배너 명</li>
+                    <li>
+                        <div class="inline">    
+                            <input type="text" class="input" placeholder="최대 20자 입력">
+                        </div>
+                    </li>
+                    <li class="lb lb-one">이미지</li>
+                    <li>
+                        <div class="attach-img">
+                            <label>
+                                <img src="" id="previewImg">
+                                <input type="file" id="attachImg" accept="image/*">
+                                <span>추가</span>
+                            </label>
+                        </div>
+                    </li>
+                    <li class="lb lb-one required link-type">링크 종류</li>
+                    <li>
+                        <div class="inline">
+                            <div class="radio">
+                                <input type="radio" name="link-type" value="1" id="link1" checked>
+                                <label for="link1">내부</label>
+                            </div>
+                            <div class="radio">
+                                <input type="radio" name="link-type" value="2" id="link2">
+                                <label for="link2">외부</label>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="lb open-window" style="display: none">창 열림</li>
+                    <li class="open-window" style="display: none">
+                        <div class="inline">
+                            <div class="radio">
+                                <input type="radio" name="open" value="1" id="open1" checked>
+                                <label for="open1">새창 열기</label>
+                            </div>
+                            <div class="radio">
+                                <input type="radio" name="open" value="2" id="open2">
+                                <label for="open2">외부 앱 열기</label>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="lb lb-one">링크 URL</li>
+                    <li>
+                        <div class="inline">
+                            <input type="text" class="input" placeholder="연결될 URL 주소 입력" disabled>
+                            <button type="button" class="btn btn-default small">링크 검색</button>
+                        </div>
+                        <div class="checkbox chk-direct">
+                            <input type="checkbox" name="" id="btnDirect">
+                            <label for="btnDirect">직접 입력</label>
+                        </div>
+
+                    </li>
+                    <li class="lb lb-one">노출 여부</li>
+                    <li>
+                        <div class="inline">
+                            <div class="radio">
+                                <input type="radio" name="useYn" value="1" id="useYn1" checked>
+                                <label for="useYn1">미노출</label>
+                            </div>
+                            <div class="radio">
+                                <input type="radio" name="useYn" value="2" id="useYn2">
+                                <label for="useYn2">노출</label>
+                            </div>
+                        </div>
+                        <div class="inline">
+                            <div class="radio">
+                                <input type="radio" name="useYn-type" value="1" id="useYn-t1" disabled>
+                                <label for="useYn-t1">상시 노출</label>
+                            </div>
+                            <div class="radio">
+                                <input type="radio" name="useYn-type" value="2" id="useYn-t2" disabled>
+                                <label for="useYn-t2">기간 노출</label>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="lb lb-one">노출 기간</li>
+                    <li>
+                        <div class="inline">
+                            <input type="date" class="input"> ~ <input type="date" class="input">
+                        </div>
+                        <ul class="guide">
+                            <li>같은 기간에 메인 배너는 최대 5개, 서브 배너는 최대 3개 노출 설정 가능합니다.</li>
+                            <li>노출 기간 만료 시 미노출 상태로 자동 변경됩니다.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="btns center">
+                <button type="button" class="btn btn-third">취소</button>
+                <button type="button" class="btn btn-second">등록</button>
+            </div>
+
+        </div>
+    </main>
+
+    @@include('./common/admin_scripts.html')
+    <script>
+        $(function() {
+            $('input[name=useYn]').on('change', function() {
+                if ($(this).val() === "1") {
+                    $('input[name=useYn-type]').attr('disabled', true);
+                } else {
+                    $('input[name=useYn-type]').attr('disabled', false);
+                }
+            })
+
+            // 링크 종로
+            $('input[name=link-type]').on('change', function() {
+                console.log($(this).val());
+                if ($(this).val() === "2") {
+                    // 외부 링크 
+                    $('.link-type').removeClass('lb-one');
+                    $('.link-type').siblings('.open-window').show();
+                } else {
+                    $('.link-type').addClass('lb-one');
+                    $('.link-type').siblings('.open-window').hide();
+                }
+            });
+
+            // 이미지 첨부 
+            $('#attachImg').on('change', function(e) {
+                fnReadUrl();
+            })
+        })
+
+        function fnReadUrl() {
+            const _input = document.getElementById('attachImg')
+            if (_input.files && _input.files[0]) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    document.getElementById('previewImg').src = e.target.result;
+                }
+                reader.readAsDataURL(_input.files[0])
+            } else {
+                document.getElementById('previewImg').src = '';
+            }
+        }
+    </script>
+  </body>
+</html>
