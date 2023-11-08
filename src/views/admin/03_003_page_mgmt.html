@@ -8,6 +8,33 @@
         @@include('./common/page_title.html', { title: '페이지 관리', path: {"p1":"",  "p2":""}, description: ''})
         <div class="content">
 
+
+            <!-- search -->
+            <div class="search">
+
+                <div class="item">
+                    <div class="label">
+                        <label for="">키워드</label>
+                    </div>
+                    <div class="inline">
+                        <select class="select">
+                            <option value="">페이지 ID</option>
+                            <option value="">페이지 명</option>
+                            <option value="">페이지 설명</option>
+                        </select>
+                        <input type="text" class="input" placeholder="입력">
+                    </div>
+                </div>
+
+                @@include('./common/search_period.html')
+
+            </div>
+            <div class="search-btn">
+                <button type="button" class="btn btn-third small">초기화</button>
+                <button type="button" class="btn btn-second small">검색</button>
+            </div>
+            <!-- search end -->
+
             <!-- list -->
             <div class="list">
                 <div class="list-head">
@@ -16,106 +43,138 @@
                   </div>
                 </div>
                 <div class="list-body">
-                  <table class="tb-data" summary="번호,OS,플랫폼,버전,중요도,버전 적용일시로 구분되는 표">
-                    <caption>번호 OS 플랫폼 버전 중요도 버전적용일시</caption>
+                  <table class="tb-data" summary="번호,페이지아이디, 페이지명, 페이지설명, 상태, 최종수정일시, 최종수정자로 구분되는 표">
+                    <caption>번호 페이지아이디 페이지명 페이지설명 상태 최종수정일시 최종수정자</caption>
                     <colgroup>
                         <col style="width:5%;">
-                        <col style="width:15%;">
-                        <col style="width:15%;">
-                        <col style="width:15%;">
+                        <col style="width:10%;">
                         <col style="width:15%;">
                         <col style="width:auto;">
+                        <col style="width:10%;">
+                        <col style="width:15%;">
+                        <col style="width:15%;">
                     </colgroup>
                     <thead>
                       <tr>
                         <th scope="col">번호</th>
-                        <th scope="col">OS</th>
-                        <th scope="col">플랫폼</th>
-                        <th scope="col">버전</th>
-                        <th scope="col">중요도</th>
-                        <th scope="col">버전 적용일시</th>
+                        <th scope="col">페이지ID</th>
+                        <th scope="col">페이지명</th>
+                        <th scope="col">페이지 설명</th>
+                        <th scope="col">상태</th>
+                        <th scope="col">최종 수정일시</th>
+                        <th scope="col">최종 수정자</th>
                       </tr>
                     </thead>
                     <tbody>
                       <tr>
                         <td>10</td>
-                        <td>안드로이드</td>
-                        <td>플레이스토어</td>
-                        <td>1.0.6</td>
-                        <td>강제</td>
+                        <td>jongnoIntro</td>
+                        <td>종로 소개</td>
+                        <td>
+                            <div class="ellipsis">종로 소개 페이지</div>
+                        </td>
+                        <td>사용</td>
                         <td>yyyy-mm-dd hh:mm</td>
+                        <td>admin_id</td>
                       </tr>
                       <tr>
                         <td>9</td>
-                        <td>iOS</td>
-                        <td>애플앱스토어</td>
-                        <td>1.0.6</td>
-                        <td>강제</td>
+                        <td>jongnoIntro</td>
+                        <td>종로 소개</td>
+                        <td>
+                            <div class="ellipsis">종로 소개 페이지</div>
+                        </td>
+                        <td>사용</td>
                         <td>yyyy-mm-dd hh:mm</td>
+                        <td>admin_id</td>
                       </tr>
                       <tr>
                         <td>8</td>
-                        <td>안드로이드</td>
-                        <td>원스토어</td>
-                        <td>1.0.6</td>
-                        <td>강제</td>
+                        <td>jongnoIntro</td>
+                        <td>종로 소개</td>
+                        <td>
+                            <div class="ellipsis">종로 소개 페이지</div>
+                        </td>
+                        <td>사용</td>
                         <td>yyyy-mm-dd hh:mm</td>
+                        <td>admin_id</td>
                       </tr>
                       <tr>
                         <td>7</td>
-                        <td>안드로이드</td>
-                        <td>플레이스토어</td>
-                        <td>1.0.5</td>
-                        <td>일반</td>
+                        <td>jongnoIntro</td>
+                        <td>종로 소개</td>
+                        <td>
+                            <div class="ellipsis">종로 소개 페이지</div>
+                        </td>
+                        <td>사용</td>
                         <td>yyyy-mm-dd hh:mm</td>
+                        <td>admin_id</td>
                       </tr>
                       <tr>
                         <td>6</td>
-                        <td>안드로이드</td>
-                        <td>플레이스토어</td>
-                        <td>1.0.6</td>
-                        <td>강제</td>
+                        <td>jongnoIntro</td>
+                        <td>종로 소개</td>
+                        <td>
+                            <div class="ellipsis">종로 소개 페이지</div>
+                        </td>
+                        <td>사용</td>
                         <td>yyyy-mm-dd hh:mm</td>
+                        <td>admin_id</td>
                       </tr>
                       <tr>
                         <td>5</td>
-                        <td>안드로이드</td>
-                        <td>플레이스토어</td>
-                        <td>1.0.6</td>
-                        <td>강제</td>
+                        <td>jongnoIntro</td>
+                        <td>종로 소개</td>
+                        <td>
+                            <div class="ellipsis">종로 소개 페이지</div>
+                        </td>
+                        <td>사용</td>
                         <td>yyyy-mm-dd hh:mm</td>
+                        <td>admin_id</td>
                       </tr>
                       <tr>
                         <td>4</td>
-                        <td>안드로이드</td>
-                        <td>플레이스토어</td>
-                        <td>1.0.6</td>
-                        <td>강제</td>
+                        <td>jongnoIntro</td>
+                        <td>종로 소개</td>
+                        <td>
+                            <div class="ellipsis">종로 소개 페이지</div>
+                        </td>
+                        <td>사용</td>
                         <td>yyyy-mm-dd hh:mm</td>
+                        <td>admin_id</td>
                       </tr>
                       <tr>
                         <td>3</td>
-                        <td>안드로이드</td>
-                        <td>플레이스토어</td>
-                        <td>1.0.6</td>
-                        <td>강제</td>
+                        <td>jongnoIntro</td>
+                        <td>종로 소개</td>
+                        <td>
+                            <div class="ellipsis">종로 소개 페이지</div>
+                        </td>
+                        <td>사용</td>
                         <td>yyyy-mm-dd hh:mm</td>
+                        <td>admin_id</td>
                       </tr>
                       <tr>
                         <td>2</td>
-                        <td>안드로이드</td>
-                        <td>플레이스토어</td>
-                        <td>1.0.6</td>
-                        <td>강제</td>
+                        <td>jongnoIntro</td>
+                        <td>종로 소개</td>
+                        <td>
+                            <div class="ellipsis">종로 소개 페이지</div>
+                        </td>
+                        <td>사용</td>
                         <td>yyyy-mm-dd hh:mm</td>
+                        <td>admin_id</td>
                       </tr>
                       <tr>
                         <td>1</td>
-                        <td>안드로이드</td>
-                        <td>플레이스토어</td>
-                        <td>1.0.6</td>
-                        <td>강제</td>
+                        <td>jongnoIntro</td>
+                        <td>종로 소개</td>
+                        <td>
+                            <div class="ellipsis">종로 소개 페이지</div>
+                        </td>
+                        <td>사용</td>
                         <td>yyyy-mm-dd hh:mm</td>
+                        <td>admin_id</td>
                       </tr>
                     </tbody>
                   </table>
@@ -124,8 +183,8 @@
               @@include('./common/pagination.html')
             <!-- list end -->
 
-            <div class="btns">
-                <a href="./03_003_page_create.html" class="btn btn-second">등록</a>
+            <div class="btns list">
+                <a href="./03_003_page_create.html" class="btn btn-second">생성</a>
             </div>
 
         </div>

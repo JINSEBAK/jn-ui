@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+  @@include('./common/head.html')
+  <body>
+    @@include('./common/header.html')
+    @@include('./common/navigation.html')
+    <main class="main">
+        @@include('./common/page_title.html', { title: '페이지 상세', path: {"p1":"",  "p2":""}, description: ''})
+        <div class="content">
+            
+            <div class="detail">
+                <ul class="lik-tb">
+                    <li class="lb lb-one">페이지 ID</li>
+                    <li>jongnoHealth</li>
+                    <li class="lb lb-one">페이지 명</li>
+                    <li>야외 시설 안내</li>
+                    <li class="lb lb-one">페이지 설명</li>
+                    <li>
+                        <div class="pre">
+종로 야외 시설 안내
+                        </div>
+                    </li>
+                    <li class="lb lb-one">상태</li>
+                    <li>사용
+                        <span class="path">종로 정보 &gt; 종로 야외 시설</span>
+                    </li>
+                </ul>
+                <ul class="lik-tb">
+                    <li class="lb lb-one">내용</li>
+                    <li>
+                        <div class="editor">Editor</div>
+                    </li>
+                    <li class="lb">등록일시</li>
+                    <li>2023-10-30 10:30</li>
+                    <li class="lb">등록자</li>
+                    <li>master_01</li>
+                </ul>
+                <ul class="lik-tb">
+                    <li class="lb">최종 수정일시</li>
+                    <li>2023-10-30 10:30</li>
+                    <li class="lb">최종 수정자</li>
+                    <li>master_01</li>
+                </ul>
+            </div>
+
+            <div class="btns detail">
+                <a href="./03_003_page_mgmt.html" class="btn btn-default">목록</a>
+                <button type="button" class="btn btn-third">삭제</button>
+                <button type="button" class="btn btn-second">수정</button>
+            </div>
+
+        </div>
+    </main>
+
+    @@include('./common/admin_scripts.html')
+    <script>
+    </script>
+  </body>
+</html>
