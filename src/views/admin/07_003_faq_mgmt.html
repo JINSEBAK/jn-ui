@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="ko">
   @@include('./common/head.html')
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
   <body>
     @@include('./common/header.html')
     @@include('./common/navigation.html')
@@ -254,7 +255,6 @@
           </div>
           @@include('./common/pagination.html')
 
-
           <div class="btns">
             <button type="button" class="btn btn-third" id="btnTop10">TOP10 관리</button>
             <a href="./07_003_faq_create.html" class="btn btn-second">등록</a>
@@ -267,11 +267,13 @@
       <div class="popup">
         <div class="popup-head">
           <h4 class="title">TOP10 관리</h4>
-          <button type="button" class="btn btn-icon" id="btnClose">CLOSE</button>
+          <button type="button" class="btn btn-icon icon close" id="btnClose">
+            <span class="sr-only">팝업닫기</span>
+          </button>
         </div>
         <div class="popup-body">
           <div>
-            <table class="tb-data" summary="이동, 순위, 카테고리, 제목, 상세이동 버튼으로 구분되는 표">
+            <table class="tb-data sortable" summary="이동, 순위, 카테고리, 제목, 상세이동 버튼으로 구분되는 표">
               <caption>이동 순위 카테고리 제목 상세</caption>
               <thead>
                 <tr>
@@ -282,115 +284,135 @@
                   <th scope="col">상세</th>
                 </tr>
               </thead>
-              <tbody>
+              <tbody id="listTopArticles">
                 <tr>
-                  <td></td>
+                  <td class="sort-handle">
+                    <span class="icon sortable"></span>
+                  </td>
                   <td>1</td>
                   <td>가입/로그인</td>
                   <td>
                     <div class="ellipsis">회원가입은 어떻게 하나요?</div>
                   </td>
                   <td>
-                    <button type="button" class="btn btn-third small">상세</button>
+                    <button type="button" class="btn btn-third mini">상세</button>
                   </td>
                 </tr>
                 <tr>
-                  <td></td>
+                  <td class="sort-handle">
+                    <span class="icon sortable"></span>
+                  </td>
                   <td>2</td>
                   <td>나우종로</td>
                   <td>
                     <div class="ellipsis">나우종로 서비스는 어떻게 사용하나요?</div>
                   </td>
                   <td>
-                    <button type="button" class="btn btn-third small">상세</button>
+                    <button type="button" class="btn btn-third mini">상세</button>
                   </td>
                 </tr>
                 <tr>
-                  <td></td>
+                  <td class="sort-handle">
+                    <span class="icon sortable"></span>
+                  </td>
                   <td>3</td>
                   <td>가입/로그인</td>
                   <td>
                     <div class="ellipsis">회원가입은 어떻게 하나요?</div>
                   </td>
                   <td>
-                    <button type="button" class="btn btn-third small">상세</button>
+                    <button type="button" class="btn btn-third mini">상세</button>
                   </td>
                 </tr>
                 <tr>
-                  <td></td>
+                  <td class="sort-handle">
+                    <span class="icon sortable"></span>
+                  </td>
                   <td>4</td>
                   <td>가입/로그인</td>
                   <td>
                     <div class="ellipsis">회원가입은 어떻게 하나요?</div>
                   </td>
                   <td>
-                    <button type="button" class="btn btn-third small">상세</button>
+                    <button type="button" class="btn btn-third mini">상세</button>
                   </td>
                 </tr>
                 <tr>
-                  <td></td>
+                  <td class="sort-handle">
+                    <span class="icon sortable"></span>
+                  </td>
                   <td>5</td>
                   <td>가입/로그인</td>
                   <td>
                     <div class="ellipsis">회원가입은 어떻게 하나요?</div>
                   </td>
                   <td>
-                    <button type="button" class="btn btn-third small">상세</button>
+                    <button type="button" class="btn btn-third mini">상세</button>
                   </td>
                 </tr>
                 <tr>
-                  <td></td>
+                  <td class="sort-handle">
+                    <span class="icon sortable"></span>
+                  </td>
                   <td>6</td>
                   <td>가입/로그인</td>
                   <td>
                     <div class="ellipsis">회원가입은 어떻게 하나요?</div>
                   </td>
                   <td>
-                    <button type="button" class="btn btn-third small">상세</button>
+                    <button type="button" class="btn btn-third mini">상세</button>
                   </td>
                 </tr>
                 <tr>
-                  <td></td>
+                  <td class="sort-handle">
+                    <span class="icon sortable"></span>
+                  </td>
                   <td>7</td>
                   <td>가입/로그인</td>
                   <td>
                     <div class="ellipsis">회원가입은 어떻게 하나요?</div>
                   </td>
                   <td>
-                    <button type="button" class="btn btn-third small">상세</button>
+                    <button type="button" class="btn btn-third mini">상세</button>
                   </td>
                 </tr>
                 <tr>
-                  <td></td>
+                  <td class="sort-handle">
+                    <span class="icon sortable"></span>
+                  </td>
                   <td>8</td>
                   <td>가입/로그인</td>
                   <td>
                     <div class="ellipsis">회원가입은 어떻게 하나요?</div>
                   </td>
                   <td>
-                    <button type="button" class="btn btn-third small">상세</button>
+                    <button type="button" class="btn btn-third mini">상세</button>
                   </td>
                 </tr>
                 <tr>
-                  <td></td>
+                  <td class="sort-handle">
+                    <span class="icon sortable"></span>
+                  </td>
                   <td>9</td>
                   <td>가입/로그인</td>
                   <td>
                     <div class="ellipsis">회원가입은 어떻게 하나요?</div>
                   </td>
                   <td>
-                    <button type="button" class="btn btn-third small">상세</button>
+                    <button type="button" class="btn btn-third mini">상세</button>
                   </td>
                 </tr>
                 <tr>
-                  <td></td>
+                  <td class="sort-handle">
+                    <span class="icon sortable"></span>
+                  </td>
                   <td>10</td>
                   <td>가입/로그인</td>
                   <td>
                     <div class="ellipsis">회원가입은 어떻게 하나요?</div>
                   </td>
                   <td>
-                    <button type="button" class="btn btn-third small">상세</button>
+                    <button type="button" class="btn btn-third mini">상세</button>
                   </td>
                 </tr>
               </tbody>
@@ -405,6 +427,8 @@
     </aside>
 
     @@include('./common/admin_scripts.html')
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+
     <script>
       const btnTop10 = document.getElementById('btnTop10');
       const btnClose = document.getElementById('btnClose');
@@ -418,6 +442,13 @@
       btnClose.addEventListener('click', function() {
         aside.classList.remove('on')
         aside.querySelector('.popup').classList.remove('show')
+      })
+
+      $(function() {
+        $('#listTopArticles').sortable({
+          handle: '.sort-handle',
+          placeholder: "ui-state-highlight"
+        })
       })
     </script>
   </body>

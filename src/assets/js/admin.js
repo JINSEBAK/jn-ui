@@ -11,6 +11,7 @@ const MENUS = [
 ]
 const container = document.getElementById('gnb');
 
+
 window.onload = function() {
 
     // gnb 메뉴 동적 생성
@@ -116,3 +117,29 @@ const message = {
 		})
     }
 }
+
+
+
+const tooltips = document.querySelectorAll('[data-role=tooltip]')
+if (tooltips.length > 0) {
+    tooltips.forEach((tooltip) => {
+        tooltip.addEventListener('click', function(e) {
+            if (e.target.nextElementSibling) {
+                e.target.nextElementSibling.classList.add('show')
+            }
+        })
+    })
+}
+
+window.addEventListener('click', function(e) {
+
+    // 툴팁 밖 클릭 시 열려있는 툴팁 닫기
+    if (e.target.dataset.role !== 'tooltip') {
+        const _tips = document.querySelectorAll('.tips')
+        if (_tips.length > 0) {
+            _tips.forEach((tip) => {
+                tip.classList.remove('show')
+            })
+        }
+    }
+})

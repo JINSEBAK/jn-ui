@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+  @@include('./common/head.html')
+  <body>
+    @@include('./common/header.html')
+    @@include('./common/navigation.html')
+    <main class="main">
+        @@include('./common/page_title.html', { title: '약관 상세', path: {"p1":"",  "p2":""}, description: ''})
+        <div class="content">
+
+          <div class="detail">
+            <ul class="lik-tb">
+              <li class="lb required">정책</li>
+              <li>서비스 이용약관</li>
+              <li class="lb">버전</li>
+              <li>1.0.6</li>
+              <li class="lb lb-one">내용</li>
+              <li>
+                <div class="pre">
+에디터 사용
+
+
+
+제 1조(목적 및 정의)
+1. 이 약관은 0000의
+                       
+                </div>
+              </li>
+              <li class="lb lb-one">배포일</li>
+              <li>2023-10-30</li>
+              <!-- NOTICE: 상세 화면에서 등록일/최종수정일 다 노출할거면 다 하고, 하나만 할거면 하나만!! -->
+              <li class="lb">최종 수정일</li>
+              <li>2023-10-30 10:30</li>
+              <li class="lb">최종 수정자</li>
+              <li>master_01</li>
+            </ul>
+          </div> 
+
+          <div class="btns detail">
+            <a href="./08_001_terms_mgmt.html" class="btn btn-default">목록</a>
+            <button type="button" class="btn btn-second">수정</button>
+          </div>
+           
+        </div>
+    </main>
+
+    @@include('./common/admin_scripts.html')
+    <script>
+    </script>
+  </body>
+</html>
