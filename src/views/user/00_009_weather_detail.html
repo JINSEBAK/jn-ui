@@ -6,66 +6,68 @@
   </head>
   <body class="more">
     @@include('../common/header_sub.html', {title: '날씨'})
-    <div class="container inner-full-padd">
+    <div class="container inner-full-padd" style="padding: 0 35px;">
 
         <section class="d-flex-col w-container">
             <div class="w-current">
                 <ul class="w-current_info">
                     <li>
                         <div class="user-position">
-                            <span class="icon map">
+                            <span class="icon wloc">
                                 <span class="sr-only">사용자 위치</span>
                             </span>
                             <span>종로구 익선동</span>
                         </div>
                     <li>
-                        <img src="../assets/images/icon_weather_lightning.svg" alt="">
+                        <div class="w-meta">
+                            <!-- sunny / littlecloud / cloudy / cloudrain / snow -->
+                            <img src="../assets/images/img_sunny.svg" alt="">
+                            <span>맑음</span>
+                        </div>
                     </li>
                     <li>
-                        <strong class="temperature">20 °C</strong>
+                        <strong class="temperature">20°</strong>
                     </li>
-                    <li>
-                        최고 32 °C  / 최저 15 °C 
-                    </li>
-                    <li>
-                        <em>맑음</em>
+                    <li class="min-max">
+                        <div>최고 <span>32°C</span></div>  
+                        <div>최저 <span>15°C</span></div>
                     </li>
                 </ul>
             </div>
 
             <ul class="extra-w-info">
                 <li class="w-info">
-                    <img src="../assets/images/icon_weather_lightning.svg" alt="">
-                    <div class="w-info_item">
-                        <span class="w-info_title">바람</span>
-                        <span class="w-info_value">
-                            <strong>10</strong>
-                            <span class="unit">Km/h</span>
-                        </span>
-                    </div>
-                </li>
-                <li class="w-info">
-                    <img src="../assets/images/icon_weather_lightning.svg" alt="">
+                    <img src="../assets/images/icon_w_humidity.svg" alt="">
                     <div class="w-info_item">
                         <span class="w-info_title">습도</span>
                         <span class="w-info_value">
                             <strong>53</strong>
-                            <span class="unit">%</span>
+                            <span class="">%</span>
                         </span>
                     </div>
                 </li>
                 <li class="w-info">
-                    <img src="../assets/images/icon_weather_lightning.svg" alt="">
+                    <img src="../assets/images/icon_w_wind.svg" alt="">
+                    <div class="w-info_item">
+                        <span class="w-info_title">바람</span>
+                        <span class="w-info_value">
+                            <strong>10</strong>
+                            <span class="">Km/h</span>
+                        </span>
+                    </div>
+                </li>
+                <li class="w-info">
+                    <img src="../assets/images/icon_w_prob_rain.svg" alt="">
                     <div class="w-info_item">
                         <span class="w-info_title">강우확률</span>
                         <span class="w-info_value">
                             <strong>10</strong>
-                            <span class="unit">%</span>
+                            <span class="">%</span>
                         </span>
                     </div>
                 </li>
                 <li class="w-info">
-                    <img src="../assets/images/icon_weather_lightning.svg" alt="">
+                    <img src="../assets/images/icon_w_uv.svg" alt="">
                     <div class="w-info_item">
                         <span class="w-info_title">자외선</span>
                         <span class="w-info_value">
@@ -74,6 +76,33 @@
                     </div>
                 </li>
             </ul>
+
+            <div class="air-info">
+                <div class="air-info_brd">
+                    <div class="bar-box">
+                        <div class="bar vertical lv1">
+                            <div class="value" style="height:25%"></div>
+                        </div>
+                    </div>
+                    <div class="air-info_txt">
+                        <span>미세먼지</span>
+                        <span>좋음</span>
+                        <span>4㎍/㎥</span>
+                    </div>
+                </div>
+                <div class="air-info_brd">
+                    <div class="bar-box">
+                        <div class="bar vertical lv2">
+                            <div class="value"></div>
+                        </div>
+                    </div>
+                    <div class="air-info_txt">
+                        <span>초미세먼지</span>
+                        <span>보통</span>
+                        <span>12㎍/㎥</span>
+                    </div>
+                </div>
+            </div>
         </section>
 
        

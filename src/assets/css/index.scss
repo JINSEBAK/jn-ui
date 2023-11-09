@@ -26,6 +26,11 @@ h2 {
   font-weight: bold;
 }
 
+.del {
+  text-decoration: line-through !important;
+  color: #aeaeae;
+}
+
 .tb-lined {
   border: 1px solid #5e5e5e;
   border-collapse: collapse;
@@ -81,6 +86,9 @@ h2 {
         padding-left: 0.25rem;
         font-size: 0.75rem;
         width: 40px;
+      }
+      .del {
+        text-decoration:line-through;
       }
       em {
         font-style: normal;

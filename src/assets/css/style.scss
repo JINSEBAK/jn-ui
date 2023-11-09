@@ -2199,6 +2199,9 @@ select {
     background-size: 1rem;
     background-image: url(../images/icon_new.svg);
   }
+  &.wloc {
+    background-image: url(../images/icon_w_loc.svg);
+  }
 }
 
 @keyframes show_pop {
