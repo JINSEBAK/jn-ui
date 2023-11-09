@@ -6,15 +6,23 @@
   </head>
   <body class="more">
     @@include('../common/header_sub.html', {title: '날씨'})
-    <div class="container inner-padd">
+    <div class="container inner-full-padd">
 
-        <section>
+        <section class="d-flex-col w-container">
             <div class="w-current">
-                <img src="../assets/images/icon_weather_lightning.svg" alt="">
                 <ul class="w-current_info">
-                    <li>종로구 익선동</li>
                     <li>
-                        <strong>20 °C</strong>
+                        <div class="user-position">
+                            <span class="icon map">
+                                <span class="sr-only">사용자 위치</span>
+                            </span>
+                            <span>종로구 익선동</span>
+                        </div>
+                    <li>
+                        <img src="../assets/images/icon_weather_lightning.svg" alt="">
+                    </li>
+                    <li>
+                        <strong class="temperature">20 °C</strong>
                     </li>
                     <li>
                         최고 32 °C  / 최저 15 °C 

@@ -205,6 +205,11 @@ a {
   input[type="text"] {
     flex: 1;
   }
+  &-col {
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - $header - 50px);
+  }
 }
 
 hr.full-line {

@@ -754,6 +754,11 @@
   }
 }
 
+.w-container {
+  gap: 2rem;
+  justify-content: space-between;
+}
+
 .extra-w-info {
   display: flex;
   flex-wrap: wrap;
@@ -768,13 +773,19 @@
   flex-direction: column;
   align-items: center;
   gap: 2rem;
-  padding: 1rem 0;
-  flex: 1;
+  padding: 3rem 0;
   &_info {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 0.5rem;
+    gap: 1rem;
+  }
+  .user-position {
+    display: flex;
+    align-items: center;
+  }
+  .temperature {
+    font-size: 3rem;
   }
 }
 
