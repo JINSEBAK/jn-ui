@@ -755,8 +755,10 @@
 }
 
 .w-container {
+  padding: 0 11.6%;
   gap: 1.25rem;
   justify-content: space-between;
+  margin-bottom: 40px;
 }
 
 .extra-w-info {
@@ -764,6 +766,7 @@
   justify-content: center;
   flex-wrap: wrap;
   position: relative;
+  margin-top: auto;
   .w-info {
     flex: 1 0 48%;
   }
@@ -811,6 +814,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    span {
+      min-height: 1rem;
+    }
   }
   .temperature {
     font-size: 60px;
@@ -832,7 +838,7 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  padding: 22px 18px;
+  padding: 22px 0 22px 18px;
   flex: 1 1 130px;
   &:nth-of-type(2n+1) {
     border-right: 1px solid $bg-content-box2;
@@ -869,7 +875,6 @@
     display: flex;
     gap: 0.5rem;
     flex: 1 1 130px;
-    padding: 14px 10px;
     .bar-box {
       padding: 0 1rem;
     }
@@ -918,6 +923,9 @@
     &:first-child {
       border-right: 1px solid $bg-content-box2;
     }
+    &:last-child {
+      padding-left: 10px;
+    }
   }
   &_txt {
     display: flex;
@@ -931,6 +939,9 @@
       }
       &:nth-of-type(2) {
         font-weight: bold;
+      }
+      &:last-child {
+        font-size: 0.875rem;
       }
     }
   }

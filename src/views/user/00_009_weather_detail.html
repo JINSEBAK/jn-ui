@@ -6,7 +6,7 @@
   </head>
   <body class="more">
     @@include('../common/header_sub.html', {title: '날씨'})
-    <div class="container inner-full-padd" style="padding: 0 35px;">
+    <div class="container">
 
         <section class="d-flex-col w-container">
             <div class="w-current">
@@ -26,7 +26,10 @@
                         </div>
                     </li>
                     <li>
-                        <strong class="temperature">20°</strong>
+                        <strong class="temperature">
+                            <span>20</span>
+                            <span>°</span>
+                        </strong>
                     </li>
                     <li class="min-max">
                         <div>최고 <span>32°C</span></div>  
