@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ko">
+  @@include('./common/head.html')
+  <body>
+    @@include('./common/header.html')
+    @@include('./common/navigation.html')
+    <main class="main">
+        @@include('./common/page_title.html', { title: '거점 관리', path: {"p1":"",  "p2":""}, description: ''})
+        <div class="content">
+
+            <!-- search -->
+            <div class="search">
+                <div class="item">
+                    <div class="label">
+                        <label for="">거점 명</label>
+                    </div>
+                    <div class="inline">
+                        <input type="text" class="input" placeholder="입력" style="max-width: 50%">
+                    </div>
+                </div>
+                @@include('./common/search_period.html')
+            </div>
+            <div class="search-btn">
+                <button type="button" class="btn btn-third small">초기화</button>
+                <button type="button" class="btn btn-second small">검색</button>
+            </div>
+            <!-- search end -->
+
+            <div class="list">
+                <div class="list-head">
+                    <div class="total">
+                      Total <em>23</em>
+                    </div>
+                </div>
+                <div class="list-body">
+                    <table class="tb-data" summary="번호, 거점명, 이미지, 최종수정일시, 최종수정로 구분되는 표">
+                        <caption>번호 거정명 이미지 최종수정일시 최종수정자</caption>
+                        <thead>
+                            <tr>
+                                <th scope="col">번호</th>
+                                <th scope="col">거점명</th>
+                                <th scope="col">이미지</th>
+                                <th scope="col">최종 수정일시</th>
+                                <th scope="col">최종 수정자</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>100</td>
+                                <td>
+                                    <div class="ellipsis">익선동 한옥마을</div>
+                                </td>
+                                <td>
+                                    <div class="thumb-img">
+                                        <img src="../../assets/images/sample/sample_07.jpeg" alt=""> 
+                                    </div>
+                                </td>
+                                <td>yyyy-mm-dd hh:mm</td>
+                                <td>admin_id</td>
+                            </tr>
+                            <tr>
+                                <td>99</td>
+                                <td>
+                                    <div class="ellipsis">거점명</div>
+                                </td>
+                                <td>
+                                    <div class="thumb-img">
+                                        <img src="../../assets/images/sample/sample_07.jpeg" alt=""> 
+                                    </div>
+                                </td>
+                                <td>yyyy-mm-dd hh:mm</td>
+                                <td>admin_id</td>
+                            </tr>
+                            <tr>
+                                <td>98</td>
+                                <td>
+                                    <div class="ellipsis">거점명</div>
+                                </td>
+                                <td>
+                                    <div class="thumb-img">
+                                        <img src="../../assets/images/sample/sample_07.jpeg" alt=""> 
+                                    </div>
+                                </td>
+                                <td>yyyy-mm-dd hh:mm</td>
+                                <td>admin_id</td>
+                            </tr>
+                            <tr>
+                                <td>97</td>
+                                <td>
+                                    <div class="ellipsis">거점명</div>
+                                </td>
+                                <td>
+                                    <div class="thumb-img">
+                                        <img src="../../assets/images/sample/sample_07.jpeg" alt=""> 
+                                    </div>
+                                </td>
+                                <td>yyyy-mm-dd hh:mm</td>
+                                <td>admin_id</td>
+                            </tr>
+                            <tr>
+                                <td>96</td>
+                                <td>
+                                    <div class="ellipsis">거점명</div>
+                                </td>
+                                <td>
+                                    <div class="thumb-img">
+                                        <img src="../../assets/images/sample/sample_07.jpeg" alt=""> 
+                                    </div>
+                                </td>
+                                <td>yyyy-mm-dd hh:mm</td>
+                                <td>admin_id</td>
+                            </tr>
+                            <tr>
+                                <td>95</td>
+                                <td>
+                                    <div class="ellipsis">거점명</div>
+                                </td>
+                                <td>
+                                    <div class="thumb-img">
+                                        <img src="../../assets/images/sample/sample_07.jpeg" alt=""> 
+                                    </div>
+                                </td>
+                                <td>yyyy-mm-dd hh:mm</td>
+                                <td>admin_id</td>
+                            </tr>
+                            <tr>
+                                <td>94</td>
+                                <td>
+                                    <div class="ellipsis">거점명</div>
+                                </td>
+                                <td>
+                                    <div class="thumb-img">
+                                        <img src="../../assets/images/sample/sample_07.jpeg" alt=""> 
+                                    </div>
+                                </td>
+                                <td>yyyy-mm-dd hh:mm</td>
+                                <td>admin_id</td>
+                            </tr>
+                            <tr>
+                                <td>93</td>
+                                <td>
+                                    <div class="ellipsis">거점명</div>
+                                </td>
+                                <td>
+                                    <div class="thumb-img">
+                                        <img src="../../assets/images/sample/sample_07.jpeg" alt=""> 
+                                    </div>
+                                </td>
+                                <td>yyyy-mm-dd hh:mm</td>
+                                <td>admin_id</td>
+                            </tr>
+                            <tr>
+                                <td>92</td>
+                                <td>
+                                    <div class="ellipsis">거점명</div>
+                                </td>
+                                <td>
+                                    <div class="thumb-img">
+                                        <img src="../../assets/images/sample/sample_07.jpeg" alt=""> 
+                                    </div>
+                                </td>
+                                <td>yyyy-mm-dd hh:mm</td>
+                                <td>admin_id</td>
+                            </tr>
+                            <tr>
+                                <td>91</td>
+                                <td>
+                                    <div class="ellipsis">거점명</div>
+                                </td>
+                                <td>
+                                    <div class="thumb-img">
+                                        <img src="../../assets/images/sample/sample_07.jpeg" alt=""> 
+                                    </div>
+                                </td>
+                                <td>yyyy-mm-dd hh:mm</td>
+                                <td>admin_id</td>
+                            </tr>
+                        </tbody>
+
+                    </table>
+                </div>
+            </div>
+            @@include('./common/pagination.html')
+
+            <div class="btns">
+                <a href="./05_002_course_point_create.html" class="btn btn-second">등록</a>
+            </div>
+        </div>
+    </main>
+
+    @@include('./common/admin_scripts.html')
+  </body>
+</html>

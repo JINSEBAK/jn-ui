@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ko">
+  @@include('./common/head.html')
+  <body>
+    @@include('./common/header.html')
+    @@include('./common/navigation.html')
+    <main class="main">
+        @@include('./common/page_title.html', { title: '탐방 코스 관리', path: {"p1":"",  "p2":""}, description: ''})
+        <div class="content">
+
+            <!-- search -->
+            <div class="search">
+                <div class="item">
+                    <div class="label">
+                        <label for="">키워드</label>
+                    </div>
+                    <div class="inline">
+                        <select class="select">
+                            <option value="">코스명</option>
+                            <option value="">거점명</option>
+                        </select>
+                        <input type="text" class="input" placeholder="입력" style="width: 50%">
+                    </div>
+                </div>
+                @@include('./common/search_period.html')
+            </div>
+            <div class="search-btn">
+                <button type="button" class="btn btn-third small">초기화</button>
+                <button type="button" class="btn btn-second small">검색</button>
+            </div>
+            <!-- search end -->
+
+            <div class="list">
+                <div class="list-head">
+                    <div class="total">
+                      Total <em>23</em>
+                    </div>
+                </div>
+                <div class="list-body">
+                    <table class="tb-data" summary="순위, 코스명, 이미지, 거점 수, 좋아요, 공유, 최종수정일, 최종수정자로 구분되는 표">
+                      <caption>수정 코스명 이미지 거점수 좋아요 공유 최종수정일 최종수정자</caption>
+                      <thead>
+                        <tr>
+                          <th></th>
+                          <th scope="col">순위</th>
+                          <th scope="col">코스명</th>
+                          <th scope="col">이미지</th>
+                          <th scope="col">거점 수</th>
+                          <th scope="col">좋아요</th>
+                          <th scope="col">공유</th>
+                          <th scope="col">최종수정일</th>
+                          <th scope="col">최종수정자</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                            <td></td>
+                            <td>1</td>
+                            <td>
+                                <div class="ellipsis">코스명입니다. 코스명입니다.</div>
+                            </td>
+                            <td>
+                                <div class="thumb-img">
+                                    <img src="../../assets/images/sample/sample_07.jpeg" alt="대체 텍스트">
+                                </div>
+                            </td>
+                            <td>8</td>
+                            <td>1,234</td>
+                            <td>72</td>
+                            <td>yyyy-mm-dd hh:mm</td>
+                            <td>admin_id</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>1</td>
+                            <td>
+                                <div class="ellipsis">코스명입니다. 코스명입니다.</div>
+                            </td>
+                            <td>
+                                <div class="thumb-img">
+                                    <img src="../../assets/images/sample/sample_07.jpeg" alt="대체 텍스트">
+                                </div>
+                            </td>
+                            <td>8</td>
+                            <td>1,234</td>
+                            <td>72</td>
+                            <td>yyyy-mm-dd hh:mm</td>
+                            <td>admin_id</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>1</td>
+                            <td>
+                                <div class="ellipsis">코스명입니다. 코스명입니다.</div>
+                            </td>
+                            <td>
+                                <div class="thumb-img">
+                                    <img src="../../assets/images/sample/sample_07.jpeg" alt="대체 텍스트">
+                                </div>
+                            </td>
+                            <td>8</td>
+                            <td>1,234</td>
+                            <td>72</td>
+                            <td>yyyy-mm-dd hh:mm</td>
+                            <td>admin_id</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>1</td>
+                            <td>
+                                <div class="ellipsis">코스명입니다. 코스명입니다.</div>
+                            </td>
+                            <td>
+                                <div class="thumb-img">
+                                    <img src="../../assets/images/sample/sample_07.jpeg" alt="대체 텍스트">
+                                </div>
+                            </td>
+                            <td>8</td>
+                            <td>1,234</td>
+                            <td>72</td>
+                            <td>yyyy-mm-dd hh:mm</td>
+                            <td>admin_id</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>1</td>
+                            <td>
+                                <div class="ellipsis">코스명입니다. 코스명입니다.</div>
+                            </td>
+                            <td>
+                                <div class="thumb-img">
+                                    <img src="../../assets/images/sample/sample_07.jpeg" alt="대체 텍스트">
+                                </div>
+                            </td>
+                            <td>8</td>
+                            <td>1,234</td>
+                            <td>72</td>
+                            <td>yyyy-mm-dd hh:mm</td>
+                            <td>admin_id</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>1</td>
+                            <td>
+                                <div class="ellipsis">코스명입니다. 코스명입니다.</div>
+                            </td>
+                            <td>
+                                <div class="thumb-img">
+                                    <img src="../../assets/images/sample/sample_07.jpeg" alt="대체 텍스트">
+                                </div>
+                            </td>
+                            <td>8</td>
+                            <td>1,234</td>
+                            <td>72</td>
+                            <td>yyyy-mm-dd hh:mm</td>
+                            <td>admin_id</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>1</td>
+                            <td>
+                                <div class="ellipsis">코스명입니다. 코스명입니다.</div>
+                            </td>
+                            <td>
+                                <div class="thumb-img">
+                                    <img src="../../assets/images/sample/sample_07.jpeg" alt="대체 텍스트">
+                                </div>
+                            </td>
+                            <td>8</td>
+                            <td>1,234</td>
+                            <td>72</td>
+                            <td>yyyy-mm-dd hh:mm</td>
+                            <td>admin_id</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>1</td>
+                            <td>
+                                <div class="ellipsis">코스명입니다. 코스명입니다.</div>
+                            </td>
+                            <td>
+                                <div class="thumb-img">
+                                    <img src="../../assets/images/sample/sample_07.jpeg" alt="대체 텍스트">
+                                </div>
+                            </td>
+                            <td>8</td>
+                            <td>1,234</td>
+                            <td>72</td>
+                            <td>yyyy-mm-dd hh:mm</td>
+                            <td>admin_id</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>1</td>
+                            <td>
+                                <div class="ellipsis">코스명입니다. 코스명입니다.</div>
+                            </td>
+                            <td>
+                                <div class="thumb-img">
+                                    <img src="../../assets/images/sample/sample_07.jpeg" alt="대체 텍스트">
+                                </div>
+                            </td>
+                            <td>8</td>
+                            <td>1,234</td>
+                            <td>72</td>
+                            <td>yyyy-mm-dd hh:mm</td>
+                            <td>admin_id</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>1</td>
+                            <td>
+                                <div class="ellipsis">코스명입니다. 코스명입니다.</div>
+                            </td>
+                            <td>
+                                <div class="thumb-img">
+                                    <img src="../../assets/images/sample/sample_07.jpeg" alt="대체 텍스트">
+                                </div>
+                            </td>
+                            <td>8</td>
+                            <td>1,234</td>
+                            <td>72</td>
+                            <td>yyyy-mm-dd hh:mm</td>
+                            <td>admin_id</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                </div>
+
+                <div class="btns">
+                    <a href="#" class="btn btn-second">생성</a>
+                  </div>
+            </div>
+        </div>
+    </main>
+
+    @@include('./common/admin_scripts.html')
+  </body>
+</html>

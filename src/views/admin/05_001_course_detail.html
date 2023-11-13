@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ko">
+  @@include('./common/head.html')
+  <body>
+    @@include('./common/header.html')
+    @@include('./common/navigation.html')
+    <main class="main">
+        @@include('./common/page_title.html', { title: '탐방 코스 관리', path: {"p1":"",  "p2":""}, description: ''})
+        <div class="content">
+
+            <div class="detail">
+                <ul class="lik-tb">
+                    <li class="lb lb-one">코스 명</li>
+                    <li>낙원/익선동 낭만 코스</li>
+                    <li class="lb">좋아요</li>
+                    <li>1,234</li>
+                    <li class="lb">공유</li>
+                    <li>41</li>
+                    <li class="lb lb-one">이미지</li>
+                    <li>
+                        <div class="thumb-img">
+                            <img src="../../assets/images/sample/sample_07.jpeg" alt="">
+                            <button type="button" class="btn-viewer">보기</button>
+                        </div>
+                    </li>
+                    <li class="lb lb-one">코스 설명</li>
+                    <li>
+                        <div class="pre">
+레트로 감성의  서울 여행 낭만 끝판왕!
+음악의 성지 낙원동과 최근 핫플레이스로 떠오른 익선동에서 낭만을 느껴 보세요.
+                        </div>
+                    </li>
+                    <li class="lb lb-one">탐방 포인트</li>
+                    <li>
+                        <div class="pre">
+- 아구찜거리 맛집 탐방
+- 낙원악기상가에서 음악과 함께하는 낭만
+- 서울 핵심 관광코스로 떠오르는 익선동 구경 및 맛집 탐방 코스
+                        </div>
+                    </li>
+                    <li class="lb lb-one">운영 정보</li>
+                    <li>약 1시간 30분</li>
+                    <li class="lb">코스 안내 자료</li>
+                    <li><a href="#" download>낙원_익선동_낭만코스.pdf</a></li>
+                    <li class="lb">코스 안내 오디오</li>
+                    <li>종로관광_오디오자료033.wav</li>
+                    <li class="lb lb-one">코스 지도</li>
+                    <li>
+                        <div class="map"></div>
+                    </li>
+                </ul>
+                
+                <!-- 코스 거점 목록 -->
+                <div class="list">
+                    <div class="list">
+                        <div class="list-head">
+                            <div class="total">
+                                Total <em>4</em>
+                            </div>
+                        </div>
+                        <div class="list-body">
+                            <table class="tb-data" summary="순서, 거점명, 이미지로 구분되는 표">
+                                <caption>순서 거점명 이미지</caption>
+                                <thead>
+                                    <tr>
+                                        <th scope="col">순서</th>
+                                        <th scope="col">거점명</th>
+                                        <th scope="col">이미지</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>
+                                            <div class="ellipsis">낙원동 아구찜거리</div>
+                                        </td>
+                                        <td>
+                                            <div class="thumb-img">
+                                                <img src="../../assets/images/sample/sample_07.jpeg" alt="대체 텍스트">
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>
+                                            <div class="ellipsis">낙원악기상가</div>
+                                        </td>
+                                        <td>
+                                            <div class="thumb-img">
+                                                <img src="../../assets/images/sample/sample_07.jpeg" alt="대체 텍스트">
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>
+                                            <div class="ellipsis">익선동 골목길</div>
+                                        </td>
+                                        <td>
+                                            <div class="thumb-img">
+                                                <img src="../../assets/images/sample/sample_07.jpeg" alt="대체 텍스트">
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td>
+                                            <div class="ellipsis">익선동 맛집거리</div>
+                                        </td>
+                                        <td>
+                                            <div class="thumb-img">
+                                                <img src="../../assets/images/sample/sample_07.jpeg" alt="대체 텍스트">
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+        
+                <ul class="lik-tb">
+                    <li class="lb">등록일시</li>
+                    <li>2023-10-30 10:30</li>
+                    <li class="lb">등록자</li>
+                    <li>admin_id</li>
+                    <li class="lb">최종 수정일시</li>
+                    <li>2023-10-30 10:30</li>
+                    <li class="lb">최종 수정자</li>
+                    <li>admin_id</li>
+                </ul>
+            </div>
+
+            <div class="btns detail">
+                <a href="./05_001_course_mgmt.html" class="btn btn-default">목록</a>
+                <button type="button" class="btn btn-second">수정</button>
+            </div>
+        </div>
+    </main>
+
+    @@include('./common/admin_scripts.html')
+  </body>
+</html>

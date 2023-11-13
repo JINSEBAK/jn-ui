@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+  @@include('./common/head.html')
+  <body>
+    @@include('./common/header.html')
+    @@include('./common/navigation.html')
+    <main class="main">
+        @@include('./common/page_title.html', { title: '거점 수정', path: {"p1":"",  "p2":""}, description: ''})
+        <div class="content">
+
+            <div class="detail">
+                <ul class="lik-tb">
+                    <li class="lb lb-one required">거점 명</li>
+                    <li>
+                        <div class="inline">
+                            <input type="text" class="input" placeholder="입력" value="낙원악기상가">
+                        </div>
+                    </li>
+                    <li class="lb lb-one required">이미지</li>
+                    <li>
+                        <!-- 제발 UI 좀 통일하자.. -->
+                        <div class="attach-img">
+                            <label>
+                                <img src="../../assets/images/sample/sample_07.jpeg" id="previewImg">
+                                <input type="file" id="attachImg" accept="image/*">
+                            </label>
+                            <div class="btns">
+                                <button type="button">보기</button>
+                                <button type="button">삭제</button>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="lb lb-one required">거점 설명</li>
+                    <li>
+                        <textarea class="textarea" name="" id="" cols="30" rows="5" placeholder="입력">
+음악을 사랑하는 사람들이라면 반드시 방문해야 하는 순례코스
+초보에서 전문가까지 모두가 찾는 국내 최대 규모의 악기 상가입니다.
+                        </textarea>
+                    </li>
+                    <li class="lb lb-one">운영 정보</li>
+                    <li>
+                        <textarea class="textarea" name="" id="" cols="30" rows="5" placeholder="거점 운영일 및 시간 입력">
+월~금요일: 오전 9:00 ~ 오후 5:00
+토요일: 오전 9:00 ~ 오후 3:00
+일요일: 휴무
+                        </textarea>
+                    </li>
+                    <li class="lb lb-one required">위치 정보</li> 
+                    <li>
+                        <div class="point-location">
+                            <div class="loc">
+                                <label for="address">주소</label>
+                                <input type="text" class="input" readonly id="address" value="서울 종로구 삼일대로 488">
+                                <button type="button" class="btn btn-default">주소검색</button>
+                            </div>
+                            <div class="loc">
+                                <label for="longitude">경도(x)</label>
+                                <input type="text" class="input" id="longitude" value="126.978909">
+                            </div>
+                            <div class="loc">
+                                <label for="latitude">위도(y)</label>
+                                <input type="text" class="input" id="latitude" value="37.573647">
+                            </div>
+                        </div>
+                        <div class="map">map</div>
+                    </li>
+                   
+                </ul>
+                
+            </div>
+
+            <div class="btns center">
+                <button type="button" class="btn btn-third">취소</button>
+                <button type="button" class="btn btn-second">저장</button>
+            </div>
+        </div>
+    </main>
+
+    @@include('./common/admin_scripts.html')
+  </body>
+</html>
