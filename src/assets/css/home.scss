@@ -949,24 +949,116 @@
 
 
 .hotline-banner {
-  margin-top: -1rem;
-  min-height: 300px;
-  background-color: #fee7b3;
-  color: #ac2649;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 2rem;
-  font-weight: bold;
+  background-color: #FDE9B4;
+  padding: 2rem 1.25rem;
+  min-height: 356px;
+  position: relative;
+  h2 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    margin-bottom: 6px;
+  }
+  p {
+   font-size: 1rem;
+   line-height: 26px; 
+  }
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    right: 4px;
+    bottom: -48px;
+    width: 248px;
+    height: 218px;
+    background-image: url(../images/img_hotline.svg);
+    background-size: 100%;
+  }
+
 }
 
 .hotline {
-  strong {
-    font-size: 2rem;
+  &:first-child {
+    margin-top: 4rem;
   }
-  p {
-    font-size: 0.875rem;
-    margin-top: 1rem;
+  &:last-child {
+    margin-top: 2rem;
+  }
+  .hl {
+    &-title {
+      font-size: 1.25rem;
+      font-weight: bold;
+      padding-left: 2rem;
+      line-height: 28px;
+      &.video {
+        background: url(../images/icon_video.svg) left center no-repeat;
+      }
+      &.talk {
+        background: url(../images/sns_kakaotalk.svg) left center no-repeat;
+      }
+    }
+    &-cont {
+      font-size: 18px;
+      margin-top: 0.5rem;
+      line-height: 26px;
+      em {
+        color: $second1;
+        font-weight: bold;
+      }
+    }
+    &-guide {
+      background-color: $bg;
+      padding: 10px;
+      margin-top: 1rem;
+      strong {
+        font-size: 0.875rem;
+      }
+      > ul {
+        > li {
+          font-size: 0.875rem;
+          line-height: 1.25rem;
+          margin-top: 0.5rem;
+          padding-left: 1.25rem;
+          position: relative;
+          &::before {
+            content: '';
+            display: block;
+            width: 4px;
+            height: 4px;
+            border-radius: 50%;
+            background-color: $guide-text;
+            position: absolute;
+            top: 0.5rem;
+            left: 0.5rem;
+          }
+        }
+      }
+      ol {
+        width: 100%;
+      }
+      > ol {
+        font-size: 0.875rem;
+        > li {
+          margin-top: 0.5rem;
+          p {
+            padding-left: 1rem;
+            line-height: 1.25rem;
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
+  &-footer {
+    background-color: $primary3;
+    color: #fff;
+    padding: 1.5rem 1.25rem;
+    text-align: center;
+    font-size: 13px;
+    strong {
+      font-size: 0.875rem;
+      display: block;
+      margin-top: 0.5rem;
+    }
   }
 }
 
@@ -1052,3 +1144,5 @@
     }
   }
 }
+
+

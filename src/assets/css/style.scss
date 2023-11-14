@@ -176,6 +176,10 @@ a {
   top: 0;
 }
 
+.highlight {
+  background-image: linear-gradient(to top, #FFE500 0 50%, transparent 50% 100%);
+}
+
 .guide {
   font-size: 13px;
   padding-top: 0.25rem 0;
