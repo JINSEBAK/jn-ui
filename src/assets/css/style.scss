@@ -499,6 +499,7 @@ strong {
   &-more {
     font-size: 13px;
     color: #3f3f45;
+    height: auto;
     padding: 0.25rem 1.5rem 0.25rem 0.5rem;
     background: transparent url(../images/icon_chevron_right.svg) right center
       no-repeat;
@@ -1535,16 +1536,10 @@ select {
   &.new {
     background-color: $em-text;
     padding: 0;
-    width: 14px;
-    height: 14px;
-    font-weight: bold;
-    line-height: 16px;
-    display: inline-flex;
-    &::after {
-      content: "N";
-      font-size: 8px;
-      margin: auto;
-    }
+    width: 16px;
+    height: 16px;
+    background: url(../images/icon_badge_new.svg) center no-repeat;
+    display: inline-block;
   }
 }
 
@@ -1742,6 +1737,7 @@ select {
 
 // 공지사항 등 보드형태
 .brd-list {
+  border-top: 1px solid $border-light;
   &_item {
     border-bottom: 1px solid $border-light;
     padding: 1rem 0.25rem;
@@ -1752,11 +1748,20 @@ select {
       }
     }
     .brd {
+      &-label {
+        font-size: 13px;
+        color: $guide-text;
+        line-height: 18px;
+      }
       &-title {
         display: block;
         font-weight: bold;
         line-height: 1.25rem;
         font-size: 0.875rem;
+      }
+      &-cont {
+        font-size: 0.875rem;
+        line-height: 1.25rem;
       }
       &-num {
         display: block;
@@ -1774,6 +1779,7 @@ select {
       }
       &-date {
         display: block;
+        margin-top: 6px;
         @include textDate;
       }
     }
@@ -1892,6 +1898,55 @@ select {
     }
   }
 }
+
+.brd-search {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .opts {
+    font-size: 0.875rem;
+    color: $guide-text;
+  }
+}
+
+.detail-info {
+  border-top: 1px solid $tb-border;
+  padding: 1rem 0;
+  &_title {
+    font-weight: bold;
+    line-height: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  .title {
+    font-size: 0.875rem;
+    font-weight: bold;
+  }
+  .info-items {
+    > li {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      padding: 0.5rem 0;
+    }
+    .lb {
+      font-size: 13px;
+      line-height: 18px;
+      color: $guide-text;
+      width: 70px;
+    }
+    .dt {
+      display: block;
+      width: calc(100% - 70px);
+      font-size: 0.875rem;
+      line-height: 1.25rem;
+    }
+    div.dt {
+      width: 100%;
+      margin-top: 0.25rem;
+    }
+  }
+}
+
 
 .air {
   &-content {
@@ -2244,5 +2299,35 @@ select {
     transform: scale(1);
     opacity: 1;
     z-index: 1;
+  }
+}
+
+
+.sns-link {
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  li {
+    .btn-icon {
+      text-indent: -9999px;
+      width: 38px;
+      height: 39px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: auto;
+      &.nv {
+        background-image: url(../images/sns_nv.png)
+      }
+      &.ka {
+        background-image: url(../images/sns_ka.png)
+      }
+      &.in {
+        background-image: url(../images/sns_in.png)
+      }
+      &.yu {
+        background-image: url(../images/sns_yu.png)
+      }
+    }
   }
 }
