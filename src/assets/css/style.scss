@@ -83,6 +83,11 @@ a {
     border-radius: 50%;
     animation: loader 1s linear infinite;
   }
+  &.observer {
+    height: 50px;
+    background-color: transparent;
+    display: none;
+  }
 }
 
 @keyframes loader {
