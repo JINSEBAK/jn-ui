@@ -200,6 +200,10 @@ a {
   background-image: linear-gradient(to top, #FFE500 0 50%, transparent 50% 100%);
 }
 
+.highlight2 {
+  background-image: linear-gradient(to top, #F5F6B4 0 50%, transparent 50% 100%);
+}
+
 .guide {
   font-size: 13px;
   padding-top: 0.25rem 0;
@@ -219,6 +223,16 @@ a {
 
 .equal {
   color: $em-text;
+}
+
+.pre {
+  white-space: pre-wrap;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  img {
+    width: 100%;
+    margin: 1rem 0;
+  }
 }
 
 .d-flex {
@@ -686,6 +700,7 @@ strong {
     height: 1px;
     left: 0.5rem;
     top: 50%;
+    opacity: 0;
     & + label {
       display: flex;
       align-items: center;
@@ -706,10 +721,13 @@ strong {
         padding-top: 3px;
       }
       &.btn-radio {
-        border: 1px solid $checkbox;
+        border: 1px solid $border-basic;
         padding: 0.5rem 1rem;
-        border-radius: 3rem;
+        border-radius: 50px;
         background-color: #fff;
+        span {
+          padding: 0;
+        }
         &::before {
           content: none;
         }
@@ -724,9 +742,9 @@ strong {
         // box-shadow: 0px 0px 0px 3px $shadow;
       }
       &.btn-radio {
-        background-color: $checkbox;
-        color: #fff;
-        // box-shadow: 0 0 0 3px $shadow;
+        border-color: #9696a3;
+        background-color: rgba(0,0,0,0.2);
+        font-weight: bold;
         &::before {
           content: none;
         }
@@ -1972,7 +1990,14 @@ select {
       width: 100%;
       margin-top: 0.25rem;
       white-space: pre-wrap;
-
+    }
+    .attach {
+      width: 100%;
+      font-size: 0.875rem;
+      line-height: 28px;
+      a {
+        text-decoration: underline;
+      }
     }
   }
 }
