@@ -31,8 +31,14 @@
         </div>
 
         <!-- filter -->
-        <div class="filter">
+        <!-- <div class="filter">
             <button type="button" class="btn btn-filter"  id="btnFilter">전체, 전체, 전체, 전체</button>
+        </div> -->
+        <div class="brd-search">
+            <span class="opts">선택옵션 텍스트</span>
+            <span class="icon srch" class="btn-popup" data-target="popupBtmSheet" id="btnFilter">
+                <span class="sr-only">검색</span>
+            </span>
         </div>
 
         <!-- list -->
@@ -110,33 +116,62 @@
 
     <!-- popup -->
     <aside id="aside" class="popup-bg popup-closable">
-        <div class="popup popup-slide" id="popupBtmSheet">
+        <div class="popup popup-slide show" id="popupBtmSheet">
             <div class="btm-sheet">
-                <div class="btm-sheet_head">
-                    <button type="button" class="btn btn-icon close">
-                    <img src="../assets/images/icon_x.svg" alt="팝업닫기" />
-                    </button>
-                </div>
                 <div class="btm-sheet_body">
+                    <div class="btns">
+                        <button type="button" class="btn btn-text reset">초기화</button>
+                        <button type="button" class="btn btn-text">확인</button>
+                    </div>
+                    <div class="input">
+                        <label>요일</label>
+                        <div class="days">
+                            <div class="checkbox">
+                                <input type="checkbox" id="checkbox" name="" value="1">
+                                <label for="checkbox"><span>월</span></label>
+                            </div>
+                            <div class="checkbox">
+                                <input type="checkbox" id="checkbox2" name="" value="2">
+                                <label for="checkbox2"><span>화</span></label>
+                            </div>
+                            <div class="checkbox">
+                                <input type="checkbox" id="checkbox3" name="" value="3">
+                                <label for="checkbox3"><span>수</span></label>
+                            </div>
+                            <div class="checkbox">
+                                <input type="checkbox" id="checkbox4" name="" value="4">
+                                <label for="checkbox4"><span>목</span></label>
+                            </div>
+                            <div class="checkbox">
+                                <input type="checkbox" id="checkbox5" name="" value="5">
+                                <label for="checkbox5"><span>금</span></label>
+                            </div>
+                            <div class="checkbox">
+                                <input type="checkbox" id="checkbox6" name="" value="6">
+                                <label for="checkbox6"><span>토</span></label>
+                            </div>
+                            <div class="checkbox">
+                                <input type="checkbox" id="checkbox7" name="" value="7">
+                                <label for="checkbox7"><span>일</span></label>
+                            </div>
+                        </div>
+                    </div>
                     <div class="select">
-                        <label>대면 여부</label>
+                        <label>교육구분</label>
                         <button type="button" class="btn btn-select" data-target="selectFilter" id="filter">전체</button>
                     </div>
                     <div class="select">
-                        <label>개설반</label>
+                        <label>접수현황</label>
                         <button type="button" class="btn btn-select" data-target="selectFilter" id="filter2">전체</button>
                     </div>
                     <div class="select">
-                        <label>진행 상태</label>
+                        <label>교육대상</label>
                         <button type="button" class="btn btn-select" data-target="selectFilter" id="filter3">전체</button>
                     </div>
                     <div class="input">
-                        <label>검색어</label>
+                        <label>검색</label>
                         <input type="text" placeholder="검색어 입력">
                     </div>
-                </div>
-                <div class="btm-sheet_tail">
-                    <button type="button" class="btn btn-primary">검색</button>
                 </div>
             </div>
         </div>
