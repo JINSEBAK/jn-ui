@@ -950,6 +950,59 @@
   }
 }
 
+.air-stnd {
+  font-size: 0.875rem;
+  & + .air-stnd {
+    margin-top: 1rem;
+  }
+  & + .guide {
+    margin-top: 0.5rem;
+  }
+  h5 {
+    font-weight: bold;
+    line-height: 20px;
+  }
+  p {
+    color: $primary-text;
+    line-height: 18px;
+  }
+  ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.25rem;
+    margin-top: 0.5rem;
+    li {
+      text-align: center;
+      color: $guide-text;
+      flex: 1;
+      span {
+        font-size: 0.75rem;
+        line-height: 20px;
+        &.status {
+          padding: 2px 10px;
+          border-radius: 100px;
+          color: #fff;
+          font-weight: bold;
+          display: block;
+          &.lv1 {
+            background-color: $weather-lv1;
+          }
+          &.lv2 {
+            background-color: $weather-lv2;
+          }
+          &.lv3 {
+            background-color: $weather-lv3;
+          }
+          &.lv4 {
+            background-color: $weather-lv4;
+          }
+        }
+      }
+    }
+  }
+}
+
 
 .hotline-banner {
   background-color: #FDE9B4;
