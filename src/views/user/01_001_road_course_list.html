@@ -30,109 +30,119 @@
         </div>
 
         <!-- bottom sheet -->
-        <aside id="aside" class="popup-bg popup-closable">
-            <div class="popup popup-slide" id="popupBtmSheet">
+        <aside id="aside" class="popup-bg popup-closable on">
+            <div class="popup popup-slide show" id="popupBtmSheet">
                 <div class="btm-sheet">
-                  <div class="btm-sheet_head">
-                    <!-- <h3 class="title">보텀시트 타이틀</h3> -->
-                    <button type="button" class="btn btn-icon close">
-                      <img src="../assets/images/icon_x.svg" alt="팝업닫기" />
-                    </button>
-                  </div>
-                  <div class="btm-sheet_body">
-
-                    <section class="course-point">
-                        <h4 class="title">낙원동 아구찜거리</h4>
-                        <ul class="course-info">
-                            <li>
-                                <div class="course-thumb">
-                                    <img src="../assets/images/sample/sample_07.jpeg" alt="낙원동 아구찜거리 이미지 설명">
-                                </div>
-                            </li>
-                            <li>
-                                <p class="course-text">
-                                    아구찜으로 유명한 낙원동
-                                    아구찜거리에서 안주거리로 좋은 아구찜을 맛볼 수 있습니다. 
-                                </p>
-                            </li>
-                        </ul>
-                    </section>
-                    
-                    <hr class="full-line"/>
-                    <section class="card-list">
-                        <h4>연관 산책 코스</h4>
-                        <div class="card-item">
+                    <div class="btm-sheet_body course">
+                        <button type="button" class="btn btn-icon icon close">
+                            <span class="sr-only">팝업 내리기</span>
+                        </button>
+                        <section class="course-point">
+                            <h4 class="title">낙원동 아구찜거리</h4>
                             <ul class="course-info">
                                 <li>
                                     <div class="course-thumb">
-                                        <img src="../assets/images/sample/sample_03.jpeg" alt="낙원동 아구찜거리 이미지 설명">
+                                        <img src="../assets/images/sample/sample_07.jpeg" alt="낙원동 아구찜거리 이미지 설명">
                                     </div>
                                 </li>
                                 <li>
-                                    <dl>
-                                        <dt>낙원/익선동 낭만 코스</dt>
-                                        <dd>
-                                            <p class="course-text ellipsis-2">
-                                                레트로 감성의 서울 여행 낭만 끝판왕! 음악의 성지 낙원동과 전통과 현대의 퓨전이 만난 익선동을 즐겨보세요. 
-                                                레트로 감성의 서울 여행 낭만 끝판왕! 음악의 성지 낙원동과 전통과 현대의 퓨전이 만난 익선동을 즐겨보세요. 
-                                            </p>
-                                            <div class="btns">
-                                                <a href="#" role="button" class="btn btn-default">코스 보기</a>
-                                            </div>
-                                        </dd>
-                                    </dl>
+                                    <p class="course-text">
+                                        아구찜으로 유명한 낙원동<br>
+                                        아구찜거리에서 안주거리로 좋은 아구찜을 맛볼 수 있습니다. 
+                                    </p>
+                                    <div class="time">매일 오전 10:00 ~ 오후 11:00</div>
                                 </li>
                             </ul>
-                        </div>
-                        <div class="card-item">
-                            <ul class="course-info">
-                                <li>
-                                    <div class="course-thumb">
-                                        <img src="../assets/images/sample/sample_03.jpeg" alt="낙원동 아구찜거리 이미지 설명">
-                                    </div>
-                                </li>
-                                <li>
-                                    <dl>
-                                        <dt>낙원/익선동 낭만 코스</dt>
-                                        <dd>
-                                            <p class="course-text ellipsis-2">
-                                                레트로 감성의 서울 여행 낭만 끝판왕! 음악의 성지 낙원동과 전통과 현대의 퓨전이 만난 익선동을 즐겨보세요. 
-                                                레트로 감성의 서울 여행 낭만 끝판왕! 음악의 성지 낙원동과 전통과 현대의 퓨전이 만난 익선동을 즐겨보세요. 
-                                            </p>
-                                            <div class="btns">
-                                                <a href="#" role="button" class="btn btn-default">코스 보기</a>
+                        </section>
+                        
+                        <section class="course-list">
+                            <h4>연관 산책 코스</h4>
+                            <div class="course-item">
+                                <ul class="course-info">
+                                    <li>
+                                        <div class="course-thumb">
+                                            <img src="../assets/images/sample/sample_03.jpeg" alt="낙원동 아구찜거리 이미지 설명">
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <dl>
+                                            <dt>낙원/익선동 낭만 코스</dt>
+                                            <dd>
+                                                <p class="course-text ellipsis-2">
+                                                    레트로 감성의 서울 여행 낭만 끝판왕! 음악의 성지 낙원동과 전통과 현대의 퓨전이 만난 익선동을 즐겨보세요. 
+                                                    레트로 감성의 서울 여행 낭만 끝판왕! 음악의 성지 낙원동과 전통과 현대의 퓨전이 만난 익선동을 즐겨보세요. 
+                                                </p>
+                                            </dd>
+                                        </dl>
+                                        <div class="etc">
+                                            <div class="like-info">
+                                                <span class="icon like">
+                                                    <span class="sr-only">코스 좋아요</span>
+                                                </span>
+                                                <span class="like-count" id="likeCount">2,311</span>
                                             </div>
-                                        </dd>
-                                    </dl>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="card-item">
-                            <ul class="course-info">
-                                <li>
-                                    <div class="course-thumb">
-                                        <img src="../assets/images/sample/sample_03.jpeg" alt="낙원동 아구찜거리 이미지 설명">
-                                    </div>
-                                </li>
-                                <li>
-                                    <dl>
-                                        <dt>낙원/익선동 낭만 코스</dt>
-                                        <dd>
-                                            <p class="course-text ellipsis-2">
-                                                레트로 감성의 서울 여행 낭만 끝판왕! 음악의 성지 낙원동과 전통과 현대의 퓨전이 만난 익선동을 즐겨보세요. 
-                                                레트로 감성의 서울 여행 낭만 끝판왕! 음악의 성지 낙원동과 전통과 현대의 퓨전이 만난 익선동을 즐겨보세요. 
-                                            </p>
-                                            <div class="btns">
-                                                <a href="#" role="button" class="btn btn-default">코스 보기</a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="course-item">
+                                <ul class="course-info">
+                                    <li>
+                                        <div class="course-thumb">
+                                            <img src="../assets/images/sample/sample_03.jpeg" alt="낙원동 아구찜거리 이미지 설명">
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <dl>
+                                            <dt>낙원/익선동 낭만 코스</dt>
+                                            <dd>
+                                                <p class="course-text ellipsis-2">
+                                                    레트로 감성의 서울 여행 낭만 끝판왕! 음악의 성지 낙원동과 전통과 현대의 퓨전이 만난 익선동을 즐겨보세요. 
+                                                    레트로 감성의 서울 여행 낭만 끝판왕! 음악의 성지 낙원동과 전통과 현대의 퓨전이 만난 익선동을 즐겨보세요. 
+                                                </p>
+                                            </dd>
+                                        </dl>
+                                        <div class="etc">
+                                            <div class="like-info">
+                                                <span class="icon like">
+                                                    <span class="sr-only">코스 좋아요</span>
+                                                </span>
+                                                <span class="like-count" id="likeCount">2,311</span>
                                             </div>
-                                        </dd>
-                                    </dl>
-                                </li>
-                            </ul>
-                        </div>
-                    </section>
-                  </div>
-                  
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="course-item">
+                                <ul class="course-info">
+                                    <li>
+                                        <div class="course-thumb">
+                                            <img src="../assets/images/sample/sample_03.jpeg" alt="낙원동 아구찜거리 이미지 설명">
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <dl>
+                                            <dt>낙원/익선동 낭만 코스</dt>
+                                            <dd>
+                                                <p class="course-text ellipsis-2">
+                                                    레트로 감성의 서울 여행 낭만 끝판왕! 음악의 성지 낙원동과 전통과 현대의 퓨전이 만난 익선동을 즐겨보세요. 
+                                                    레트로 감성의 서울 여행 낭만 끝판왕! 음악의 성지 낙원동과 전통과 현대의 퓨전이 만난 익선동을 즐겨보세요. 
+                                                </p>
+                                            </dd>
+                                        </dl>
+                                        <div class="etc">
+                                            <div class="like-info">
+                                                <span class="icon like">
+                                                    <span class="sr-only">코스 좋아요</span>
+                                                </span>
+                                                <span class="like-count" id="likeCount">2,311</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </section>
+                    </div>
                 </div>
             </div>
         </aside>

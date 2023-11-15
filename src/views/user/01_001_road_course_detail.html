@@ -5,7 +5,7 @@
         <link rel="stylesheet" href="../assets/css/map.css"></link>
     </head>
     <body class="course">
-        @@include('../common/header_sub.html', {title: '코스 상세 보기'})
+        @@include('../common/header_sub.html', {title: '산책 코스'})
         <div class="container">
 
             <!-- photo area -->
@@ -13,47 +13,51 @@
                 <img src="../../assets/images/sample/sample_07.jpeg" alt="대체텍스트">
             </div>
 
+            <div class="course-social">
+                <button type="button" class="btn btn-like" id="btnLike">
+                    <span class="icon like">
+                        <span class="sr-only">코스 좋아요</span>
+                    </span>
+                    <span class="like-count" id="likeCount">2,311</span>
+                </button>
+                
+                <button type="button" class="btn btn-share">
+                    <span class="icon share">
+                        <span class="sr-only">공유하기</span>
+                    </span>
+                </button>
+            </div>
+
             <!-- text contents -->
             <div class="course-detail">
                 <h3 class="course-title">낙원/익선동 낭만코스</h3>
-                <div class="course-btns">
-                    <button type="button" class="btn btn-icon" id="btnLike">
-                        <span class="icon like">
-                            <span class="sr-only">코스 좋아요</span>
-                        </span>
-                    </button>
-                    <span class="like-count" id="likeCount">2,311</span>
-                    <button type="button" class="btn btn-icon">
-                        <span class="icon share">
-                            <span class="sr-only">공유하기</span>
-                        </span>
-                    </button>
-                    <!-- 구청홈페이지 url 사용? -->
-                    <a href="#" role="button" class="btn btn-icon" download>
-                        <span class="icon download">
-                            <span class="sr-only">리플릿 다운로드</span>
-                        </span>
-                    </a>
-                </div>
                 <div class="course-content">
                     <p>
-                        레트로 감성의  서울 여행 낭만 끝판왕!
+                        레트로 감성의  서울 여행 낭만 끝판왕!<br>
                         음악의 성지 낙원동과 최근 핫플레이스로 떠오른 익선동에서 낭만을 느껴 보세요.
-                        <br><br>
-                        아구찜으로 유명한 낙원동 아구찜 거리, 국내 최대 악기 종합 상가인 낙원 상가와 함께, 
-                        레트로 감성을 한 가득 느낄 수 있는 익선동 골목길과 요즘 핫플레이스로 떠오르고 있는 
-                        익선동 맛집거리에서 맛있는 길거리 음식과 함께 종로 산책의 색다른 감성을 느낄 수 있을 것입니다.
                     </p>
                     <dl>
-                        <dt>운영정보</dt>
-                        <dd>5월 ~ 10월 둘째, 넷째주 금요일 오후 4시<br>3.5km 2시간 30분 코스</dd>
-                    </dl>
-                    <dl>
-                        <dt>코스</dt>
+                        <dt>탐방 포인트</dt>
                         <dd>
-                            낙원동 아구찜거리 - 낙원악기상가 - 익선동 골목길 - 익선동 맛집거리
+                            - 아구찜거리 맛집 탐방<br>
+                            - 낙원악기상가에서 음악과 함께하는 낭만<br>
+                            - 서울 핵심 관광코스로 떠오르는 익선동 구경 및 맛집 탐방 코스
                         </dd>
                     </dl>
+                    <dl>
+                        <dt>소요시간</dt>
+                        <dd>
+                            약 1시간 30분 정도 소요
+                        </dd>
+                    </dl>
+                </div>
+                <div class="course-btns">
+                    <button type="button" class="btn btn-audio" id="btnAudio">
+                        오디오 안내
+                    </button>
+                    <a href="#" role="button" class="btn btn-guide" download>
+                        코스 안내서
+                    </a>
                 </div>
             </div>
 
@@ -68,65 +72,74 @@
                     <li>
                         <div class="point-item">
                             <div class="title">
+                                <span class="num">1</span>
                                 <h5 class="course-name">낙원동 아구찜거리</h5>
-                                <button type="button" class="btn btn-icon btn-audio">
-                                    <span class="icon play">
-                                        <span class="sr-only">오디오파일 재생</span>
-                                    </span>
-                                </button>
                             </div>
-                            <div class="thumb-img">
-                                <img src="../../assets/images/sample/sample_07.jpeg" alt="거점 이미지 소개">
+                            <div class="point-card">
+                                <img src="../../assets/images/icon_stamp.svg" class="img-completed" alt="완주 스탬프">
+                                <div class="thumb-img">
+                                    <img src="../../assets/images/sample/sample_07.jpeg" alt="거점 이미지 소개">
+                                </div>
+                                <div class="cont">
+                                    아구찜으로 유명한 낙원동<br>
+                                    아구찜거리에서 안주거리로 좋은 아구찜을 맛볼 수 있습니다
+                                </div>
+                                <div class="time">매일 오전 10:00 ~ 오후 11:00</div>
                             </div>
-                            <button type="button" class="btn btn-stamp completed" disabled>스탬프<br>획득!</button>
                         </div>
                     </li>
                     <li>
                         <div class="point-item">
                             <div class="title">
-                                <h5 class="course-name">낙원 악기상가</h5>
-                                <button type="button" class="btn btn-icon btn-audio">
-                                    <span class="icon play">
-                                        <span class="sr-only">오디오파일 재생</span>
-                                    </span>
-                                </button>
+                                <span class="num">2</span>
+                                <h5 class="course-name">낙원악기상가</h5>
                             </div>
-                            <div class="thumb-img">
-                                <img src="../../assets/images/sample/sample_07.jpeg" alt="거점 이미지 소개">
+                            <div class="point-card">
+                                <button type="button" class="btn btn-stamp">스탬프 받기</button>
+                                <div class="thumb-img">
+                                    <img src="../../assets/images/sample/sample_07.jpeg" alt="거점 이미지 소개">
+                                </div>
+                                <div class="cont">
+                                    음악을 사랑하는 사람들이라면 반드시 방문해야 하는 순례 코스. 초보에서 전문가까지 모두가 찾는 국내 최대 규모의 악기 상가입니다.
+                                </div>
+                                <div class="time">월~금 오전 9:00 ~ 오후 5:00</div>
                             </div>
-                            <button type="button" class="btn btn-stamp">스탬프<br>받기</button>
                         </div>
                     </li>
                     <li>
                         <div class="point-item">
                             <div class="title">
+                                <span class="num">3</span>
                                 <h5 class="course-name">익선동 골목길</h5>
-                                <button type="button" class="btn btn-icon btn-audio">
-                                    <span class="icon play">
-                                        <span class="sr-only">오디오파일 재생</span>
-                                    </span>
-                                </button>
                             </div>
-                            <div class="thumb-img">
-                                <img src="../../assets/images/sample/sample_07.jpeg" alt="거점 이미지 소개">
+                            <div class="point-card">
+                                <button type="button" class="btn btn-stamp">스탬프 받기</button>
+                                <div class="thumb-img">
+                                    <img src="../../assets/images/sample/sample_07.jpeg" alt="거점 이미지 소개">
+                                </div>
+                                <div class="cont">
+                                    젊은 감성을 입은 문화공간으로 변신한 익선동 한옥마을과 서순라길을 걸어보면서 종로의 멋을 느낄 수 있습니다.
+                                </div>
+                                <div class="time">24시간 개방</div>
                             </div>
-                            <button type="button" class="btn btn-stamp">스탬프<br>받기</button>
                         </div>
                     </li>
                     <li>
                         <div class="point-item">
                             <div class="title">
+                                <span class="num">4</span>
                                 <h5 class="course-name">익선동 맛집거리</h5>
-                                <button type="button" class="btn btn-icon btn-audio">
-                                    <span class="icon play">
-                                        <span class="sr-only">오디오파일 재생</span>
-                                    </span>
-                                </button>
                             </div>
-                            <div class="thumb-img">
-                                <img src="../../assets/images/sample/sample_07.jpeg" alt="거점 이미지 소개">
+                            <div class="point-card">
+                                <button type="button" class="btn btn-stamp">스탬프 받기</button>
+                                <div class="thumb-img">
+                                    <img src="../../assets/images/sample/sample_07.jpeg" alt="거점 이미지 소개">
+                                </div>
+                                <div class="cont">
+                                    현지 주민들의 삶과 한국적인 멋이 가장 잘 어우러지는 익선동 한옥마을에서 한국적인 맛을 즐길 수 있는 즐거운 식사 코스 입니다.
+                                </div>
+                                <div class="time">각 점포별 상이</div>
                             </div>
-                            <button type="button" class="btn btn-stamp">스탬프<br>받기</button>
                         </div>
                     </li>
                 </ol>
@@ -141,22 +154,21 @@
                     <span class="sr-only">재생</span>
                 </button>
                 <div class="timeline">
-                    <span class="time-current" id="timeCurrent">0:00</span>
                     <input type="range" min="0" max="100" value="0" id="timeProgress">
                     <div class="progress">
                         <span class="gage" style="width:40%"></span>
                     </div>
-                    <span class="time-duration" id="timeDuration"></span>
+                    <span class="time-current" id="timeCurrent">0:48</span>
+                    <!-- <span class="time-duration" id="timeDuration"></span> -->
                 </div>
                 <button type="button" class="btn btn-icon icon volume" id="btnVolume">
                     <span class="sr-only">볼륨끄기</span>
                 </button>
-            </div>
-            <button type="button" class="btn btn-icon" id="btnCloseAudio">
-                <span class="icon close">
+                <span class="bar"></span>
+                <button type="button" class="btn btn-icon icon audio-close" id="btnCloseAudio">
                     <span class="sr-only">닫기</span>
-                </span>
-            </button>
+                </button>
+            </div>
         </div>
         
         

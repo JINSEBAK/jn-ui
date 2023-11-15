@@ -503,7 +503,7 @@ strong {
       height: 24px;
     }
     &:active {
-      background-color: rgba(0, 0, 0, 0.03);
+      //background-color: rgba(0, 0, 0, 0.03);
     }
   }
   &-delete {
@@ -591,16 +591,6 @@ strong {
       display: flex;
     }
   }
-  &-stamp {
-    border: 1px solid $btn-stamp;
-    background-color: transparent;
-    color: $btn-stamp;
-    &.completed,
-    &:disabled {
-      background-color: $btn-stamp;
-      color: #fff;
-    }
-  }
   &:disabled {
     cursor: auto;
     border-color: #dcdcec;
@@ -612,7 +602,7 @@ strong {
     }
   }
   &:hover, &:active {
-    background-image: linear-gradient(rgb(0 0 0/20%) 0 0);
+    //background-image: linear-gradient(rgb(0 0 0/20%) 0 0);
     //box-shadow: 0 0 2px 3px rgb(255, 218, 213);
   }
   &.small {
@@ -866,17 +856,17 @@ input[type="range"] {
   -moz-appearance: none;
   -webkit-appearance: none;
   width: 100%;
-  height: 6px;
+  height: 4px;
   background: linear-gradient(
     to right,
-    #ff0000 0%,
-    #ff0000 0%,
-    #d5d4d3 0%,
-    #d5d4d3 100%
+    #AD2A4B 0%,
+    #AD2A4B 0%,
+    #C8C8D7 0%,
+    #C8C8D7 100%
   );
   border: none;
   cursor: pointer;
-  border-radius: 0;
+  border-radius: 6px;
   &:focus,
   &:active {
     outline: none;
@@ -885,11 +875,11 @@ input[type="range"] {
 }
 input[type="range"]::-webkit-slider-thumb {
   -webkit-appearance: none;
-  width: 16px;
-  height: 16px;
+  width: 14px;
+  height: 14px;
   background: #fff;
-  border: 1px solid $btn-primary;
-  box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.1);
+  border: 5px solid $second1;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
   border-radius: 50%;
   cursor: pointer;
   transition: all 0.4s;
@@ -1296,8 +1286,8 @@ select {
   border-radius: 1rem 1rem 0 0;
   visibility: hidden;
   transition: all 0.5s;
-  max-height: 460px;
-  overflow-y: auto;
+  // max-height: 460px;
+  // overflow-y: auto;
   &.show {
     bottom: 0;
     visibility: visible;
@@ -1370,6 +1360,7 @@ select {
 }
 
 .btm-sheet {
+  position: relative;
   .btns {
     justify-content: flex-end;
     gap: 1.5rem;
@@ -1404,6 +1395,20 @@ select {
   &_body {
     padding: 1.5rem 1rem;
     line-height: 1.2;
+    max-height: 450px;
+    overflow-y: auto;
+    &.course {
+      padding: 0 1.25rem;
+      margin-top: 36px;
+      .btn.close {
+        position: absolute;
+        right: 1rem;
+        top: 0;
+        transform: translateY(-100%);
+        width: 1rem;
+        height: 1rem;
+      }
+    }
     .section-title {
       margin-bottom: 0.5rem;
     }
@@ -1702,12 +1707,12 @@ select {
 }
 
 .audio-player {
-  border: 1px solid $border-basic;
-  background-color: #f2f3f6;
+  background-color: #fff;
+  box-shadow: 0 -3px 3px rgba(0,0,0,.1);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.5rem 1rem;
+  padding: 18px 1.25rem;
   gap: 0.5rem;
   .timeline {
     flex: 1;
@@ -1716,12 +1721,22 @@ select {
     align-items: center;
     span {
       font-size: 0.75rem;
+      color: #5f5f67;
     }
   }
+  .bar {
+    width: 1px;
+    height: 0.5rem;
+    background-color: $border-light;
+  }
   .btn {
-    &.icon.play,
-    &.icon.volume {
-      transition: none;
+    &.icon {
+      width: 1.5rem;
+      height: 1.5rem;
+      background-size: 100%;
+      &.play, &.volume {
+        transition:none;
+      }
     }
   }
 }
@@ -2232,11 +2247,11 @@ select {
 }
 
 .icon {
-  width: 2rem;
-  height: 2rem;
+  width: 1.5rem;
+  height: 1.5rem;
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 1.5rem;
+  background-size: 100%;
   background-color: transparent;
   display: inline-block;
   &.s-large {
@@ -2284,16 +2299,19 @@ select {
     background-image: url(../images/icon_download.svg);
   }
   &.play {
-    background-image: url(../images/icon_play.svg);
+    background-image: url(../images/icon_audio_play.svg);
   }
   &.pause {
-    background-image: url(../images/icon_pause.svg);
+    background-image: url(../images/icon_audio_pause.svg);
   }
   &.volume {
-    background-image: url(../images/icon_volume.svg);
+    background-image: url(../images/icon_sound_on.svg);
   }
   &.muted {
-    background-image: url(../images/icon_muted.svg);
+    background-image: url(../images/icon_sound_off.svg);
+  }
+  &.audio-close {
+    background-image: url(../images/icon_audio_close.svg);
   }
   &.close {
     background-image: url(../images/icon_x.svg);

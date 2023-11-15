@@ -55,11 +55,11 @@ timeProgress.addEventListener("input", function () {
 
 function styleBarActive() {
   timeProgress.style.background =
-    "linear-gradient(to right, #ff0000 0%, #ff0000 " +
+    "linear-gradient(to right, #AD2A4B 0%, #AD2A4B " +
     timeProgress.value +
-    "%, #d5d4d3 " +
+    "%, #C8C8D7 " +
     timeProgress.value +
-    "%, #d5d4d3 50%)";
+    "%, #C8C8D7 50%)";
 }
 
 /**
