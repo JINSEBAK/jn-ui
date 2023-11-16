@@ -1504,18 +1504,19 @@ select {
   border-radius: 0.5rem;
   position: absolute;
   visibility: hidden;
-  padding: 1rem;
+  padding: 1.5rem 1rem 1rem;
   &.show {
     visibility: visible;
   }
   .message {
     padding: 0.5rem 0 1.5rem;
-    font-size: 0.875rem;
     .title {
       font-weight: 700;
       margin-bottom: 0.5rem;
+      padding-bottom: 1rem;
     }
     p {
+      font-size: 0.875rem;
       line-height: 1.2;
     }
   }
@@ -1579,6 +1580,12 @@ select {
 .tab-contents {
   border-radius: 0.25rem;
   line-height: 1.2;
+}
+
+.badges {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
 }
 
 .badge {
@@ -2005,6 +2012,25 @@ select {
   }
 }
 
+.r-cnt {
+  font-size: 13px;
+  color: $guide-text;
+  margin-bottom: 1rem;
+  em {
+    color: #e45e63;
+    font-weight: bold;
+    font-size: 0.875rem;
+  }
+  .total {
+    color: #000;
+    font-size: 0.875rem;
+  }
+}
+
+.badges + .detail-info_title {
+  margin-top: 0.5rem;
+}
+
 .detail-info {
   border-top: 1px solid $tb-border;
   padding: 1rem 0;
@@ -2387,6 +2413,33 @@ select {
   &.wloc {
     background-image: url(../images/icon_w_loc.svg);
   }
+  &.sky-1 {
+    background-image: url(../images/img_sunny.svg);
+  }
+  &.sky-3 {
+    background-image: url(../images/img_littlecloud.svg);
+  }
+  &.sky-4 {
+    background-image: url(../images/img_cloudy.svg);
+  }
+  &.pty-1 {
+    background-image: url(../images/img_cloudrain.svg);
+  }
+  &.pty-2 {
+    background-image: url(../images/img_cloudrain.svg);
+  }
+  &.pty-3 {
+    background-image: url(../images/img_snow.svg);
+  }
+  &.pty-5 {
+    background-image: url(../images/img_cloudrain.svg);
+  }
+  &.pty-6 {
+    background-image: url(../images/img_cloudrain.svg);
+  }
+  &.pty-7 {
+    background-image: url(../images/img_snow.svg);
+  }
 }
 
 @keyframes show_pop {
@@ -2447,6 +2500,9 @@ select {
   .temper {
     font-size: 0.875rem;
     color: #4f4f4f;
+    &::after {
+      content: '°';
+    }
     &-txt {
       font-size: 0.75rem;
       font-weight: bold;

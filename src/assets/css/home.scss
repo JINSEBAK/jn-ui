@@ -446,6 +446,9 @@
       .temperature {
         font-size: 1.5rem;
         font-weight: bold;
+        &::after {
+          content: '°';
+        }
       }
       .unit {
         font-size: 1rem;
@@ -1176,6 +1179,15 @@
       background-color: #f8f0f3;
       color: $primary3;
     }
+  }
+}
+
+.edu-cont {
+  white-space: pre-wrap;
+  line-height: 1.2;
+  font-size: 0.875rem;
+  img {
+    width: 100%;
   }
 }
 
