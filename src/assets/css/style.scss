@@ -2439,3 +2439,28 @@ select {
     }
   }
 }
+
+.weather {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  .temper {
+    font-size: 0.875rem;
+    color: #4f4f4f;
+    &-txt {
+      font-size: 0.75rem;
+      font-weight: bold;
+      color: #2742A3;
+    }
+  }
+  &.bar {
+    &::before {
+      content: '';
+      display: block;
+      width: 1px;
+      height: 14px;
+      margin: 0 0 0 0.5rem;
+      background-color: #dcdcec;
+    }
+  }
+}
