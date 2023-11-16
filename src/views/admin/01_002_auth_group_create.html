@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ko">
+  @@include('./common/head.html')
+  <body>
+    @@include('./common/header.html')
+    @@include('./common/navigation.html')
+    <main class="main">
+        @@include('./common/page_title.html', { title: '권한 그룹 추가', path: {"p1":"",  "p2":""}, description: ''})
+        <div class="content">
+
+          <div class="detail">
+            <div class="lik-tb_title">권한 그룹 정보</div>
+            <ul class="lik-tb">
+              <li class="lb lb-one required">그룹 명</li>
+              <li>
+                <div class="inline">
+                  <input type="text" class="input" placeholder="한글, 영문, 숫자 입력 가능 (최대 10자)" maxlength="10">
+                </div>
+              </li>
+              <li class="lb lb-one required">그룹 설명</li>
+              <li>
+                <div class="inline">
+                  <input type="text" class="input" placeholder="권한 그룹 설명 입력 (최대 50자)" maxlength="50">
+                </div>
+              </li>
+            </ul>
+
+            <div class="lik-tb_title">관리 권한</div>
+            <ul class="menu-auth">
+              <li class="d1">
+                  <label class="checkbox">
+                    <input type="checkbox">
+                    <span>사용자 관리</span>
+                  </label>
+              </li>
+              <li class="d2">
+                <label class="checkbox">
+                  <input type="checkbox">
+                  <span>관리자 관리</span>
+                </label>
+                <label class="checkbox">
+                  <input type="checkbox">
+                  <span>관리자 권한 그룹</span>
+                </label>
+                <label class="checkbox">
+                  <input type="checkbox">
+                  <span>회원 내역</span>
+                </label>
+              </li>
+              <li class="d1">
+                <label class="checkbox">
+                  <input type="checkbox">
+                  <span>민원/서비스 관리</span>
+                </label>
+              </li>
+              <li class="d2">
+                <label class="checkbox">
+                  <input type="checkbox">
+                  <span>건강이랑 신청</span>
+                </label>
+                <label class="checkbox">
+                  <input type="checkbox">
+                  <span>정화조 청소 예약 신청</span>
+                </label>
+                <label class="checkbox">
+                  <input type="checkbox">
+                  <span>제설함 민원 관리</span>
+                </label>
+                <label class="checkbox">
+                  <input type="checkbox">
+                  <span>FAQ</span>
+                </label>
+                <label class="checkbox">
+                  <input type="checkbox">
+                  <span>1:1 문의</span>
+                </label>
+              </li>
+              <li class="d1">
+                <label class="checkbox">
+                  <input type="checkbox">
+                  <span>메뉴 관리</span>
+                </label>
+              </li>
+              <li class="d2">
+                <label class="checkbox">
+                  <input type="checkbox">
+                  <span>전체 메뉴</span>
+                </label>
+                <label class="checkbox">
+                  <input type="checkbox">
+                  <span>종로 맵 메뉴</span>
+                </label>
+              </li>
+
+              <li class="d1">
+                <label class="checkbox">
+                  <input type="checkbox">
+                  <span>콘텐츠 관리</span>
+                </label>
+              </li>
+              <li class="d2">
+                <label class="checkbox">
+                  <input type="checkbox">
+                  <span>탐방 코스</span>
+                </label>
+                <label class="checkbox">
+                  <input type="checkbox">
+                  <span>코스 거점</span>
+                </label>
+                <label class="checkbox">
+                  <input type="checkbox">
+                  <span>검색어</span>
+                </label>
+                <label class="checkbox">
+                  <input type="checkbox">
+                  <span>배너</span>
+                </label>
+                <label class="checkbox">
+                  <input type="checkbox">
+                  <span>페이지</span>
+                </label>
+                <label class="checkbox">
+                  <input type="checkbox">
+                  <span>스마트 제설함</span>
+                </label>
+              </li>
+            </ul>
+            
+          </div> 
+
+          <div class="btns center">
+            <button type="button" class="btn btn-third">취소</button>
+            <button type="button" class="btn btn-second">등록</button>
+        </div>
+         
+        </div>
+    </main>
+  </body>
+  </html>

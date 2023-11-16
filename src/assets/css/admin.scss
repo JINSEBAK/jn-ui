@@ -217,6 +217,16 @@ html, body {
     background-color: #f2f3f9;
 }
 
+.checkbox {
+    font-size: 0.875rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    span {
+        line-height: 1.2;
+    }
+}
+
 .btns {
     padding: 1rem 0;
     display: flex;
@@ -598,6 +608,17 @@ html, body {
 
 .list {
     margin: $base-px auto;
+    &-title {
+        font-size: 0.875rem;
+        font-weight: bold;
+        background-color: #30303f;
+        color: #fff;
+        padding: 0.5rem;
+        margin-top: 2rem;
+        & + .list-body {
+            padding-top: 0;
+        }
+    }
     &-head {
         display: flex;
         align-items: center;
@@ -1181,4 +1202,29 @@ html, body {
     width: 100%;
     background-color:#f2f3f6;
     min-height: 400px;
+ }
+
+ .menu-auth {
+    li {
+        border-bottom: 1px solid $border-basic;
+        padding: 0.75rem 1rem;
+        &:last-child {
+            border-bottom-color: #000;
+        }
+        &.d2 {
+            background-color: #f2f3f6;
+            padding: 0.75rem 2rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            &::before {
+                content: '';
+                display: block;
+                width: 0.5rem;
+                height: 0.5rem;
+                border-left: 1px solid $border-basic;
+                border-bottom: 1px solid $border-basic;
+            }
+        }
+    }
  }
