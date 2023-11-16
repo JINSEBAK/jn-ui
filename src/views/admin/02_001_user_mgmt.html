@@ -14,6 +14,37 @@
 
             <div class="item item-col-5">
               <div class="label">
+                <label for="">구분</label>
+              </div>
+              <div class="inline">
+                <div class="radio">
+                  <input type="radio" name="u-type" value="1" id="utype1">
+                  <label for="utype1">전체</label>
+                </div>
+                <div class="radio">
+                  <input type="radio" name="u-type" value="2" id="utype2">
+                  <label for="utype2">카카오</label>
+                </div>
+                <div class="radio">
+                  <input type="radio" name="u-type" value="3" id="utype3">
+                  <label for="utype3">네이버</label>
+                </div>
+                <div class="radio">
+                  <input type="radio" name="u-type" value="4" id="utype4">
+                  <label for="utype4">NICE</label>
+                </div>
+              </div>
+            </div>
+
+            <div class="item item-col-5">
+              <div class="label">
+                <label for="">구분</label>
+              </div>
+              <div class="inline"></div>
+            </div>
+
+            <div class="item item-col-5">
+              <div class="label">
                 <label for="">키워드</label>
               </div>
               <div class="inline">
@@ -41,7 +72,7 @@
                   </div>
                   <div class="radio">
                     <input type="radio" name="status" value="3" id="status3">
-                    <label for="status3">해지</label>
+                    <label for="status3">휴면</label>
                   </div>
                 </div>
               </div>
@@ -72,117 +103,129 @@
                     <col style="width:10%;">
                     <col style="width:10%;">
                     <col style="width:10%;">
+                    <col style="width:10%;">
                 </colgroup>
                 <thead>
                   <tr>
                     <th scope="col">번호</th>
-                    <th scope="col">CUID</th>
+                    <th scope="col">구분</th>
+                    <th scope="col">ID</th>
                     <th scope="col">이름</th>
-                    <th scope="col"></th>
-                    <th scope="col">알림</th>
                     <th scope="col">상태</th>
-                    <th scope="col">가입일</th>
+                    <th scope="col">푸시알림</th>
+                    <th scope="col">광고알림</th>
+                    <th scope="col">가입일시</th>
                     <th scope="col">최근로그인</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
                     <td>10</td>
+                    <td>카카오</td>
                     <td>id</td>
                     <td>OOO</td>
-                    <td></td>
-                    <td>허용</td>
                     <td>활동</td>
+                    <td>허용</td>
+                    <td>허용</td>
                     <td>yyyy-mm-dd</td>
                     <td>yyyy-mm-dd hh:mm</td>
                   </tr>
                   <tr>
                     <td>9</td>
+                    <td>카카오</td>
                     <td>id</td>
                     <td>OOO</td>
-                    <td></td>
-                    <td>비허용</td>
                     <td>활동</td>
+                    <td>허용</td>
+                    <td>비허용</td>
                     <td>yyyy-mm-dd</td>
                     <td>yyyy-mm-dd hh:mm</td>
                   </tr>
                   <tr>
                     <td>8</td>
+                    <td>카카오</td>
                     <td>id</td>
                     <td>OOO</td>
-                    <td></td>
-                    <td>허용</td>
                     <td>해지</td>
+                    <td>허용</td>
+                    <td>허용</td>
                     <td>yyyy-mm-dd</td>
                     <td>yyyy-mm-dd hh:mm</td>
                   </tr>
                   <tr>
                     <td>7</td>
+                    <td>카카오</td>
                     <td>id</td>
                     <td>OOO</td>
-                    <td></td>
-                    <td>허용</td>
                     <td>활동</td>
+                    <td>허용</td>
+                    <td>허용</td>
                     <td>yyyy-mm-dd</td>
                     <td>yyyy-mm-dd hh:mm</td>
                   </tr>
                   <tr>
                     <td>6</td>
+                    <td>카카오</td>
                     <td>id</td>
                     <td>OOO</td>
-                    <td></td>
-                    <td>허용</td>
                     <td>활동</td>
+                    <td>허용</td>
+                    <td>허용</td>
                     <td>yyyy-mm-dd</td>
                     <td>yyyy-mm-dd hh:mm</td>
                   </tr>
                   <tr>
                     <td>5</td>
+                    <td>카카오</td>
                     <td>id</td>
                     <td>OOO</td>
-                    <td></td>
-                    <td>허용</td>
                     <td>활동</td>
+                    <td>허용</td>
+                    <td>허용</td>
                     <td>yyyy-mm-dd</td>
                     <td>yyyy-mm-dd hh:mm</td>
                   </tr>
                   <tr>
                     <td>4</td>
+                    <td>카카오</td>
                     <td>id</td>
                     <td>OOO</td>
-                    <td></td>
-                    <td>허용</td>
                     <td>활동</td>
+                    <td>허용</td>
+                    <td>허용</td>
                     <td>yyyy-mm-dd</td>
                     <td>yyyy-mm-dd hh:mm</td>
                   </tr>
                   <tr>
                     <td>3</td>
+                    <td>카카오</td>
                     <td>id</td>
                     <td>OOO</td>
-                    <td></td>
-                    <td>허용</td>
                     <td>활동</td>
+                    <td>허용</td>
+                    <td>미허용</td>
                     <td>yyyy-mm-dd</td>
                     <td>yyyy-mm-dd hh:mm</td>
                   </tr>
                   <tr>
                     <td>2</td>
+                    <td>카카오</td>
                     <td>id</td>
                     <td>OOO</td>
-                    <td></td>
-                    <td>허용</td>
                     <td>활동</td>
+                    <td>허용</td>
+                    <td>허용</td>
                     <td>yyyy-mm-dd</td>
                     <td>yyyy-mm-dd hh:mm</td>
                   </tr>
                   <tr>
                     <td>1</td>
+                    <td>카카오</td>
                     <td>id</td>
                     <td>OOO</td>
-                    <td></td>
-                    <td>허용</td>
                     <td>활동</td>
+                    <td>허용</td>
+                    <td>허용</td>
                     <td>yyyy-mm-dd</td>
                     <td>yyyy-mm-dd hh:mm</td>
                   </tr>

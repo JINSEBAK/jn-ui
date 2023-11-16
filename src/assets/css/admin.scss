@@ -787,6 +787,7 @@ html, body {
         margin-right: -1px;
         position: relative;
         z-index: 1;
+        font-size: 0.875rem;
         cursor: pointer;
         &.active {
             border-color:#000;
@@ -1224,6 +1225,52 @@ html, body {
                 height: 0.5rem;
                 border-left: 1px solid $border-basic;
                 border-bottom: 1px solid $border-basic;
+            }
+        }
+    }
+ }
+
+ .user-activity {
+    margin-top: 2rem;
+ }
+
+ .activity-title {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    h4 {
+        font-weight: bold;
+    }
+    ul.cnt {
+        display: flex;
+        align-items: center;
+        font-size: 0.75rem;
+        color: $guide-text;
+        .total {
+            text-decoration: underline;
+            cursor: pointer;
+            color: $clr-primary;
+            font-weight: bold;
+        }
+        em {
+            font-weight: bold;
+            color: #000;
+        }
+        li {
+            display: flex;
+            align-items: center;
+            &::after {
+                content: '';
+                display: block;
+                margin: 0 0.5rem;
+                width: 1px;
+                height: 8px;
+                background-color: $border-basic;
+            }
+            &:last-child {
+                &::after {
+                    content: none;
+                }
             }
         }
     }
