@@ -611,7 +611,11 @@ strong {
   &.small {
     padding: 0.25rem 0.5rem;
     font-size: 0.875rem;
-    height: 40px;
+    height: 36px;
+  }
+  &.round {
+    border-radius: 50px;
+    min-width: 56px;
   }
 }
 
@@ -1313,7 +1317,7 @@ select {
 
 .popup-cnt {
   width: 92%;
-  height: 100%;
+  height: auto;
   max-height: 80%;
   background-color: #fff;
   border-radius: 0.5rem;
@@ -1354,7 +1358,6 @@ select {
       height: 1rem;
     }
   }
-  
 }
 
 .popup-filter {
@@ -1391,6 +1394,50 @@ select {
     }
     &-container {
     }
+  }
+}
+
+// 스탬프 발급 
+.popup-stamp {
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  background-color: #fff;
+  border: 3px solid #c6b888;
+  padding: 7px;
+  visibility: hidden;
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+  .inner {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #c6b888;
+    .title {
+      font-weight: bold;
+      font-size: 1.25rem;
+      line-height: 28px;
+    }
+    img {
+      display: block;
+      margin: 0.25rem 0 0.5rem;
+    }
+    p {
+      font-size: 0.875rem;
+      line-height: 1.2rem;
+      text-align: center;
+    }
+    .btn {
+      margin-top: 1rem;
+    }
+  }
+  &.show {
+    animation: show_pop 0.3s forwards;
   }
 }
 
@@ -1605,8 +1652,14 @@ select {
   &.end {
     background-color: $badge-end;
   }
+  &.inc {
+    background-color: $badge-inc;
+  }
   &.ing {
     background-color: $badge-ing;
+  }
+  &.target {
+    background-color: $badge-target;
   }
   &.category {
     background-color: $badge-category;

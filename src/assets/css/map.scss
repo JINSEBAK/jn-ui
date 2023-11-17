@@ -95,7 +95,6 @@
 .course {
   .container {
     margin-bottom: 0;
-    padding-bottom: $bottom;
   }
 }
 
@@ -190,12 +189,10 @@
   }
   &-social {
     display: flex;
-    justify-content: flex-end;
     gap: 0.5rem;
-    padding: 0 1.25rem;
-    transform: translateY(-50%);
+    padding-top: 0.5rem;
     .btn {
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      border: 1px solid $border-light;
       background-color: #fff;
       display: flex;
       align-items: center;
@@ -222,7 +219,8 @@
   &-btns {
     display: flex;
     align-items: center;
-    gap: 0.25rem;
+    flex-wrap: wrap;
+    gap: 1.5rem 0.25rem;
     margin: 1.25rem 0;
     .btn {
       display: flex;
@@ -253,10 +251,26 @@
           background: url(../images/icon_download.svg) center no-repeat;
         }
       }
+      &.btn-apply {
+        background-color: #46536F;
+        color: #fff;
+        width: 100%;
+        flex: none;
+        border-color: #46536F;
+      }
     }
   }
   &-detail {
-    padding: 0 1.25rem;
+    padding: 2rem 1.25rem 0;
+    position: relative;
+    .crs-complete {
+      position: absolute;
+      right: 10px;
+      top: 0;
+      width: 100px;
+      height: 100px;
+      transform: translateY(-50%);
+    }
     .course {
       &-title {
         font-weight: bold;
@@ -338,7 +352,7 @@
           padding: 0.25rem 0;
           .num {
             font-weight: bold;
-            background-color: $primary3;
+            background-color: #E46E5E;
             color: #fff;
             font-size: 0.75rem;
             display: block;
@@ -535,10 +549,83 @@
         }
       }
     }
-    .like-info {
-      display: flex;
-      align-items: center;
-      font-size: 0.75rem;
+  }
+}
+
+.like-info {
+  display: flex;
+  align-items: center;
+  font-size: 0.75rem;
+}
+
+
+
+// 추천 산책 코스 
+.course {
+  &-card_item {
+    & + .course-card_item {
+      margin-top: 1rem;
     }
+    .thumb-img {
+      height: 170px;
+      overflow: hidden;
+      border-radius: 6px;
+      margin: 0.25rem 0;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+    }
+  }
+  &-title {
+    font-weight: bold;
+    line-height: 1.5rem;
+  }
+  &-info {
+    position: relative;
+    .crs-complete {
+      position: absolute;
+      right: 0;
+      top: 0;
+      transform: translateY(-60%);
+    }
+  }
+  &-expln {
+    max-width: calc(100% - 62px);
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    margin: 0.25rem 0;
+  }
+}
+
+#certification {
+  .popup-cnt {
+    max-width: 260px;
+  }
+}
+.course-certify {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 1rem 1rem;
+  .title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    line-height: 28px;
+    margin-bottom: 1rem;
+  }
+  .name {
+    color: $second1;
+  }
+  .date {
+    margin-top: 1rem;
+    color: $primary-text;
+    font-size: 13px;
+  }
+  button {
+    width: 100%;
+    margin-top: 1.5rem;
   }
 }
