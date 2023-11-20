@@ -100,29 +100,34 @@
 .custom-controls {
   position: absolute;
   z-index: 100;
-  height: 30px;
+  height: 24px;
   bottom: 0;
   width: 100%;
   display: flex;
   justify-content: flex-end;
-  align-items: center;
+   
   gap: 1px;
   > * {
     border-radius: 0;
-    background-color: rgba(255, 255, 255, 0.25);
   }
   .swiper-pagination {
+    background-color: rgba(255, 255, 255, 0.25);
     position: relative;
     width: auto;
     bottom: auto;
     left: auto;
     color: #ccc;
-    height: 2rem;
-    line-height: 2rem;
+    height: 24px;
+    line-height: 24px;
     padding: 0 0.75rem;
     span {
       color: #fff;
     }
+  }
+  .btn {
+    width: 1.5rem;
+    height: 1.5rem;
+    border: 1px solid rgba(255,255,255,0.25);
   }
 }
 
@@ -463,6 +468,18 @@
         padding: 0 0.5rem;
         em {
           font-weight: 500;
+          &.item_alarm_blue {
+            color: #2295FF;
+          }
+          &.item_alarm_green {
+            color: #33D66B;
+          }
+          &.item_alarm_yellow {
+            color: #D6B22C;
+          }
+          &.item_alarm_red {
+            color: #FB7152;
+          }
         }
         &:last-child {
           border-left: 1px solid $border-dark;
@@ -820,6 +837,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    .icon {
+      width: 10rem;
+      height: 10rem;
+    }
     span {
       min-height: 1rem;
     }
@@ -900,27 +921,31 @@
           bottom: 0;
         }
       }
-      &.lv1 {
+      &.item_alarm_blue {
         background-color: #C3E2FF;
         .value {
+          height: 25%;
           background-color: #69B7FF;
         }
       }
-      &.lv2{
+      &.item_alarm_green {
         background-color: #B2F8CA;
         .value {
+          height: 50%;
           background-color: #33D66B;
         }
       }
-      &.lv3 {
+      &.item_alarm_yellow {
         background-color: #F8E9B2;
         .value {
+          height: 75%;
           background-color: #D6B22C;
         }
       }
-      &.lv4 {
+      &.item_alarm_red {
         background-color: #F8C7B2;
         .value {
+          height: 100%;
           background-color: #FB7152;
         }
       }
@@ -948,6 +973,9 @@
       }
       &:last-child {
         font-size: 0.875rem;
+        &::after {
+          content: "㎍/㎥"
+        }
       }
     }
   }
@@ -1353,5 +1381,86 @@
     & + .checkbox {
       margin: 0;
     }
+  }
+}
+
+.btn-sos {
+  position: fixed;
+  right: 1.25rem;
+  bottom: 70px;
+  z-index: 1500;
+  width: 70px;
+  height: 70px;
+  padding: 0;
+  border-radius: 50%;
+  border: none;
+  background: transparent url(../images/btn_floating_sos.svg) center no-repeat;
+  background-size: 100%;
+  box-shadow: 0 6px 8px rgba(0,0,0,0.2);
+}
+
+.login {
+  &-wrapper {
+    img {
+      display: block;
+      margin: 2rem auto;
+    }
+  }
+  border: 1px solid $border-basic;
+  border-radius: 6px;
+  & + .login {
+    margin-top: 2rem;
+  }
+  padding: 1rem;
+  h3 {
+    font-weight: bold;
+    font-size: 13px;
+    color: $primary-text;
+  }
+  .btns {
+    flex-direction: column;
+    .btn {
+      width: 100%;
+      &-kakao {
+        background-color: #fae100;
+        color: #181600;
+      }
+      &-naver {
+        background-color: #2DB400;
+        color: #fff;
+      }
+    }
+  }
+}
+
+
+@media (max-width: 320px) {
+  .quick-link {
+    &_item {
+      padding: 1rem 0.5rem;
+    }
+  }
+  .weather-air {
+    .info-board {
+      padding: 10px 0.5rem;
+    }
+  }
+  .link-list {
+    .link-item {
+      &.hl {
+        padding: 0.625rem 1rem;
+      }
+      img {
+        max-height: 2rem;
+      }
+    }
+  }
+  .ticket-issue_guide {
+    ul {
+      padding: 0 0.5rem 0 1.25rem;
+    }
+  }
+  .w-container {
+    padding: 0 6%;
   }
 }

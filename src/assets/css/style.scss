@@ -168,6 +168,14 @@ a {
   -webkit-line-clamp: 2;
 }
 
+.ellipsis-4 {
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+}
+
 .x-scroll {
   overflow-x: auto !important;
   scrollbar-width: none;
@@ -267,6 +275,10 @@ hr.full-line {
 
 strong {
   font-weight: bold !important;
+}
+
+.mt36 {
+  margin-top: 36px !important;
 }
 
 // header
@@ -555,6 +567,9 @@ strong {
     border-radius: 40px;
     width: calc(100% - 40px);
     height: 50px;
+    &:visited {
+      color: #fff;
+    }
   }
   &-info {
     border: 1px solid $border-basic;
@@ -605,7 +620,7 @@ strong {
     }
   }
   &:hover, &:active {
-    //background-image: linear-gradient(rgb(0 0 0/20%) 0 0);
+    background-image: linear-gradient(rgb(0 0 0/20%) 0 0);
     //box-shadow: 0 0 2px 3px rgb(255, 218, 213);
   }
   &.small {
@@ -632,6 +647,7 @@ strong {
     height: 1px;
     left: 0.5rem;
     top: 50%;
+    opacity: 0;
     & + label {
       display: flex;
       align-items: center;
@@ -963,6 +979,11 @@ select {
     input[type="text"],
     input[type="tel"] {
       flex: 1;
+      min-width: 0;
+      &.block {
+        flex: none;
+        width: 100%;
+      }
     }
     .btn {
       font-size: 0.875rem;
@@ -1425,6 +1446,7 @@ select {
     }
     img {
       display: block;
+      max-height: 70px;
       margin: 0.25rem 0 0.5rem;
     }
     p {
@@ -1443,6 +1465,14 @@ select {
 
 .btm-sheet {
   position: relative;
+  > .btn.close {
+    position: absolute;
+    top: 0;
+    right: 20px;
+    width: 1rem;
+    height: 1rem;
+    transform: translateY(-100%);
+  }
   .btns {
     justify-content: flex-end;
     gap: 1.5rem;
@@ -2412,6 +2442,15 @@ select {
   &.download {
     background-image: url(../images/icon_download.svg);
   }
+  &.sw-next {
+    background-image: url(../images/icon_sw_next.svg);
+  }
+  &.sw-play {
+    background-image: url(../images/icon_sw_play.svg);
+  }
+  &.sw-pause {
+    background-image: url(../images/icon_sw_pause.svg);
+  }
   &.play {
     background-image: url(../images/icon_audio_play.svg);
   }
@@ -2571,5 +2610,17 @@ select {
       margin: 0 0 0 0.5rem;
       background-color: #dcdcec;
     }
+  }
+}
+
+
+@media (max-width: 320px) {
+  .tb {
+    th {
+      padding: 10px 0;
+    }
+  }
+  .terms-agree {
+    flex-wrap: wrap;
   }
 }

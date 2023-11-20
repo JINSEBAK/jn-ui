@@ -624,6 +624,18 @@
     color: $primary-text;
     font-size: 13px;
   }
+  .img-crt {
+    max-height: 100px;
+  }
+  .stampes {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    img {
+      width: 30px;
+      display: block;
+    }
+  }
   button {
     width: 100%;
     margin-top: 1.5rem;

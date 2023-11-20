@@ -52,16 +52,16 @@
 
           <div class="custom-controls">
             <!-- play / pause -->
-            <button type="button" class="btn btn-icon icon pause" >
+            <button type="button" class="btn btn-icon icon sw-pause" >
               <span class="sr-only">일시정지</span>
             </button>
-            <button type="button" class="btn btn-icon icon play" style="display:none">
+            <button type="button" class="btn btn-icon icon sw-play" style="display:none">
               <span class="sr-only">재생</span>
             </button>
             <!-- pagination fraction -->
             <div class="swiper-pagination" id="mainSwiperPagination"></div>
             <!-- next -->
-            <button type="button" class="btn btn-icon icon next">
+            <button type="button" class="btn btn-icon icon sw-next">
               <span class="sr-only">다음</span>
             </button>
           </div>
@@ -354,6 +354,13 @@
           </li>
         </ul>
       </section>
+
+
+      <!-- 긴급신고 버튼 -->
+      <button type="button" class="btn btn-sos">
+        <span class="sr-only">긴급신고</span>
+      </button>
+
     </div>
     @@include('../common/navigation.html', {activeMenu: "on"})
     @@include('../common/script.html')

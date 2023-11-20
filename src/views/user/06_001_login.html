@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        @@include('../common/head.html')
+        <link rel="stylesheet" href="../assets/css/home.css"></link>
+    </head>
+    <body class="more">
+        @@include('../common/header_sub.html', {title: '로그인'})
+        <div class="container inner-full-padd">
+
+            <div class="login-wrapper">
+                <img src="../../assets/images/logo.png">
+                
+                <section class="login social">
+                    <h3>소셜 로그인</h3>
+                    <div class="btns">
+                        <button type="button" class="btn btn-kakao">카카오 로그인</button>
+                        <button type="button" class="btn btn-naver">네이버 로그인</button>
+                    </div>
+                    <div class="guide">
+                        ※ 소셜 로그인 시 최초 1회 본인인증이 필요합니다.<br>
+                        인증 후에는 추가 재인증 없이 소셜 로그인이 가능합니다.
+                    </div>
+                </section>
+                
+                <section class="login nice">
+                    <h3>NICE 휴대폰 본인인증 로그인</h3>
+                    <div class="btns">
+                        <button type="button" class="btn btn-second">인증하기</button>
+                    </div>
+                    <div class="guide">
+                        본인 명의의 휴대폰 인증을 통해 본인임을 확인하여 로그인을 진행합니다.<br>
+                        ※ 휴대폰 인증 문의: 1600-1522
+                    </div>
+                </section>
+                
+            </div>
+        </div>
+    </body>
+</html>
