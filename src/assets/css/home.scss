@@ -1401,7 +1401,7 @@
 
 .login {
   &-wrapper {
-    img {
+   > img {
       display: block;
       margin: 2rem auto;
     }

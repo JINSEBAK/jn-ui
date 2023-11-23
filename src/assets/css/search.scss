@@ -13,6 +13,12 @@
       margin-top: $header;
     }
   }
+  &.more {
+    background-color: #fff;
+    .container {
+      margin-top: 50px;
+    }
+  }
 }
 .search-box {
   padding: 0;
@@ -205,6 +211,61 @@
       color: $sub-text;
       font-size: 0.75rem;
       line-height: 1.2;
+    }
+  }
+}
+
+
+.search-result {
+  &_box {
+    border-bottom: 1px solid $border-light;
+    &:first-child {
+      padding: 1rem 0;
+    }
+    padding: 1.5rem 0;
+    .keyword {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      dl {
+        font-size: 0.875rem;
+      }
+      dt {
+        font-weight: bold;
+      }
+    }
+    .title {
+      font-weight: bold;
+      .cnt {
+        font-weight: normal;
+        &::after {
+          content: '+'
+        }
+      }
+    }
+    .contents {
+      margin-top: 0.5rem;
+      ul {
+        li {
+          padding: 0.25rem 0;
+          a {
+            display: flex;
+            padding: 0.25rem 0;
+            background: url(../images/icon_chevron_right.svg) right center no-repeat;
+          }
+        }
+      }
+    }
+  }
+  &_guide {
+    padding: 1rem 0;
+    line-height: 1.2;
+    strong {
+      display: block;
+    }
+    button {
+      margin: 0.5rem auto;
+      width: 100%;
     }
   }
 }
