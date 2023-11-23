@@ -7,7 +7,7 @@
   <body class="more">
     
     @@include('../common/header_sub.html', {title: "알림설정"})
-    <div class="container inner-padd">
+    <div class="container inner-full-padd">
       <section class="setting-box">
         <div class="switch-item">
           <h5>Push 알림 수신 설정</h5>
@@ -27,6 +27,19 @@
       </section>
 
       <section class="setting-box">
+        <!-- notice -->
+        <div class="switch-item">
+          <h5>앱 공지사항</h5>
+          <div class="switch">
+            <input type="checkbox" id="switch0" name="switch" value="" class="sr-only">
+            <label for="switch0" class="btn-switch">
+              <span class="sr-only">앱 공지사항 알림 설정</span>
+            </label>
+          </div>
+          <div class="guide">
+            앱 공지사항 알림을 발송합니다.
+          </div>
+
         <!-- alarm item -->
         <div class="switch-item">
           <h5>스마트 번호표</h5>
@@ -40,33 +53,66 @@
             스마트 번호표 발권 및 번호 알림을 발송합니다.
           </div>
         </div>
-        <!-- alarm item -->
+
         <div class="switch-item">
-          <h5>알림 1</h5>
+          <h5>정화조 청소 신청 알림</h5>
           <div class="switch">
             <input type="checkbox" id="switch2" name="switch" value="" class="sr-only">
             <label for="switch2" class="btn-switch">
-              <span class="sr-only">알림 1 수신 설정</span>
+              <span class="sr-only">정화조 청소 신청 알림</span>
             </label>
           </div>
           <div class="guide">
-            알림 1 수신에 대한 설명입니다.
+            정화조 청소 신청 완료 시 알림을 발송합니다.
           </div>
         </div>
-        <!-- alarm item -->
+
         <div class="switch-item">
-          <h5>알림 2</h5>
+          <h5>건강이랑 서비스 신청 알림</h5>
           <div class="switch">
             <input type="checkbox" id="switch3" name="switch" value="" class="sr-only">
             <label for="switch3" class="btn-switch">
-              <span class="sr-only">알림 2 수신 설정</span>
+              <span class="sr-only">건강이랑 서비스 신청 알림</span>
             </label>
           </div>
           <div class="guide">
-            알림 2 수신에 대한 설명입니다.
+            건강이랑 서비스 신청 완료 시 알림을 발송합니다.
           </div>
         </div>
       </section>
+
+      <div class="switch-item">
+        <h5>1:1문의 답변 알림</h5>
+        <div class="switch">
+          <input type="checkbox" id="switch4" name="switch" value="" class="sr-only">
+          <label for="switch4" class="btn-switch">
+            <span class="sr-only">1:1문의 답변 알림</span>
+          </label>
+        </div>
+        <div class="guide">
+          1:1 문의에 대한 답변 알림을 발송합니다.
+        </div>
+      </div>
+
+      <div class="switch-item">
+        <h5>관심 키워드 알림</h5>
+        <div class="switch">
+          <input type="checkbox" id="switch5" name="switch" value="" class="sr-only">
+          <label for="switch5" class="btn-switch">
+            <span class="sr-only">관심 키워드 알림</span>
+          </label>
+        </div>
+        <div class="guide">
+          관심 키워드와 관련된 새 글 알림을 발송합니다.
+        </div>
+        <button type="button" class="btn btn-default">관심 키워드 관리</button>
+      </div>
+
+    </section>
+
+    <section class="setting-box">
+      <button type="button" class="btn btn-default">이벤트 정보 수신 관리</button>
+    </section>
     </div>
 
     @@include('../common/script.html')
