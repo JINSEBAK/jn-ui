@@ -465,7 +465,11 @@ strong {
     margin: 0;
     z-index: 1000;
     //background-color: #fff;
-    background-image: linear-gradient(to top, #fff 60%, transparent 100%)
+    background-image: linear-gradient(to top, #fff 8 0%, transparent 100%);
+    .select {
+      width: 100%;
+      margin: 0;
+    }
   }
   .btn {
     flex: 1;
@@ -1941,20 +1945,20 @@ select {
 }
 
 .middle-menu {
-  margin-left: -1rem;
-  margin-right: -1rem;
-  border-top: 1px solid $border-light;
   &_item {
     display: block;
     font-size: 0.875rem;
-    padding: 1rem;
-    border-bottom: 1px solid $border-light;
-    background: url(../images/icon_chevron_right.svg) right 1rem center
+    line-height: 1.25rem;
+    padding: 10px 0;
+    background: url(../images/icon_arrow_right.svg) right center
       no-repeat;
     background-size: 1.5rem;
     &:active {
       background-color: rgba(0, 0, 0, 0.03);
     }
+  }
+  li {
+    margin-bottom: 0.5rem;
   }
 }
 
