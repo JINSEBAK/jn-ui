@@ -6,27 +6,26 @@
   </head>
   <body class="more">
     
-    @@include('../common/header_sub.html', {title: "공지사항 상세?"})
-    <div class="container inner-padd">
-      <dl class="brd-detail">
-        <dt>
-          <span class="brd-title">공지 제목입니다.</span>
-          <span class="brd-date">yyyy-mm-dd hh:mm</span>
-        </dt>
-        <dd>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-          </p>
-        </dd>
-      </dl>
-    </div>
+    @@include('../common/header_blank.html')
+    <div class="container inner-full-padd">
 
-    <aside id="aside" class="popup-bg popup-closable">
-      @@include("../popup/popup_select_bottom.html")
-    </aside>
+      <div class="badges">
+        <span class="badge n-system">시스템</span>
+      </div>
+
+      <h3 class="detail-info_title">
+        앱 점검 예정 안내 드립니다
+      </h3>
+      <div class="r-cnt">2023-10-23</div>
+
+      <section class="detail-info">
+        <div class="pre">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </div>
+      </section>
 
     @@include('../common/script.html')
   </body>

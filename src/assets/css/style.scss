@@ -465,7 +465,7 @@ strong {
     margin: 0;
     z-index: 1000;
     //background-color: #fff;
-    background-image: linear-gradient(to top, #fff 8 0%, transparent 100%);
+    background-image: linear-gradient(to top, #fff 80%, transparent 100%);
     .select {
       width: 100%;
       margin: 0;
@@ -1724,6 +1724,12 @@ select {
   &.completed {
     background-color: $badge-completed;
   }
+  &.n-general {
+    background-color: $badge-n1;
+  }
+  &.n-system {
+    background-color: $badge-n2;
+  }
   &.disabled {
     background-color: $sub-text;
     color: rgba(255, 255, 255, 0.5) !important;
@@ -1965,6 +1971,9 @@ select {
 // 공지사항 등 보드형태
 .brd-list {
   border-top: 1px solid $border-light;
+  &.top-blank {
+    border-top: none;
+  }
   &_item {
     border-bottom: 1px solid $border-light;
     padding: 1rem 0.25rem;
