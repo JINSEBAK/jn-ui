@@ -99,6 +99,20 @@ html, body {
     padding: 50px 0 !important;
 }
 
+.scroll {
+    width: 100%;
+    height: 360px;
+    overflow-y: auto;
+    &::-webkit-scrollbar {
+        width: 5px;
+        height: 8px;
+        background-color: #eee;
+    }
+    &::-webkit-scrollbar-thumb {
+        background: #222;
+    }
+}
+
 
 /** header */
 #header {
@@ -175,6 +189,9 @@ html, body {
         > li {
             a { 
                 color: #bbb;
+                &.active {
+                    color: yellow;
+                }
             }
         }
         &.visible {
@@ -556,6 +573,9 @@ html, body {
         &-col-5 {
             width: 50%;
         }
+        .input-keyword {
+            max-width: 100% !important;
+        }
     }
     
 }
@@ -684,6 +704,7 @@ html, body {
         }
     }
     tr {
+        cursor: pointer;
         &:hover {
             background-color: rgba(0,0,0,0.03);
         }
@@ -983,6 +1004,11 @@ html, body {
         height: 100%;
         object-fit: cover;
         display: block;
+        &.stamp {
+            width: auto;
+            height: 42px;
+            margin: 0 auto;
+        }
     }
     .btn-viewer {
         border: none;
@@ -1001,8 +1027,6 @@ html, body {
 
  .attach-img {
     border: 1px solid $border-basic;
-    width: 140px;
-    height: 100px;
     position: relative;
     background-color: $bg-th;
     input[type=file] {
@@ -1012,8 +1036,10 @@ html, body {
         opacity: 0;
     }
     label {
-        width: 100%;
-        height: 100%;
+        width: 140px;
+        height: 100px;
+        overflow: hidden;
+        position: relative;
         @include flexCenter;
         span {
             position: relative;
@@ -1030,8 +1056,58 @@ html, body {
             object-fit: cover;
         }
     }
-    .lik-btn {
+    .btns {
+        padding: 0;
+        @include flexCenter;
+        gap: 1px;
+        .btn {
+            flex: 1;
+            border-radius: 0;
+            min-width: 0;
+            background-color: $clr-third;
+            color: #fff;
+            font-size: 0.875rem;
+            padding: 0.5rem;
+        }
+    }
+ }
 
+ .file-box {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    .file {
+        position: relative;
+        input[type="file"] {
+            position: absolute;
+            z-index: -1;
+            width: 1px;
+            height: 1px;
+            opacity: 0;
+            & + span {
+                display: inline-block;
+                background-color: $clr-third;
+                color: #fff;
+                border-radius: 2px;
+                font-size: 0.875rem;
+                line-height: 1.25rem;
+                padding: 0.55rem 1.25rem;
+                cursor: pointer;
+            }
+        }
+        &-info {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            text-decoration: underline;
+            color: #5f5f67;
+            .btn {
+                width: 1rem;
+                height: 1rem;
+                background-size: 100%;
+                padding: 0;
+            }
+        }
     }
  }
 
@@ -1084,6 +1160,24 @@ html, body {
             min-width: 90px;
             line-height: 32px;
             padding: 0 1rem;
+        }
+    }
+
+    &.popup-img-viewer {
+        width: auto !important;
+        .img-container {
+            position: relative;
+            .btn.close {
+                position: absolute;
+                right: 1rem;
+                top: 1rem;
+                z-index: 500;
+            }
+            img {
+                position: relative;
+                z-index: 400;
+                display: block;
+            }
         }
     }
  }

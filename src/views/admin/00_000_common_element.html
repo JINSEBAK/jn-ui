@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ko">
   <head>
     <meta charset="UTF-8" />
@@ -30,6 +31,7 @@
                     <button type="button" class="btn btn-default btn-popup" data-target="confirm">메시지 컨펌</button>
 
                     <button type="button" class="btn btn-default btn-popup" data-target="thumbImg">이미지 크게보기</button>
+                    <button type="button" class="btn btn-default btn-popup" data-target="">모달 팝업</button>
                 </dd>
             </dl>
 
@@ -48,6 +50,19 @@
     </div>
 
     <!-- popup -->
+    <aside class="popup-bg popup-closable on">
+        <div class="popup show">
+            <div class="popup-head">
+                header
+            </div>
+            <div class="popup-body">
+                body
+            </div>
+            <div class="popup-tail">
+                tail
+            </div>
+        </div>
+    </aside>
 
     @@include('./common/admin_scripts.html')
 </body>

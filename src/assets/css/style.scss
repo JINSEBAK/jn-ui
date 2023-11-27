@@ -212,9 +212,9 @@ a {
   background-image: linear-gradient(to top, #F5F6B4 0 50%, transparent 50% 100%);
 }
 
+// 검색 결과
 .highlight3 {
-  color: red;
-  background-image: linear-gradient(to top, #F5F6B4 10% 50%, #F5F6B4 50% 90%);
+  color: $second1 !important;
 }
 
 .guide {
@@ -644,8 +644,8 @@ strong {
       box-shadow: none;
     }
   }
-  &:hover, &:active {
-    background-image: linear-gradient(rgb(0 0 0/20%) 0 0);
+  &:hover {
+    //background-image: linear-gradient(rgb(0 0 0/20%) 0 0);
     //box-shadow: 0 0 2px 3px rgb(255, 218, 213);
   }
   &.small {
@@ -1643,6 +1643,45 @@ select {
   }
 }
 
+.attach-file {
+  display: flex;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  .title {
+    color: #5F5F67;
+    font-size: 13px;
+    line-height: 18px;
+    width: 100%;
+  }
+  .file {
+    background-color: #F1F1F9;
+    border-radius: 6px;
+    position: relative;
+    width: 100px;
+    height: 100px;
+    margin: 0;
+    display: flex;
+    &::after {
+      content: '';
+      display: block;
+      width: 1.5rem;
+      height: 1.5rem;
+      background: url(../images/icon_plus.svg) center no-repeat;
+      margin: auto;
+    }
+    input[type="file"] {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      opacity: 0;
+    }
+  }
+  .guide {
+    flex: 1;
+  }
+}
+
 // tabs
 .tab-container {
   margin-bottom: 1rem;
@@ -1650,10 +1689,8 @@ select {
 .tab-list {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
+  gap: 1rem;
   .tab-item {
-    flex: 1;
     border-bottom: 3px solid transparent;
     transition: all 0.3s;
     .tab-button {
@@ -1662,17 +1699,17 @@ select {
       display: block;
       width: 100%;
       text-align: center;
-      padding: 0.5rem;
-      font-size: 1rem;
+      padding: 6px 0;
+      font-size: 0.875rem;
+      line-height: 1.25rem;
       color: #000;
       &:active {
         background-color: rgba(0, 0, 0, 0.03);
       }
     }
     &.active {
-      border-bottom-color: $em-text;
+      border-bottom-color: $input-focus;
       .tab-button {
-        color: $em-text;
         font-weight: bold;
       }
     }
@@ -1681,6 +1718,14 @@ select {
 .tab-contents {
   border-radius: 0.25rem;
   line-height: 1.2;
+}
+.tab-footer {
+  margin-top: 40px;
+  background-color: $bg-content-box2;
+  margin-left: -1.25rem;
+  margin-right: -1.25rem;
+  padding: 1.5rem 1.25rem;
+  color: #000;
 }
 
 .badges {
@@ -1730,6 +1775,15 @@ select {
   &.n-system {
     background-color: $badge-n2;
   }
+  &.faq {
+    background-color: $badge-end;
+  }
+  &.qa-ing {
+    background-color: $badge-pre;
+  }
+  &.qa-finish {
+    background-color: $badge-finish;
+  }
   &.disabled {
     background-color: $sub-text;
     color: rgba(255, 255, 255, 0.5) !important;
@@ -1764,7 +1818,7 @@ select {
       color: #fff;
       text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
     }
-    a {
+    a, button {
       display: flex;
       align-items: center;
       gap: 1rem;
@@ -1847,14 +1901,18 @@ select {
       }
     }
     &-emerge {
-      background-color: #F7EFC6;
       margin: 1rem 0;
-      a {
+      a, button {
         padding: 1rem 1.5rem;
+        width: 100%;
+        border-color: transparent;
+        background-color: #F7EFC6;
+        color: #000;
       }
       dl {
         display: flex;
         flex-direction: column-reverse;
+        text-align: left;
         dt {
           font-size: 1rem;
           line-height: 1.5rem;
@@ -1932,21 +1990,24 @@ select {
 }
 
 .not-found {
-  border: 1px solid $border-basic;
-  background-color: #f2f3f6;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 4rem 0;
-  gap: 1rem;
+  padding-top: 100px;
+  gap: 0.5rem;
   &::before {
     content: "";
     display: block;
-    background: url(../images/icon_not_found.svg) center no-repeat;
-    background-size: 2rem;
-    width: 3rem;
-    height: 3rem;
+    background: url(../images/icon_empty_result.svg) center no-repeat;
+    background-size: 100%;
+    width: 45px;
+    height: 45px;
+  }
+  p {
+    color: #787882;
+    font-size: 13px;
+    line-height: 1.25rem;
   }
 }
 
@@ -2261,7 +2322,7 @@ select {
     input[type="radio"] {
       & + label {
         width: 100% !important;
-        color: #000;
+        color: $primary-text;
         font-size: 0.875rem;
         padding: 6px 1.25rem;
         border-color: $border-basic;
@@ -2272,7 +2333,9 @@ select {
       }
       &:checked + label {
         color: #000;
-        background-color: $bg-content-box2;
+        font-weight: bold;
+        background-color: #fff;
+        border-color: #9696A3;
       }
     }
     & + .radio {
@@ -2304,11 +2367,24 @@ select {
         font-size: 0.875rem;
         font-weight: normal;
       }
+      &.health {
+        flex-wrap: wrap;
+        .tel {
+          width: 100%;
+          margin-top: 0.5rem;
+        }
+      }
     }
     .card-cont {
       padding-top: 0.75rem;
       font-size: 0.875rem;
       line-height: 1.25rem;
+      .label {
+        font-size: 13px;
+        color:$guide-text;
+        display: block;
+        margin-bottom: 0.25rem;
+      }
     }
   }
 }

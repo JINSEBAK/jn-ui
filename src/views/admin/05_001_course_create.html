@@ -43,16 +43,39 @@
                     <li>
                         <textarea class="textarea" name="" id="" cols="30" rows="5"></textarea>
                     </li>
-                    <li class="lb">코스 안내 자료</li>
+                    <li class="lb lb-one">코스 안내 자료</li>
                     <li>
-                        <input type="file" class="input">
+                        <div class="file-box">
+                            <label class="file">
+                                <input type="file" class="input">
+                                <span>파일추가</span>
+                            </label>
+                            <div class="file-info">
+                                세종마을_B코스_골목길지도.pdf
+                                <button type="button" class="btn btn-icon icon close">
+                                    <span class="sr-only">파일삭제</span>
+                                </button>
+                            </div>
+                        </div>
+
                         <ul class="guide">
                             <li>10Mb 이내 PDF, DOC, JPG 파일 업로드</li>
                         </ul>
                     </li>
-                    <li class="lb">코스 안내 오디오</li>
+                    <li class="lb lb-one">코스 안내 오디오</li>
                     <li>
-                        <input type="file" class="input">
+                        <div class="file-box">
+                            <label class="file">
+                                <input type="file" class="input">
+                                <span>파일추가</span>
+                            </label>
+                            <div class="file-info">
+                                세종마을_B코드.mp3
+                                <button type="button" class="btn btn-icon icon close">
+                                    <span class="sr-only">파일삭제</span>
+                                </button>
+                            </div>
+                        </div>
                         <ul class="guide">
                             <li>30Mb 이내 WAV, MP3, OGG 파일 업로드</li>
                         </ul>
@@ -118,6 +141,155 @@
             </div>
         </div>
     </main>
+
+    <!-- popup -->
+    <aside class="popup-bg popup-closable">
+        <div class="popup">
+            <div class="popup-head">
+                <h3 class="title">거점 등록</h3>
+                <button type="button" class="btn btn-icon icon close">
+                    <span class="sr-only">팝업닫기</span>
+                </button>
+            </div>
+            <div class="popup-body">
+                <div class="search">
+                    <div class="item">
+                        <div class="label">
+                            <label for="">거점명</label>
+                        </div>
+                        <div class="inline">
+                            <input type="text" class="input" placeholder="입력">
+                            <button type="button" class="btn btn-default">검색</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="list">
+                    <div class="list-head">
+                        <div class="total">
+                          Total <em>100</em>
+                        </div>
+                    </div>
+                    <div class="list-body">
+                        <table class="tb-data" summary="번호, 거점명, 최종수정일시로 구분되는 표">
+                          <caption>번호 거점명 최종수정일시</caption>
+                          <colgroup>
+                            <col style="width: 20px">
+                            <col style="width: 10%">
+                            <col style="width: auto">
+                            <col style="width: 30%">
+                          </colgroup>
+                          <thead>
+                            <tr>
+                              <th>
+                                <input type="checkbox">
+                              </th>
+                              <th scope="col">번호</th>
+                              <th scope="col">거점명</th>
+                              <th scope="col">최종 수정일시</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                                <td>
+                                    <input type="checkbox">
+                                </td>
+                                <td>100</td>
+                                <td>
+                                    <div class="ellipsis">익선동 한옥마을</div>
+                                </td>
+                                <td>yyyy-mm-dd hh:mm</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="checkbox">
+                                </td>
+                                <td>98</td>
+                                <td>
+                                    <div class="ellipsis">익선동 한옥마을</div>
+                                </td>
+                                <td>yyyy-mm-dd hh:mm</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="checkbox">
+                                </td>
+                                <td>97</td>
+                                <td>
+                                    <div class="ellipsis">익선동 한옥마을</div>
+                                </td>
+                                <td>yyyy-mm-dd hh:mm</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="checkbox">
+                                </td>
+                                <td>96</td>
+                                <td>
+                                    <div class="ellipsis">익선동 한옥마을</div>
+                                </td>
+                                <td>yyyy-mm-dd hh:mm</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="checkbox">
+                                </td>
+                                <td>95</td>
+                                <td>
+                                    <div class="ellipsis">익선동 한옥마을</div>
+                                </td>
+                                <td>yyyy-mm-dd hh:mm</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="checkbox">
+                                </td>
+                                <td>94</td>
+                                <td>
+                                    <div class="ellipsis">익선동 한옥마을</div>
+                                </td>
+                                <td>yyyy-mm-dd hh:mm</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="checkbox">
+                                </td>
+                                <td>93</td>
+                                <td>
+                                    <div class="ellipsis">익선동 한옥마을</div>
+                                </td>
+                                <td>yyyy-mm-dd hh:mm</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="checkbox">
+                                </td>
+                                <td>92</td>
+                                <td>
+                                    <div class="ellipsis">익선동 한옥마을</div>
+                                </td>
+                                <td>yyyy-mm-dd hh:mm</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="checkbox">
+                                </td>
+                                <td>91</td>
+                                <td>
+                                    <div class="ellipsis">익선동 한옥마을</div>
+                                </td>
+                                <td>yyyy-mm-dd hh:mm</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                    </div>
+
+                    <div class="btns center">
+                        <button type="button" class="btn btn-second">선택</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </aside>
 
     @@include('./common/admin_scripts.html')
   </body>
