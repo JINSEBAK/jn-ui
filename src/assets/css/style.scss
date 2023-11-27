@@ -286,6 +286,10 @@ strong {
   margin-top: 20px !important;
 }
 
+.mt24 {
+  margin-top: 24px !important;
+}
+
 .mt36 {
   margin-top: 36px !important;
 }
@@ -807,30 +811,30 @@ strong {
     left: 50%;
     top: 50%;
     & + .btn-switch {
-      width: 52px;
-      height: 24px;
+      width: 48px;
+      height: 26px;
       border-radius: 50px;
       display: block;
-      background-color: #ddd;
+      background-color: #DCDCEC;
       position: relative;
       &::before {
         content: "";
         display: block;
-        width: 20px;
-        height: 20px;
+        width: 18px;
+        height: 18px;
         background-color: #fff;
         border-radius: 50%;
         position: absolute;
-        left: 2px;
-        top: 2px;
+        left: 4px;
+        top: 4px;
         transition: all 0.5s;
-        box-shadow: 0 0 2px 3px rgba(0, 0, 0, 0.03);
+        box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
       }
     }
     &:checked + .btn-switch {
-      background-color: $btn-primary;
+      background-color: #E45E63;
       &::before {
-        transform: translateX(28px);
+        transform: translateX(22px);
       }
     }
   }
@@ -1775,6 +1779,15 @@ select {
   &.n-system {
     background-color: $badge-n2;
   }
+  &.w-1 {
+    background-color: $badge-w1;
+  }
+  &.w-2 {
+    background-color: $badge-w2;
+  }
+  &.w-3 {
+    background-color: $badge-w3;
+  }
   &.faq {
     background-color: $badge-end;
   }
@@ -2639,6 +2652,9 @@ select {
     height: 1rem;
     background-size: 1rem;
     background-image: url(../images/icon_new.svg);
+  }
+  &.add {
+    background-image: url(../images/btn_add.svg);
   }
   &.wloc {
     background-image: url(../images/icon_w_loc.svg);
