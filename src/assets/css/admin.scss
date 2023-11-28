@@ -1165,6 +1165,7 @@ html, body {
 
     &.popup-img-viewer {
         width: auto !important;
+        max-width: 95%;
         .img-container {
             position: relative;
             .btn.close {
@@ -1174,6 +1175,7 @@ html, body {
                 z-index: 500;
             }
             img {
+                width: 100%;
                 position: relative;
                 z-index: 400;
                 display: block;

@@ -8,7 +8,7 @@
         @@include('../common/header_sub.html', {title: '제설함 관리 요청'})
         <div class="container inner-full-padd">
 
-            <dl>
+            <dl class="snow-box_info">
                 <dt>종로 006 제설함</dt>
                 <dd>서울 종로구 우정국로 22-2 종각역 3-1번 출구 앞</dd>
             </dl>
@@ -28,12 +28,39 @@
 
             <div>
                 <form>
-                    <div class="qa-forms">
-
+                    <div class="snow-forms">
+                        <div class="input">
+                            <label for=""><span>요청분야</span></label>
+                            <div class="inline">
+                                <label class="radio">
+                                    <input type="radio" name="snow-compl" value="1" checked>
+                                    <span>염화칼슘 보충</span>
+                                </label>
+                                <label class="radio">
+                                    <input type="radio" name="snow-compl" value="2">
+                                    <span>제설함 청소</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="snow-forms">
                         <div class="input">
                             <label for="" class="required"><span>요청내용</span></label>
                             <textarea name="" id="" cols="30" rows="8" maxlength="1000" placeholder="요청 내용 입력(1,000자 이내)"></textarea>
                         </div>
+                        <div class="attach-file">
+                            <h5 class="title">사진첨부</h5>
+                            <label class="file">
+                                <button type="button" class="btn btn-icon icon del">
+                                    <span class="sr-only">첨부파일 삭제</span>
+                                </button>
+                              <input type="file">
+                              <img src=".././../assets/images/sample/sample_01.png" alt="" id="previewImg">
+                            </label>
+                            <div class="guide">
+                              사진첨부는 5MB이내, jpg/png/gif파일, 최대 1건만 첨부 가능합니다. 
+                            </div>
+                          </div>
                     </div>
                     
                 </form>

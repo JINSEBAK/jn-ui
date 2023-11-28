@@ -1687,6 +1687,12 @@ select {
       object-fit: cover;
       display: block;
     }
+    .btn.del {
+      position: absolute;
+      z-index: 600;
+      right: 6px;
+      top: 6px;
+    }
   }
   .guide {
     flex: 1;
@@ -2692,6 +2698,9 @@ select {
   }
   &.pty-7 {
     background-image: url(../images/img_snow.svg);
+  }
+  &.del {
+    background-image: url(../images/btn_photo_delete.svg)
   }
 }
 
