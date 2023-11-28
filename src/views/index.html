@@ -355,7 +355,7 @@
             <td class="idx"></td>
             <td></td>
             <td></td>
-            <td class="del">미세먼지 현황</td>
+            <td class="del no-count">미세먼지 현황</td>
             <td></td>
             <td></td>
             <td><a href="user/00_008_outdoor_air_status.html" target="_blank">00_008_outdoor_air_status.html</a></td>
@@ -636,7 +636,7 @@
             <td class="idx"></td>
             <td></td>
             <td></td>
-            <td>구청홈페이지</td>
+            <td class="no-count">구청홈페이지</td>
             <td></td>
             <td></td>
             <td>외부페이지 연동</td>
@@ -650,7 +650,7 @@
             <td class="idx"></td>
             <td></td>
             <td></td>
-            <td>정부24</td>
+            <td class="no-count">정부24</td>
             <td></td>
             <td></td>
             <td>외부페이지 연동</td>
@@ -665,7 +665,7 @@
             <td class="idx"></td>
             <td></td>
             <td></td>
-            <td>대형폐기물 신고</td>
+            <td class="no-count">대형폐기물 신고</td>
             <td></td>
             <td></td>
             <td>외부페이지 연동</td>
@@ -679,7 +679,7 @@
             <td class="idx"></td>
             <td></td>
             <td></td>
-            <td>교통 과태료 조회</td>
+            <td class="no-count">교통 과태료 조회</td>
             <td></td>
             <td></td>
             <td>외부페이지 연동</td>
@@ -693,7 +693,7 @@
             <td class="idx"></td>
             <td></td>
             <td></td>
-            <td>스마트 비대면 환급신청</td>
+            <td class="no-count">스마트 비대면 환급신청</td>
             <td></td>
             <td></td>
             <td>외부페이지 연동</td>
@@ -761,6 +761,7 @@
                 <li>9/19: 기본 마크업</li>
                 <li>11/15: 디자인 반영</li>
                 <li>11/17: 디자인 수정 (소셜 버튼 위치, 완주 표시 등)</li>
+                <li>11/28: 거점목록 디자인 변경, 거점 정보보기 팝업 추가</li>
               </ul>
             </td>
           </tr>
@@ -1086,7 +1087,7 @@
             <td class="idx"></td>
             <td></td>
             <td></td>
-            <td>긴급신고</td>
+            <td class="no-count">긴급신고</td>
             <td></td>
             <td></td>
             <td>네이티브 영역</td>
@@ -1140,7 +1141,7 @@
             <td class="idx"></td>
             <td></td>
             <td></td>
-            <td class="del">가이드 북</td>
+            <td class="del no-count">가이드 북</td>
             <td></td>
             <td></td>
             <td><a href="user/05_002_guide_book.html" target="_blank">05_002_guide_book.html</a></td>
@@ -1343,11 +1344,14 @@
 
     // 진척률 
     let average = 0;
+    let delCnt = 0
     trList.forEach((tr, idx) => {
       const per = tr.querySelector('progress').value
+      const delTr = tr.querySelector('.no-count');
+      if (delTr) delCnt++
       average += per;
       if (idx === trList.length - 1 ) {
-        average = average / trList.length
+        average = average / (trList.length - delCnt)
         currentPer.innerText = average.toFixed(2);
       }
     })
