@@ -2775,6 +2775,77 @@ select {
 }
 
 
+.snow {
+  position: relative;
+  .tooltip {
+    position: absolute;
+    right: 1.25rem;
+    top: 3px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    .standard {
+      display: flex;
+      align-items: center;
+      @include textDate;
+    }
+    .icon {
+      width: 1rem;
+      height: 1rem;
+      background-size: 100%;
+    }
+  }
+  .snow-status {
+    padding: 10px 0;
+    margin: 0.5rem 0;
+    .title {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 0.5rem;
+      .label {
+        font-size: 14px;
+        line-height: 1.5rem;
+        color: $guide-text;
+      }
+      .value {
+        font-size: 1.5rem;
+        line-height: 1.5rem;
+      }
+      .volume {
+        margin-left: auto;
+        font-size: 0.875rem;
+        em {
+          color: #02A7EE;
+        }
+      }
+    }
+    progress {
+      width: 100%;
+      height: 6px;
+      background-color: #DCDCEC;
+      border-radius: 10px;
+      display: block;
+      &::-webkit-progress-bar {
+        border-radius: 10px;
+        background-color: #DCDCEC;
+      }
+      &::-webkit-progress-value {
+        background-color: #02A7EE;
+        border-radius: 10px;
+      }
+      &::-moz-progress-bar {
+        border-radius: 10px;
+        background-color: #DCDCEC;
+      }
+    }
+  }
+  .btn {
+    width: 100%;
+  }
+}
+
+
 @media (max-width: 320px) {
   .tb {
     th {

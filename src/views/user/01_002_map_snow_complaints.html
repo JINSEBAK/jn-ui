@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        @@include('../common/head.html')
+        <link rel="stylesheet" href="../assets/css/map.css"></link>
+    </head>
+    <body class="more">
+        @@include('../common/header_sub.html', {title: '제설함 관리 요청'})
+        <div class="container inner-full-padd">
+
+            <dl>
+                <dt>종로 006 제설함</dt>
+                <dd>서울 종로구 우정국로 22-2 종각역 3-1번 출구 앞</dd>
+            </dl>
+
+            <div class="snow">
+                <div class="snow-status">
+                    <div class="title">
+                        <span class="label">염화칼슘</span>
+                        <strong class="value">65%</strong>
+                        <div class="volume">
+                            <em>195</em>/<span class="total">300L</span>
+                        </div>
+                    </div>
+                    <progress value="65" max="100"></progress>
+                </div>
+            </div>
+
+            <div>
+                <form>
+                    <div class="qa-forms">
+
+                        <div class="input">
+                            <label for="" class="required"><span>요청내용</span></label>
+                            <textarea name="" id="" cols="30" rows="8" maxlength="1000" placeholder="요청 내용 입력(1,000자 이내)"></textarea>
+                        </div>
+                    </div>
+                    
+                </form>
+            </div>
+
+            <div class="btns under">
+                <button type="button" class="btn btn-primary">제설함 관리 요청</button>
+            </div>
+            
+        </div>
+
+        @@include('../common/script.html')
+    </body>
+</html>
