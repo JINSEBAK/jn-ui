@@ -575,10 +575,10 @@ strong {
     font-size: 13px;
     color: #3f3f45;
     height: auto;
-    padding: 0.25rem 1.5rem 0.25rem 0.5rem;
+    padding: 0.25rem 1.25rem 0.25rem 0.5rem;
     background: transparent url(../images/icon_chevron_right.svg) right center
       no-repeat;
-    background-size: 1.5rem;
+    background-size: 1.25rem;
   }
   &-recommend {
     background-color: rgba(119, 49, 71, 0.9);
@@ -1549,6 +1549,22 @@ select {
         height: 1rem;
       }
     }
+    &.air {
+      .air-box {
+        padding: 1rem 0;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+        .air-info_brd {
+          &:nth-of-type(odd) {
+            border-right: 1px solid #F1F1F9;
+          }
+          &:last-child {
+            padding-left: 0;
+          }
+        }
+      }
+    }
     .section-title {
       margin-bottom: 0.5rem;
     }
@@ -2328,14 +2344,33 @@ select {
 }
 
 .one-maps {
-  height: 80vh;
+  height: calc(100vh - 50px);
   overflow: hidden;
   position: relative;
+  display: flex;
+  flex-direction: column;
   .info {
     padding: 1rem;
     text-align: center;
     line-height: 1.2;
     @include textDate();
+  }
+  .map-box {
+    flex: 1;
+    .map {
+      height: 100%;
+    }
+  }
+  .my-location {
+    position: absolute;
+	z-index: 600;
+	right: 2rem;
+	bottom: 3rem;
+	width: 2rem;
+	height: 2rem;
+	background-color: #fff;
+	border-radius: 50%;
+	box-shadow: 0 3px 8px rgba(0,0,0,0.15)
   }
 }
 
@@ -2729,27 +2764,28 @@ select {
 .sns-link {
   margin-top: 2rem;
   display: flex;
+  justify-content: center;
   align-items: center;
-  gap: 1rem;
+  gap: 1.5rem;
   li {
     .btn-icon {
       text-indent: -9999px;
-      width: 38px;
-      height: 39px;
+      width: 40px;
+      height: 40px;
       background-position: center;
       background-repeat: no-repeat;
       background-size: auto;
       &.nv {
-        background-image: url(../images/sns_nv.png)
+        background-image: url(../images/sns_nv.svg)
       }
       &.ka {
-        background-image: url(../images/sns_ka.png)
+        background-image: url(../images/sns_ka.svg)
       }
       &.in {
-        background-image: url(../images/sns_in.png)
+        background-image: url(../images/sns_in.svg)
       }
       &.yu {
-        background-image: url(../images/sns_yu.png)
+        background-image: url(../images/sns_yu.svg)
       }
     }
   }
@@ -2851,6 +2887,35 @@ select {
   }
   .btn {
     width: 100%;
+  }
+}
+
+.pbl {
+  &-title {
+    strong {
+      line-height: 1.5rem;
+      display: block;
+    }
+    .addr {
+      display: block;
+      margin-top: 0.25rem;
+      line-height: 18px;
+      font-size: 13px;
+      color: $primary-text;
+    }
+  }
+  &-info {
+    margin-top: 1rem;
+    dt {
+      font-size: 13px;
+      line-height: 18px;
+      color: $guide-text;
+    }
+    dd {
+      font-size: 0.875rem;
+      line-height: 1.25rem;
+      margin-top: 0.25rem;
+    }
   }
 }
 

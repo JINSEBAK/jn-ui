@@ -23,50 +23,9 @@
         </div>
     </div>
 
-    <aside id="aside" class="popup-bg popup-closable  top-flex">
-        <div class="popup popup-slide" id="popupBtmSheet">
-            <div class="btm-sheet">
-                <div class="btm-sheet_head">
-                    <h3 class="title">어린이집/유치원 06</h3>
-                    <button type="button" class="btn btn-icon close">
-                    <img src="../assets/images/icon_x.svg" alt="팝업닫기" />
-                    </button>
-                </div>
-                <div class="btm-sheet_body">
-
-                    <!-- 미세먼지 -->
-                    <section class="air-content">
-                        <div class="air-summary">
-                            <h3 class="title">미세먼지 (PM-2.5)</h3>
-                            <div class="value">4 <span class="unit">㎍/㎥</span></div>
-                            <span class="badge category"> :) 좋음</span>
-                        </div>
-                        <div class="air-forecast">
-                            <canvas id="chart1" height="90" aria-label="시간대별 미세먼지 농도 차트" role="img">
-                                <p>미세먼지 농도에 대한 설명 텍스트</p>
-                            </canvas>
-                        </div>
-                    </section>
-
-                    <!-- 초미세먼지 -->
-                    <section class="air-content">
-                        <div class="air-summary">
-                            <h3 class="title">초미세먼지 (PM-10)</h3>
-                            <div class="value">12 <span class="unit">㎍/㎥</span></div>
-                            <span class="badge category"> :) 좋음</span>
-                        </div>
-                        <div class="air-forecast">
-                            <canvas id="chart2" height="90" aria-label="시간대별 초 미세먼지 농도 차트" role="img">
-                                <p>초 미세먼지 농도에 대한 설명 텍스트</p>
-                            </canvas>
-                        </div>
-                    </section>
-                </div>
-             </div>
-        </div>
-
-        <!-- 인포 팝업 -->
-        <div class="popup popup-content show" id="selectContent">
+    <!-- 인포 팝업 -->
+    <aside class="poup-bg popup-closable top-flex">
+        <div class="popup popup-content" id="selectContent">
             <div class="top">
                 <button type="button" class="btn btn-icon icon close">close</button>
               </div>
@@ -164,6 +123,85 @@
                 </div>
                 <p class="guide">*한국환경공단 기준</p>
               </div>
+        </div>
+    </aside>
+
+    <aside id="aside" class="popup-bg popup-closable on">
+        <div class="popup popup-slide show" id="popupBtmSheet">
+            <div class="btm-sheet">
+                <button type="button" class="btn btn-icon icon close">
+                    <span class="sr-only">팝업닫기</span>
+                </button>
+                <div class="btm-sheet_body air">
+
+                    <div class="pbl-title">
+						<strong>국공립 어린이집</strong>
+						<span class="addr">
+							서울시 종로구 수송동
+						</span>
+					</div>
+
+                    <div class="air-box">
+                        <!-- 미세먼지 -->
+                        <div class="air-info_brd">
+                            <div class="bar-box">
+                                <div class="bar vertical item_alarm_blue">
+                                    <div class="value"></div>
+                                </div>
+                            </div>
+                            <div class="air-info_txt">
+                                <span>미세먼지</span>
+                                <span>좋음</span>
+                                <span>4</span>
+                            </div>
+                        </div>
+
+                        <!-- 초미세먼지 -->
+                        <div class="air-info_brd">
+                            <div class="bar-box">
+                                <div class="bar vertical item_alarm_blue">
+                                    <div class="value"></div>
+                                </div>
+                            </div>
+                            <div class="air-info_txt">
+                                <span>미세먼지</span>
+                                <span>좋음</span>
+                                <span>4</span>
+                            </div>
+                        </div>
+
+                        <!-- 오존 -->
+                        <div class="air-info_brd">
+                            <div class="bar-box">
+                                <div class="bar vertical item_alarm_green">
+                                    <div class="value"></div>
+                                </div>
+                            </div>
+                            <div class="air-info_txt">
+                                <span>미세먼지</span>
+                                <span>좋음</span>
+                                <span>14</span>
+                            </div>
+                        </div>
+
+                        <!-- 이산화탄소 -->
+                        <div class="air-info_brd">
+                            <div class="bar-box">
+                                <div class="bar vertical item_alarm_blue">
+                                    <div class="value"></div>
+                                </div>
+                            </div>
+                            <div class="air-info_txt">
+                                <span>이산화탄소</span>
+                                <span>좋음</span>
+                                <span>4</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                </div>
+             </div>
         </div>
     </aside>
 

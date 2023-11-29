@@ -261,8 +261,11 @@
       p {
         font-size: 0.875rem;
         line-height: 1.25rem;
+        white-space: pre-wrap;
         img {
           width: 100%;
+          display: block;
+          margin-top: 0.5rem;
         }
       }
     }

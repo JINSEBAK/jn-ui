@@ -435,7 +435,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #fffdf3;
+    background-color: #fff;
     border-radius: 0.5rem;
     padding: 10px 1rem;
     .weather {
@@ -486,6 +486,14 @@
         }
       }
     }
+  }
+}
+.air-btns {
+  padding: 10px 0.5rem;
+  margin-top: 0.5rem;
+  text-align: right;
+  .btn {
+    color: #787882;
   }
 }
 
