@@ -4,33 +4,33 @@
         @@include('../common/head.html')
         <link rel="stylesheet" href="../assets/css/home.css"></link>
     </head>
-    <body class="more">
-        @@include('../common/header_sub.html', {title: '로그인'})
+    <body class="more no-btm">
+        @@include('../common/header_sub.html', {title: ''})
         <div class="container inner-full-padd">
 
             <div class="login-wrapper">
-                <img src="../../assets/images/logo.png">
-                
+                <div class="logo">
+                    종로에서는
+                    <em>종로Pick</em>
+                </div>
                 <section class="login social">
-                    <h3>소셜 로그인</h3>
                     <div class="btns">
                         <button type="button" class="btn btn-kakao">카카오 로그인</button>
                         <button type="button" class="btn btn-naver">네이버 로그인</button>
                     </div>
                     <div class="guide">
-                        ※ 소셜 로그인 시 최초 1회 본인인증이 필요합니다.<br>
-                        인증 후에는 추가 재인증 없이 소셜 로그인이 가능합니다.
+                        <em>종로Pick</em> 회원가입이 되어 있지 않은 경우,<br>
+                        선택하신 카카오 또는 네이버로 <em>종로Pick</em> 회원가입 후<br> 로그인이 됩니다.
                     </div>
                 </section>
-                
                 <section class="login nice">
-                    <h3>NICE 휴대폰 본인인증 로그인</h3>
                     <div class="btns">
-                        <button type="button" class="btn btn-second">인증하기</button>
+                        <button type="button" class="btn btn-pnum">휴대폰번호로 로그인</button>
                     </div>
                     <div class="guide">
-                        본인 명의의 휴대폰 인증을 통해 본인임을 확인하여 로그인을 진행합니다.<br>
-                        ※ 휴대폰 인증 문의: 1600-1522
+                        휴대폰번호로 로그인은 본인 명의의 휴대폰 인증을 통해<br>
+                        본인임을 확인합니다.<br>
+                        *휴대폰 인증 문의: 1600-1522
                     </div>
                 </section>
                 

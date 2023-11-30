@@ -900,147 +900,6 @@
   }
 }
 
-.air-info {
-  background-color: $bg-content-box;
-  border-radius: 6px;
-  padding: 0.875rem 10px;
-  display: flex;
-  align-items: center;
-  &_brd {
-    display: flex;
-    gap: 0.5rem;
-    flex: 1 1 130px;
-    .bar-box {
-      padding: 0 1rem;
-    }
-    .bar {
-      width: 0.5rem;
-      height: 60px;
-      border-radius: 1.25rem;
-      position: relative;
-      .value {
-        position: absolute;
-        width: 100%;
-        border-radius: 1.25rem;
-        height: 50%;
-      }
-      &.vertical {
-        .value {
-          bottom: 0;
-        }
-      }
-      &.item_alarm_blue {
-        background-color: #C3E2FF;
-        .value {
-          height: 25%;
-          background-color: #69B7FF;
-        }
-      }
-      &.item_alarm_green {
-        background-color: #B2F8CA;
-        .value {
-          height: 50%;
-          background-color: #33D66B;
-        }
-      }
-      &.item_alarm_yellow {
-        background-color: #F8E9B2;
-        .value {
-          height: 75%;
-          background-color: #D6B22C;
-        }
-      }
-      &.item_alarm_red {
-        background-color: #F8C7B2;
-        .value {
-          height: 100%;
-          background-color: #FB7152;
-        }
-      }
-
-    }
-    &:first-child {
-      border-right: 1px solid $bg-content-box2;
-    }
-    &:last-child {
-      padding-left: 10px;
-    }
-  }
-  &_txt {
-    display: flex;
-    flex-direction: column;
-    gap: 0.25rem;
-    span {
-      line-height: 1.2;
-      &:first-child {
-        color: $guide-text;
-        font-size: 0.75rem;
-      }
-      &:nth-of-type(2) {
-        font-weight: bold;
-      }
-      &:last-child {
-        font-size: 0.875rem;
-        &::after {
-          content: "㎍/㎥"
-        }
-      }
-    }
-  }
-}
-
-.air-stnd {
-  font-size: 0.875rem;
-  & + .air-stnd {
-    margin-top: 1rem;
-  }
-  & + .guide {
-    margin-top: 0.5rem;
-  }
-  h5 {
-    font-weight: bold;
-    line-height: 20px;
-  }
-  p {
-    color: $primary-text;
-    line-height: 18px;
-  }
-  ul {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 0.25rem;
-    margin-top: 0.5rem;
-    li {
-      text-align: center;
-      color: $guide-text;
-      flex: 1;
-      span {
-        font-size: 0.75rem;
-        line-height: 20px;
-        &.status {
-          padding: 2px 10px;
-          border-radius: 100px;
-          color: #fff;
-          font-weight: bold;
-          display: block;
-          &.lv1 {
-            background-color: $weather-lv1;
-          }
-          &.lv2 {
-            background-color: $weather-lv2;
-          }
-          &.lv3 {
-            background-color: $weather-lv3;
-          }
-          &.lv4 {
-            background-color: $weather-lv4;
-          }
-        }
-      }
-    }
-  }
-}
 
 
 .hotline-banner {
@@ -1409,33 +1268,59 @@
 
 .login {
   &-wrapper {
+    padding: 0 10px;
    > img {
       display: block;
       margin: 2rem auto;
     }
+    .logo {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      line-height: 24px;
+      gap: 7px;
+      padding: 3rem 0;
+      margin: 3vh 0;
+      em {
+        color: #E45E63;
+        font-size: 40px;
+        font-weight: bold;
+        line-height: 36px;
+      }
+    }
+    .login {
+      & + .login {
+        border-top: 1px solid $border-light;
+      }
+    }
   }
-  border: 1px solid $border-basic;
-  border-radius: 6px;
-  & + .login {
-    margin-top: 2rem;
-  }
-  padding: 1rem;
-  h3 {
-    font-weight: bold;
-    font-size: 13px;
-    color: $primary-text;
+  padding: 1rem 0;
+  .guide {
+    margin-top: 1rem;
   }
   .btns {
     flex-direction: column;
+    gap: 1rem;
     .btn {
       width: 100%;
+      font-size: 0.875rem;
+      background-repeat: no-repeat;
+      background-position: 1.25rem center;
+      text-indent: 1.25rem;
       &-kakao {
-        background-color: #fae100;
         color: #181600;
+        background-color: #FEE500;
+        background-image: url(../images/icon_login_ka.svg);
       }
       &-naver {
-        background-color: #2DB400;
         color: #fff;
+        background-color: #03C75A;
+        background-image: url(../images/icon_login_nv.svg);
+      }
+      &-pnum {
+        color: #fff;
+        background-color: $primary3;
+        background-image: url(../images/icon_login_pn.svg);
       }
     }
   }
