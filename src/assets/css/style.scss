@@ -1711,6 +1711,8 @@ select {
       height: 100%;
       object-fit: cover;
       display: block;
+      position: absolute;
+      z-index: 599;
     }
     .btn.del {
       position: absolute;
@@ -1858,6 +1860,7 @@ select {
     border-radius: 0.625rem;
     overflow: hidden;
     position: relative;
+    background-color: #F1F1f9;
     &-title {
       font-family: "GangwonState";
       position: absolute;
@@ -2050,10 +2053,15 @@ select {
   &::before {
     content: "";
     display: block;
-    background: url(../images/icon_empty_result.svg) center no-repeat;
-    background-size: 100%;
+    background: url(../images/icon_not_register.svg) center no-repeat;
+    background-size: 43px;
     width: 45px;
     height: 45px;
+  }
+  &.search {
+    &::before {
+      background-image: url(../images/icon_empty_result.svg)
+    }
   }
   p {
     color: #787882;
@@ -2068,6 +2076,9 @@ select {
     font-size: 0.875rem;
     line-height: 1.25rem;
     padding: 10px 0;
+    border: none;
+    width: 100%;
+    text-align: left;
     background: url(../images/icon_arrow_right.svg) right center
       no-repeat;
     background-size: 1.5rem;
