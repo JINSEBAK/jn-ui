@@ -9,6 +9,7 @@
     padding: 1.5rem 1.25rem;
   }
   &.place {
+    background-color: #fff;
     .container {
       margin-top: $header;
     }
@@ -152,7 +153,6 @@
 }
 
 .search-result {
-  border-top: 1px solid $border-basic;
   .recent {
     padding: 1rem;
     .title {
@@ -192,25 +192,40 @@
 .place-list {
   .place-item {
     display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    border-bottom: 1px solid $border-basic;
-    padding: 1rem;
+    align-items: flex-start;
+    border-bottom: 1px solid $border-light;
+    padding: 1rem 0.25rem;
+    .icon {
+      margin-top: -2px;
+    }
     dl {
       flex: 1;
+      dt {
+        font-weight: bold;
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+        display: flex;
+        align-items: center;
+        .cate {
+          margin-left: auto;
+          font-weight: normal;
+          font-size: 13px;
+          color: $guide-text;
+        }
+      }
       dd {
         margin-top: 0.25rem;
         display: flex;
         justify-content: space-between;
-        align-items: center;
+        align-items: flex-start;
         gap: 0.5rem;
+        font-size: 13px;
+        line-height: 18px;
+        color: $guide-text;
       }
     }
-    .address,
     .distance {
-      color: $sub-text;
-      font-size: 0.75rem;
-      line-height: 1.2;
+      color: $primary-text;
     }
   }
 }

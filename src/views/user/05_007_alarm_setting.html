@@ -4,7 +4,7 @@
     @@include('../common/head.html')
     <link rel="stylesheet" href="../assets/css/more.css"></link>
   </head>
-  <body class="more">
+  <body class="more no-btm">
     
     @@include('../common/header_sub.html', {title: "알림설정"})
     <div class="container inner-full-padd">
@@ -13,9 +13,9 @@
         <span class="type">서비스 알림</span>
         <div class="switch-item">
           <dl>
-            <dt>종로ONE 서비스</dt>
+            <dt>종로Pick 서비스</dt>
             <dd>
-              종로ONE에서 제공하는 발권, 민원신청, 공지등에<br>대한 알림을 받을 수 있습니다.
+              종로Pick에서 제공하는 발권, 민원신청, 공지등에<br>대한 알림을 받을 수 있습니다.
             </dd>
           </dl>
           <div class="switch">
@@ -52,8 +52,8 @@
           </dd>
         </dl>
         <div class="switch">
-          <input type="checkbox" id="s2" name="whole-switch" value="" class="sr-only">
-          <label for="s2" class="btn-switch">
+          <input type="checkbox" id="s3" name="whole-switch" value="" class="sr-only">
+          <label for="s3" class="btn-switch">
             <span class="sr-only">푸시알림 수신설정</span>
           </label>
         </div>
@@ -88,18 +88,33 @@
     </section>
 
     <section class="setting-box">
-      <span class="type">이벤트 알림</span>
+      <span class="type">마케팅 설정</span>
       <div class="switch-item">
         <dl>
-          <dt>이벤트/광고</dt>
+          <dt>광고성 정보 수신동의</dt>
           <dd>
-            종로ONE에서 제공하는 이벤트/광고에 대한 알림을 받을 수 있습니다.
+            종로Pick에서 제공하는 이벤트/광고에<br>대한 알림을 받을 수 있습니다.
           </dd>
         </dl>
         <div class="switch">
-          <input type="checkbox" id="s4" name="whole-switch" value="" class="sr-only">
+          <input type="checkbox" id="s4" name="ad-agree" value="" class="sr-only">
           <label for="s4" class="btn-switch">
-            <span class="sr-only">푸시알림 수신설정</span>
+            <span class="sr-only">광고성 정보 알림</span>
+          </label>
+        </div>
+      </div>
+
+      <div class="switch-item">
+        <dl>
+          <dt>광고성 정보 알림</dt>
+          <dd>
+            종로Pick에서 제공하는 이벤트/광고에<br>대한 알림을 받을 수 있습니다.
+          </dd>
+        </dl>
+        <div class="switch">
+          <input type="checkbox" id="s5" name="ad-alarm-agree" value="" class="sr-only">
+          <label for="s5" class="btn-switch">
+            <span class="sr-only">광고성 정보 알림</span>
           </label>
         </div>
       </div>
@@ -140,6 +155,12 @@
 
       switches.forEach((checkbox) => {
         checkbox.addEventListener('click', lengthCheck)
+      })
+
+      document.querySelector('input[name="ad-agree"]').addEventListener('change', function(e) {
+        if (!e.target.checked) {
+          document.querySelector('input[name="ad-alarm-agree"]').checked = false;
+        }
       })
       
       function lengthCheck() {
