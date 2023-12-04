@@ -4,7 +4,7 @@
     @@include('../common/head.html')
     <link rel="stylesheet" href="../assets/css/search.css"></link>
   </head>
-  <body class="search more">
+  <body class="search more" style="background-color:#f7f7fd">
 
     @@include('../common/header_sub.html', {title: "검색 결과"})
     <div class="container inner-full-padd">
@@ -20,6 +20,7 @@
                 <h3 class="title">
                     공지
                     <span class="cnt" id="noticeCnt">3</span>
+                    <a href="#" class="btn btn-more">전체보기</a>
                 </h3>
                 <div class="contents">
                     <ul class="" id="noticeList">
@@ -33,6 +34,7 @@
                 <h3 class="title">
                     행사
                     <span class="cnt" id="festivalCnt">4</span>
+                    <a href="#" class="btn btn-more">전체보기</a>
                 </h3>
                 <div class="contents">
                     <ul class="" id="festivalList">
@@ -43,12 +45,29 @@
                     </ul>
                 </div>
             </div>
+            <div class="search-result_box">
+                <h3 class="title">
+                    장소
+                    <span class="cnt" id="festivalCnt">1</span>
+                    <a href="#" class="btn btn-more">전체보기</a>
+                </h3>
+                <div class="contents">
+                    <ul class="">
+                        <li>
+                            <a href="#">
+                                <span>우리 <span class="highlight3">청소년</span> 도서관
+                                <span class="addr">서울시 종로구 삼일대로 30길 47</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </section>
         <section class="search-result_guide">
-            <strong>원하는 검색 결과가 나오지 않나요?</strong>
+            <em>원하는 검색 결과가 나오지 않나요?</em>
             종로구청 홈페이지로 이동하여 검색해주세요.
 
-            <button type="button" class="btn btn-primary new-web" data-target="https://www.jongno.go.kr/portalMain.do">종로구청 홈페이지 이동</button>
+            <button type="button" class="btn btn-link new-web" data-target="https://www.jongno.go.kr/portalMain.do">종로구청 홈페이지로 이동</button>
         </section>
 
   

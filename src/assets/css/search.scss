@@ -34,6 +34,9 @@
     font-weight: bold;
     margin-bottom: 0.5rem;
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     .btn-text {
       position: absolute;
       right: 0;
@@ -126,6 +129,17 @@
     &::marker {
       font-size: 0.875rem;
       font-family: "IBM Plex Sans KR";
+    }
+  }
+  &.blank {
+    list-style: none;
+    align-items: center;
+    max-height: 100%;
+    .not-found {
+      padding: 24px 0;
+      &::before {
+        background-image: url(../images/icon_not_finish.svg)
+      }
     }
   }
 }
@@ -241,46 +255,101 @@
     .keyword {
       display: flex;
       align-items: center;
-      gap: 0.5rem;
-      dl {
-        font-size: 0.875rem;
-      }
+      gap: 0.25rem;
       dt {
+        color:#787882
+      }
+      dd {
         font-weight: bold;
       }
     }
     .title {
       font-weight: bold;
+      display: flex;
+      align-items: center;
       .cnt {
+        margin-left: 0.5rem;
         font-weight: normal;
+        color: $second1;
+        font-size: 0.875rem;
         &::after {
-          content: '+'
+          content: '건';
+          color: #787882;
         }
+      }
+      .btn-more {
+        font-weight: normal;
+        margin-left: auto;
       }
     }
     .contents {
       margin-top: 0.5rem;
+      font-size: 0.875rem;
       ul {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
         li {
-          padding: 0.25rem 0;
           a {
             display: flex;
-            padding: 0.25rem 0;
-            background: url(../images/icon_chevron_right.svg) right center no-repeat;
+            line-height: 22px;
+            flex-wrap: wrap;
+            .addr {
+              display: block;
+              width: 100%;
+              font-size: 13px;
+              color: #3f3f45;
+            }
           }
         }
       }
     }
   }
   &_guide {
-    padding: 1rem 0;
     line-height: 1.2;
-    strong {
-      display: block;
+    font-size: 13px;
+    line-height: 18px;
+    color: $primary-text;
+    margin-top: 1.5rem;
+    em {
+      display: flex;
+      align-items: center;
+      gap: 0.25rem;
+      font-size: 0.875rem;
+      line-height: 1.25rem;
+      margin-bottom: 0.25rem;
+      &::before {
+        content: '';
+        display: block;
+        width: 1.25rem;
+        height: 1.25rem;
+        background: url(../images/icon_noti_guide.svg) center no-repeat;
+      }
     }
     button {
-      margin: 0.5rem auto;
+      margin-top: 1.5rem;
       width: 100%;
+    }
+  }
+}
+
+.quick-menu {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  li {
+    flex: 1 0 45%;
+    a {
+      display: block;
+      font-size: 0.875rem;
+      color: #18181a;
+      text-align: center;
+      border: 1px solid $border-light;
+      border-radius: 6px;
+      line-height: 1rem;
+      padding: 0.75rem 1rem;
+      background-color: $bg-content-box2;
     }
   }
 }

@@ -524,6 +524,7 @@
 
 .my-keywords {
   display: flex;
+  flex-wrap: wrap;
   gap: 0.25rem;
   .word {
     border: 1px solid #C8C8D7;

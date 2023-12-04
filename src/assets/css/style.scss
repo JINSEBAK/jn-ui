@@ -338,6 +338,17 @@ strong {
     .info {
       margin-left: auto;
     }
+    .btn-ticket {
+      margin-left: auto;
+      border: 1px solid $border-light;
+      background-color: #fff;
+      font-size: 0.75rem;
+      color: $primary-text;
+      line-height: 1.25rem;
+      border-radius: 50px;
+      padding: 6px 10px;
+      height: auto;
+    }
   }
   &.location {
     height: 50px;
@@ -525,6 +536,12 @@ strong {
     line-height: 34px;
     padding: 0 1rem;
   }
+  &-link {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    border: 1px solid $border-light;
+    background-color: $bg-content-box2;
+  }
   &-sub {
     background-color: $btn-sub;
     border-color: $btn-sub;
@@ -647,9 +664,9 @@ strong {
   }
   &:disabled {
     cursor: auto;
-    border-color: #dcdcec;
-    background-color: #dcdcec;
-    color: #9696A3;
+    border-color: #dcdcec !important;
+    background-color: #dcdcec !important;
+    color: #9696A3 !important;
     background-image: none !important;
     &:active {
       box-shadow: none;
@@ -1976,6 +1993,17 @@ select {
           color: $primary-text;
           font-size: 0.875rem;
           line-height: 1.25rem;
+        }
+      }
+    }
+    &.only-img {
+      background-color: transparent;
+      a {
+        padding: 0;
+        gap: 0;
+        img {
+          display: block;
+          width: 100%;
         }
       }
     }
