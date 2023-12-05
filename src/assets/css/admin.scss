@@ -66,6 +66,7 @@ html, body {
     display: block;
     width: 100%;
     font-size: 0.875rem;
+    margin-top: 0.5rem;
     > li {
         opacity: 0.6;
         line-height: 1.3;
@@ -90,9 +91,25 @@ html, body {
     text-align: left;
 }
 
+.align {
+    &-left {
+        text-align: left;
+    }
+    &-center {
+        text-align: center;
+    }
+    &-right {
+        text-align: right;
+    }
+}
+
 .pre {
     white-space: pre-wrap;
     line-height: 1.3;
+}
+
+.highlight {
+    color: blue;
 }
 
 .empty {
@@ -245,6 +262,52 @@ html, body {
     gap: 0.25rem;
     span {
         line-height: 1.2;
+    }
+}
+
+.checkround-box {
+    min-height: 150px;
+    max-height: 300px;
+    width: 100%;
+    overflow-y: auto;
+    border: 1px solid $border-input;
+    padding: 1rem;
+}
+
+.checkround {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    position: relative;
+    margin-bottom: 0.5rem;
+    input[type="checkbox"] {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        opacity: 0;
+        + span {
+            padding: 0.25rem 0.5rem;
+            line-height: 1.25rem;
+            font-size: 0.875rem;
+            border: 1px solid $border-basic;
+            border-radius: 50px;
+            color: #000;
+        }
+        &:checked + span {
+            color: #fff;
+            background-color: $clr-primary;
+        }
+        &:disabled + span {
+            background-color: #f1f1f9;
+            color: #bbb;
+            cursor: default;
+        }
+    }
+    .icon {
+        width: 1rem;
+        height: 1rem;
+        background-size: 100%;
     }
 }
 
@@ -510,6 +573,12 @@ html, body {
         background-color: #000;
         color: #fff;
         padding: 0.5rem;
+        & ~ .list {
+            margin-top: 0;
+            .list-body {
+                padding: 0;
+            }
+        }
     }
     & + .lik-tb_title {
         margin-top: 2rem;
@@ -537,6 +606,9 @@ html, body {
             display: inline-block;
             background-color: $bg-th;
             padding: 0.25rem 0.5rem;
+        }
+        .btn.float {
+            margin-left: auto;
         }
         
     }
@@ -804,6 +876,9 @@ html, body {
         left: 0;
         bottom: 0;
         background-color: $border-basic;
+    }
+    > button {
+        margin-left: auto;
     }
     .tab {
         border: 1px solid $border-basic;
@@ -1370,6 +1445,31 @@ html, body {
             &:last-child {
                 &::after {
                     content: none;
+                }
+            }
+        }
+    }
+ }
+
+ .dropdown-search {
+    position: relative;
+    .d-search {
+        position: absolute;
+        left: 0;
+        top: 100%;
+        width: 100%;
+        z-index: 500;
+        border: 1px solid $border-input;
+        background-color: #fff;
+        li {
+            button {
+                width: 100%;
+                background-color: transparent;
+                border: none;
+                padding: 0.25rem 0.5rem;
+                text-align: left;
+                &:hover {
+                    background-color: #faeef0;
                 }
             }
         }

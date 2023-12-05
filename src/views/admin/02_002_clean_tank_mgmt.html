@@ -6,15 +6,15 @@
     @@include('./common/header.html')
     @@include('./common/navigation.html')
     <main class="main">
-        @@include('./common/page_title.html', { title: '건강이랑 서비스', path: {"p1":"",  "p2":""}, description: ''})
+        @@include('./common/page_title.html', { title: '정화조 청소 신청', path: {"p1":"",  "p2":""}, description: ''})
         <div class="content">
 
           <div class="tabs" role="tablist">
             <div class="tab active" role="tab" aria-selected="true" aria-controls="tabContent1" id="tab1">
-                <span>서비스 신청 내역</span>
+                <span>청소 예약 신청 내역</span>
             </div>
             <div class="tab" role="tab" aria-selected="true" aria-controls="tabContent2" id="tab2">
-              <span>권역 관리</span>
+              <span>청소 업체 관리</span>
             </div>
           </div>
 
@@ -22,43 +22,16 @@
             <div class="tab-content" role="tabpanel" aria-labelledby="tab1" id="tabContent1" tabIndex="0">
                 <!-- .search start -->
                 <div class="search">
-                  <div class="item item-col-5">
+
+                  <div class="item">
                     <div class="label">
-                      <label for="">담당 센터</label>
+                      <label for="">담당 업체</label>
                     </div>
                     <div class="inline">
                       <select class="select">
                         <option value="">선택</option>
                       </select>
                     </div>
-                  </div>
-
-                  <div class="item item-col-5">
-                      <div class="label">
-                        <label for="">상태</label>
-                      </div>
-                      <div class="inline">
-                        <label class="radio">
-                          <input type="radio" name="status" value="1" checked>
-                          <span>전체</span>
-                        </label>
-                        <label class="radio">
-                          <input type="radio" name="status" value="2" >
-                          <span>접수</span>
-                        </label>
-                        <label class="radio">
-                          <input type="radio" name="status" value="3" >
-                          <span>보류</span>
-                        </label>
-                        <label class="radio">
-                          <input type="radio" name="status" value="4" >
-                          <span>완료</span>
-                        </label>
-                        <label class="radio">
-                          <input type="radio" name="status" value="5" >
-                          <span>반려</span>
-                        </label>
-                      </div>
                   </div>
 
                   <div class="item">
@@ -75,7 +48,6 @@
                       <input type="text" class="input" placeholder="입력">
                     </div>
                   </div>
-
                   @@include('./common/search_period.html')
                 </div>
                 <div class="search-btn">
@@ -91,142 +63,106 @@
                     </div>
                   </div>
                   <div class="list-body">
-                    <table class="tb-data" summary="번호, 신청일, 성함, 신청자, 가구 형태, 담당, 내소 가능 여부, 상태, 최근 수정일로 구분되는 표">
-                      <caption>번호 신청일 성함 신청자 가구형태 담당 내소가능여부 상태 최근수정일</caption>
+                    <table class="tb-data" summary="번호, 신청일시, 청소 예약일시, 성함, 주소, 담당업체로 구분되는 표">
+                      <caption>번호, 신청일시, 청소 예약일시, 성함, 주소, 담당업체</caption>
                       <colgroup>
                         <col style="width: 5%">
                         <col style="width: 10%">
-                        <col style="width: 10%">
-                        <col style="width: 10%">
-                        <col style="width: 10%">
+                        <col style="width: 15%">
+                        <col style="width: 15%">
+                        <col style="width: 15%">
                         <col style="width: auto;">
-                        <col style="width: 10%">
-                        <col style="width: 10%">
-                        <col style="width: 10%">
                       </colgroup>
                       <thead>
                         <tr>
                           <th scope="col">번호</th>
-                          <th scope="col">신청일</th>
+                          <th scope="col">신청일시</th>
+                          <th scope="col">청소 예약일시</th>
                           <th scope="col">성함</th>
-                          <th scope="col">신청자</th>
-                          <th scope="col">가구 형태</th>
-                          <th scope="col">담당 센터</th>
-                          <th scope="col">내소 가능 여부</th>
-                          <th scope="col">진행 상태</th>
-                          <th scope="col">최근 수정일</th>
+                          <th scope="col">주소</th>
+                          <th scope="col">담당 업체</th>
                         </tr>
                       </thead>
                       <tbody>
                         <tr>
                           <td>10</td>
-                          <td>yyyy-mm-dd</td>
-                          <td>OOO</td>
-                          <td>본인</td>
-                          <td>1,2인</td>
-                          <td><div class="ellipsis">종로구보건소</div></td>
-                          <td>가능</td>
-                          <td>접수</td>
-                          <td>yyyy-mm-dd</td>
+                          <td>yyyy-mm-dd hh:mm</td>
+                          <td>yyyy-mm-dd hh:mm</td>
+                          <td>홍길동</td>
+                          <td>종로동</td>
+                          <td>종복환경개발(주)</td>
                         </tr>
                         <tr>
                           <td>9</td>
-                          <td>yyyy-mm-dd</td>
-                          <td>OOO</td>
-                          <td>자녀</td>
-                          <td>다인</td>
-                          <td><div class="ellipsis">종로구보건소</div></td>
-                          <td>가능</td>
-                          <td>접수</td>
-                          <td>yyyy-mm-dd</td>
+                          <td>yyyy-mm-dd hh:mm</td>
+                          <td>yyyy-mm-dd hh:mm</td>
+                          <td>홍길동</td>
+                          <td>종로동</td>
+                          <td>종복환경개발(주)</td>
                         </tr>
                         <tr>
                           <td>8</td>
-                          <td>yyyy-mm-dd</td>
-                          <td>OOO</td>
-                          <td>본인</td>
-                          <td>1,2인</td>
-                          <td><div class="ellipsis">종로구보건소</div></td>
-                          <td>가능</td>
-                          <td>접수</td>
-                          <td>yyyy-mm-dd</td>
+                          <td>yyyy-mm-dd hh:mm</td>
+                          <td>yyyy-mm-dd hh:mm</td>
+                          <td>홍길동</td>
+                          <td>종로동</td>
+                          <td>종복환경개발(주)</td>
                         </tr>
                         <tr>
                           <td>7</td>
-                          <td>yyyy-mm-dd</td>
-                          <td>OOO</td>
-                          <td>본인</td>
-                          <td>1,2인</td>
-                          <td><div class="ellipsis">종로구보건소</div></td>
-                          <td>가능</td>
-                          <td>접수</td>
-                          <td>yyyy-mm-dd</td>
+                          <td>yyyy-mm-dd hh:mm</td>
+                          <td>yyyy-mm-dd hh:mm</td>
+                          <td>홍길동</td>
+                          <td>종로동</td>
+                          <td>종복환경개발(주)</td>
                         </tr>
                         <tr>
                           <td>6</td>
-                          <td>yyyy-mm-dd</td>
-                          <td>OOO</td>
-                          <td>본인</td>
-                          <td>1,2인</td>
-                          <td><div class="ellipsis">종로구보건소</div></td>
-                          <td>가능</td>
-                          <td>접수</td>
-                          <td>yyyy-mm-dd</td>
+                          <td>yyyy-mm-dd hh:mm</td>
+                          <td>yyyy-mm-dd hh:mm</td>
+                          <td>홍길동</td>
+                          <td>종로동</td>
+                          <td>종복환경개발(주)</td>
                         </tr>
                         <tr>
                           <td>5</td>
-                          <td>yyyy-mm-dd</td>
-                          <td>OOO</td>
-                          <td>본인</td>
-                          <td>1,2인</td>
-                          <td><div class="ellipsis">종로구보건소</div></td>
-                          <td>가능</td>
-                          <td>접수</td>
-                          <td>yyyy-mm-dd</td>
+                          <td>yyyy-mm-dd hh:mm</td>
+                          <td>yyyy-mm-dd hh:mm</td>
+                          <td>홍길동</td>
+                          <td>종로동</td>
+                          <td>종복환경개발(주)</td>
                         </tr>
                         <tr>
                           <td>4</td>
-                          <td>yyyy-mm-dd</td>
-                          <td>OOO</td>
-                          <td>본인</td>
-                          <td>1,2인</td>
-                          <td><div class="ellipsis">종로구보건소</div></td>
-                          <td>가능</td>
-                          <td>접수</td>
-                          <td>yyyy-mm-dd</td>
+                          <td>yyyy-mm-dd hh:mm</td>
+                          <td>yyyy-mm-dd hh:mm</td>
+                          <td>홍길동</td>
+                          <td>종로동</td>
+                          <td>종복환경개발(주)</td>
                         </tr>
                         <tr>
                           <td>3</td>
-                          <td>yyyy-mm-dd</td>
-                          <td>OOO</td>
-                          <td>본인</td>
-                          <td>1,2인</td>
-                          <td><div class="ellipsis">종로구보건소</div></td>
-                          <td>가능</td>
-                          <td>접수</td>
-                          <td>yyyy-mm-dd</td>
+                          <td>yyyy-mm-dd hh:mm</td>
+                          <td>yyyy-mm-dd hh:mm</td>
+                          <td>홍길동</td>
+                          <td>종로동</td>
+                          <td>종복환경개발(주)</td>
                         </tr>
                         <tr>
                           <td>2</td>
-                          <td>yyyy-mm-dd</td>
-                          <td>OOO</td>
-                          <td>본인</td>
-                          <td>1,2인</td>
-                          <td><div class="ellipsis">종로구보건소</div></td>
-                          <td>가능</td>
-                          <td>접수</td>
-                          <td>yyyy-mm-dd</td>
+                          <td>yyyy-mm-dd hh:mm</td>
+                          <td>yyyy-mm-dd hh:mm</td>
+                          <td>홍길동</td>
+                          <td>종로동</td>
+                          <td>종복환경개발(주)</td>
                         </tr>
                         <tr>
                           <td>1</td>
-                          <td>yyyy-mm-dd</td>
-                          <td>OOO</td>
-                          <td>본인</td>
-                          <td>1,2인</td>
-                          <td><div class="ellipsis">종로구보건소</div></td>
-                          <td>가능</td>
-                          <td>접수</td>
-                          <td>yyyy-mm-dd</td>
+                          <td>yyyy-mm-dd hh:mm</td>
+                          <td>yyyy-mm-dd hh:mm</td>
+                          <td>홍길동</td>
+                          <td>종로동</td>
+                          <td>종복환경개발(주)</td>
                         </tr>
                       </tbody>
                     </table>

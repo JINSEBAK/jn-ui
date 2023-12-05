@@ -118,6 +118,29 @@ const message = {
     }
 }
 
+const modal = {
+    open: function(target) {
+        if (!target) return
+        const container = document.querySelector('#' + target);
+        container.classList.add('show')
+        container.closest('.popup-bg').classList.add('on')
+        document.body.style.overflowY = 'hidden'
+    },
+    close: function(e) {
+        e.target.closest('.popup').classList.remove('show')
+        e.target.closest('.popup-bg').classList.remove('on')
+        document.body.style.overflowY = 'auto'
+    }
+}
+
+const closeBtns = document.querySelectorAll('.btn-popup-close')
+if (closeBtns.length > 0) {
+    closeBtns.forEach((btn) => {
+        btn.addEventListener('click', function(e) {
+            modal.close(e)
+        })
+    })
+}
 
 
 const tooltips = document.querySelectorAll('[data-role=tooltip]')
@@ -142,4 +165,47 @@ window.addEventListener('click', function(e) {
             })
         }
     }
+})
+
+
+const popups = document.querySelectorAll('[data-role="popup"]');
+if (popups.length > 0) {
+    popups.forEach((popup) => {
+        popup.addEventListener('click', function(e) {
+            const target = e.target.dataset.target;
+            modal.open(target);
+        })
+    })
+}
+
+
+$(function() {
+    // tab 이벤트
+    $(".tab").on("click", function () {
+        // 보여줄 tab-content id 가져오기
+        const target = $(this).attr("aria-controls");
+
+        // 탭 활성화 처리
+        $(".tab").removeClass("active");
+        $(this).addClass("active");
+
+        // 다른 탭은 키보드 탭으로 접근하지 않게 해줌 (tabindex=-1)
+        $(".tab").attr("tabindex", -1);
+        $(this).removeAttr("tabindex");
+
+        $(".tab-content").attr("hidden", true);
+        $("#" + target).removeAttr("hidden");
+    });
+
+    $('.dropdown-search').find('input[type="text"]').on('input', function() {
+        if ($(this).val().length > 0) {
+            $(this).next('.d-search').show();
+        } else {
+            $(this).next('.d-search').hide();
+        }
+    })
+
+    $('.d-search_item').find('button').on('click', function() {
+        $('.d-search').hide();
+    })
 })

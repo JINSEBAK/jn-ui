@@ -5,7 +5,7 @@
     @@include('./common/header.html')
     @@include('./common/navigation.html')
     <main class="main">
-        @@include('./common/page_title.html', { title: '신청 상세', path: { "p1": "", "p2": ""}, description: ''})
+        @@include('./common/page_title.html', { title: '건강이랑 서비스 신청 상세', path: { "p1": "", "p2": ""}, description: ''})
         <div class="content">
 
             <div class="detail">
@@ -13,49 +13,127 @@
                 <ul class="lik-tb">
                     <li class="lb">성함</li>
                     <li>박성웅</li>
-                    <li class="lb">신청자</li>
-                    <li>자녀</li>
                     <li class="lb">생년월일</li>
                     <li>1968-02-15</li>
-                    <li class="lb">연락처</li>
-                    <li>010-1234-5678</li>
-                    <li class="lb lb-one">주소</li>
-                    <li>[23563] 서울 종로구 혜화동 452번지 혜화빌라 302호</li> 
                     <li class="lb">가구 형태</li>
                     <li>1,2인</li>
-                    <li class="lb">담당</li>
-                    <li>1권역 종로구보건소</li>
-                    <li class="lb">상태</li>
-                    <li>대기</li>
-                    <li class="lb">병의원 진료여부</li>
+                    <li class="lb">신청일시</li>
+                    <li>2023-10-21 10:31</li>
+                    <li class="lb">연락처</li>
+                    <li>010-1234-5678</li>
+                    <li class="lb">진료여부</li>
                     <li>예</li>
+                    <li class="lb lb-one">주소</li>
+                    <li>[23563] 서울 종로구 혜화동 452번지 혜화빌라 302호</li> 
+                    <li class="lb">담당 센터</li>
+                    <li>(1권역) 종로구보건소</li>
+                    <li class="lb">진행 상태</li>
+                    <li>
+                        대기
+                        <button type="button" class="btn btn-second float small" data-role="popup" data-target="popupStatus">변경</button>
+                    </li>
                 </ul>
 
                 <div class="lik-tb_title">대리자 정보</div>
                 <ul class="lik-tb">
                     <li class="lb">성함</li>
                     <li>황정민</li>
-                    <li class="lb">연락처</li>
+                    <li class="lb">관계</li>
+                    <li>자녀</li>
+                    <li class="lb lb-one">연락처</li>
                     <li>010-9999-9999</li>
                 </ul>
 
+                <div class="lik-tb_title">설문</div>
                 <ul class="lik-tb">
-                    <li class="lb">최종 수정일시</li>
-                    <li>2023-10-30 11:33</li>
-                    <li class="lb">최종 수정자</li>
-                    <li>master_01</li>
+                    <li class="lb">알게 된 경로</li>
+                    <li>지역 활동가</li>
+                    <li class="lb">내소 가능 여부</li>
+                    <li>아니오</li>
                 </ul>
+
+                <div class="lik-tb_title">신청 진행 내역</div>
+                <div class="list">
+                    <div class="list-body">
+                        <table class="tb-data" summary="번호, 변경 전 후, 진행 내용, 등록자, 등록일시로 구분되는 표">
+                            <caption>번호 변경전 변경후 진행내용 등록자 등록일시</caption>
+                            <thead>
+                                <tr>
+                                    <th scope="col">번호</th>
+                                    <th scope="col">변경 전</th>
+                                    <th scope="col">변경 후</th>
+                                    <th scope="col">진행 내용</th>
+                                    <th scope="col">등록자</th>
+                                    <th scope="col">등록일시</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>보류</td>
+                                    <td>완료</td>
+                                    <td>
+                                        <div class="align-left">
+                                            신청 순차 처리하여 완료했습니다. 해당 보건소에서 담당자가 신청자와 연락하여 일정 조율하였습니다.<br><br>
+                                            담당자 : 종로구보건소 김보건 (010-3423-3421)
+                                        </div>
+                                    </td>
+                                    <td>yyyy-mm-dd hh:mm</td>
+                                    <td>yesman</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="6" class="empty">아직 진행된 내용이 없습니다.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
 
             </div>
 
             <div class="btns detail">
                 <button type="button" class="btn btn-default">목록</button>
-                <button type="button" class="btn btn-second">수정</button>
             </div>
-
 
         </div>
     </main>
+
+    <aside class="popup-bg popup-closable">
+        <div class="popup" id="popupStatus">
+            <div class="popup-head">
+                건강이랑 신청 진행 상태 변경
+            </div>
+            <div class="popup-body">
+                <div class="detail">
+                    <ul class="lik-tb">
+                        <li class="lb">현재 상태</li>
+                        <li>접수</li>
+                        <li class="lb">현재 상태</li>
+                        <li>
+                            <select class="select">
+                                <option value="">선택</option>
+                                <option value="">접수</option>
+                                <option value="">보류</option>
+                                <option value="">완료</option>
+                                <option value="">반려</option>
+                            </select>
+                        </li>
+                        <li class="lb lb-one">진행 내용</li>
+                        <li>
+                            <textarea class="textarea" name="" id="" cols="30" rows="10" placeholder="신청 처리 내용을 입력해주세요."></textarea>
+                        </li>
+                    </ul>
+                    <ul class="guide">
+                        <li>입력 내용은 진행 내역에 기록 됩니다.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="popup-tail">
+                <button type="button" class="btn btn-default btn-popup-close">취소</button>
+                <button type="button" class="btn btn-primary">등록</button>
+            </div>
+        </div>
+    </aside>
 
     @@include('./common/admin_scripts.html')
   </body>

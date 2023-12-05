@@ -30,24 +30,7 @@
 
     @@include('./common/admin_scripts.html')
     <script>
-        $(function() {
-            // tab 이벤트
-            $(".tab").on("click", function () {
-                // 보여줄 tab-content id 가져오기
-                const target = $(this).attr("aria-controls");
-
-                // 탭 활성화 처리
-                $(".tab").removeClass("active");
-                $(this).addClass("active");
-
-                // 다른 탭은 키보드 탭으로 접근하지 않게 해줌 (tabindex=-1)
-                $(".tab").attr("tabindex", -1);
-                $(this).removeAttr("tabindex");
-
-                $(".tab-content").attr("hidden", true);
-                $("#" + target).removeAttr("hidden");
-            });
-        })
+        
     </script>
   </body>
 </html>
