@@ -6,15 +6,15 @@
     @@include('./common/header.html')
     @@include('./common/navigation.html')
     <main class="main">
-        @@include('./common/page_title.html', { title: '정화조 청소 신청', path: {"p1":"",  "p2":""}, description: ''})
+        @@include('./common/page_title.html', { title: '스마트 제설함 민원', path: {"p1":"",  "p2":""}, description: ''})
         <div class="content">
 
           <div class="tabs" role="tablist">
             <div class="tab active" role="tab" aria-selected="true" aria-controls="tabContent1" id="tab1">
-                <span>청소 예약 신청 내역</span>
+                <span>처리 중</span>
             </div>
             <div class="tab" role="tab" aria-selected="true" aria-controls="tabContent2" id="tab2">
-              <span>청소 업체 관리</span>
+              <span>처리 완료</span>
             </div>
           </div>
 
@@ -22,32 +22,41 @@
             <div class="tab-content" role="tabpanel" aria-labelledby="tab1" id="tabContent1" tabIndex="0">
                 <!-- .search start -->
                 <div class="search">
-
-                  <div class="item">
-                    <div class="label">
-                      <label for="">담당 업체</label>
-                    </div>
-                    <div class="inline">
-                      <select class="select">
-                        <option value="">선택</option>
-                      </select>
-                    </div>
-                  </div>
-
-                  <div class="item detail">
+                  <div class="item item-col-5 detail">
                     <div class="label">
                       <label for="">키워드</label>
                     </div>
                     <div class="inline">
                       <select class="select">
-                        <option value="">성함</option>
-                        <option value="">대리 신청자 성함</option>
-                        <option value="">등록자</option>
-                        <option value="">최종 수정자</option>
+                        <option value="">제설함 명</option>
+                        <option value="">관리코드</option>
+                        <option value="">위치</option>
+                        <option value="">내용</option>
                       </select>
                       <input type="text" class="input" placeholder="입력">
                     </div>
                   </div>
+
+                  <div class="item item-col-5 detail">
+                    <div class="label">
+                      <label for="">민원 구분</label>
+                    </div>
+                    <div class="inline">
+                      <label class="radio">
+                        <input type="radio" name="type" value="1" checked>
+                        <span>전체</span>
+                      </label>
+                      <label class="radio">
+                        <input type="radio" name="type" value="2">
+                        <span>청소</span>
+                      </label>
+                      <label class="radio">
+                        <input type="radio" name="type" value="3">
+                        <span>보충</span>
+                      </label>
+                    </div>
+                  </div>
+
                   @@include('./common/search_period.html')
                 </div>
                 <div class="search-btn">
@@ -63,106 +72,94 @@
                     </div>
                   </div>
                   <div class="list-body">
-                    <table class="tb-data" summary="번호, 신청일시, 청소 예약일시, 성함, 주소, 담당업체로 구분되는 표">
-                      <caption>번호, 신청일시, 청소 예약일시, 성함, 주소, 담당업체</caption>
+                    <table class="tb-data" summary="번호, 민원 등록일시, 민원 구분, 제설함 명, 내용으로 구분되는 표">
+                      <caption>번호, 민원 등록일시, 민원 구분, 제설함 명, 내용</caption>
                       <colgroup>
                         <col style="width: 5%">
-                        <col style="width: 20%">
-                        <col style="width: 20%">
                         <col style="width: 15%">
+                        <col style="width: 10%">
                         <col style="width: 15%">
                         <col style="width: auto;">
                       </colgroup>
                       <thead>
                         <tr>
                           <th scope="col">번호</th>
-                          <th scope="col">신청일시</th>
-                          <th scope="col">청소 예약일시</th>
-                          <th scope="col">성함</th>
-                          <th scope="col">주소</th>
-                          <th scope="col">담당 업체</th>
+                          <th scope="col">민원 등록일시</th>
+                          <th scope="col">민원 구분</th>
+                          <th scope="col">제설함 명</th>
+                          <th scope="col">내용</th>
                         </tr>
                       </thead>
                       <tbody>
                         <tr>
                           <td>10</td>
                           <td>yyyy-mm-dd hh:mm</td>
-                          <td>yyyy-mm-dd hh:mm</td>
-                          <td>홍길동</td>
-                          <td>종로동</td>
-                          <td>종복환경개발(주)</td>
+                          <td>청소</td>
+                          <td>종로001</td>
+                          <td><div class="ellipsis">제설함 청소 요청 드립니다요.</div></td>
                         </tr>
                         <tr>
                           <td>9</td>
                           <td>yyyy-mm-dd hh:mm</td>
-                          <td>yyyy-mm-dd hh:mm</td>
-                          <td>홍길동</td>
-                          <td>종로동</td>
-                          <td>종복환경개발(주)</td>
+                          <td>보충</td>
+                          <td>종로001</td>
+                          <td><div class="ellipsis">잔량 좀 채워요</div></td>
                         </tr>
                         <tr>
                           <td>8</td>
                           <td>yyyy-mm-dd hh:mm</td>
-                          <td>yyyy-mm-dd hh:mm</td>
-                          <td>홍길동</td>
-                          <td>종로동</td>
-                          <td>종복환경개발(주)</td>
+                          <td>청소</td>
+                          <td>종로001</td>
+                          <td><div class="ellipsis">제설함 청소 요청 드립니다요.</div></td>
                         </tr>
                         <tr>
                           <td>7</td>
                           <td>yyyy-mm-dd hh:mm</td>
-                          <td>yyyy-mm-dd hh:mm</td>
-                          <td>홍길동</td>
-                          <td>종로동</td>
-                          <td>종복환경개발(주)</td>
+                          <td>청소</td>
+                          <td>종로001</td>
+                          <td><div class="ellipsis">제설함 청소 요청 드립니다요.</div></td>
                         </tr>
                         <tr>
                           <td>6</td>
                           <td>yyyy-mm-dd hh:mm</td>
-                          <td>yyyy-mm-dd hh:mm</td>
-                          <td>홍길동</td>
-                          <td>종로동</td>
-                          <td>종복환경개발(주)</td>
+                          <td>청소</td>
+                          <td>종로001</td>
+                          <td><div class="ellipsis">제설함 청소 요청 드립니다요.</div></td>
                         </tr>
                         <tr>
                           <td>5</td>
                           <td>yyyy-mm-dd hh:mm</td>
-                          <td>yyyy-mm-dd hh:mm</td>
-                          <td>홍길동</td>
-                          <td>종로동</td>
-                          <td>종복환경개발(주)</td>
+                          <td>청소</td>
+                          <td>종로001</td>
+                          <td><div class="ellipsis">제설함 청소 요청 드립니다요.</div></td>
                         </tr>
                         <tr>
                           <td>4</td>
                           <td>yyyy-mm-dd hh:mm</td>
-                          <td>yyyy-mm-dd hh:mm</td>
-                          <td>홍길동</td>
-                          <td>종로동</td>
-                          <td>종복환경개발(주)</td>
+                          <td>청소</td>
+                          <td>종로001</td>
+                          <td><div class="ellipsis">제설함 청소 요청 드립니다요.</div></td>
                         </tr>
                         <tr>
                           <td>3</td>
                           <td>yyyy-mm-dd hh:mm</td>
-                          <td>yyyy-mm-dd hh:mm</td>
-                          <td>홍길동</td>
-                          <td>종로동</td>
-                          <td>종복환경개발(주)</td>
+                          <td>청소</td>
+                          <td>종로001</td>
+                          <td><div class="ellipsis">제설함 청소 요청 드립니다요.</div></td>
                         </tr>
                         <tr>
                           <td>2</td>
                           <td>yyyy-mm-dd hh:mm</td>
-                          <td>yyyy-mm-dd hh:mm</td>
-                          <td>홍길동</td>
-                          <td>종로동</td>
-                          <td>종복환경개발(주)</td>
+                          <td>청소</td>
+                          <td>종로001</td>
+                          <td><div class="ellipsis">제설함 청소 요청 드립니다요.</div></td>
                         </tr>
                         <tr>
                           <td>1</td>
                           <td>yyyy-mm-dd hh:mm</td>
-                          <td>yyyy-mm-dd hh:mm</td>
-                          <td>홍길동</td>
-                          <td>종로동</td>
-                          <td>종복환경개발(주)</td>
+                          <td>청소</td>
+                          <td>종로001</td>
+                          <td><div class="ellipsis">제설함 청소 요청 드립니다요.</div></td>
                         </tr>
                       </tbody>
                     </table>

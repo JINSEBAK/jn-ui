@@ -610,6 +610,9 @@ html, body {
         .btn.float {
             margin-left: auto;
         }
+        .info {
+            min-height: 100px;
+        }
         
     }
     & + .lik-tb {
@@ -1235,6 +1238,9 @@ html, body {
             min-width: 90px;
             line-height: 32px;
             padding: 0 1rem;
+        }
+        &.right {
+            justify-content: flex-end;
         }
     }
 
