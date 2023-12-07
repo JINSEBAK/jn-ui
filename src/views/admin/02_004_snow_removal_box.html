@@ -11,7 +11,7 @@
 
           <div class="tabs" role="tablist">
             <div class="tab active" role="tab" aria-selected="true" aria-controls="tabContent1" id="tab1">
-                <span>처리 중</span>
+                <span>처리 대기</span>
             </div>
             <div class="tab" role="tab" aria-selected="true" aria-controls="tabContent2" id="tab2">
               <span>처리 완료</span>
@@ -168,82 +168,192 @@
                 @@include('./common/pagination.html')
             </div>
 
-
+            <!-- 처리완료 -->
             <div class="tab-content" role="tabpanel" aria-labelledby="tab2" id="tabContent2" tabIndex="0" hidden="true">
+                <!-- .search start -->
+                <div class="search">
+                  <div class="item item-col-5 detail">
+                    <div class="label">
+                      <label for="">키워드</label>
+                    </div>
+                    <div class="inline">
+                      <select class="select">
+                        <option value="">제설함 명</option>
+                        <option value="">관리코드</option>
+                        <option value="">위치</option>
+                        <option value="">내용</option>
+                      </select>
+                      <input type="text" class="input" placeholder="입력">
+                    </div>
+                  </div>
+
+                  <div class="item item-col-5 detail">
+                    <div class="label">
+                      <label for="">민원 구분</label>
+                    </div>
+                    <div class="inline">
+                      <label class="radio">
+                        <input type="radio" name="type" value="1" checked>
+                        <span>전체</span>
+                      </label>
+                      <label class="radio">
+                        <input type="radio" name="type" value="2">
+                        <span>청소</span>
+                      </label>
+                      <label class="radio">
+                        <input type="radio" name="type" value="3">
+                        <span>보충</span>
+                      </label>
+                    </div>
+                  </div>
+
+                  @@include('./common/search_period.html')
+                </div>
+                <div class="search-btn">
+                  <button type="button" class="btn btn-third small">초기화</button>
+                  <button type="button" class="btn btn-second small">검색</button>
+                </div>
+                <!-- .search end -->
                 <div class="list">
                   <div class="list-body">
-                      <table class="tb-data" summary="권역, 위치, 관할지역, 연락처, 담당 관리자, 최종 수정일시로 구분되는 표">
-                          <caption>권역, 위치, 관할지역, 연락처, 담당 관리자, 최종 수정일시</caption>
+                      <table class="tb-data" summary="번호, 민원등록일시, 민원구분, 제설함명, 내용, 최종 수정일시, 최종 수정자로 구분되는 표">
+                          <caption>번호 민원등록일시 민원구분 제설함명 내용 최종수정일시 최종수정자</caption>
+                          <colgroup>
+                              <col style="width: 5%">
+                              <col style="width: 15%">
+                              <col style="width: 10%">
+                              <col style="width: 15%">
+                              <col style="width: auto">
+                              <col style="width: 15%">
+                              <col style="width: 10%">
+                          </colgroup>
                           <thead>
                               <tr>
-                                  <th scope="col">권역</th>
-                                  <th scope="col">위치</th>
-                                  <th scope="col">관할지역</th>
-                                  <th scope="col">연락처</th>
-                                  <th scope="col">담당 관리자</th>
+                                  <th scope="col">번호</th>
+                                  <th scope="col">민원 등록일시</th>
+                                  <th scope="col">민원 구분</th>
+                                  <th scope="col">제설함 명</th>
+                                  <th scope="col">내용</th>
                                   <th scope="col">최종 수정일시</th>
+                                  <th scope="col">최종 수정자</th>
                               </tr>
                           </thead>
                           <tbody>
                               <tr>
-                                  <td>1권역</td>
-                                  <td>
-                                    <div class="align-left">동부진료소</div>
-                                  </td>
-                                  <td>청운효자, 사직, 교남, 무악</td>
-                                  <td>02-2134-4567</td>
-                                  <td>yesman</td>
+                                  <td>index</td>
                                   <td>yyyy-mm-dd hh:mm</td>
+                                  <td>보충</td>
+                                  <td>종로001</td>
+                                  <td>
+                                    <div class="ellipsis">제설함 보충 요청드립니다.</div>
+                                  </td>
+                                  <td>yyyy-mm-dd hh:mm</td>
+                                  <td>yesman</td>
                               </tr>
                               <tr>
-                                <td>2권역</td>
-                                <td>
-                                  <div class="align-left">동부진료소</div>
-                                </td>
-                                <td>청운효자, 사직, 교남, 무악</td>
-                                <td>02-2134-4567</td>
-                                <td>yesman</td>
+                                <td>index</td>
                                 <td>yyyy-mm-dd hh:mm</td>
+                                <td>보충</td>
+                                <td>종로001</td>
+                                <td>
+                                  <div class="ellipsis">제설함 보충 요청드립니다.</div>
+                                </td>
+                                <td>yyyy-mm-dd hh:mm</td>
+                                <td>yesman</td>
                               </tr>
                               <tr>
-                                <td>3권역</td>
-                                <td>
-                                  <div class="align-left">동부진료소</div>
-                                </td>
-                                <td>청운효자, 사직, 교남, 무악</td>
-                                <td>02-2134-4567</td>
-                                <td>yesman</td>
+                                <td>index</td>
                                 <td>yyyy-mm-dd hh:mm</td>
+                                <td>보충</td>
+                                <td>종로001</td>
+                                <td>
+                                  <div class="ellipsis">제설함 보충 요청드립니다.</div>
+                                </td>
+                                <td>yyyy-mm-dd hh:mm</td>
+                                <td>yesman</td>
                               </tr>
                               <tr>
-                                <td>4권역</td>
-                                <td>
-                                  <div class="align-left">동부진료소</div>
-                                </td>
-                                <td>청운효자, 사직, 교남, 무악</td>
-                                <td>02-2134-4567</td>
-                                <td>yesman</td>
+                                <td>index</td>
                                 <td>yyyy-mm-dd hh:mm</td>
+                                <td>보충</td>
+                                <td>종로001</td>
+                                <td>
+                                  <div class="ellipsis">제설함 보충 요청드립니다.</div>
+                                </td>
+                                <td>yyyy-mm-dd hh:mm</td>
+                                <td>yesman</td>
                               </tr>
                               <tr>
-                                <td>5권역</td>
-                                <td>
-                                  <div class="align-left">동부진료소</div>
-                                </td>
-                                <td>청운효자, 사직, 교남, 무악</td>
-                                <td>02-2134-4567</td>
-                                <td>yesman</td>
+                                <td>index</td>
                                 <td>yyyy-mm-dd hh:mm</td>
+                                <td>보충</td>
+                                <td>종로001</td>
+                                <td>
+                                  <div class="ellipsis">제설함 보충 요청드립니다.</div>
+                                </td>
+                                <td>yyyy-mm-dd hh:mm</td>
+                                <td>yesman</td>
+                              </tr>
+                              <tr>
+                                <td>index</td>
+                                <td>yyyy-mm-dd hh:mm</td>
+                                <td>보충</td>
+                                <td>종로001</td>
+                                <td>
+                                  <div class="ellipsis">제설함 보충 요청드립니다.</div>
+                                </td>
+                                <td>yyyy-mm-dd hh:mm</td>
+                                <td>yesman</td>
+                              </tr>
+                              <tr>
+                                <td>index</td>
+                                <td>yyyy-mm-dd hh:mm</td>
+                                <td>보충</td>
+                                <td>종로001</td>
+                                <td>
+                                  <div class="ellipsis">제설함 보충 요청드립니다.</div>
+                                </td>
+                                <td>yyyy-mm-dd hh:mm</td>
+                                <td>yesman</td>
+                              </tr>
+                              <tr>
+                                <td>index</td>
+                                <td>yyyy-mm-dd hh:mm</td>
+                                <td>보충</td>
+                                <td>종로001</td>
+                                <td>
+                                  <div class="ellipsis">제설함 보충 요청드립니다.</div>
+                                </td>
+                                <td>yyyy-mm-dd hh:mm</td>
+                                <td>yesman</td>
+                              </tr>
+                              <tr>
+                                <td>index</td>
+                                <td>yyyy-mm-dd hh:mm</td>
+                                <td>보충</td>
+                                <td>종로001</td>
+                                <td>
+                                  <div class="ellipsis">제설함 보충 요청드립니다.</div>
+                                </td>
+                                <td>yyyy-mm-dd hh:mm</td>
+                                <td>yesman</td>
+                              </tr>
+                              <tr>
+                                <td>index</td>
+                                <td>yyyy-mm-dd hh:mm</td>
+                                <td>보충</td>
+                                <td>종로001</td>
+                                <td>
+                                  <div class="ellipsis">제설함 보충 요청드립니다.</div>
+                                </td>
+                                <td>yyyy-mm-dd hh:mm</td>
+                                <td>yesman</td>
                               </tr>
                           </tbody>
                       </table>
                   </div>
-              </div>
-
-              <div class="btns list">
-                <a href="./02_001_user_health_center.html" class="btn btn-second">등록</a>
-              </div>
-
+                </div>
+                @@include('./common/pagination.html')
             </div>
          </div>
 

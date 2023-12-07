@@ -403,6 +403,7 @@ strong {
   }
   &.search {
     box-shadow: none;
+    gap: 0.25rem;
   }
   .title {
     font-weight: bold;
@@ -1844,7 +1845,7 @@ select {
       padding: 6px 0;
       font-size: 0.875rem;
       line-height: 1.25rem;
-      color: #000;
+      color: $primary-text;
       &:active {
         background-color: rgba(0, 0, 0, 0.03);
       }
@@ -1853,6 +1854,7 @@ select {
       border-bottom-color: $input-focus;
       .tab-button {
         font-weight: bold;
+        color: #000
       }
     }
   }
@@ -2176,6 +2178,7 @@ select {
     padding: 46px 0;
   }
   p {
+    text-align: center;
     color: #787882;
     font-size: 13px;
     line-height: 1.25rem;
@@ -2655,6 +2658,7 @@ select {
   td {
     border: 1px solid $tb-border;
     padding: 10px;
+    line-height: 1.25rem;
     vertical-align: middle;
   }
   th {
@@ -2662,7 +2666,8 @@ select {
     width: 25%;
   }
   td {
-    color: $guide-text;
+    color: $primary-text;
+    background-color: #fff;
   }
 }
 
@@ -3247,6 +3252,27 @@ select {
   }
 }
 
+
+.circle-num {
+  counter-reset: numlist;
+  li {
+    display: flex;
+    gap: 0.5rem;
+    &::before {
+      counter-increment: numlist;
+      content: counter(numlist);
+      border: 1px solid $guide-text;
+      border-radius: 50%;
+      font-size: 10px;
+      display: block;
+      text-align: center;
+      line-height: 0.875rem;
+      margin: 3px 0;
+      width: 0.875rem;
+      height: 0.875rem;
+    }
+  }
+}
 
 
 @media (max-width: 320px) {

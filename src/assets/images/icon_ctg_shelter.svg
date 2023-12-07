@@ -1,11 +1,23 @@
 <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g clip-path="url(#clip0_1426_7707)">
-<circle cx="16" cy="16" r="14" fill="#E4C864"/>
-<path d="M15.5 9.00003C11.745 9.00003 8.63106 11.7458 8.05563 15.3396C7.99946 15.6904 7.97138 15.8657 8.04189 16.0531C8.09799 16.2021 8.23534 16.3633 8.37361 16.4422C8.54738 16.5415 8.75383 16.5415 9.16673 16.5415H21.8333C22.2462 16.5415 22.4526 16.5415 22.6264 16.4422C22.7647 16.3633 22.902 16.2021 22.9581 16.0531C23.0286 15.8657 23.0005 15.6904 22.9444 15.3396C22.3689 11.7458 19.255 9.00003 15.5 9.00003Z" fill="white"/>
-<path d="M15.5 24V16.5415M8.05563 15.3396C8.63106 11.7458 11.745 9.00003 15.5 9.00003C19.255 9.00003 22.3689 11.7458 22.9444 15.3396C23.0005 15.6904 23.0286 15.8657 22.9581 16.0531C22.902 16.2021 22.7647 16.3633 22.6264 16.4422C22.4526 16.5415 22.2462 16.5415 21.8333 16.5415H9.16673C8.75383 16.5415 8.54738 16.5415 8.37361 16.4422C8.23534 16.3633 8.09799 16.2021 8.04189 16.0531C7.97138 15.8657 7.99946 15.6904 8.05563 15.3396Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<g clip-path="url(#clip0_1568_32493)">
+<g filter="url(#filter0_d_1568_32493)">
+<circle cx="16" cy="16" r="12" fill="#E4C864" fill-opacity="0.8" shape-rendering="crispEdges"/>
+</g>
+<path d="M15.9999 10.4C13.1961 10.4 10.8711 12.4502 10.4414 15.1335C10.3995 15.3954 10.3785 15.5264 10.4312 15.6663C10.4731 15.7776 10.5756 15.8979 10.6789 15.9568C10.8086 16.031 10.9628 16.031 11.2711 16.031H20.7287C21.037 16.031 21.1912 16.031 21.3209 15.9568C21.4242 15.8979 21.5267 15.7776 21.5686 15.6663C21.6213 15.5264 21.6003 15.3954 21.5584 15.1335C21.1287 12.4502 18.8037 10.4 15.9999 10.4Z" fill="white"/>
+<path d="M15.9999 21.6V16.031M10.4414 15.1335C10.8711 12.4502 13.1961 10.4 15.9999 10.4C18.8037 10.4 21.1287 12.4502 21.5584 15.1335C21.6003 15.3954 21.6213 15.5264 21.5686 15.6663C21.5267 15.7776 21.4242 15.8979 21.3209 15.9568C21.1912 16.031 21.037 16.031 20.7287 16.031H11.2711C10.9628 16.031 10.8086 16.031 10.6789 15.9568C10.5756 15.8979 10.4731 15.7776 10.4312 15.6663C10.3785 15.5264 10.3995 15.3954 10.4414 15.1335Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 <defs>
-<clipPath id="clip0_1426_7707">
+<filter id="filter0_d_1568_32493" x="1" y="2" width="30" height="30" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="1"/>
+<feGaussianBlur stdDeviation="1.5"/>
+<feComposite in2="hardAlpha" operator="out"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.2 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1568_32493"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1568_32493" result="shape"/>
+</filter>
+<clipPath id="clip0_1568_32493">
 <rect width="32" height="32" fill="white"/>
 </clipPath>
 </defs>

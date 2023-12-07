@@ -130,6 +130,17 @@ html, body {
     }
 }
 
+.user-origin {
+    display: block;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 4px;
+    background-size: 100%;
+    &.kakao {
+        background: url(../images/icon_login_ka.svg) center no-repeat;
+    }
+}
+
 
 /** header */
 #header {
