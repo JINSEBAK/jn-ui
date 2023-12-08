@@ -22,7 +22,7 @@
                         </div>
                     </div>
                 </li>
-                <li class="lb lb-one required">플랫폼</li>
+                <li class="lb required">플랫폼</li>
                 <li>
                     <div class="inline">
                         <div class="radio">
@@ -39,9 +39,15 @@
                         </div>
                     </div>
                 </li>
+                <li class="lb">현재 배포 버전 </li>
+                <li>1.0.2 <small>(배포일시 : 2023-10-21 10:30)</small></li>
                 <li class="lb required">버전</li>
                 <li>
-                    <input type="text" class="input" placeholder="숫자/특수문자(.) 입력">
+                    <div class="inline version">
+                        <input type="text" class="input" placeholder="0">.
+                        <input type="text" class="input" placeholder="0">.
+                        <input type="text" class="input" placeholder="0">
+                    </div>
                 </li>
                 <li class="lb required">중요도</li>
                 <li>
@@ -74,7 +80,12 @@
                         <span>분</span>
                     </div>
                 </li>
-                <!-- NOTICE: APK 파일을 업로드 하는 방식으로 되어 있는데 -- x -->
+                <li class="lb lb-one required">다운로드 URL</li>
+                <li>
+                    <div class="inline">
+                        <input type="text" class="input" placeholder="관리용 URL">
+                    </div>
+                </li>
             </ul>
           </div>
 

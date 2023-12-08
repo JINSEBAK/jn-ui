@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="ko">
+  @@include('./common/head.html')
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+  <body>
+    @@include('./common/header.html')
+    @@include('./common/navigation.html')
+    <main class="main">
+        @@include('./common/page_title.html', { title: '공통 코드 그룹 상세', path: {"p1":"",  "p2":""}, description: ''})
+        <div class="content">
+
+           <div class="detail">
+                <div class="lik-tb_title">
+                    코드 그룹 정보
+                    <button type="button" class="btn btn-default" data-role="popup" data-target="popupGrpMod">그룹 수정</button>
+                </div>
+                <ul class="lik-tb">
+                    <li class="lb">코드 그룹 ID</li>
+                    <li>COMM0025</li>
+                    <li class="lb">사용 여부</li>
+                    <li>사용</li>
+                    <li class="lb lb-one">코드 그룹 명</li>
+                    <li>처리 상태 표시 컬러</li>  
+                    <li class="lb lb-one">코드 그룹 설명</li>
+                    <li>
+                        <div class="pre scroll small">처리상태 표시 컬러</div>
+                    </li>  
+                    <li class="lb">등록일시</li>
+                    <li>yyyy-mm-mm hh:mm / admin</li>
+                    <li class="lb">최종 수정일시</li>
+                    <li>yyyy-mm-mm hh:mm / admin</li>
+                </ul>
+           </div>
+
+           <div class="search" style="margin-top: 2rem">
+                <div class="item">
+                    <div class="label">
+                        <label for="">사용 여부</label>
+                    </div>
+                    <div class="inline">
+                        <div class="radio">
+                            <input type="radio" name="status" value="1" id="status1" checked>
+                            <label for="status1">전체</label>
+                        </div>
+                        <div class="radio">
+                            <input type="radio" name="status" value="2" id="status2">
+                            <label for="status2">사용</label>
+                        </div>
+                        <div class="radio">
+                            <input type="radio" name="status" value="3" id="status3">
+                            <label for="status3">사용 안함</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="label">
+                        <label for="">키워드</label>
+                    </div>
+                    <div class="inline">
+                        <select class="select">
+                            <option value="">코드 그룹ID</option>
+                            <option value="">코드 그룹명</option>
+                            <option value="">코드 그룹 설명</option>
+                            <option value="">등록자</option>
+                            <option value="">최종 수정자</option>
+                        </select>
+                        <input type="text" class="input" placeholder="입력">
+                    </div>
+                </div>
+            </div>
+           <div class="search-btn">
+                <button type="button" class="btn btn-third small">초기화</button>
+                <button type="button" class="btn btn-second small">검색</button>
+           </div>
+
+           <div class="list">
+                <div class="list-head">
+                    <div class="total">
+                        Total <em>4</em>
+                    </div>
+                </div>
+                <div class="list-body">
+                    <table class="tb-data" summary="코드ID, 코드명, 사용여부, 표시 순서, 최종 수정일시, 최종수정자로 구분되는 표">
+                        <caption>코드ID, 코드명, 사용여부, 표시 순서, 최종 수정일시, 최종수정자</caption>
+                        <thead>
+                            <tr>
+                                <th scope="col"><input type="checkbox" class="all-check"></th>
+                                <th scope="col">코드 ID</th>
+                                <th scope="col">코드 명</th>
+                                <th scope="col">사용 여부</th>
+                                <th scope="col">표시 순서</th>
+                                <th scope="col">최종 수정일시</th>
+                                <th scope="col">최종 수정자</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><input type="checkbox" class="code"></td>
+                                <td>COMM0000</td>
+                                <td><div class="ellipsis">진행 중 - Green</div></td>
+                                <td>사용</td>
+                                <td>1</td>
+                                <td>yyyy-mm-dd hh:mm</td>
+                                <td>admin</td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" class="code"></td>
+                                <td>COMM0000</td>
+                                <td><div class="ellipsis">진행 중 - Green</div></td>
+                                <td>사용</td>
+                                <td>1</td>
+                                <td>yyyy-mm-dd hh:mm</td>
+                                <td>admin</td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" class="code"></td>
+                                <td>COMM0000</td>
+                                <td><div class="ellipsis">진행 중 - Green</div></td>
+                                <td>사용</td>
+                                <td>1</td>
+                                <td>yyyy-mm-dd hh:mm</td>
+                                <td>admin</td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" class="code"></td>
+                                <td>COMM0000</td>
+                                <td><div class="ellipsis">진행 중 - Green</div></td>
+                                <td>사용</td>
+                                <td>1</td>
+                                <td>yyyy-mm-dd hh:mm</td>
+                                <td>admin</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+           </div>
+           @@include('./common/pagination.html')
+
+           <div class="btns">
+                <button type="button" class="btn btn-default">삭제</button>
+                <button type="button" class="btn btn-second" data-role="popup" data-target="popupCodeCrt">등록</button>
+           </div>
+
+        </div>
+    </main>
+
+    <!-- popup -->
+    <aside class="popup-bg popup-closable">
+        <div class="popup" id="popupGrpMod">
+            <div class="popup-head">
+                <h4 class="title">코드 그룹 수정</h4>
+            </div>
+            <div class="popup-body">
+                <div class="detail">
+                    <ul class="lik-tb">
+                        <li class="lb lb-one">코드 그룹 ID</li>
+                        <li>COMM0025</li>
+                        <li class="lb lb-one required">코드 그룹명</li>
+                        <li>
+                            <div class="inline">
+                                <input type="text" class="input" placeholder="최대 20자 입력 가능" maxlength="20" value="처리 상태 표시 컬러">
+                            </div>
+                        </li>
+                        <li class="lb lb-one required">코드 그룹 설명</li>
+                        <li>
+                            <div class="inline">
+                                <textarea class="textarea" name="" id="" cols="30" rows="10" placeholder="코드그룹 설명 입력">처리 상태 표시 컬러 관리</textarea>
+                            </div>
+                        </li>
+                        <li class="lb lb-one">사용 여부</li>
+                        <li>
+                            <label class="radio">
+                                <input type="radio" name="useYn" value="Y" checked>
+                                <span>사용</span>
+                            </label>
+                            <label class="radio">
+                                <input type="radio" name="useYn" value="N">
+                                <span>사용 안함</span>
+                            </label>
+                        </li>
+                        <li class="lb lb-one">등록일시</li>
+                        <li>yyyy-mm-dd hh:mm / admin</li>
+                        <li class="lb lb-one">최종 수정일시</li>
+                        <li>yyyy-mm-dd hh:mm / admin</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="popup-tail">
+                <button type="button" class="btn btn-third btn-popup-close">취소</button>
+                <button type="button" class="btn btn-second">저장</button>
+            </div>
+        </div>
+    </aside>
+
+    <!-- 하위 코드 등록 -->
+     <aside class="popup-bg popup-closable">
+        <div class="popup" id="popupCodeCrt">
+            <div class="popup-head">
+                <h4 class="title">코드 등록</h4>
+            </div>
+            <div class="popup-body">
+                <div class="detail">
+                    <ul class="lik-tb">
+                        <li class="lb lb-one required">코드 명</li>
+                        <li>
+                            <div class="inline">
+                                <input type="text" class="input" placeholder="식별 가능한 코드 명 입력 (최대 20자, 중복 불가)" maxlength="20">
+                            </div>
+                        </li>
+                        <li class="lb lb-one">사용 여부</li>
+                        <li>
+                            <label class="radio">
+                                <input type="radio" name="useYn" value="Y" checked>
+                                <span>사용</span>
+                            </label>
+                            <label class="radio">
+                                <input type="radio" name="useYn" value="N">
+                                <span>사용 안함</span>
+                            </label>
+                        </li>
+                        <li class="lb lb-one required">표시 순서</li>
+                        <li>
+                            <div class="inline">
+                                <input type="text" class="input" placeholder="표시 순서 입력 (숫자가 낮을 수록 우선 표시)" maxlength="20">
+                            </div>
+                        </li>
+                        <li class="lb lb-one required">코드 그룹 설명</li>
+                        <li>
+                            <div class="inline">
+                                <textarea class="textarea" name="" id="" cols="30" rows="10" placeholder="코드 설명 입력"></textarea>
+                            </div>
+                        </li>
+                        <li class="lb lb-one required">코드 그룹 설명</li>
+                        <li>
+                            <div class="inline">
+                                <textarea class="textarea" name="" id="" cols="30" rows="5" placeholder="기타 사항 입력"></textarea>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="popup-tail">
+                <button type="button" class="btn btn-third btn-popup-close">취소</button>
+                <button type="button" class="btn btn-second">저장</button>
+            </div>
+        </div>
+    </aside>
+
+    @@include('./common/admin_scripts.html')
+    <script>
+       
+    </script>
+  </body>
+</html>

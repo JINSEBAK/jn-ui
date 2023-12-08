@@ -208,4 +208,14 @@ $(function() {
     $('.d-search_item').find('button').on('click', function() {
         $('.d-search').hide();
     })
+
+    // All check
+    $('.all-check').on('click', function(e) {
+        console.log(e.target);
+        if (e.target.checked) {
+            $('tbody').find('input[type="checkbox"]').prop('checked', true)
+        } else {
+            $('tbody').find('input[type="checkbox"]').prop('checked', false)
+        }
+    })
 })

@@ -7,92 +7,115 @@
     <body class="more no-btm">
         @@include('../common/header_sub.html', {title: '나의 민원'})
         <div class="container inner-full-padd">
-            <div class="my-ticket_list">
-                <div class="my-ticket_item">
-                    <h5 class="ticket-title">
-                        <strong>건강이랑 신청</strong>
-                        <span class="badge w-1">신청완료</span>
-                    </h5>
-                    <div class="ticket-date">2023-08-22</div>
-                    <div class="my-ticket_info">
-                        <ul class="ticket-info">
-                            <li>
-                                <label class="value-label">서비스 대상자</label>
-                                <span class="value">김*순 (010-****-1234)</span>
-                            </li>
-                            <li>
-                                <label class="value-label">신청자</label>
-                                <span class="value">김*석 (010-****-2323)</span>
-                            </li> 
-                            <li>
-                                <label class="value-label">서비스 대상자 행정동</label>
-                                <span class="value">무악동</span>
-                            </li>
-                        </ul>
-                        <ul class="ticket-info">
-                            <li>
-                                <label class="value-label">서비스센터 위치</label>
-                                <span class="value">
-                                    1권역 건강이랑서비스센터
-                                    <em>종로구보건소(02-2148-3794, 3796)</em>
-                                </span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
 
-                <div class="my-ticket_item">
-                    <h5 class="ticket-title">
-                        <strong>스마트 제설함 [<em>보충</em>] 신청</strong>
-                        <span class="badge w-2">접수완료</span>
-                    </h5>
-                    <div class="ticket-date">2023-08-22</div>
-                    <div class="my-ticket_info">
-                        <ul class="ticket-info">
-                            <li>
-                                <label class="value-label">스마트 제설함명</label>
-                                <span class="value"><strong>종로 008</strong></span>
-                                <div class="cont">
-                                    제설제를 뿌려야 할 시기는 아직 많이 남아있지만
-지나가는 김에 미리 대비하면 좋지 않을까 싶어…
-제설함 보충 요청해봅니다. 잘 부탁드립니다.
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+            <div class="tab-container">
+                <ul class="tab-list" role="tablist">
+                    <li class="tab-item active">
+                        <button type="button" class="tab-button" role="tab" aria-selected="true" aria-controls="tabContent1" id="tab1">건강이랑</button>
+                    </li>
+                    <li class="tab-item">
+                        <button type="button" class="tab-button" role="tab" tabindex="-1" aria-selected="false" aria-controls="tabContent2" id="tab2">스마트 제설함</button>
+                    </li>
+                </ul>
+              </div>
 
-                <div class="my-ticket_item">
-                    <h5 class="ticket-title">
-                        <strong>스마트 제설함 [<em>청소</em>] 신청</strong>
-                        <span class="badge w-3">처리완료</span>
-                    </h5>
-                    <div class="ticket-date">2023-08-20</div>
-                    <div class="my-ticket_info">
-                        <ul class="ticket-info">
-                            <li>
-                                <label class="value-label">스마트 제설함명</label>
-                                <span class="value">종로 008</span>
-                            </li>
-                            <div class="cont">
-                                현재 제설함 주변이 매우 더럽습니다.
-누군가 계속 쓰레기를 몰래 버리는 거 같습니다.
-고생 많으시겠지만, 환경 미관을 위해 처치는 되어야 할 거 같습니다. 빠른 처리 부탁드립니다.
-                                <img src="../../assets/images/sample/sample_01.png" alt="">
+            
+            <div class="tab-contents">
+
+                <div class="tab-content" role="tabpanel" aria-labelledby="tab1" id="tabContent1" tabindex="0">
+                    <div class="my-ticket_list">
+                        <div class="my-ticket_item">
+                            <h5 class="ticket-title">
+                                <strong>건강이랑 신청</strong>
+                                <span class="badge w-1">신청완료</span>
+                            </h5>
+                            <div class="ticket-date">2023-08-22</div>
+                            <div class="my-ticket_info">
+                                <ul class="ticket-info">
+                                    <li>
+                                        <label class="value-label">서비스 대상자</label>
+                                        <span class="value">김*순 (010-****-1234)</span>
+                                    </li>
+                                    <li>
+                                        <label class="value-label">신청자</label>
+                                        <span class="value">김*석 (010-****-2323)</span>
+                                    </li> 
+                                    <li>
+                                        <label class="value-label">서비스 대상자 행정동</label>
+                                        <span class="value">무악동</span>
+                                    </li>
+                                </ul>
+                                <ul class="ticket-info">
+                                    <li>
+                                        <label class="value-label">서비스센터 위치</label>
+                                        <span class="value">
+                                            1권역 건강이랑서비스센터
+                                            <em>종로구보건소(02-2148-3794, 3796)</em>
+                                        </span>
+                                    </li>
+                                </ul>
                             </div>
-                            <div class="result">
-                                <strong>처리상태</strong>
-                                <p>
-                                    제설함 청소를 완료하였습니다.<br>
-깨끗한 종로를 위한 민원에 감사드립니다.
-                                </p>
-                                <div class="date">2023-08-21</div>
-                            </div>
-                        </ul>
+                        </div>
                     </div>
                 </div>
 
-               
+                <div class="tab-content" role="tabpanel" aria-labelledby="tab2" id="tabContent2" tabindex="0" hidden="true">
+                    <div class="my-ticket_list">
+                        <div class="my-ticket_item">
+                            <h5 class="ticket-title">
+                                <strong>스마트 제설함 [<em>보충</em>] 신청</strong>
+                                <span class="badge sn-0">접수완료</span>
+                            </h5>
+                            <div class="ticket-date">2023-08-22</div>
+                            <div class="my-ticket_info">
+                                <ul class="ticket-info">
+                                    <li>
+                                        <label class="value-label">스마트 제설함명</label>
+                                        <span class="value"><strong>종로 008</strong></span>
+                                        <div class="cont">
+                                            제설제를 뿌려야 할 시기는 아직 많이 남아있지만
+        지나가는 김에 미리 대비하면 좋지 않을까 싶어…
+        제설함 보충 요청해봅니다. 잘 부탁드립니다.
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="my-ticket_item">
+                            <h5 class="ticket-title">
+                                <strong>스마트 제설함 [<em>청소</em>] 신청</strong>
+                                <span class="badge sn-1">처리완료</span>
+                            </h5>
+                            <div class="ticket-date">2023-08-20</div>
+                            <div class="my-ticket_info">
+                                <ul class="ticket-info">
+                                    <li>
+                                        <label class="value-label">스마트 제설함명</label>
+                                        <span class="value">종로 008</span>
+                                    <div class="cont">
+                                        현재 제설함 주변이 매우 더럽습니다.
+        누군가 계속 쓰레기를 몰래 버리는 거 같습니다.
+        고생 많으시겠지만, 환경 미관을 위해 처치는 되어야 할 거 같습니다. 빠른 처리 부탁드립니다.
+                                        <img src="../../assets/images/sample/sample_01.png" alt="">
+                                    </div>
+                                    <div class="result">
+                                        <strong>처리상태</strong>
+                                        <p>
+                                            제설함 청소를 완료하였습니다.<br>
+        깨끗한 종로를 위한 민원에 감사드립니다.
+                                        </p>
+                                        <div class="date">2023-08-21</div>
+                                    </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                    </div>
+                </div>
+
             </div>
 
         </div>

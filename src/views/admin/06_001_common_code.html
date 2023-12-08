@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ko">
+  @@include('./common/head.html')
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+  <body>
+    @@include('./common/header.html')
+    @@include('./common/navigation.html')
+    <main class="main">
+        @@include('./common/page_title.html', { title: '공통 코드 그룹', path: {"p1":"",  "p2":""}, description: ''})
+        <div class="content">
+
+            <div class="search">
+                <div class="item">
+                    <div class="label">
+                        <label for="">사용 여부</label>
+                    </div>
+                    <div class="inline">
+                        <div class="radio">
+                            <input type="radio" name="status" value="1" id="status1" checked>
+                            <label for="status1">전체</label>
+                        </div>
+                        <div class="radio">
+                            <input type="radio" name="status" value="2" id="status2">
+                            <label for="status2">사용</label>
+                        </div>
+                        <div class="radio">
+                            <input type="radio" name="status" value="3" id="status3">
+                            <label for="status3">사용 안함</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="label">
+                        <label for="">키워드</label>
+                    </div>
+                    <div class="inline">
+                        <select class="select">
+                            <option value="">코드 그룹ID</option>
+                            <option value="">코드 그룹명</option>
+                            <option value="">코드 그룹 설명</option>
+                            <option value="">등록자</option>
+                            <option value="">최종 수정자</option>
+                        </select>
+                        <input type="text" class="input" placeholder="입력">
+                    </div>
+                </div>
+            </div>
+            <div class="search-btn">
+                <button type="button" class="btn btn-third small">초기화</button>
+                <button type="button" class="btn btn-second small">검색</button>
+            </div>
+
+            <div class="list">
+                <div class="list-head">
+                    <div class="total">
+                        Total <em>100</em>
+                    </div>
+                </div>
+                <div class="list-body">
+                    <table class="tb-data" summary="코드 그룹ID, 코드 그룹명, 사용여부,최종 수정일시, 최종 수장자로 구분되는 표">
+                        <caption>코드 그룹ID, 코드 그룹명, 사용여부, 최종수정일시, 최종수정자</caption>
+                        <colgroup>
+                            <col style="width:15%">
+                            <col style="width:auto">
+                            <col style="width:15%">
+                            <col style="width:15%">
+                            <col style="width:15%">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th scope="col">코드 그룹ID</th>
+                                <th scope="col">코드 그룹명</th>
+                                <th scope="col">사용 여부</th>
+                                <th scope="col">최종 수정일시</th>
+                                <th scope="col">최종 수정자</th>
+                            </tr>
+                        </thead>
+                        <tbody> 
+                            <tr>
+                                <td>COMM0100</td>
+                                <td>
+                                    <div class="ellipsis">진행 단계 컬러</div>
+                                </td>
+                                <td>사용</td>
+                                <td>yyyy-mm-dd hh:mm</td>
+                                <td>admin</td>
+                            </tr>
+                            <tr>
+                                <td>COMM0099</td>
+                                <td>
+                                    <div class="ellipsis">진행 단계 컬러</div>
+                                </td>
+                                <td>사용</td>
+                                <td>yyyy-mm-dd hh:mm</td>
+                                <td>admin</td>
+                            </tr>
+                            <tr>
+                                <td>COMM0098</td>
+                                <td>
+                                    <div class="ellipsis">진행 단계 컬러</div>
+                                </td>
+                                <td>사용</td>
+                                <td>yyyy-mm-dd hh:mm</td>
+                                <td>admin</td>
+                            </tr>
+                            <tr>
+                                <td>COMM0097</td>
+                                <td>
+                                    <div class="ellipsis">진행 단계 컬러</div>
+                                </td>
+                                <td>사용</td>
+                                <td>yyyy-mm-dd hh:mm</td>
+                                <td>admin</td>
+                            </tr>
+                            <tr>
+                                <td>COMM0096</td>
+                                <td>
+                                    <div class="ellipsis">진행 단계 컬러</div>
+                                </td>
+                                <td>사용</td>
+                                <td>yyyy-mm-dd hh:mm</td>
+                                <td>admin</td>
+                            </tr>
+                            <tr>
+                                <td>COMM0095</td>
+                                <td>
+                                    <div class="ellipsis">진행 단계 컬러</div>
+                                </td>
+                                <td>사용</td>
+                                <td>yyyy-mm-dd hh:mm</td>
+                                <td>admin</td>
+                            </tr>
+                            <tr>
+                                <td>COMM0094</td>
+                                <td>
+                                    <div class="ellipsis">진행 단계 컬러</div>
+                                </td>
+                                <td>사용</td>
+                                <td>yyyy-mm-dd hh:mm</td>
+                                <td>admin</td>
+                            </tr>
+                            <tr>
+                                <td>COMM0093</td>
+                                <td>
+                                    <div class="ellipsis">진행 단계 컬러</div>
+                                </td>
+                                <td>사용</td>
+                                <td>yyyy-mm-dd hh:mm</td>
+                                <td>admin</td>
+                            </tr>
+                            <tr>
+                                <td>COMM0092</td>
+                                <td>
+                                    <div class="ellipsis">진행 단계 컬러</div>
+                                </td>
+                                <td>사용</td>
+                                <td>yyyy-mm-dd hh:mm</td>
+                                <td>admin</td>
+                            </tr>
+                            <tr>
+                                <td>COMM0091</td>
+                                <td>
+                                    <div class="ellipsis">진행 단계 컬러</div>
+                                </td>
+                                <td>사용</td>
+                                <td>yyyy-mm-dd hh:mm</td>
+                                <td>admin</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            @@include('./common/pagination.html')
+
+            <div class="btns">
+                <button type="button" class="btn btn-second" data-role="popup" data-target="popupGrpCrt">그룹 등록</button>
+            </div>
+        </div>
+    </main>
+
+    <!-- popup -->
+    <aside class="popup-bg popup-closable">
+        <div class="popup" id="popupGrpCrt">
+            <div class="popup-head">
+                <h4 class="title">코드 그룹 등록</h4>
+            </div>
+            <div class="popup-body">
+                <div class="detail">
+                    <ul class="lik-tb">
+                        <li class="lb lb-one required">코드 그룹ID</li>
+                        <li>
+                            <div class="inline">
+                                <input type="text" class="input" placeholder="영문, 숫자, -, _ 입력 가능 (최대 20자, 중복 불가)" maxlength="20">
+                            </div>
+                        </li>
+                        <li class="lb lb-one required">코드 그룹명</li>
+                        <li>
+                            <div class="inline">
+                                <input type="text" class="input" placeholder="최대 20자 입력 가능" maxlength="20">
+                            </div>
+                        </li>
+                        <li class="lb lb-one required">코드 그룹 설명</li>
+                        <li>
+                            <div class="inline">
+                                <textarea class="textarea" name="" id="" cols="30" rows="10" placeholder="코드그룹 설명 입력"></textarea>
+                            </div>
+                        </li>
+                        <li class="lb lb-one">사용 여부</li>
+                        <li>
+                            <label class="radio">
+                                <input type="radio" name="useYn" value="Y" checked>
+                                <span>사용</span>
+                            </label>
+                            <label class="radio">
+                                <input type="radio" name="useYn" value="N">
+                                <span>사용 안함</span>
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="popup-tail">
+                <button type="button" class="btn btn-third btn-popup-close">취소</button>
+                <button type="button" class="btn btn-second">등록</button>
+            </div>
+        </div>
+    </aside>
+
+    @@include('./common/admin_scripts.html')
+
+  </body>
+</html>
