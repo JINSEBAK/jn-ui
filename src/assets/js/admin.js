@@ -220,7 +220,7 @@ $(function() {
     })
 
     // datepicker
-    $('.input-date').datepicker({
+    $('.date.picker').find('.input').datepicker({
         dateFormat: 'yy-mm-dd'
     })
 })

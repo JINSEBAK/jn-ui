@@ -146,6 +146,12 @@ html, body {
         height: 1rem;
     }
 }
+.user-type {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
 
 .user-origin {
     display: block;
@@ -287,6 +293,9 @@ html, body {
     padding: 0.5rem;
     height: 34px;
     border-radius: 2px;
+    background: url(../images/icon_dropdown.svg) right 0.5rem center no-repeat;
+    background-size: 1.25rem;
+    appearance: none;
 }
 
 .textarea {
@@ -616,13 +625,32 @@ html, body {
 }
 
 .frm-date {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    .select {
+        min-width: 100px;
+    }
     .date {
         position: relative;
-        .calendar {
+        &::after {
+            content: '';
+            display: block;
+            width: 1.5rem;
+            height: 1.5rem;
+            background: url(../images/icon_calendar.svg) center no-repeat;
+            background-size: 1.25rem;
             position: absolute;
-            right: 0.5rem;
+            right: 0.25rem;
             top: 50%;
             transform: translateY(-50%);
+        }
+        &.picker {
+            max-width: 180px;
+            .input {
+                width: 100%;
+                max-width: 100%;
+            }
         }
     }
 }
