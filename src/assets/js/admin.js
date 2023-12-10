@@ -218,4 +218,9 @@ $(function() {
             $('tbody').find('input[type="checkbox"]').prop('checked', false)
         }
     })
+
+    // datepicker
+    $('.input-date').datepicker({
+        dateFormat: 'yy-mm-dd'
+    })
 })

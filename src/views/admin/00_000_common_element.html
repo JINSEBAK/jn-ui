@@ -31,7 +31,7 @@
                     <button type="button" class="btn btn-default btn-popup" data-target="confirm">메시지 컨펌</button>
 
                     <button type="button" class="btn btn-default btn-popup" data-target="thumbImg">이미지 크게보기</button>
-                    <button type="button" class="btn btn-default btn-popup" data-target="">모달 팝업</button>
+                    <button type="button" class="btn btn-default" id="btnPopupSample">모달 팝업</button>
                 </dd>
             </dl>
 
@@ -46,24 +46,132 @@
                     </div>
                 </dd>
             </dl>
+
+            <dl class="el-items">
+                <dt>Forms</dt>
+                <dd class="form-flex">
+                    <div>
+                        <input type="text" class="input input-keyword" placeholder="placeholder">
+                    </div>
+                    <div>
+                        <select class="select">
+                            <option value="">OPTION 1</option>
+                            <option value="">OPTION 2</option>
+                            <option value="">OPTION 3</option>
+                        </select>
+                    </div>
+                    <div>
+                        <textarea class="textarea" name="" id="" cols="30" rows="10" placeholder="placeholder"></textarea>
+                    </div>
+                    <div class="inline">
+                        <label class="checkbox">
+                            <input type="checkbox" name="chk" value="1">
+                            <span>checkbox 1</span>
+                        </label>
+                        <label class="checkbox">
+                            <input type="checkbox" name="chk" value="2">
+                            <span>checkbox 2</span>
+                        </label>
+                        <label class="checkbox">
+                            <input type="checkbox" name="chk" value="3">
+                            <span>checkbox 3</span>
+                        </label>
+                    </div>
+                    <div class="inline">
+                        <label class="radio">
+                            <input type="radio" name="radio" value="1" checked>
+                            <span>radio 1</span>
+                        </label>
+                        <label class="radio">
+                            <input type="radio" name="radio" value="2">
+                            <span>radio 2</span>
+                        </label>
+                        <label class="radio">
+                            <input type="radio" name="radio" value="3">
+                            <span>radio 3</span>
+                        </label>
+                    </div>
+                    <div class="checkround-box">
+                        <label class="checkround">
+                            <input type="checkbox">
+                            <span>r-checkbox 1</span>
+                        </label>
+                        <label class="checkround">
+                            <input type="checkbox">
+                            <span>r-checkbox 2</span>
+                        </label>
+                        <label class="checkround">
+                            <input type="checkbox">
+                            <span>r-checkbox 3</span>
+                        </label>
+                    </div>
+                    <div>
+                        <div class="file-box">
+                            <label class="file">
+                                <input type="file" class="input">
+                                <span>파일추가</span>
+                            </label>
+                            <div class="file-info">
+                                세종마을_B코드.mp3
+                                <button type="button" class="btn btn-icon icon close">
+                                    <span class="sr-only">파일삭제</span>
+                                </button>
+                            </div>
+                        </div>
+                        <ul class="guide">
+                            <li>30Mb 이내 WAV, MP3, OGG 파일 업로드</li>
+                        </ul>
+                    </div>
+
+                </dd>
+            </dl>
+
+            <dl class="el-items">
+                <dt>이미지 첨부 및 미리보기</dt>
+                <dd>
+                    <div>
+                        <div class="attach-img">
+                            <label>
+                                <img src="" id="previewImg" style="display:none">
+                                <input type="file" id="attachImg" accept="image/*">
+                                <span>추가</span>
+                            </label>
+                        </div>
+                        
+                        <ul class="guide">
+                            <li>5MB 이내 JPG, PNG, GIT 파일 업로드</li>
+                        </ul>
+                    </div>
+                </dd>
+            </dl>
         </div>
     </div>
 
     <!-- popup -->
-    <aside class="popup-bg popup-closable on">
-        <div class="popup show">
+    <aside class="popup-bg popup-closable">
+        <div class="popup" id="popupSample">
             <div class="popup-head">
-                header
+                <h4 class="title">팝업 타이틀</h4>
+                <button type="button" class="btn btn-icon icon close btn-popup-close">
+                    <span class="sr-only">팝업 닫기</span>
+                </button>
             </div>
             <div class="popup-body">
                 body
             </div>
             <div class="popup-tail">
-                tail
+                <button type="button" class="btn btn-primary">.primary</button>
             </div>
         </div>
     </aside>
 
     @@include('./common/admin_scripts.html')
+    <script>
+        $(document).ready(function() {
+            $('#btnPopupSample').on('click', function() {
+                modal.open('popupSample')
+            })
+        })
+    </script>
 </body>
 </html>

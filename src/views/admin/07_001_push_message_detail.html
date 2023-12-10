@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+  @@include('./common/head.html')
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+  <body>
+    @@include('./common/header.html')
+    @@include('./common/navigation.html')
+    <main class="main">
+        @@include('./common/page_title.html', { title: '알림 메시지', path: {"p1":"",  "p2":""}, description: ''})
+        <div class="content">
+
+          <div class="tabs" role="tablist">
+            <div class="tab" role="tab" aria-selected="true" aria-controls="tabContent1" id="tab1">
+                <span>알림 목록</span>
+            </div>
+            <div class="tab active" role="tab" aria-selected="true" aria-controls="tabContent2" id="tab2">
+              <span>메시지 관리</span>
+            </div>
+          </div>
+
+          <div class="tab-contents">
+            <div class="tab-content" role="tabpanel" aria-labelledby="tab2" id="tabContent2" tabindex="0">
+                <h3 class="tab-content_title">메시지 상세</h3>
+                <div class="detail">
+                    <ul class="lik-tb">
+                        <li class="lb lb-one">알림 유형</li>
+                        <li>시스템 공지</li>
+                        <li class="lb lb-one">제목</li>
+                        <li>[시스템] <span class="dynamic-msg">{앱 공지 제목}</span></li>
+                        <li class="lb lb-one">메시지</li>
+                        <li>
+                            <div class="pre"><span class="dynamic-msg">{앱 공지 내용 첫 줄}</span></div>
+                        </li>
+                        <li class="lb">등록일시</li>
+                        <li>yyyy-mm-dd hh:mm / admin</li>
+                        <li class="lb">최종 수정일시</li>
+                        <li>yyyy-mm-dd hh:mm / admin</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="btns detail">
+              <a href="#" class="btn btn-default">목록</a>
+              <button type="button" class="btn btn-second">수정</button>
+            </div>
+          </div>
+
+
+        </div>
+    </main>
+
+    @@include('./common/admin_scripts.html')
+  </body>
+</html>

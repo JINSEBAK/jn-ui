@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="ko">
   @@include('./common/head.html')
+  <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css" rel="stylesheet">
   <body>
     @@include('./common/header.html')
     @@include('./common/navigation.html')
@@ -12,64 +13,101 @@
                 <ul class="lik-tb">
                     <li class="lb lb-one required">구분</li>
                     <li>
-                        <select class="select">
-                            <option value="">일반</option>
-                            <option value="">시스템</option>
-                        </select>
-                        <div class="checkbox">
-                            <input type="checkbox" id="check-important">
-                            <label for="check-important">중요</label>
+                        <div class="inline">
+                            <label class="radio">
+                                <input type="radio" name="useYn" value="1" checked>
+                                <span>일반</span>
+                            </label>
+                            <label class="radio">
+                                <input type="radio" name="useYn" value="1">
+                                <span>이벤트</span>
+                            </label>
+                            <label class="radio">
+                                <input type="radio" name="useYn" value="1" >
+                                <span>시스템</span>
+                            </label>
                         </div>
                     </li>
                     <li class="lb lb-one required">제목</li>
                     <li>
                         <div class="inline">
-                            <input type="text" class="input" placeholder="2자 이상, 20자 이하 입력">
+                            <input type="text" class="input" placeholder="공지 제목 입력 (최소 2자 이상, 최대 20자)" minlength="2" maxlength="20">
                         </div>
                     </li>
                     <li class="lb lb-one required">내용</li>
-                    <li>Editor</li>
-                    <li class="lb lb-one required">첨부파일</li>
+                    <li><div class="editor"></div></li>
+                    <li class="lb lb-one required">
+                        첨부파일
+                    </li>
                     <li>
-                        <input type="file" class="input">
+                        <div class="file-box">
+                            <label class="file">
+                                <input type="file" class="input">
+                                <span>첨부</span>
+                            </label>
+                            <div class="file-info">
+                                <span class="name">가을축제_안내_브로셔.pdf</span> <span class="unit size">5.4MB</span>
+                                <button type="button" class="btn btn-icon icon close">
+                                    <span class="sr-only">파일삭제</span>
+                                </button>
+                            </div>
+                            <div class="file-info">
+                                <span class="name">가을축제_쿠폰.pdf</span> <span class="unit size">3.2MB</span>
+                                <button type="button" class="btn btn-icon icon close">
+                                    <span class="sr-only">파일삭제</span>
+                                </button>
+                            </div>
+                        </div>
+                        
                     </li>
                 </ul>
 
                 <ul class="lik-tb">
-                    <li class="lb">팝업</li>
+                    <li class="lb lb-one">팝업</li>
                     <li>
                         <div class="inline">
                             <div class="radio">
                                 <input type="radio" name="useYn" value="1" id="useYn1" checked>
-                                <label for="useYn1">미적용</label>
+                                <label for="useYn1">사용 안 함</label>
                             </div>
                             <div class="radio">
                                 <input type="radio" name="useYn" value="2" id="useYn2">
-                                <label for="useYn2">적용</label>
+                                <label for="useYn2">사용</label>
                             </div>
                         </div>
+                        <div class="guide">공지 게시 시간에 함께 노출 시작됩니다.</div>
                     </li>
-                    <li class="lb">팝업 종류</li>
+                    <li class="lb lb-one">팝업 이미지</li>
                     <li>
-                        <div class="inline">
-                            <div class="radio">
-                                <input type="radio" name="ptype" value="1" id="ptype1" checked>
-                                <label for="ptype2">텍스트</label>
-                            </div>
-                            <div class="radio">
-                                <input type="radio" name="type" value="2" id="ptype2">
-                                <label for="ptype2">이미지</label>
-                            </div>
+                        <div class="attach-img">
+                            <label>
+                                <img src="" id="previewImg" style="display:none">
+                                <input type="file" id="attachImg" accept="image/*">
+                                <span>추가</span>
+                            </label>
                         </div>
                     </li>
-                    <li class="lb lb-one">팝업 내용</li>
+                    <li class="lb lb-one">팝업 종료일시</li>
                     <li>
-                        <textarea class="textarea" name="" id="" cols="30" rows="10"></textarea>
-                    </li>
-                    <li class="lb lb-one">팝업 노출 기간</li>
-                    <li>
-                        <div class="inline">
-                            <input type="date" class="input"> ~ <input type="date" class="input">
+                        <div class="frm-date inline">
+                            <div class="date">
+                                <input type="text" class="input input-date"> 
+                                <span class="icon calendar">
+                                    <span class="sr-only">달력</span>
+                                </span>
+                            </div>
+                            <div class="hour">
+                                <select class="select">
+                                    <option value="">00</option>
+                                </select>
+                                시
+                            </div>
+                            <div class="time">
+                                <select class="select">
+                                    <option value="">00</option>
+                                </select>
+                                분
+                            </div>
                         </div>
                     </li>
                 </ul>
@@ -84,8 +122,18 @@
     </main>
 
     @@include('./common/admin_scripts.html')
+    <!-- lite 버전 - without bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
     <script>
-       
+       $(document).ready(function() {
+        $('.editor').summernote({
+            width: '100%',
+            height: 300,
+            codemirror: {
+                theme: 'monokai'
+            }
+        });
+       })
     </script>
   </body>
 </html>

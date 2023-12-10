@@ -49,6 +49,14 @@ gulp.task("filesCopy", function () {
   });
 });
 
+// vendor copy
+gulp.task('vendorCopy', function() {
+  return new Promise((resolve) => {
+    gulp.src("src/assets/vendor/**/*.*").pipe(gulp.dest("dist/assets/vendor"));
+    resolve();
+  })
+})
+
 // script copy
 gulp.task("scriptCopy", function () {
   return new Promise((resolve) => {
@@ -147,6 +155,7 @@ gulp.task(
     "filesCopy",
     "imagesCopy",
     "scriptCopy",
+    "vendorCopy",
     "mapCopy",
     "browserSync",
     "watch"

@@ -307,3 +307,13 @@ input[type="text"]:focus {
     text-align: center;
   }
 }
+
+.form-flex {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  > div {
+    border: 1px dashed #f9f9f9;
+    padding: 0.5rem;
+  }
+}

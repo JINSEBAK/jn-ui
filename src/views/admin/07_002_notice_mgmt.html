@@ -12,61 +12,33 @@
             <!-- search -->
             <div class="search">
 
-                <div class="item item-col-5">
+                <div class="item">
                     <div class="label">
                         <label for="">구분</label>
                     </div>
                     <div class="inline">
-                        <select class="select">
-                            <option value="">전체</option>
-                            <option value="">일반</option>
-                            <option value="">시스템</option>
-                        </select>
-                        <div class="checkbox">
-                            <input type="checkbox" id="imprt">
-                            <label for="imprt">중요</label>
-                        </div>
+                        <label class="radio">
+                          <input type="radio" name="ntcType" value="0" checked>
+                          <span>전체</span>
+                        </label>
+                        <label class="radio">
+                          <input type="radio" name="ntcType" value="1">
+                          <span>일반</span>
+                        </label>
+                        <label class="radio">
+                          <input type="radio" name="ntcType" value="2">
+                          <span>이벤트</span>
+                        </label>
+                        <label class="radio">
+                          <input type="radio" name="ntcType" value="3">
+                          <span>시스템</span>
+                        </label>
                     </div>
                 </div>
 
                 <div class="item item-col-5">
                     <div class="label">
-                        <label for="">키워드</label>
-                    </div>
-                    <div class="inline">
-                        <select class="select">
-                            <option value="">제목</option>
-                            <option value="">내용</option>
-                            <option value="">등록자</option>
-                            <option value="">최종 수정자</option>
-                        </select>
-                        <input type="text" class="input" placeholder="입력">
-                    </div>
-                </div>
-
-                <div class="item item-col-5">
-                    <div class="label">
-                        <label for="">팝업</label>
-                    </div>
-                    <div class="inline">
-                        <div class="radio">
-                            <input type="radio" name="status" value="1" id="status1" checked>
-                            <label for="status1">전체</label>
-                        </div>
-                        <div class="radio">
-                            <input type="radio" name="status" value="2" id="status2">
-                            <label for="status2">미적용</label>
-                        </div>
-                        <div class="radio">
-                            <input type="radio" name="status" value="3" id="status3">
-                            <label for="status3">적용</label>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="item item-col-5">
-                    <div class="label">
-                        <label for="">팝업 종류</label>
+                        <label for="">팝업 공지</label>
                     </div>
                     <div class="inline">
                         <div class="radio">
@@ -75,14 +47,49 @@
                         </div>
                         <div class="radio">
                             <input type="radio" name="type" value="2" id="type2">
-                            <label for="type2">이미지</label>
+                            <label for="type2">사용 안 함</label>
                         </div>
                         <div class="radio">
                             <input type="radio" name="type" value="3" id="type3">
-                            <label for="type3">텍스트</label>
+                            <label for="type3">사용</label>
                         </div>
                     </div>
                 </div>
+
+                <div class="item item-col-5">
+                  <div class="label">
+                      <label for="">PUSH 공지</label>
+                  </div>
+                  <div class="inline">
+                      <div class="radio">
+                          <input type="radio" name="push" value="1" id="type1" checked>
+                          <label for="type1">전체</label>
+                      </div>
+                      <div class="radio">
+                          <input type="radio" name="push" value="2" id="type2">
+                          <label for="type2">사용 안 함</label>
+                      </div>
+                      <div class="radio">
+                          <input type="radio" name="push" value="3" id="type3">
+                          <label for="type3">사용</label>
+                      </div>
+                  </div>
+              </div>
+
+                <div class="item">
+                  <div class="label">
+                      <label for="">키워드</label>
+                  </div>
+                  <div class="inline">
+                      <select class="select">
+                          <option value="">제목</option>
+                          <option value="">내용</option>
+                          <option value="">등록자</option>
+                          <option value="">최종 수정자</option>
+                      </select>
+                      <input type="text" class="input input-keyword" placeholder="입력">
+                  </div>
+               </div>
       
 
                 @@include('./common/search_period.html')
@@ -103,6 +110,17 @@
                 <div class="list-body">
                   <table class="tb-data" summary="번호,등록일, 구분, 제목, 팝업, 종류, 최종수정자, 최종수정일시로 구분되는 표">
                     <caption>번호 등록일 구분 제목 팝업 종류 최종수정자 최종수정일시</caption>
+                    <colgroup>
+                      <col style="width: 5%">
+                      <col style="width: 5%">
+                      <col style="width: 15%">
+                      <col style="width: 10%">
+                      <col style="width: auto">
+                      <col style="width: 10%">
+                      <col style="width: 10%">
+                      <col style="width: 15%">
+                      <col style="width: 10%">
+                    </colgroup>
                     <thead>
                       <tr>
                         <th scope="col">
@@ -117,8 +135,8 @@
                         <th scope="col">제목</th>
                         <th scope="col">팝업</th>
                         <th scope="col">종류</th>
-                        <th scope="col">최종 수정자</th>
                         <th scope="col">최종 수정일시</th>
+                        <th scope="col">최종 수정자</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -131,10 +149,10 @@
                             <label class="badge badge-imp">중요</label>
                             10월 20일 (금) 시스템 점검 안내 시스템 점검 안내  시스템 점검 안내 시스템 점검 안내  시스템 점검 안내 시스템 점검 안내  시스템 점검 안내 시스템 점검 안내  시스템 점검 안내 시스템 점검 안내  시스템 점검 안내 시스템 점검 안내  시스템 점검 안내 시스템 점검 안내  시스템 점검 안내 시스템 점검 안내 
                         </div></td>
-                        <td>적용</td>
-                        <td>텍스트</td>
-                        <td>admin_id</td>
+                        <td>-</td>
+                        <td>예약</td>
                         <td>yyyy-mm-dd hh:mm</td>
+                        <td>admin_id</td>
                       </tr>
                       <tr>
                         <td><input type="checkbox"></td>
@@ -142,10 +160,10 @@
                         <td>yyyy-mm-dd</td>
                         <td>시스템</td>
                         <td><div class="ellipsis">xxxx@xxx.co.kr</div></td>
-                        <td>적용</td>
-                        <td>텍스트</td>
-                        <td>admin_id</td>
+                        <td>노출</td>
+                        <td>발송완료</td>
                         <td>yyyy-mm-dd hh:mm</td>
+                        <td>admin_id</td>
                       </tr>
                       <tr>
                         <td><input type="checkbox"></td>
@@ -153,10 +171,10 @@
                         <td>yyyy-mm-dd</td>
                         <td>시스템</td>
                         <td><div class="ellipsis">xxxx@xxx.co.kr</div></td>
-                        <td>적용</td>
-                        <td>텍스트</td>
-                        <td>admin_id</td>
+                        <td>노출</td>
+                        <td>-</td>
                         <td>yyyy-mm-dd hh:mm</td>
+                        <td>admin_id</td>
                       </tr>
                       <tr>
                         <td><input type="checkbox"></td>
@@ -164,10 +182,10 @@
                         <td>yyyy-mm-dd</td>
                         <td>시스템</td>
                         <td><div class="ellipsis">xxxx@xxx.co.kr</div></td>
-                        <td>적용</td>
-                        <td>텍스트</td>
-                        <td>admin_id</td>
+                        <td>-</td>
+                        <td>-</td>
                         <td>yyyy-mm-dd hh:mm</td>
+                        <td>admin_id</td>
                       </tr>
                       <tr>
                         <td><input type="checkbox"></td>
@@ -175,10 +193,10 @@
                         <td>yyyy-mm-dd</td>
                         <td>시스템</td>
                         <td><div class="ellipsis">xxxx@xxx.co.kr</div></td>
-                        <td>적용</td>
-                        <td>텍스트</td>
-                        <td>admin_id</td>
+                        <td>-</td>
+                        <td>-</td>
                         <td>yyyy-mm-dd hh:mm</td>
+                        <td>admin_id</td>
                       </tr>
                       <tr>
                         <td><input type="checkbox"></td>
@@ -186,10 +204,10 @@
                         <td>yyyy-mm-dd</td>
                         <td>시스템</td>
                         <td><div class="ellipsis">xxxx@xxx.co.kr</div></td>
-                        <td>적용</td>
-                        <td>텍스트</td>
-                        <td>admin_id</td>
+                        <td>-</td>
+                        <td>-</td>
                         <td>yyyy-mm-dd hh:mm</td>
+                        <td>admin_id</td>
                       </tr>
                       <tr>
                         <td><input type="checkbox"></td>
@@ -197,10 +215,10 @@
                         <td>yyyy-mm-dd</td>
                         <td>시스템</td>
                         <td><div class="ellipsis">xxxx@xxx.co.kr</div></td>
-                        <td>적용</td>
-                        <td>텍스트</td>
-                        <td>admin_id</td>
+                        <td>-</td>
+                        <td>-</td>
                         <td>yyyy-mm-dd hh:mm</td>
+                        <td>admin_id</td>
                       </tr>
                       <tr>
                         <td><input type="checkbox"></td>
@@ -208,10 +226,10 @@
                         <td>yyyy-mm-dd</td>
                         <td>시스템</td>
                         <td><div class="ellipsis">xxxx@xxx.co.kr</div></td>
-                        <td>적용</td>
-                        <td>텍스트</td>
-                        <td>admin_id</td>
+                        <td>-</td>
+                        <td>-</td>
                         <td>yyyy-mm-dd hh:mm</td>
+                        <td>admin_id</td>
                       </tr>
                       <tr>
                         <td><input type="checkbox"></td>
@@ -219,10 +237,10 @@
                         <td>yyyy-mm-dd</td>
                         <td>시스템</td>
                         <td><div class="ellipsis">xxxx@xxx.co.kr</div></td>
-                        <td>적용</td>
-                        <td>텍스트</td>
-                        <td>admin_id</td>
+                        <td>-</td>
+                        <td>-</td>
                         <td>yyyy-mm-dd hh:mm</td>
+                        <td>admin_id</td>
                       </tr>
                       <tr>
                         <td><input type="checkbox"></td>
@@ -230,10 +248,10 @@
                         <td>yyyy-mm-dd</td>
                         <td>시스템</td>
                         <td><div class="ellipsis">xxxx@xxx.co.kr</div></td>
-                        <td>적용</td>
-                        <td>텍스트</td>
-                        <td>admin_id</td>
+                        <td>-</td>
+                        <td>-</td>
                         <td>yyyy-mm-dd hh:mm</td>
+                        <td>admin_id</td>
                       </tr>
                     </tbody>
                   </table>
