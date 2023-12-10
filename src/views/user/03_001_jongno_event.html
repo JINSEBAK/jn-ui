@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    @@include('../common/head.html')
+    <link rel="stylesheet" href="../assets/css/now.css"></link>
+  </head>
+  <body class="now detail">
+    @@include('../common/header_sub.html', { title: '행사'})
+
+    <div class="container inner-full-padd">
+
+        <div class="brd-search">
+            <span class="opts"></span>
+            <span class="icon srch" class="btn-popup" data-target="popupBtmSheet" id="btnFilter">
+                <span class="sr-only">검색</span>
+            </span>
+        </div>
+
+        <!-- list -->
+        <div>
+            <ul class="brd-list">
+                <li class="brd-list_item">
+                    <a href="#">
+                        <span class="badge end">교통행정과</span>
+                        <span class="brd-title">종로형 주민자체 모델 수립을 위한 공청회 개회</span>
+                        <span class="brd-date">2023-08-24</span>
+                    </a>
+                </li>
+                <li class="brd-list_item">
+                    <a href="#">
+                        <span class="badge end">과명</span>
+                        <span class="brd-title">[사직동 소식] 주민 친목 화합의 장 사직동에서 함께 느껴보세요!</span>
+                        <span class="brd-date">2023-08-21</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- aside -->
+    <aside id="aside" class="popup-bg popup-closable">
+        <div class="popup popup-slide" id="popupBtmSheet">
+            <div class="btm-sheet">
+                <div class="btm-sheet_body">
+                    <div class="btns">
+                        <button type="button" class="btn btn-text reset">초기화</button>
+                        <button type="button" class="btn btn-text">확인</button>
+                    </div>
+                    <div class="select">
+                        <label>구분</label>
+                        <button type="button" class="btn btn-select" data-target="selectFilter" id="filter2">제목</button>
+                    </div>
+                    <div class="input">
+                        <input type="text" placeholder="검색어 입력">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    @@include('../common/script.html')
+    <script>
+        const aside = document.getElementById('aside')
+        const popupBtmSheet = document.getElementById('popupBtmSheet')
+        const btnFilter = document.getElementById('btnFilter')
+
+        btnFilter.onclick = function() {
+            aside.classList.add('on')
+            popupBtmSheet.classList.add('show')
+        }
+    </script>
+  </body>
+</html>
