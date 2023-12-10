@@ -414,3 +414,70 @@
     }
   }
 }
+
+// 조직도 
+.org-chart {
+  .group {
+    flex: 1 0 45%;
+    border: 2px solid #A1526B;
+    border-radius: 10px;
+    &-box {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.5rem;
+      font-size: 0.875rem;
+    }
+    &-top {
+      width: 100%;
+      border: 1px solid red;
+      .title {
+        color: #fff;
+        border-radius: 10px;
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+        padding: 1rem 36rem;
+        width: 110px;
+      }
+    }
+    &-hd {
+      border-radius: 7px;
+      color: #000000;
+      line-height: 1.25rem;
+      text-align: center;
+      padding: 10px;
+    }
+    ul {
+      padding: 1rem 2.25rem;
+      li {
+        line-height: 1.5rem;
+        list-style: disc;
+      }
+    }
+    
+  }
+  .type-a {
+    .group {
+      &-hd {
+        color: #fff;
+        background-color: #A1526B;
+        border-radius: 7px 7px 0 0;
+      }
+    }
+  }
+  .type-b {
+    .group {
+      border-color: #46536F;
+      &-top {
+        .title {
+          background-color: #46536F;
+        }
+      }
+    }
+  }
+  .type-c {
+    .group {
+      border-color: #877379;
+    }
+  }
+}
