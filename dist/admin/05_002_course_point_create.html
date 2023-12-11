@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>종로 관리자</title>
+    <link rel="stylesheet" href="../assets/vendor/jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="../assets/css/reset.css">
+    <link rel="stylesheet" href="../assets/css/admin.css">
+</head>
+  <body>
+    <header id="header">
+    <a href="00_002_dashboard.html" class="logo">
+        종로 스마트시티앱 관리자사이트
+    </a>
+    <div class="opt">
+        <button type="button" class="btn btn-text">yesman 님</button>
+    </div>
+    <div class="opt">
+        <button type="button" class="btn btn-icon icon alarm"></button>
+        <div class="dropdown">
+            <div class="dropdown-alarm">
+                <h4 class="title">알림</h4>
+                <button type="button" class="btn btn-text">모두 읽음 처리</button>
+                <ul class="lists">
+                    <li>
+                        새로운 1:1 문의가 도착했습니다. 
+                        <span class="date">2023-10-31 10:30</span>
+                    </li>
+                    <li>
+                        권한이 관리자로 변경되었습니다.
+                        <span class="date">2023-10-31 10:30</span>
+                    </li>
+                    <li>
+                        가입이 승인되었습니다.
+                        <span class="date">2023-10-31 10:30</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="opt">
+        <button type="button" class="btn btn-text">로그아웃</button>
+    </div>
+</header>
+    <nav id="nav">
+  <ul class="gnb" id="gnb">
+    <li class="">
+      <a href="#">menu 1</a>
+    </li>
+    <li class="">
+      <a href="#">Depth 1</a>
+      <ul class="sub">
+        <li>
+          <a href="#">menu 1</a>
+        </li>
+        <li>
+          <a href="#">menu 2</a>
+        </li>
+        <li>
+          <a href="#">menu 3</a>
+        </li>
+        <li>
+          <a href="#">menu 4</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+    <main class="main">
+        <div class="page-title">
+    <h2>거점 등록</h2>
+    <p class="des"></p>
+    <ol class="breadcrumb">
+        <li></li>
+        <li></li>
+    </ol>
+</div>
+        <div class="content">
+
+            <div class="detail">
+                <ul class="lik-tb">
+                    <li class="lb lb-one required">거점 명</li>
+                    <li>
+                        <div class="inline">
+                            <input type="text" class="input" placeholder="입력">
+                        </div>
+                    </li>
+                    <li class="lb lb-one required">이미지</li>
+                    <li>
+                        <div class="attach-img">
+                            <label>
+                                <img src="" id="previewImg" style="display:none">
+                                <input type="file" id="attachImg" accept="image/*">
+                                <span>추가</span>
+                            </label>
+                        </div>
+                    </li>
+                    <li class="lb lb-one required">거점 설명</li>
+                    <li>
+                        <textarea class="textarea" name="" id="" cols="30" rows="5" placeholder="입력"></textarea>
+                    </li>
+                    <li class="lb lb-one">운영 정보</li>
+                    <li>
+                        <textarea class="textarea" name="" id="" cols="30" rows="5" placeholder="거점 운영일 및 시간 입력"></textarea>
+                    </li>
+                    <li class="lb lb-one required">위치 정보</li> 
+                    <li>
+                        <div class="point-location">
+                            <div class="loc">
+                                <label for="address">주소</label>
+                                <input type="text" class="input" readonly id="address">
+                                <button type="button" class="btn btn-default">주소검색</button>
+                            </div>
+                            <div class="loc">
+                                <label for="longitude">경도(x)</label>
+                                <input type="text" class="input" id="longitude">
+                            </div>
+                            <div class="loc">
+                                <label for="latitude">위도(y)</label>
+                                <input type="text" class="input" id="latitude">
+                            </div>
+                        </div>
+                        <div class="map">map</div>
+                    </li>
+                   
+                </ul>
+                
+            </div>
+
+            <div class="btns center">
+                <button type="button" class="btn btn-third">취소</button>
+                <button type="button" class="btn btn-second">등록</button>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="../../../assets/vendor/jquery-ui/jquery-ui.min.js"></script>
+<script src="../../../assets/js/admin.js"></script>
+  </body>
+</html>

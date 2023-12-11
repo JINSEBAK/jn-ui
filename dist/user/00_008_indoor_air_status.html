@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="../assets/css/reset.css"></link>
+<link rel="stylesheet" href="../assets/css/style.css"></link>
+<title>종로 스마트시티 모바일 앱</title>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="../assets/css/home.css"></link>
+  </head>
+  <body class="more" style="margin-bottom: 0">
+    <header id="header" class="sub">
+  <button type="button" class="btn btn-icon" id="btnBack">
+    <img src="../assets/images/icon_back.svg" alt="" />
+    <span class="sr-only">뒤로가기</span>
+  </button>
+  <a type="button" class="btn btn-icon" id="btnHome">
+    <img src="../assets/images/icon_home.svg" alt="" />
+    <span class="sr-only">홈 바로가기</span>
+  </a>
+  <h2 class="title"><span>실내 공기질 현황</span></h2>
+
+  <button type="button" class="btn btn-icon icon info">
+    <span class="sr-only">추가 정보 보기</span>
+  </button>
+  
+</header>
+
+    <div class="container">
+        <div class="one-maps">
+            <div class="info">
+                사용자의 위치를 기반으로 실내 공기질 측정 장소를 표시합니다.<br>선택 시, 해당 장소의 실내 공기질을 확인할 수 있습니다.
+            </div>
+            <div></div>
+            <!-- TODO: 개발시에는 지도 반영 -->
+            <!-- TODO: 지도 사이즈에 따라 height 조정 필요 -->
+            <button type="button" class="btn btn-icon" id="btnMarker" style="position:absolute;left: 50%;top:50%;z-index:10;transform:scale(1.5)">
+                <span class="icon map">
+                    <span class="sr-only">샘플 마커</span>
+                </span>
+            </button>
+            <img src="../../assets/images/sample/sample_05.png" alt="샘플 지도 이미지" style="position: absolute;left: 0;width: 100%;z-index:9">
+        </div>
+    </div>
+
+    <!-- 인포 팝업 -->
+    <aside class="poup-bg popup-closable top-flex">
+        <div class="popup popup-content" id="selectContent">
+            <div class="top">
+                <button type="button" class="btn btn-icon icon close">close</button>
+              </div>
+              <div class="contents">
+                <div class="air-stnd">
+                    <h5>초미세먼지 (PM2.5)</h5>
+                    <p>입자의 크기가 2.5㎍이하인 먼지</p>
+                    <ul>
+                        <li>
+                            <span class="status lv1">좋음</span>
+                            <span>0~15</span>
+                        </li>
+                        <li>
+                            <span class="status lv2">보통</span>
+                            <span>16~36</span>
+                        </li>
+                        <li>
+                            <span class="status lv3">나쁨</span>
+                            <span>36~75</span>
+                        </li>
+                        <li>
+                            <span class="status lv4">매우나쁨</span>
+                            <span>76~</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="air-stnd">
+                    <h5>미세먼지 (PM10)</h5>
+                    <p>입자의 크기가 10㎍이하인 먼지</p>
+                    <ul>
+                        <li>
+                            <span class="status lv1">좋음</span>
+                            <span>0~30</span>
+                        </li>
+                        <li>
+                            <span class="status lv2">보통</span>
+                            <span>31~80</span>
+                        </li>
+                        <li>
+                            <span class="status lv3">나쁨</span>
+                            <span>81~150</span>
+                        </li>
+                        <li>
+                            <span class="status lv4">매우나쁨</span>
+                            <span>151~</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="air-stnd">
+                    <h5>오존(O₃)</h5>
+                    <p>대기 중에 배출된 NOx와 휘발성유기화합물(VOCs) 등이 자외선과 광화학 반응을 일으켜 생성된 PAN, 알데하이드, Acrolein 등의 광화학 옥시던트의 일종으로 2차 오염물질</p>
+                    <ul>
+                        <li>
+                            <span class="status lv1">좋음</span>
+                            <span>0-0.03</span>
+                        </li>
+                        <li>
+                            <span class="status lv2">보통</span>
+                            <span>0.031-0.09</span>
+                        </li>
+                        <li>
+                            <span class="status lv3">나쁨</span>
+                            <span>0.091-0.15</span>
+                        </li>
+                        <li>
+                            <span class="status lv4">매우나쁨</span>
+                            <span>0.151-</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="air-stnd">
+                    <h5>일산화탄소(CO)</h5>
+                    <p>무색, 무취의 유독성 가스로서 연료속의 탄소성분이 불완전 연소되었을 때 발생</p>
+                    <ul>
+                        <li>
+                            <span class="status lv1">좋음</span>
+                            <span>0-2</span>
+                        </li>
+                        <li>
+                            <span class="status lv2">보통</span>
+                            <span>2-9</span>
+                        </li>
+                        <li>
+                            <span class="status lv3">나쁨</span>
+                            <span>9-15</span>
+                        </li>
+                        <li>
+                            <span class="status lv4">매우나쁨</span>
+                            <span>15-</span>
+                        </li>
+                    </ul>
+                </div>
+                <p class="guide">*한국환경공단 기준</p>
+              </div>
+        </div>
+    </aside>
+
+    <aside id="aside" class="popup-bg popup-closable on">
+        <div class="popup popup-slide show" id="popupBtmSheet">
+            <div class="btm-sheet">
+                <button type="button" class="btn btn-icon icon close">
+                    <span class="sr-only">팝업닫기</span>
+                </button>
+                <div class="btm-sheet_body air">
+
+                    <div class="pbl-title">
+						<strong>국공립 어린이집</strong>
+						<span class="addr">
+							서울시 종로구 수송동
+						</span>
+					</div>
+
+                    <div class="air-info">
+                        <div class="air-info_brd">
+                            <div class="bar-box">
+                                <div class="bar vertical item_alarm_blue">
+                                    <div class="value"></div>
+                                </div>
+                            </div>
+                            <div class="air-info_txt">
+                                <span>미세먼지</span>
+                                <span>좋음</span>
+                                <span>4</span>
+                            </div>
+                        </div>
+                        <div class="air-info_brd">
+                            <div class="bar-box">
+                                <div class="bar vertical  item_alarm_green">
+                                    <div class="value"></div>
+                                </div>
+                            </div>
+                            <div class="air-info_txt">
+                                <span>초미세먼지</span>
+                                <span>보통</span>
+                                <span>12</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="air-info">
+                        <div class="air-info_brd">
+                            <div class="bar-box">
+                                <div class="bar vertical item_alarm_blue">
+                                    <div class="value"></div>
+                                </div>
+                            </div>
+                            <div class="air-info_txt">
+                                <span>이산화탄소</span>
+                                <span>좋음</span>
+                                <span>4</span>
+                            </div>
+                        </div>
+                        <div class="air-info_brd">
+                            <div class="bar-box">
+                                <div class="bar vertical  item_alarm_green">
+                                    <div class="value"></div>
+                                </div>
+                            </div>
+                            <div class="air-info_txt">
+                                <span>온도</span>
+                                <span>보통</span>
+                                <span>12</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="air-info">
+                        <div class="air-info_brd">
+                            <div class="bar-box">
+                                <div class="bar vertical item_alarm_blue">
+                                    <div class="value"></div>
+                                </div>
+                            </div>
+                            <div class="air-info_txt">
+                                <span>습도</span>
+                                <span>좋음</span>
+                                <span>4</span>
+                            </div>
+                        </div>
+                        <div class="air-info_brd">
+                            <div class="bar-box">
+                                <div class="bar vertical  item_alarm_green">
+                                    <div class="value"></div>
+                                </div>
+                            </div>
+                            <div class="air-info_txt">
+                                <span>소음</span>
+                                <span>보통</span>
+                                <span>12</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+             </div>
+        </div>
+    </aside>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="../../assets/js/common.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        const btnMarker = document.getElementById('btnMarker')
+        const aside = document.getElementById('aside')
+        const popupBtmSheet = document.getElementById('popupBtmSheet')
+
+        btnMarker.onclick = function() {
+            aside.classList.add('on')
+            popupBtmSheet.classList.add('show')
+        }
+    </script>
+  </body>
+</html>

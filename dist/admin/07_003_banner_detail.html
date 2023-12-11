@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>종로 관리자</title>
+    <link rel="stylesheet" href="../assets/vendor/jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="../assets/css/reset.css">
+    <link rel="stylesheet" href="../assets/css/admin.css">
+</head>
+  <body>
+    <header id="header">
+    <a href="00_002_dashboard.html" class="logo">
+        종로 스마트시티앱 관리자사이트
+    </a>
+    <div class="opt">
+        <button type="button" class="btn btn-text">yesman 님</button>
+    </div>
+    <div class="opt">
+        <button type="button" class="btn btn-icon icon alarm"></button>
+        <div class="dropdown">
+            <div class="dropdown-alarm">
+                <h4 class="title">알림</h4>
+                <button type="button" class="btn btn-text">모두 읽음 처리</button>
+                <ul class="lists">
+                    <li>
+                        새로운 1:1 문의가 도착했습니다. 
+                        <span class="date">2023-10-31 10:30</span>
+                    </li>
+                    <li>
+                        권한이 관리자로 변경되었습니다.
+                        <span class="date">2023-10-31 10:30</span>
+                    </li>
+                    <li>
+                        가입이 승인되었습니다.
+                        <span class="date">2023-10-31 10:30</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="opt">
+        <button type="button" class="btn btn-text">로그아웃</button>
+    </div>
+</header>
+    <nav id="nav">
+  <ul class="gnb" id="gnb">
+    <li class="">
+      <a href="#">menu 1</a>
+    </li>
+    <li class="">
+      <a href="#">Depth 1</a>
+      <ul class="sub">
+        <li>
+          <a href="#">menu 1</a>
+        </li>
+        <li>
+          <a href="#">menu 2</a>
+        </li>
+        <li>
+          <a href="#">menu 3</a>
+        </li>
+        <li>
+          <a href="#">menu 4</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+    <main class="main">
+        <div class="page-title">
+    <h2>메인 배너 상세</h2>
+    <p class="des"></p>
+    <ol class="breadcrumb">
+        <li></li>
+        <li></li>
+    </ol>
+</div>
+        <div class="content">
+
+            <div class="detail">
+                <ul class="lik-tb">
+                    <li class="lb lb-one">배너 명</li>
+                    <li>종로 구민의 날</li>
+                    <li class="lb lb-one">이미지</li>
+                    <li>
+                        <div class="thumb-img">
+                            <img src="../../assets/images/sample/sample_07.jpeg" alt="">
+                            <button type="button" class="btn-viewer">보기</button>
+                        </div>
+                    </li>
+                    <li class="lb lb-one">링크 종류</li>
+                    <li>내부</li>
+                    <li class="lb lb-one">링크 URL</li>
+                    <li>/userMain</li>
+                    <li class="lb lb-one">노출 여부</li>
+                    <li>노출 (기간노출)</li>
+                    <li class="lb lb-one">노출 기간</li>
+                    <li>
+                        2023-01-21 ~ 2023-12-31
+                        <ul class="guide">
+                            <li>같은 기간에 메인 배너는 최대 5개, 서브 배너는 최대 3개 노출 설정 가능합니다.</li>
+                            <li>노출 기간 만료 시 미노출 상태로 자동 변경됩니다.</li>
+                        </ul>
+                    </li>
+                    <li class="lb">등록일시</li>
+                    <li>2023-10-30 10:30</li>
+                    <li class="lb">등록자</li>
+                    <li>master_01</li>
+                </ul>
+
+                <ul class="lik-tb">
+                    <li class="lb">최종 수정일시</li>
+                    <li>2023-10-30 10:30</li>
+                    <li class="lb">최종 수정자</li>
+                    <li>master_01</li>
+                </ul>
+            </div>
+
+            <div class="btns detail">
+                <button type="button" class="btn btn-default">목록</button>
+                <button type="button" class="btn btn-third">삭제</button>
+                <button type="button" class="btn btn-second">수정</button>
+            </div>
+
+        </div>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="../../../assets/vendor/jquery-ui/jquery-ui.min.js"></script>
+<script src="../../../assets/js/admin.js"></script>
+    <script>
+        $(function() {
+            // tab 이벤트
+            $(".tab").on("click", function () {
+                // 보여줄 tab-content id 가져오기
+                const target = $(this).attr("aria-controls");
+
+                // 탭 활성화 처리
+                $(".tab").removeClass("active");
+                $(this).addClass("active");
+
+                // 다른 탭은 키보드 탭으로 접근하지 않게 해줌 (tabindex=-1)
+                $(".tab").attr("tabindex", -1);
+                $(this).removeAttr("tabindex");
+
+                $(".tab-content").attr("hidden", true);
+                $("#" + target).removeAttr("hidden");
+            });
+        })
+    </script>
+  </body>
+</html>

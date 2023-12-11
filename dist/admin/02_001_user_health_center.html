@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>종로 관리자</title>
+    <link rel="stylesheet" href="../assets/vendor/jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="../assets/css/reset.css">
+    <link rel="stylesheet" href="../assets/css/admin.css">
+</head>
+  <body>
+    <header id="header">
+    <a href="00_002_dashboard.html" class="logo">
+        종로 스마트시티앱 관리자사이트
+    </a>
+    <div class="opt">
+        <button type="button" class="btn btn-text">yesman 님</button>
+    </div>
+    <div class="opt">
+        <button type="button" class="btn btn-icon icon alarm"></button>
+        <div class="dropdown">
+            <div class="dropdown-alarm">
+                <h4 class="title">알림</h4>
+                <button type="button" class="btn btn-text">모두 읽음 처리</button>
+                <ul class="lists">
+                    <li>
+                        새로운 1:1 문의가 도착했습니다. 
+                        <span class="date">2023-10-31 10:30</span>
+                    </li>
+                    <li>
+                        권한이 관리자로 변경되었습니다.
+                        <span class="date">2023-10-31 10:30</span>
+                    </li>
+                    <li>
+                        가입이 승인되었습니다.
+                        <span class="date">2023-10-31 10:30</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="opt">
+        <button type="button" class="btn btn-text">로그아웃</button>
+    </div>
+</header>
+    <nav id="nav">
+  <ul class="gnb" id="gnb">
+    <li class="">
+      <a href="#">menu 1</a>
+    </li>
+    <li class="">
+      <a href="#">Depth 1</a>
+      <ul class="sub">
+        <li>
+          <a href="#">menu 1</a>
+        </li>
+        <li>
+          <a href="#">menu 2</a>
+        </li>
+        <li>
+          <a href="#">menu 3</a>
+        </li>
+        <li>
+          <a href="#">menu 4</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+    <main class="main">
+        <div class="page-title">
+    <h2>건강이랑 서비스 권역 등록</h2>
+    <p class="des"></p>
+    <ol class="breadcrumb">
+        <li></li>
+        <li></li>
+    </ol>
+</div>
+        <div class="content">
+
+            <div class="detail">
+                <div class="lik-tb_title">센터 정보</div>
+                <ul class="lik-tb">
+                    <li class="lb">권역</li>
+                    <li>
+                        <select class="select">
+                            <option value="">1권역</option>
+                            <option value="">2권역</option>
+                            <option value="">3권역</option>
+                            <option value="">4권역</option>
+                            <option value="">5권역</option>
+                            <option value="">6권역</option>
+                        </select>
+                    </li>
+                    <li class="lb">담당자</li>
+                    <li>
+                        <button type="button" class="btn btn-second small">선택</button>
+                    </li>
+                    <li class="lb">연락처</li>
+                    <li>
+                        <div class="inline">
+                            <input type="text" class="input" placeholder="입력">
+                        </div>
+                    </li>
+                    <li class="lb">이메일</li>
+                    <li>
+                        <div class="inline">
+                            <input type="email" class="input" placeholder="이메일 입력">
+                        </div>
+                    </li>
+                    <li class="lb">위치</li>
+                    <li>
+                        <div class="inline">
+                            <input type="text" class="input" placeholder="센터 위치 입력">
+                        </div>
+                    </li>
+                    <li class="lb">비고</li>
+                    <li>
+                        <div class="inline">
+                            <input type="text" class="input" placeholder="기타 사항 입력">
+                        </div>
+                    </li>
+                </ul>
+
+                <div class="lik-tb_title">관할 구역</div>
+                <ul class="lik-tb">
+                    <li class="lb lb-one">관할 구역</li>
+                    <li>
+                        <button type="button" class="btn btn-second small" data-role="popup" data-target="popupStatus">추가</button>
+                        <div class="checkround-box">
+                            <label class="checkround">
+                                <input type="checkbox" checked>
+                                <span>교남동</span>
+                                <span class="icon close">
+                                    <span class="sr-only">삭제</span>
+                                </span>
+                            </label>
+                            <label class="checkround">
+                                <input type="checkbox" checked>
+                                <span>무악동</span>
+                                <span class="icon close">
+                                    <span class="sr-only">삭제</span>
+                                </span>
+                            </label>
+                            <label class="checkround">
+                                <input type="checkbox" checked>
+                                <span>사직동</span>
+                                <span class="icon close">
+                                    <span class="sr-only">삭제</span>
+                                </span>
+                            </label>
+                            <label class="checkround">
+                                <input type="checkbox" checked>
+                                <span>청운효자동</span>
+                                <span class="icon close">
+                                    <span class="sr-only">삭제</span>
+                                </span>
+                            </label>
+                        </div>
+                        <button type="button" class="btn btn-default small">선택 초기화</button>
+
+                    </li>
+                </ul>
+
+            </div>
+
+            <div class="btns center">
+                <button type="button" class="btn btn-third">취소</button>
+                <button type="button" class="btn btn-second">등록</button>
+            </div>
+
+        </div>
+    </main>
+
+    <aside class="popup-bg popup-closable on">
+    <div class="popup show" id="popupStatus">
+        <div class="popup-head">
+            지역 선택 | 행정동
+
+            <button type="button" class="btn btn-icon icon close btn-popup-close">
+                <span class="sr-only">팝업 닫기</span>
+              </button>
+        </div>
+        <div class="popup-body">
+            <div class="detail">
+                <div class="lik-tb_title">동 검색</div>
+                <ul class="lik-tb">
+                    <li class="lb lb-one">동 검색</li>
+                    <li>
+                        <div class="inline dropdown-search">
+                            <input type="text" class="input" placeholder="동 이름 검색">
+                            <div class="d-search" style="display:none">
+                                <ul>
+                                    <li class="d-search_item">
+                                        <button type="button"><em class="highlight">이</em>화동</button>
+                                    </li>
+                                    <li class="d-search_item">
+                                        <button type="button">익선동</button>
+                                    </li>
+                                    <li class="d-search_item">
+                                        <button type="button">메롱동</button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+
+                <div class="lik-tb_title">관할 구역</div>
+                <ul class="lik-tb">
+                    <li class="lb lb-one">직접 선택 <small class="guide">관할 지역은 중복하여 선택할 수 없습니다.</small></li>
+                    <li>
+                        <div class="checkround-box">
+                            <label class="checkround">
+                                <input type="checkbox">
+                                <span>가회동</span>
+                            </label>
+                            <label class="checkround">
+                                <input type="checkbox">
+                                <span>교남동</span>
+                            </label>
+                            <label class="checkround">
+                                <input type="checkbox">
+                                <span>무악동</span>
+                            </label>
+                            <label class="checkround">
+                                <input type="checkbox">
+                                <span>부암동</span>
+                            </label>
+                            <label class="checkround">
+                                <input type="checkbox" disabled>
+                                <span>사직동</span>
+                            </label>
+                            <label class="checkround">
+                                <input type="checkbox" disabled>
+                                <span>삼청동</span>
+                            </label>
+                            <label class="checkround">
+                                <input type="checkbox">
+                                <span>숭인제1동</span>
+                            </label>
+                            <label class="checkround">
+                                <input type="checkbox">
+                                <span>숭인제2동</span>
+                            </label>
+                        </div>
+                    </li>
+                    
+            </div>
+        </div>
+        <div class="popup-tail">
+            <button type="button" class="btn btn-primary">선택</button>
+        </div>
+    </div>
+</aside>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="../../../assets/vendor/jquery-ui/jquery-ui.min.js"></script>
+<script src="../../../assets/js/admin.js"></script>
+  </body>
+</html>

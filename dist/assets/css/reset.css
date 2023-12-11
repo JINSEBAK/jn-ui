@@ -1,0 +1,54 @@
+/**
+ * Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/)
+ * http://cssreset.com
+ */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/*# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInJlc2V0LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7QUFBQTtBQUFBO0FBQUE7QUFJQztBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtFQWFJO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7O0FBRUo7QUFDQTtBQUFBO0VBRUk7OztBQUVKO0VBQ0k7OztBQUVKO0VBQ0k7OztBQUVKO0VBQ0k7OztBQUVKO0FBQUE7RUFFSTtFQUNBOzs7QUFFSjtFQUNJO0VBQ0EiLCJmaWxlIjoicmVzZXQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLyoqXG4gKiBFcmljIE1leWVyJ3MgUmVzZXQgQ1NTIHYyLjAgKGh0dHA6Ly9tZXllcndlYi5jb20vZXJpYy90b29scy9jc3MvcmVzZXQvKVxuICogaHR0cDovL2Nzc3Jlc2V0LmNvbVxuICovXG4gaHRtbCwgYm9keSwgZGl2LCBzcGFuLCBhcHBsZXQsIG9iamVjdCwgaWZyYW1lLFxuIGgxLCBoMiwgaDMsIGg0LCBoNSwgaDYsIHAsIGJsb2NrcXVvdGUsIHByZSxcbiBhLCBhYmJyLCBhY3JvbnltLCBhZGRyZXNzLCBiaWcsIGNpdGUsIGNvZGUsXG4gZGVsLCBkZm4sIGVtLCBpbWcsIGlucywga2JkLCBxLCBzLCBzYW1wLFxuIHNtYWxsLCBzdHJpa2UsIHN0cm9uZywgc3ViLCBzdXAsIHR0LCB2YXIsXG4gYiwgdSwgaSwgY2VudGVyLFxuIGRsLCBkdCwgZGQsIG9sLCB1bCwgbGksXG4gZmllbGRzZXQsIGZvcm0sIGxhYmVsLCBsZWdlbmQsXG4gdGFibGUsIGNhcHRpb24sIHRib2R5LCB0Zm9vdCwgdGhlYWQsIHRyLCB0aCwgdGQsXG4gYXJ0aWNsZSwgYXNpZGUsIGNhbnZhcywgZGV0YWlscywgZW1iZWQsXG4gZmlndXJlLCBmaWdjYXB0aW9uLCBmb290ZXIsIGhlYWRlciwgaGdyb3VwLFxuIG1lbnUsIG5hdiwgb3V0cHV0LCBydWJ5LCBzZWN0aW9uLCBzdW1tYXJ5LFxuIHRpbWUsIG1hcmssIGF1ZGlvLCB2aWRlbyB7XG4gICAgIG1hcmdpbjogMDtcbiAgICAgcGFkZGluZzogMDtcbiAgICAgYm9yZGVyOiAwO1xuICAgICBmb250LXNpemU6IDEwMCU7XG4gICAgIGZvbnQ6IGluaGVyaXQ7XG4gICAgIHZlcnRpY2FsLWFsaWduOiBiYXNlbGluZTtcbiB9XG4gLyogSFRNTDUgZGlzcGxheS1yb2xlIHJlc2V0IGZvciBvbGRlciBicm93c2VycyAqL1xuIGFydGljbGUsIGFzaWRlLCBkZXRhaWxzLCBmaWdjYXB0aW9uLCBmaWd1cmUsXG4gZm9vdGVyLCBoZWFkZXIsIGhncm91cCwgbWVudSwgbmF2LCBzZWN0aW9uIHtcbiAgICAgZGlzcGxheTogYmxvY2s7XG4gfVxuIGJvZHkge1xuICAgICBsaW5lLWhlaWdodDogMTtcbiB9XG4gb2wsIHVsIHtcbiAgICAgbGlzdC1zdHlsZTogbm9uZTtcbiB9XG4gYmxvY2txdW90ZSwgcSB7XG4gICAgIHF1b3Rlczogbm9uZTtcbiB9XG4gYmxvY2txdW90ZTpiZWZvcmUsIGJsb2NrcXVvdGU6YWZ0ZXIsXG4gcTpiZWZvcmUsIHE6YWZ0ZXIge1xuICAgICBjb250ZW50OiAnJztcbiAgICAgY29udGVudDogbm9uZTtcbiB9XG4gdGFibGUge1xuICAgICBib3JkZXItY29sbGFwc2U6IGNvbGxhcHNlO1xuICAgICBib3JkZXItc3BhY2luZzogMDtcbiB9Il19 */

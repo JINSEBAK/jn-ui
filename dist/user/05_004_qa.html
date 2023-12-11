@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="../assets/css/reset.css"></link>
+<link rel="stylesheet" href="../assets/css/style.css"></link>
+<title>종로 스마트시티 모바일 앱</title>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="../assets/css/more.css"></link>
+  </head>
+  <body class="more no-btm">
+    
+    <header id="header" class="sub">
+  <button type="button" class="btn btn-icon" id="btnBack">
+    <img src="../assets/images/icon_back.svg" alt="" />
+    <span class="sr-only">뒤로가기</span>
+  </button>
+  <a type="button" class="btn btn-icon" id="btnHome">
+    <img src="../assets/images/icon_home.svg" alt="" />
+    <span class="sr-only">홈 바로가기</span>
+  </a>
+  <h2 class="title"><span>1:1 문의</span></h2>
+
+  <button type="button" class="btn btn-icon icon info">
+    <span class="sr-only">추가 정보 보기</span>
+  </button>
+  
+</header>
+
+    <div class="container inner-full-padd">
+      <div class="tab-container">
+        <ul class="tab-list" role="tablist">
+            <li class="tab-item active">
+                <button type="button" class="tab-button" role="tab" aria-selected="true" aria-controls="tabContent1" id="tab1">1:1문의</button>
+            </li>
+            <li class="tab-item">
+                <button type="button" class="tab-button" role="tab" tabindex="-1" aria-selected="false" aria-controls="tabContent2" id="tab2">나의 문의내역</button>
+            </li>
+        </ul>
+      </div>
+      <div class="tab-contents">
+
+        <!-- 1:1문의 등록 -->
+        <div class="tab-content" role="tabpanel" aria-labelledby="tab1" id="tabContent1" tabindex="0">
+          <form>
+            <div class="qa-forms">
+              <div class="select">
+                <button type="button" class="btn btn-select" data-target="selectBtm">문의유형 선택</button>
+              </div>
+              <div class="input">
+                <input type="text" placeholder="제목 입력 (30자 이내)" id="input" maxlength="30">
+              </div>
+              <div class="input">
+                <textarea name="" id="" cols="30" rows="8" maxlength="1000" placeholder="문의 내용 입력(1,000자 이내)"></textarea>
+              </div>
+
+              <div class="attach-file">
+                <h5 class="title">사진첨부</h5>
+                <label class="file">
+                  <input type="file">
+                  <img src="" alt="" id="previewImg">
+                </label>
+                <div class="guide">
+                  사진첨부는 5MB이내, jpg/png/gif파일, 최대 1건만 첨부 가능합니다. 
+                </div>
+              </div>
+            </div>
+          </form>
+
+          <div class="tab-footer guide">
+            <ul>
+              <li>
+                빠른 대응을 위해 단말정보가 포함되어 발송됩니다.
+                <div>
+                  애플리케이션 버전 : 7.7.1<br>
+                  기기모델 : SM-S908N<br>
+                  OS버전 : 12
+                </div>
+              </li>
+              <li>빠른 시일내에 답변 드리겠습니다.</li>
+              <li>1:1문의가 많은 경우 답변 처리가 다소 지연될 수 있습니다. 양해부착드립니다.</li>
+            </ul>
+          </div>
+
+          <!-- TODO: 유효성 체크 후 버튼 disabled 삭제 -->
+          <div class="btns under">
+            <button type="button" class="btn btn-primary">1:1문의 등록</button>
+          </div>
+      </div>
+
+          <!-- 1:1 문의목록 -->
+          <div class="tab-content" role="tabpanel" aria-labelledby="tab2" id="tabContent2" tabindex="0" hidden="true">
+              <!-- filter -->
+              <ul class="qa-list faq">
+                <li>
+                  <div class="qa-item question">
+                    <div class="qa-item_head">
+                      <ul>
+                        <li>
+                          <span class="badge faq">카테고리1</span>
+                          <span class="badge qa-ing">문의중</span>
+                        </li>
+                        <li class="qa-item_title">카카오,네이버도 했는데 가입안되는데 왜 그럴까요?</li>
+                      </ul>
+                    </div>
+                    <div class="qa-item_content">
+                      <p>
+                        종로ONE 모바일앱은 카카오와 네이버로 간편회원가
+                        입을 할 수 있습니다.<br><br>
+                        
+                        간편가입은 카카오 또는 네이버 회원인 경우 가능합니다.<br>
+                        간편가입시 필수항목 동의시 종로ONE가입이 완료됩니
+                        다.
+                        <br><br>
+                        <img src="../../assets/images/sample/sample_01.png" alt="">
+                      </p>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="qa-item question">
+                    <div class="qa-item_head">
+                      <ul>
+                        <li>
+                          <span class="badge faq">카테고리1</span>
+                          <span class="badge qa-finish">답변완료</span>
+                        </li>
+                        <li class="qa-item_title">문의 제목입니다.</li>
+                      </ul>
+                    </div>
+                    <div class="qa-item_content">
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="qa-item answer">
+                    <div class="qa-item_content">
+                      <strong>답변</strong>
+                      <p>
+                        안녕하세요. 회원님.<br>
+                        종로ONE앱을 이용해주셔서 감사합니다.<br>
+                        사용에 불편을 드려서 죄송합니다.<br><br>
+
+                        오류 사항 확인을 위해 오류화면을 스크린샷으로 보내주시면 원인파악에 도움이 될 것 같습니다
+                        <br><br>
+                        감사합니다.
+                      </p>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+          </div>
+
+          
+      </div>
+    </div>
+
+    <aside id="aside" class="popup-bg popup-closable">
+      <div class="popup popup-slide select" id="selectBtm">
+  <ul class="select-options">
+    <li class="select-options_item">
+      <button type="button">리스트 옵션 1</button>
+    </li>
+    <li class="select-options_item">
+      <button type="button">리스트 옵션 2</button>
+    </li>
+    <li class="select-options_item">
+      <button type="button">리스트 옵션 3</button>
+    </li>
+    <li class="select-options_item">
+      <button type="button">리스트 옵션 4</button>
+    </li>
+    <li class="select-options_item">
+      <button type="button">리스트 옵션 5</button>
+    </li>
+    <li class="select-options_item">
+      <button type="button">리스트 옵션 6</button>
+    </li>
+    <li class="select-options_item">
+      <button type="button">리스트 옵션 7</button>
+    </li>
+    <li class="select-options_item">
+      <button type="button">리스트 옵션 8</button>
+    </li>
+    <li class="select-options_item">
+      <button type="button">리스트 옵션 9</button>
+    </li>
+    <li class="select-options_item">
+      <button type="button">리스트 옵션 10</button>
+    </li>
+  </ul>
+</div>
+
+    </aside>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="../../assets/js/common.js"></script>
+
+  </body>
+</html>

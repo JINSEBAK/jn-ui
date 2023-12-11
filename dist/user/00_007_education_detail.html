@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="../assets/css/reset.css"></link>
+<link rel="stylesheet" href="../assets/css/style.css"></link>
+<title>종로 스마트시티 모바일 앱</title>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="../assets/css/home.css"></link>
+  </head>
+  <body class="more">
+    
+    <header id="header" class="sub detail">
+  <button type="button" class="btn btn-icon" id="btnBack">
+    <img src="../assets/images/icon_back.svg" alt="" />
+    <span class="sr-only">뒤로가기</span>
+  </button>
+</header>
+
+
+    <div class="container inner-full-padd">
+
+        <div class="badges">
+            <span class="badge pre">교육예정</span>
+        </div>
+        
+        <h3 class="detail-info_title">
+            2023 하반기 관학 협력 [종로모던멘토링] 참여 청소년(멘티) 모집(변경)
+        </h3>
+
+        <div class="r-cnt">조회수 <span class="total">11</span></div>
+        
+        <!-- 상세 정보 -->
+        <section class="detail-info">
+
+            <div class="edu-cont"><strong>2023 종로 행복 아카데미 제5탄!</strong>
+
+[나만의 행복정원 만들기]참여자를 모집하오니 관심 있는 분들의 많은 참여 바랍니다.
+
+<모집 개요>
+○ 모집대상: 종로구민 및 생활인 누구나
+○ 모집기간: 2023. 8. 21. 09:00부터 ~ 2023. 8. 27. 18:00까지
+○ 모집인원: 선착순 15명
+○ 결과발표: 2023. 8. 28.(월) 개별 문자 통보
+
+<img src="../../assets/images/sample/sample_03.jpeg" alt="">
+            </div>
+
+        <section class="detail-info">
+            <ul class="info-items">
+                <li>
+                  <span class="lb">첨부파일</span>
+                  <div class="attach">
+                    <a href="#">(안내문)종로싱글홈케어_하반기_사업.hwpx</a>
+                  </div>
+                </li>
+            </ul>
+        </section>
+
+        <section class="detail-info">
+            <ul class="info-items">
+                <li>
+                    <span class="lb">담당부서</span>
+                    <span class="dt">교육과</span>
+                </li>
+                <li>
+                    <span class="lb">등록자</span>
+                    <span class="dt">배한솔</span>
+                </li>
+                <li>
+                    <span class="lb">등록일</span>
+                    <span class="dt">2023-08-22</span>
+                </li>
+                <li>
+                    <span class="lb">문의처</span>
+                    <span class="dt">02-2148-2006</span>
+                </li>
+            </ul>
+        </section>
+
+        <div class="btns under">
+            <button type="button" class="btn btn-primary">교육 신청</button>
+        </div>
+
+    </div>
+
+    <!-- popup -->
+    <aside id="aside" class="popup-bg popup-closable">
+        <div class="popup popup-slide" id="popupBtmSheet">
+            <div class="btm-sheet">
+                <div class="btm-sheet_head">
+                    <button type="button" class="btn btn-icon close">
+                    <img src="../assets/images/icon_x.svg" alt="팝업닫기" />
+                    </button>
+                </div>
+                <div class="btm-sheet_body">
+                    <div class="select">
+                        <label>대면 여부</label>
+                        <button type="button" class="btn btn-select" data-target="selectFilter" id="filter">전체</button>
+                    </div>
+                    <div class="select">
+                        <label>개설반</label>
+                        <button type="button" class="btn btn-select" data-target="selectFilter" id="filter2">전체</button>
+                    </div>
+                    <div class="select">
+                        <label>진행 상태</label>
+                        <button type="button" class="btn btn-select" data-target="selectFilter" id="filter3">전체</button>
+                    </div>
+                    <div class="input">
+                        <label>검색어</label>
+                        <input type="text" placeholder="검색어 입력">
+                    </div>
+                </div>
+                <div class="btm-sheet_tail">
+                    <button type="button" class="btn btn-primary">검색</button>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="../../assets/js/common.js"></script>
+
+    <script>
+        const aside = document.getElementById('aside')
+        const popupBtmSheet = document.getElementById('popupBtmSheet')
+        const btnFilter = document.getElementById('btnFilter')
+
+        btnFilter.onclick = function() {
+            aside.classList.add('on')
+            popupBtmSheet.classList.add('show')
+        }
+       
+    </script>
+  </body>
+</html>

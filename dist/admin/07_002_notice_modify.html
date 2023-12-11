@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>종로 관리자</title>
+    <link rel="stylesheet" href="../assets/vendor/jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="../assets/css/reset.css">
+    <link rel="stylesheet" href="../assets/css/admin.css">
+</head>
+  <body>
+    <header id="header">
+    <a href="00_002_dashboard.html" class="logo">
+        종로 스마트시티앱 관리자사이트
+    </a>
+    <div class="opt">
+        <button type="button" class="btn btn-text">yesman 님</button>
+    </div>
+    <div class="opt">
+        <button type="button" class="btn btn-icon icon alarm"></button>
+        <div class="dropdown">
+            <div class="dropdown-alarm">
+                <h4 class="title">알림</h4>
+                <button type="button" class="btn btn-text">모두 읽음 처리</button>
+                <ul class="lists">
+                    <li>
+                        새로운 1:1 문의가 도착했습니다. 
+                        <span class="date">2023-10-31 10:30</span>
+                    </li>
+                    <li>
+                        권한이 관리자로 변경되었습니다.
+                        <span class="date">2023-10-31 10:30</span>
+                    </li>
+                    <li>
+                        가입이 승인되었습니다.
+                        <span class="date">2023-10-31 10:30</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="opt">
+        <button type="button" class="btn btn-text">로그아웃</button>
+    </div>
+</header>
+    <nav id="nav">
+  <ul class="gnb" id="gnb">
+    <li class="">
+      <a href="#">menu 1</a>
+    </li>
+    <li class="">
+      <a href="#">Depth 1</a>
+      <ul class="sub">
+        <li>
+          <a href="#">menu 1</a>
+        </li>
+        <li>
+          <a href="#">menu 2</a>
+        </li>
+        <li>
+          <a href="#">menu 3</a>
+        </li>
+        <li>
+          <a href="#">menu 4</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+    <main class="main">
+        <div class="page-title">
+    <h2>공지사항 수정</h2>
+    <p class="des"></p>
+    <ol class="breadcrumb">
+        <li></li>
+        <li></li>
+    </ol>
+</div>
+        <div class="content">
+
+            <div class="detail">
+                <ul class="lik-tb">
+                    <li class="lb lb-one required">구분</li>
+                    <li>
+                        <div class="inline">
+                            <select class="select">
+                                <option value="">일반</option>
+                                <option value="">시스템</option>
+                            </select>
+                            <div class="checkbox">
+                                <input type="checkbox" id="check-important" checked>
+                                <label for="check-important">중요</label>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="lb lb-one required">제목</li>
+                    <li>
+                        <div class="inline">
+                            <input type="text" class="input" placeholder="2자 이상, 20자 이하 입력" value="종로 가을 단풍축제 안내">
+                        </div>
+                    </li>
+                    <li class="lb lb-one required">내용</li>
+                    <li>Editor</li>
+                    <li class="lb lb-one required">첨부파일</li>
+                    <li>
+                        <input type="file" class="input">
+                    </li>
+                </ul>
+
+                <ul class="lik-tb">
+                    <li class="lb">팝업</li>
+                    <li>
+                        <div class="inline">
+                            <div class="radio">
+                                <input type="radio" name="useYn" value="1" id="useYn1">
+                                <label for="useYn1">미적용</label>
+                            </div>
+                            <div class="radio">
+                                <input type="radio" name="useYn" value="2" id="useYn2" checked>
+                                <label for="useYn2">적용</label>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="lb">팝업 종류</li>
+                    <li>
+                        <div class="inline">
+                            <div class="radio">
+                                <input type="radio" name="ptype" value="1" id="ptype1">
+                                <label for="ptype1">텍스트</label>
+                            </div>
+                            <div class="radio">
+                                <input type="radio" name="ptype" value="2" id="ptype2" checked>
+                                <label for="ptype2">이미지</label>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="lb lb-one">팝업 내용</li>
+                    <li>
+                        <!-- text -->
+                        <!-- <textarea class="textarea" name="" id="" cols="30" rows="10"></textarea> -->
+                        <!-- image -->
+                        <div class="thumb-img">
+                            <img src="../../assets/images/sample/sample_07.jpeg">
+                            <button type="button" class="btn-viewer">삭제</button>
+                            <button type="button" class="btn-viewer">변경</button>
+                        </div>
+                    </li>
+                    <li class="lb lb-one">팝업 노출 기간</li>
+                    <li>
+                        <div class="inline">
+                            <input type="date" class="input" value="2023-01-01"> ~ <input type="date" class="input" value="2023-12-31">
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="btns center">
+                <button type="button" class="btn btn-third">취소</button>
+                <button type="button" class="btn btn-second">등록</button>
+            </div>
+
+        </div>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="../../../assets/vendor/jquery-ui/jquery-ui.min.js"></script>
+<script src="../../../assets/js/admin.js"></script>
+    <script>
+       
+    </script>
+  </body>
+</html>

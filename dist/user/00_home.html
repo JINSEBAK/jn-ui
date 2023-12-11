@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="../assets/css/reset.css"></link>
+<link rel="stylesheet" href="../assets/css/style.css"></link>
+<title>종로 스마트시티 모바일 앱</title>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="../assets/css/home.css"></link>
+  </head>
+  <body class="home">
+    <header id="header" class="main">
+  <h1 class="logo">
+    <a href="#" role="button">
+      <img src="../../assets/images/logo.png" alt="서울의심장 다시뛰는 종로" />
+    </a>
+  </h1>
+  <a href="./00_010_alarm_history.html" role="button" class="btn btn-icon">
+    <span class="new-alarm"></span>
+    <span class="icon bell">
+      <span class="sr-only">알림 내역보기</span>
+    </span>
+  </a>
+  <a href="./00_011_all_menu.html" role="button" class="btn btn-icon">
+    <span class="icon menu">
+      <span class="sr-only">메뉴 전체보기</span>
+    </span>
+  </a>
+</header>
+
+    <div class="container">
+
+      <!-- main banner -->
+      <section class="content-box visual">
+        <div class="swiper main-visual" id="mainSwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <dl class="event-title">
+                <dt>호호식당</dt>
+                <dd>한옥과 자연의 어울어짐, 그곳에서 근사한 한끼 식사</dd>
+              </dl>
+              <img src="../assets/images/sample/sample_51.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+              <dl class="event-title">
+                <dt>호호식당2</dt>
+                <dd>한옥과 자연의 어울어짐, 그곳에서 근사한 한끼 식사</dd>
+              </dl>
+              <img src="../assets/images/sample/sample_52.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+              <dl class="event-title">
+                <dt>목욕탕</dt>
+                <dd>어린시절 추억돋는 우리 동네 목욕탕</dd>
+              </dl>
+              <img src="../assets/images/sample/sample_53.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+              <dl class="event-title">
+                <dt>가즈아! 인사동</dt>
+                <dd>많은 사람들로 북적북적 환장대파티!</dd>
+              </dl>
+              <img src="../assets/images/sample/sample_54.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+              <dl class="event-title">
+                <dt>안녕, 인사동</dt>
+                <dd>모여라 꿈동산</dd>
+              </dl>
+              <img src="../assets/images/sample/sample_55.jpg" alt="">
+            </div>
+          </div>
+
+          <div class="custom-controls">
+            <!-- play / pause -->
+            <button type="button" class="btn btn-icon icon sw-pause" >
+              <span class="sr-only">일시정지</span>
+            </button>
+            <button type="button" class="btn btn-icon icon sw-play" style="display:none">
+              <span class="sr-only">재생</span>
+            </button>
+            <!-- pagination fraction -->
+            <div class="swiper-pagination" id="mainSwiperPagination"></div>
+            <!-- next -->
+            <button type="button" class="btn btn-icon icon sw-next">
+              <span class="sr-only">다음</span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      
+      <!-- 스마트 민원 대기표 -->
+      <section class="content-box">
+        <div class="banners">
+          <div class="banner banner-ticket">
+            <a href="#">
+              <dl>
+                <dt>스마트 번호표</dt>
+                <dd>
+                  어디서든 편리하게 신청!<br>언제나 신속하게 처리!
+                </dd>
+              </dl>
+              <img src="../../assets/images/icon_banner__ticket.svg" alt="스마트 번호표 이미지" class="banner-img">
+            </a>
+          </div>
+        </div>
+      </section>
+      
+      <!-- 스마트 민원 -->
+      <section class="content-box">
+        <h3 class="content-title">편리한 민원</h3>
+        <div class="quick-link">
+          <a href="#" class="quick-link_item"><div class="img-wrap"><img src="../assets/images/icon_compl_01.svg" alt=""></div><span>종합 민원<br>통합 신청</span></a>
+          <button type="button" class="quick-link_item"><div class="img-wrap"><img src="../assets/images/icon_compl_02.svg" alt=""></div><span>대형 생활<br>폐기물 신고</span></button>
+          <a href="#" class="quick-link_item"><div class="img-wrap"><img src="../assets/images/icon_compl_03.svg" alt=""></div><span>교통 과태료<br>조회</span></a>
+          <a href="#" class="quick-link_item"><div class="img-wrap"><img src="../assets/images/icon_compl_04.svg" alt=""></div><span>지방세<br>환급 신청</span></a>
+          <a href="#" class="quick-link_item"><div class="img-wrap"><img src="../assets/images/icon_compl_05.svg" alt=""></div><span>건강이랑<br>서비스 신청</span></a>
+          <a href="#" class="quick-link_item"><div class="img-wrap"><img src="../assets/images/icon_compl_06.svg" alt=""></div><span>정화조 청소<br>예약 신청</span></a>
+        </div>
+        <div class="quick-link type-b">
+          <a href="#" class="quick-link_item"><div class="img-wrap"><img src="../assets/images/icon_compl_07.svg" alt=""></div><span>실시간<br>공영주차장</span></a>
+          <!-- TODO: app 명칭 변경 -->
+          <a href="#" class="quick-link_item"><div class="img-wrap"><img src="../assets/images/icon_compl_08.svg" alt=""></div><span>종로ONE<br>긴급신고 안내</span></a>
+        </div>
+      </section>
+
+      <!-- 제설함 배너는 동절기에만 노출 -->
+      <section class="content-box">
+        <div class="banners">
+          <div class="banner banner-edu">
+            <a href="#">
+              <dl>
+                <dt>종로 교육/강좌</dt>
+                <dd>
+                  평생/혁신교육, 진로 직업체험<br>교육 서비스
+                </dd>
+              </dl>
+              <img src="../../assets/images/icon_banner_edu.svg" alt="종로 교육강좌 이미지" class="banner-img">
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="content-box">
+        <div class="banners">
+          <div class="banner banner-snow">
+            <a href="#">
+              <dl>
+                <dt>스마트 제설함</dt>
+                <dd>
+                  눈이와도 안전하게! 우리동네 제설함
+                </dd>
+              </dl>
+              <img src="../../assets/images/icon_banner_snow.svg" alt="스마트 제설함 이미지" class="banner-img">
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- 종로알림 -->
+      <section class="content-box filled-swiper filled-a">
+        <h3 class="content-title">
+          새소식
+          <a href="#" role="button" class="btn btn-more">전체보기</a>
+        </h3>
+        <div class="swiper rolling-news" id="newsSwiper"> 
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide rolling-news_item">
+              <div class="flex between">
+                <span class="badge category">공지</span>
+                <span class="icon new"><span class="sr-only">신규 게시물</span></span>
+              </div>
+              <p class="news-title">인왕산 산불예방 블랙박스 설치에 따른 행정예고</p>
+              <span class="news-date">2023-09-21</span>
+            </div>
+
+            <div class="swiper-slide rolling-news_item">
+              <div class="flex between">
+                <span class="badge category">입법예고</span>
+                <span class="icon new"><span class="sr-only">신규 게시물</span></span>
+              </div>
+              <p class="news-title">서울특별시 종로구 비공무원 공정채용 규정 제정(안) 행정예고</p>
+              <span class="news-date">2023-09-21</span>
+            </div>
+
+          </div>
+        </div>
+        <div class="swiper-pagination custom" id="newsSwiperPagination"></div>
+      </section>
+
+      <!-- 채용공고 -->
+      <section class="content-box filled-swiper filled-b">
+        <h3 class="content-title">
+          일자리
+          <a href="#" role="button" class="btn btn-more">전체보기</a>
+        </h3>
+
+        <div class="swiper rolling-news" id="jobSwiper"> 
+          <div class="swiper-wrapper">
+            <div class="swiper-slide rolling-news_item">
+              <div class="flex end">
+                <span class="icon new">
+                  <span class="sr-only">신규 게시물</span>
+                </span>
+              </div>
+              <p class="news-title">
+                <span>종로구 불법주정차단속분야 시간선택제 임기제 공무원 채용공고</span>
+              </p>
+              <p class="news-opt">공고기간: 20203-10-22</p>
+              <span class="news-date">2023-09-21</span>
+            </div>
+
+            <div class="swiper-slide rolling-news_item">
+              <div class="flex end">
+                <span class="icon new">
+                  <span class="sr-only">신규 게시물</span>
+                </span>
+              </div>
+              <p class="news-title">
+                서울특별시 종로구 임기제 공무원(평생교육) 채용공고
+              </p>
+              <p class="news-opt">공고기간: 20203-10-22</p>
+              <span class="news-date">2023-09-21</span>
+            </div>
+
+            <div class="swiper-slide rolling-news_item">
+              <div class="flex end">
+                <span class="icon new">
+                  <span class="sr-only">신규 게시물</span>
+                </span>
+              </div>
+              <p class="news-title">
+                2023년 북촌마을지킴이 기간제근로자 최종합격자 공고
+              </p>
+              <p class="news-opt">공고기간: 20203-10-22</p>
+              <span class="news-date">2023-09-19</span>
+            </div>
+
+          </div>
+        </div>
+        <div class="swiper-pagination custom" id="jobSwiperPagination"></div>
+      </section>
+
+      <!-- 산책코스 -->
+      <section class="content-box"> 
+        <h3 class="content-title">
+          추천 종로 산책 코스
+          <a href="#" role="button" class="btn btn-more">전체보기</a>
+        </h3>
+        <div class="x-scroll">
+          <ul class="recommend-list">
+            <li>
+              <div class="recommend-item">
+                <div class="img-thumb"><img src="../../assets/images/sample/sample_course.png" alt="이미지설명"></div>
+                <div class="course-title">
+                  <div class="course-title">
+                    <p class="course-title_name">세종마을</p>
+                    <p class="course-title_exp">조선의 역사와 전설</p>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="recommend-item">
+                <div class="img-thumb"><img src="../../assets/images/sample/sample_course_2.png" alt="이미지설명"></div>
+                <div class="course-title">
+                  <div class="course-title">
+                    <p class="course-title_name">인왕산자락<br>예술가길</p>
+                    <p class="course-title_exp">예술을 느끼며</p>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="recommend-item">
+                <div class="img-thumb"><img src="../../assets/images/sample/sample_course_3.png" alt="이미지설명"></div>
+                <div class="course-title">
+                  <p class="course-title_name">광장시장</p>
+                  <p class="course-title_exp">조선의 역사와 전설</p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="recommend-item">
+                <div class="img-thumb"><img src="../../assets/images/sample/sample_course.png" alt="이미지설명"></div>
+                <div class="course-title">
+                  <p class="course-title_name">세종마을</p>
+                  <p class="course-title_exp">조선의 역사와 전설</p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="recommend-item">
+                <div class="img-thumb"><img src="../../assets/images/sample/sample_course_2.png" alt="이미지설명"></div>
+                <div class="course-title">
+                  <p class="course-title_name">세종마을</p>
+                  <p class="course-title_exp">조선의 역사와 전설</p>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- 날씨 -->
+      <section class="content-box filled-c">
+        <div class="weather-air">
+          <div class="user-pos">
+            <span>익선동</span>
+            <span class="icon target">
+              <span class="sr-only">현재 위치</span>
+            </span>
+          </div>
+          <div class="info-board">
+            <!-- 날씨 -->
+            <div class="weather">
+              <span class="icon sunny">
+                <span class="sr-only">맑음</span>
+              </span>
+              <strong class="temperature">20</strong>
+            </div>
+
+            <!-- 미세먼지 -->
+            <ul class="air">
+              <li>미세 <em class="bad">나쁨</em></li>
+              <li>초미세 <em class="good">좋음</em></li>
+            </ul>
+          </div>
+
+          <div class="air-btns">
+              <a href="#" class="btn btn-more">종로구 실내 공기질 알아보기</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- 서비스 연결 -->
+      <section class="content-box">
+        <div class="link-list">
+          <a href="#" class="link-item hl" title="종로핫라인 바로가기">
+            <dl>
+              <dt>언제! 어디서나</dt>
+              <dd>신속한 민원 상담 받으세요!</dd>
+            </dl>
+            <img src="../assets/images/logo_hotline.png">
+          </a>
+          <a href="#" class="link-item" title="종로구청 홈페이지 바로가기">
+            <img src="../assets/images/logo_jn.png">
+          </a>
+          <a href="#" class="link-item" title="정부24 사이트 바로가기">
+            <img src="../assets/images/logo_gov.png">
+          </a>
+          <a href="#" class="link-item" title="전체메뉴 보기">
+            전체 메뉴
+          </a>
+        </div>
+
+        <ul class="sns-link">
+          <li>
+            <button type="button" class="btn btn-icon new-web nv" data-target="https://blog.naver.com/jongno0401">
+              네이버 블로그 바로가기
+            </button>
+          </li>
+          <li>
+            <button type="button" class="btn btn-icon new-web ka" data-target="http://pf.kakao.com/_zAyHu">
+              카카오 채널 바로가기
+            </button>
+          </li>
+          <li>
+            <button type="button" class="btn btn-icon new-web in" data-target="https://www.instagram.com/jongnotong">
+              인스타그램 바로가기
+            </button>
+          </li>
+          <li>
+            <button type="button" class="btn btn-icon new-web yu" data-target="https://www.youtube.com/channel/UCElvTSAbQjunKseoz1u_-0A/featured">
+              종로TV 유튜브 바로가기
+            </button>
+          </li>
+        </ul>
+      </section>
+
+
+      <!-- 긴급신고 버튼 -->
+      <button type="button" class="btn btn-sos">
+        <span class="sr-only">긴급신고</span>
+      </button>
+
+    </div>
+    <footer id="footer">
+  <nav>
+    <ul class="gnb">
+      <li class="gnb-item">
+        <a href="#" class="on">
+          <span class="icon menu1">
+            <span class="sr-only">홈화면 바로가기</span>
+          </span>
+          <span class="title">홈</span>
+        </a>
+      </li>
+      <li class="gnb-item">
+        <a href="#">
+          <span class="icon menu2">
+            <span class="sr-only">종로맵 바로가기</span>
+          </span>
+          <span class="title">종로맵</span>
+        </a>
+      </li>
+      <li class="gnb-item">
+        <a href="#">
+          <span class="icon menu3">
+            <span class="sr-only">종로소식 바로가기</span>
+          </span>
+          <span class="title">종로소식</span>
+        </a>
+      </li>
+      <li class="gnb-item">
+        <a href="#">
+          <span class="icon menu4">
+            <span class="sr-only">검색 바로가기</span>
+          </span>
+          <span class="title">검색</span>
+        </a>
+      </li>
+      <li class="gnb-item">
+        <a href="#">
+          <span class="icon menu5">
+            <span class="sr-only">더보기 바로가기</span>
+          </span>
+          <span class="title">더보기</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+</footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="../../assets/js/common.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script>
+      const slide = new Swiper('#mainSwiper', {
+        slidesPerView: 'auto',
+        spaceBetween: 0,
+        loop:false,
+        loopAdditionalSlides:1,
+        keyboard: {
+          enables: true
+        },
+        pagination: {
+          el: "#mainSwiperPagination",
+          type: "fraction"
+        },
+        autoplay: {
+          delay: 3000,
+          desableOnInteraction:false
+        }
+      })
+      
+      const btnPause = document.querySelector('.btn.pause')
+      const btnPlay = document.querySelector('.btn.play')
+
+      btnPause.onclick = function() {
+        slide.autoplay.stop();
+        btnPause.style.display = 'none'
+        btnPlay.style.display = 'block'
+      }
+      btnPlay.onclick = function() {
+        slide.autoplay.start();
+        btnPlay.style.display = 'none'
+        btnPause.style.display = 'block'
+      }
+
+      // news swiper
+      const newsSlide = new Swiper('#newsSwiper',  {
+        slidesPerView: 1,
+        spaceBetween: 16,
+        loop:false,
+        loopAdditionalSlides:1,
+        keyboard: {
+          enables: true
+        },
+        pagination: {
+          el: "#newsSwiperPagination",
+        },
+        autoplay: {
+          delay: 5000,
+          desableOnInteraction:false
+        }
+      })
+
+      // job swiper
+      const jobSlide = new Swiper('#jobSwiper',  {
+        slidesPerView: 1,
+        spaceBetween: 16,
+        loop:false,
+        loopAdditionalSlides:1,
+        keyboard: {
+          enables: true
+        },
+        pagination: {
+          el: "#jobSwiperPagination",
+        },
+        autoplay: {
+          delay: 4500,
+          desableOnInteraction:false
+        }
+      })
+    </script>
+  </body>
+</html>

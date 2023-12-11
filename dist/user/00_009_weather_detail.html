@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="../assets/css/reset.css"></link>
+<link rel="stylesheet" href="../assets/css/style.css"></link>
+<title>종로 스마트시티 모바일 앱</title>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="../assets/css/home.css"></link>
+  </head>
+  <body class="more">
+    <header id="header" class="sub">
+  <button type="button" class="btn btn-icon" id="btnBack">
+    <img src="../assets/images/icon_back.svg" alt="" />
+    <span class="sr-only">뒤로가기</span>
+  </button>
+  <a type="button" class="btn btn-icon" id="btnHome">
+    <img src="../assets/images/icon_home.svg" alt="" />
+    <span class="sr-only">홈 바로가기</span>
+  </a>
+  <h2 class="title"><span>날씨</span></h2>
+
+  <button type="button" class="btn btn-icon icon info">
+    <span class="sr-only">추가 정보 보기</span>
+  </button>
+  
+</header>
+
+    <div class="container">
+
+        <section class="d-flex-col w-container">
+            <div class="w-current">
+                <ul class="w-current_info">
+                    <li>
+                        <div class="user-position">
+                            <span class="icon wloc">
+                                <span class="sr-only">사용자 위치</span>
+                            </span>
+                            <span>종로구 익선동</span>
+                        </div>
+                    <li>
+                        <div class="w-meta">
+                            <!-- sunny / littlecloud / cloudy / cloudrain / snow -->
+                            <!-- <img src="../assets/images/img_sunny.svg" alt=""> -->
+                            <span class="icon sky-1">
+                                <span class="sr-only">맑음</span>
+                            </span>
+                            <span>맑음</span>
+                        </div>
+                    </li>
+                    <li>
+                        <strong class="temperature">
+                            <span>20</span>
+                            <span>°</span>
+                        </strong>
+                    </li>
+                    <li class="min-max">
+                        <div>최고 <span>32°C</span></div>  
+                        <div>최저 <span>15°C</span></div>
+                    </li>
+                </ul>
+            </div>
+
+            <ul class="extra-w-info">
+                <li class="w-info">
+                    <img src="../assets/images/icon_w_humidity.svg" alt="">
+                    <div class="w-info_item">
+                        <span class="w-info_title">습도</span>
+                        <span class="w-info_value">
+                            <strong>53</strong>
+                            <span class="">%</span>
+                        </span>
+                    </div>
+                </li>
+                <li class="w-info">
+                    <img src="../assets/images/icon_w_wind.svg" alt="">
+                    <div class="w-info_item">
+                        <span class="w-info_title">바람</span>
+                        <span class="w-info_value">
+                            <strong>10</strong>
+                            <span class="">Km/h</span>
+                        </span>
+                    </div>
+                </li>
+                <li class="w-info">
+                    <img src="../assets/images/icon_w_prob_rain.svg" alt="">
+                    <div class="w-info_item">
+                        <span class="w-info_title">강우확률</span>
+                        <span class="w-info_value">
+                            <strong>10</strong>
+                            <span class="">%</span>
+                        </span>
+                    </div>
+                </li>
+                <li class="w-info">
+                    <img src="../assets/images/icon_w_uv.svg" alt="">
+                    <div class="w-info_item">
+                        <span class="w-info_title">자외선</span>
+                        <span class="w-info_value">
+                            <strong>좋음</strong>
+                        </span>
+                    </div>
+                </li>
+            </ul>
+
+            <div class="air-info">
+                <div class="air-info_brd">
+                    <div class="bar-box">
+                        <div class="bar vertical item_alarm_blue">
+                            <div class="value"></div>
+                        </div>
+                    </div>
+                    <div class="air-info_txt">
+                        <span>미세먼지</span>
+                        <span>좋음</span>
+                        <span>4</span>
+                    </div>
+                </div>
+                <div class="air-info_brd">
+                    <div class="bar-box">
+                        <div class="bar vertical  item_alarm_green">
+                            <div class="value"></div>
+                        </div>
+                    </div>
+                    <div class="air-info_txt">
+                        <span>초미세먼지</span>
+                        <span>보통</span>
+                        <span>12</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <aside id="aside" class="popup-bg popup-closable top-flex">
+        <div class="popup popup-content" id="selectContent">
+            <div class="top">
+              <button type="button" class="btn btn-icon icon close">close</button>
+            </div>
+            <div class="contents">
+
+                <div class="air-stnd">
+                    <h5>초미세먼지 (PM2.5)</h5>
+                    <p>입자의 크기가 2.5㎍이하인 먼지</p>
+                    <ul>
+                        <li>
+                            <span class="status lv1">좋음</span>
+                            <span>(0~15)</span>
+                        </li>
+                        <li>
+                            <span class="status lv2">보통</span>
+                            <span>(16~36)</span>
+                        </li>
+                        <li>
+                            <span class="status lv3">나쁨</span>
+                            <span>(36~75)</span>
+                        </li>
+                        <li>
+                            <span class="status lv4">매우나쁨</span>
+                            <span>(76~)</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="air-stnd">
+                    <h5>미세먼지 (PM10)</h5>
+                    <p>입자의 크기가 10㎍이하인 먼지</p>
+                    <ul>
+                        <li>
+                            <span class="status lv1">좋음</span>
+                            <span>(0~30)</span>
+                        </li>
+                        <li>
+                            <span class="status lv2">보통</span>
+                            <span>(31~80)</span>
+                        </li>
+                        <li>
+                            <span class="status lv3">나쁨</span>
+                            <span>(81~150)</span>
+                        </li>
+                        <li>
+                            <span class="status lv4">매우나쁨</span>
+                            <span>(151~)</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <p class="guide">*한국환경공단 기준</p>
+            </div>
+          </div>
+    </aside>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="../../assets/js/common.js"></script>
+
+    <script>
+        document.querySelector('.icon.info').addEventListener('click', function() {
+            document.querySelector('#aside').classList.add('on')
+            document.querySelector('#selectContent').classList.add('show')
+        })
+    </script>
+    
+  </body>
+</html>

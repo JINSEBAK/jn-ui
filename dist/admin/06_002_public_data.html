@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>종로 관리자</title>
+    <link rel="stylesheet" href="../assets/vendor/jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="../assets/css/reset.css">
+    <link rel="stylesheet" href="../assets/css/admin.css">
+</head>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+  <body>
+    <header id="header">
+    <a href="00_002_dashboard.html" class="logo">
+        종로 스마트시티앱 관리자사이트
+    </a>
+    <div class="opt">
+        <button type="button" class="btn btn-text">yesman 님</button>
+    </div>
+    <div class="opt">
+        <button type="button" class="btn btn-icon icon alarm"></button>
+        <div class="dropdown">
+            <div class="dropdown-alarm">
+                <h4 class="title">알림</h4>
+                <button type="button" class="btn btn-text">모두 읽음 처리</button>
+                <ul class="lists">
+                    <li>
+                        새로운 1:1 문의가 도착했습니다. 
+                        <span class="date">2023-10-31 10:30</span>
+                    </li>
+                    <li>
+                        권한이 관리자로 변경되었습니다.
+                        <span class="date">2023-10-31 10:30</span>
+                    </li>
+                    <li>
+                        가입이 승인되었습니다.
+                        <span class="date">2023-10-31 10:30</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="opt">
+        <button type="button" class="btn btn-text">로그아웃</button>
+    </div>
+</header>
+    <nav id="nav">
+  <ul class="gnb" id="gnb">
+    <li class="">
+      <a href="#">menu 1</a>
+    </li>
+    <li class="">
+      <a href="#">Depth 1</a>
+      <ul class="sub">
+        <li>
+          <a href="#">menu 1</a>
+        </li>
+        <li>
+          <a href="#">menu 2</a>
+        </li>
+        <li>
+          <a href="#">menu 3</a>
+        </li>
+        <li>
+          <a href="#">menu 4</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+    <main class="main">
+        <div class="page-title">
+    <h2>공공 데이터 관리</h2>
+    <p class="des"></p>
+    <ol class="breadcrumb">
+        <li></li>
+        <li></li>
+    </ol>
+</div>
+        <div class="content">
+
+            <div class="search">
+                <div class="item item-col-5">
+                    <div class="label">
+                        <label for="">키워드</label>
+                    </div>
+                    <div class="inline">
+                        <select class="select">
+                            <option value="">코드 그룹ID</option>
+                            <option value="">코드 그룹명</option>
+                            <option value="">코드 그룹 설명</option>
+                            <option value="">등록자</option>
+                            <option value="">최종 수정자</option>
+                        </select>
+                        <input type="text" class="input" placeholder="입력">
+                    </div>
+                </div>
+                <div class="item item-col-5">
+                    <div class="label">
+                        <label for="">데이터 유형</label>
+                    </div>
+                    <div class="inline">
+                        <div class="radio">
+                            <input type="radio" name="status" value="1" id="status1" checked>
+                            <label for="status1">전체</label>
+                        </div>
+                        <div class="radio">
+                            <input type="radio" name="status" value="2" id="status2">
+                            <label for="status2">CSV</label>
+                        </div>
+                        <div class="radio">
+                            <input type="radio" name="status" value="3" id="status3">
+                            <label for="status3">엑셀</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+    <div class="label">
+      <label for="">기간 조회</label>
+    </div>
+    <div class="inline">
+      <select class="select">
+        <option value="">옵션 1</option>
+        <option value="">옵션 2</option>
+      </select>
+      <input type="date" class="input" placeholder="시작일"> 
+      ~
+      <input type="date" class="input" placeholder="종료일">
+      <div class="select-date">
+        <label>
+          <input type="radio" name="select-date" value="1" checked>
+          <span>전체</span>
+        </label>
+        <label>
+          <input type="radio" name="select-date" value="2">
+          <span>오늘</span>
+        </label>
+        <label>
+          <input type="radio" name="select-date" value="3">
+          <span>일주일</span>
+        </label>
+        <label>
+          <input type="radio" name="select-date" value="4">
+          <span>1개월</span>
+        </label>
+        <label>
+          <input type="radio" name="select-date" value="5">
+          <span>3개월</span>
+        </label>
+      </div>
+    </div>
+  </div>
+            </div>
+            <div class="search-btn">
+                <button type="button" class="btn btn-third small">초기화</button>
+                <button type="button" class="btn btn-second small">검색</button>
+            </div>
+
+            <div class="list">
+                <div class="list-head">
+                    <div class="total">
+                        Total <em>50</em>
+                    </div>
+                </div>
+                <div class="list-body">
+                    <table class="tb-data" summary="번호, 데이터 ID, 데이터 명, 데이터 설명, 데이터 유형, 최종 수정일시, 최종 수정자로 구분되는 표">
+                        <caption>번호, 데이터 ID, 데이터 명, 데이터 설명, 데이터 유형, 최종 수정일시, 최종 수정자</caption>
+                        <colgroup>
+                            <col style="width:5%">
+                            <col style="width:15%">
+                            <col style="width:15%">
+                            <col style="width:auto">
+                            <col style="width:10%">
+                            <col style="width:15%">
+                            <col style="width:10%">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th scope="col">번호</th>
+                                <th scope="col">데이터 ID</th>
+                                <th scope="col">데이터 명</th>
+                                <th scope="col">데이터 설명</th>
+                                <th scope="col">데이터 유형</th>
+                                <th scope="col">최종 수정일시</th>
+                                <th scope="col">최종 수정자</th>
+                            </tr>
+                        </thead>
+                        <tbody> 
+                            <tr>
+                                <td>50</td>
+                                <td>map_publicpark</td>
+                                <td><div class="ellipsis">공영 주차장</div></td>
+                                <td><div class="ellipsis">종로맵 공영 주차장 지도</div></td>
+                                <td>CSV</td>
+                                <td>yyyy-mm-dd hh:mm</td>
+                                <td>admin</td>
+                            </tr>
+                            <tr>
+                                <td>49</td>
+                                <td>map_publicpark</td>
+                                <td><div class="ellipsis">공영 주차장</div></td>
+                                <td><div class="ellipsis">종로맵 공영 주차장 지도</div></td>
+                                <td>CSV</td>
+                                <td>yyyy-mm-dd hh:mm</td>
+                                <td>admin</td>
+                            </tr>
+                            <tr>
+                                <td>48</td>
+                                <td>map_publicpark</td>
+                                <td><div class="ellipsis">공영 주차장</div></td>
+                                <td><div class="ellipsis">종로맵 공영 주차장 지도</div></td>
+                                <td>CSV</td>
+                                <td>yyyy-mm-dd hh:mm</td>
+                                <td>admin</td>
+                            </tr>
+                            <tr>
+                                <td>47</td>
+                                <td>map_publicpark</td>
+                                <td><div class="ellipsis">공영 주차장</div></td>
+                                <td><div class="ellipsis">종로맵 공영 주차장 지도</div></td>
+                                <td>CSV</td>
+                                <td>yyyy-mm-dd hh:mm</td>
+                                <td>admin</td>
+                            </tr>
+                            <tr>
+                                <td>46</td>
+                                <td>map_publicpark</td>
+                                <td><div class="ellipsis">공영 주차장</div></td>
+                                <td><div class="ellipsis">종로맵 공영 주차장 지도</div></td>
+                                <td>CSV</td>
+                                <td>yyyy-mm-dd hh:mm</td>
+                                <td>admin</td>
+                            </tr>
+                            <tr>
+                                <td>45</td>
+                                <td>map_publicpark</td>
+                                <td><div class="ellipsis">공영 주차장</div></td>
+                                <td><div class="ellipsis">종로맵 공영 주차장 지도</div></td>
+                                <td>CSV</td>
+                                <td>yyyy-mm-dd hh:mm</td>
+                                <td>admin</td>
+                            </tr>
+                            <tr>
+                                <td>44</td>
+                                <td>map_publicpark</td>
+                                <td><div class="ellipsis">공영 주차장</div></td>
+                                <td><div class="ellipsis">종로맵 공영 주차장 지도</div></td>
+                                <td>CSV</td>
+                                <td>yyyy-mm-dd hh:mm</td>
+                                <td>admin</td>
+                            </tr>
+                            <tr>
+                                <td>43</td>
+                                <td>map_publicpark</td>
+                                <td><div class="ellipsis">공영 주차장</div></td>
+                                <td><div class="ellipsis">종로맵 공영 주차장 지도</div></td>
+                                <td>CSV</td>
+                                <td>yyyy-mm-dd hh:mm</td>
+                                <td>admin</td>
+                            </tr>
+                            <tr>
+                                <td>42</td>
+                                <td>map_publicpark</td>
+                                <td><div class="ellipsis">공영 주차장</div></td>
+                                <td><div class="ellipsis">종로맵 공영 주차장 지도</div></td>
+                                <td>CSV</td>
+                                <td>yyyy-mm-dd hh:mm</td>
+                                <td>admin</td>
+                            </tr>
+                            <tr>
+                                <td>41</td>
+                                <td>map_publicpark</td>
+                                <td><div class="ellipsis">공영 주차장</div></td>
+                                <td><div class="ellipsis">종로맵 공영 주차장 지도</div></td>
+                                <td>CSV</td>
+                                <td>yyyy-mm-dd hh:mm</td>
+                                <td>admin</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="pagination">
+    <button type="button" class="btn btn-first">First</button>
+    <button type="button" class="btn btn-prev">Prev</button>
+    <ul class="page">
+        <li class="active">1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+        <li>9</li>
+        <li>10</li>
+    </ul>
+    <button type="button" class="btn btn-next">Next</button>
+    <button type="button" class="btn btn-last">Last</button>
+</div>
+        </div>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="../../../assets/vendor/jquery-ui/jquery-ui.min.js"></script>
+<script src="../../../assets/js/admin.js"></script>
+
+  </body>
+</html>

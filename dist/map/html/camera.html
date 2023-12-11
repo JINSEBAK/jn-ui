@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../style/style.css" />
+
+    <style>
+      #preview {
+        width: 100px;
+        height: 100px;
+      }
+      .qr-result p {
+        font-size: 1.5rem;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>카메라 테스트</h1>
+    <div>
+      <input class="fileInput" type="file" accept="image/*,capture=camera" />
+
+      <img src="" alt="preview" id="preview" />
+
+      <button class="chkPermission">카메라 권한체크</button>
+      <button class="callQrScanner">callQrScanner</button>
+      <div></div>
+
+      <div class="qr-result">
+        <p>QR 스캔으로 부터 내려온 데이터:</p>
+        <p class="qr-content"></p>
+      </div>
+    </div>
+    <!-- bottom nav -->
+    <div class="navbar">
+      <div class="nav-list">
+        <a href="#" class="active">Home</a>
+        <a href="./index.html">Map</a>
+        <a href="./camera.html">카메라</a>
+        <!-- <a href="../home.html" class="active">Home</a>
+              <a href="./index.html">Map</a>
+              <a href="../search.html">Search</a> -->
+      </div>
+    </div>
+  </body>
+
+  <script>
+    const qrContent = document.querySelector(".qr-content");
+    // qr 코드에서 데이터 get 했을 시 플러터에서 실행시키는 함수
+    const qrDataFromDevice = (qrData) => {
+      if (qrData) {
+        qrContent.innerHTML = qrData.value.data;
+      }
+    };
+    const fileInput = document.querySelector(".fileInput");
+    const checkCamera = document.querySelector(".chkPermission");
+    const callQrScanner = document.querySelector(".callQrScanner");
+
+    fileInput.addEventListener("change", (e) => {
+      if (e.target.files && e.target.files[0]) {
+        var reader = new FileReader();
+        reader.onload = function (e) {
+          document.getElementById("preview").src = e.target.result;
+        };
+        reader.readAsDataURL(e.target.files[0]);
+      } else {
+        document.getElementById("preview").src = "";
+      }
+    });
+
+    callQrScanner.addEventListener("click", () => {
+      console.log("callQrScanner check");
+      if (window.flutter_inappwebview) {
+        window.flutter_inappwebview.callHandler("callQrScanner");
+      }
+    });
+  </script>
+</html>

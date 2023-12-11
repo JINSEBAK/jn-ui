@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="../assets/css/reset.css"></link>
+<link rel="stylesheet" href="../assets/css/style.css"></link>
+<title>종로 스마트시티 모바일 앱</title>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="../assets/css/home.css"></link>
+  </head>
+  <body class="more">
+    <header id="header" class="sub">
+  <button type="button" class="btn btn-icon" id="btnBack">
+    <img src="../assets/images/icon_back.svg" alt="" />
+    <span class="sr-only">뒤로가기</span>
+  </button>
+  <a type="button" class="btn btn-icon" id="btnHome">
+    <img src="../assets/images/icon_home.svg" alt="" />
+    <span class="sr-only">홈 바로가기</span>
+  </a>
+  <h2 class="title"><span>실외 미세먼지 현황</span></h2>
+
+  <button type="button" class="btn btn-icon icon info">
+    <span class="sr-only">추가 정보 보기</span>
+  </button>
+  
+</header>
+
+    <div class="container inner-padd">
+        <!-- 미세먼지 -->
+        <section class="air-content">
+            <div class="air-summary">
+                <h3 class="title">미세먼지 (PM-2.5)</h3>
+                <div class="value">4 <span class="unit">㎍/㎥</span></div>
+                <span class="badge category"> :) 좋음</span>
+            </div>
+            <div class="air-forecast">
+                <canvas id="chart1" aria-label="시간대별 미세먼지 농도 차트" role="img">
+                    <p>미세먼지 농도에 대한 설명 텍스트</p>
+                </canvas>
+            </div>
+        </section>
+
+        <!-- 초미세먼지 -->
+        <section class="air-content">
+            <div class="air-summary">
+                <h3 class="title">초미세먼지 (PM-10)</h3>
+                <div class="value">12 <span class="unit">㎍/㎥</span></div>
+                <span class="badge category"> :) 좋음</span>
+            </div>
+            <div class="air-forecast">
+                <canvas id="chart2" aria-label="시간대별 초 미세먼지 농도 차트" role="img">
+                    <p>초 미세먼지 농도에 대한 설명 텍스트</p>
+                </canvas>
+            </div>
+        </section>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="../../assets/js/common.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+       document.addEventListener('DOMContentLoaded', function() {
+            const ctx = document.getElementById('chart1')
+            const myChart = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: ['01시','02시','03시','04시', '05시'],
+                    datasets: [{
+                        label: '',
+                        data: [2, 1, 3, 4, 1],
+                        borderWidth: 2,
+                        borderColor: '#ff0000'
+                    }]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            })
+
+            const ctx2 = document.getElementById('chart2')
+            const myChart2 = new Chart(ctx2, {
+                type: 'line',
+                data: {
+                    labels: ['01시','02시','03시','04시', '05시'],
+                    datasets: [{
+                        label: '',
+                        data: [2, 1.3, 1.2, 2.2, 1],
+                        borderWidth: 2,
+                        borderColor: '#ff9e40'
+                    }]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            })
+        })
+    </script>
+  </body>
+</html>

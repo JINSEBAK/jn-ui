@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../style/style.css" />
+    <!-- modal -->
+    <link rel="stylesheet" href="../style/micromodal.css" />
+    <script src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script>
+    <!-- jquery -->
+    <script
+      src="https://code.jquery.com/jquery-3.7.0.min.js"
+      integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
+      crossorigin="anonymous"
+    ></script>
+    <!-- map -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="http://map.seoul.go.kr/smgis/apps/mapsvr.do?cmd=gisMapCss"
+    />
+    <script
+      type="text/javascript"
+      src="http://map.seoul.go.kr/smgis/apps/mapsvr.do?cmd=gisMapJs&key=3b9579ca0f9c42929e6a9bf68ac4e267"
+    ></script>
+  </head>
+  <body>
+    <div id="app">
+      <div id="control-wrap">
+        <div class="search-box">
+          <input
+            id="searchInput"
+            class="search-box__text"
+            type="text"
+            placeholder="검색어를 입력하세요"
+          />
+          <div class="search-box__img">
+            <img
+              src="https://www.jongno.go.kr/portal/open_content/images/2021new/main/btn_search.png"
+              class="searchBtn"
+            />
+          </div>
+        </div>
+
+        <div class="map-control">
+          <div class="category"></div>
+        </div>
+      </div>
+    </div>
+    <div id="map_"></div>
+    <!-- bottom nav -->
+    <div class="navbar">
+      <div class="nav-list">
+        <a href="#" class="active">Home</a>
+        <a href="#">Map</a>
+        <a href="./camera.html">카메라</a>
+      </div>
+    </div>
+
+    <!-- modal -->
+    <div class="modal-wrapper"></div>
+
+    <script>
+      const back = () => {
+        const modalElement = document.querySelector("#modal-1");
+        if (modalElement) {
+          const modalContainer = document.querySelector(".modal-wrapper");
+          modalContainer.innerHTML = "";
+          return "onWebBack";
+        }
+      };
+    </script>
+
+    <script src="../js/map.js" type="module" defer></script>
+    <script src="../js/search.js" type="module" defer></script>
+    <script src="../js/common.js" type="module" defer></script>
+    <script src="../js/category.js" type="module" defer></script>
+    <script src="../js/data.js" type="module" defer></script>
+  </body>
+</html>

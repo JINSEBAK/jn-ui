@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="../assets/css/reset.css"></link>
+<link rel="stylesheet" href="../assets/css/style.css"></link>
+<title>종로 스마트시티 모바일 앱</title>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="../assets/css/home.css"></link>
+  </head>
+  <body class="home">
+    
+    <header id="header" class="sub">
+  <button type="button" class="btn btn-icon" id="btnBack">
+    <img src="../assets/images/icon_back.svg" alt="" />
+    <span class="sr-only">뒤로가기</span>
+  </button>
+  <a type="button" class="btn btn-icon" id="btnHome">
+    <img src="../assets/images/icon_home.svg" alt="" />
+    <span class="sr-only">홈 바로가기</span>
+  </a>
+  <h2 class="title"><span>정화조 청소 예약</span></h2>
+
+  <button type="button" class="btn btn-icon icon info">
+    <span class="sr-only">추가 정보 보기</span>
+  </button>
+  
+</header>
+
+
+    <div class="container inner-full-padd">
+
+        <!-- guide text & image -->
+        <section class="pre-guide">
+            <img src="../assets/images/img_clean.svg" alt="">
+            <h3 class="pre-guide_title">정화조 청소</h3>
+            <p class="pre-guide_cont">
+              정화조 소유/관리자는 오수관로 막힘, 악취 발생 및 기능 저하로 인한 수질 오염을 방지하기 위해 정화조를 연 1회 이상 청소가 필요합니다. <br>
+              (하수도법 제 80조 및 시행 규칙 제 43조 근거 / 위반 시 100만원 이하 과태료 부과)
+            </p>
+            <div class="pre-guide_cont">
+                <em class="tit">정화조 청소 예약 안내</em>
+                <ul class="service-step">
+                  <li>
+                    <div class="step step-1">SMS<br>인증</div>
+                    <div class="step-act">휴대폰번호를 입력하여 SMS 문자 인증</div>
+                  </li>
+                  <li>
+                    <div class="step step-2">신청정보<br>입력</div>
+                    <div class="step-act">
+                      청소 일정 및 시간, 신청자 정보 및 주소 입력폼
+                      <span>* 관할구역은 [정화조 청소 예약 가능 지역]을 확인해주세요.</span>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="step step-3">업체<br>확인</div>
+                    <div class="step-act">
+                      거주지역 청소업체가 신청정보 확인 후 신청자에게 전화하여 정화조 청소 진행 안내 및 예약 정보 확인
+                    </div>
+                  </li>
+                  <li>
+                    <div class="step step-4">결제</div>
+                    <div class="step-act">
+                      청소 수수료 납부
+                    </div>
+                  </li>
+                  <li>
+                    <div class="step step-5">정화조<br>청소</div>
+                    <div class="step-act">
+                      신청일에 정화조 청소 진행<br>(청소 후 3년 동안 영수증 보관)
+                    </div>
+                  </li>
+                </ul>
+
+                <button type="button" class="btn btn-info btn-popup" data-target="popupPage">
+                  정화조 청소 예약 가능 지역
+                </button>
+            </div>
+
+            <div class="pre-guide_cont">
+              <em class="tit">정화조 청소 수수료</em>
+              <table class="tb">
+                <caption>정화조 청소 분료, 정화조, 야간/지하 할증, 요금계산법이 있습니다.</caption>
+                <tbody>
+                  <tr>
+                    <th scope="row">분료</th>
+                    <td>226원 (18L 기준)</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">정화조</th>
+                    <td>기본 21,400원 (0.75m2 기준)<br>초과 1,550원 (0.1m2 당)</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">야간/지하<br>할증</th>
+                    <td>정화조 청소 요금의 7.0%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">요금<br>계산법</th>
+                    <td>산정 요금 = 기본요금 + (청소량-0.75) X 초과요금</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+        </section>
+
+        <div class="btns under">
+            <button type="button" class="btn btn-primary" id="btnReserve">정화조 청소 예약</button>
+        </div>
+    </div>
+
+    <aside id="aside" class="popup-bg popup-closable">
+
+        <!-- SMS 인증팝업 -->
+        <div class="popup popup-slide" id="popupBtmSheet">
+            <div class="btm-sheet">
+              <div class="btm-sheet_head"></div>
+              <div class="btm-sheet_body">
+                    <h3 class="section-title">SMS 인증</h3>
+                    <p class="ctx">본인확인을 위해 휴대폰번호를 입력해주세요.</p>
+                    <div class="input inline">
+                        <input type="tel" placeholder="-없이 휴대폰번호 입력" aria-label="하이픈없이 휴대폰번호를 입력해주세요." id="telNumber" maxlength="11">
+                        <button type="button" class="btn btn-default">인증요청</button>
+                    </div>
+                    <div class="input">
+                        <input type="tel" placeholder="인증번호 6자리" aria-label="인증번호 6자리를 입력해주세요." id="authNumber" maxlength="6">
+                        <span class="counter time">02:59</span>
+                    </div>
+                    <div class="guide">
+                        인증번호가 수신되지 않은 경우, 휴대폰 번호를 다시 확인하여 주세요.
+                    </div>
+              </div>
+
+              <div class="btm-sheet_tail">
+                <button type="button" class="btn btn-second close">닫기</button>
+                <button type="button" class="btn btn-primary">확인</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 청소가능 지역 확인  -->
+          <div class="popup popup-page" id="popupPage">
+            <div class="popup-hd">
+              <button type="button" class="btn btn-icon close">
+                <span class="icon close">
+                  <span class="sr-only">팝업 닫기</span>
+                </span>
+              </button>
+            </div>
+            <div class="popup-container inner-padd">
+              <div class="service-info">
+                <h3 class="title">정화조 청소 신청 가능 지역</h3>
+                <ul>
+                  <li>
+                    <div class="service-info_card">
+                      <div class="card-tit">
+                        환경개발(주)
+                        <span class="tel">02)720-8745~9</span>
+                      </div>
+                      <div class="card-cont">
+                        가희동, 구기동, 교남동, 교복동, 궁정동, 계동, 누상동, 누화동, 내수동, 내자동, 도령동, 당주동, 무역동, <strong>명륜1가</strong>, <strong>명륜3가</strong>, 가희동, 구기동, 교남동, 교복동, 궁정동, 계동, 누상동, 누화동, 내수동, 내자동, 도령동, 당주동, 무역동, 명륜1가, 명륜3가 
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="service-info_card">
+                      <div class="card-tit">
+                        종복환경개발(주)
+                        <span class="tel">02)741-0909</span>
+                      </div>
+                      <div class="card-cont">
+                        가희동, 구기동, 교남동, 교복동, 궁정동, 계동, 누상동, 누화동, 내수동, 내자동, 도령동, 당주동, 무역동, <strong>명륜1가</strong>, <strong>명륜3가</strong>, 가희동, 구기동, 교남동, 교복동, 궁정동, 계동, 누상동, 누화동, 내수동, 내자동, 도령동, 당주동, 무역동, 명륜1가, 명륜3가 
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          
+
+    </aside>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="../../assets/js/common.js"></script>
+
+    <script>
+        const btnReserve = document.getElementById('btnReserve')
+        const aside = document.getElementById('aside');
+
+        btnReserve.addEventListener('click', function() {
+          aside.classList.add('on')
+          aside.querySelector('#popupBtmSheet').classList.add('show')
+        })
+    </script>
+  </body>
+</html>

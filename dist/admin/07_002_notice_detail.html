@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>종로 관리자</title>
+    <link rel="stylesheet" href="../assets/vendor/jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="../assets/css/reset.css">
+    <link rel="stylesheet" href="../assets/css/admin.css">
+</head>
+  <body>
+    <header id="header">
+    <a href="00_002_dashboard.html" class="logo">
+        종로 스마트시티앱 관리자사이트
+    </a>
+    <div class="opt">
+        <button type="button" class="btn btn-text">yesman 님</button>
+    </div>
+    <div class="opt">
+        <button type="button" class="btn btn-icon icon alarm"></button>
+        <div class="dropdown">
+            <div class="dropdown-alarm">
+                <h4 class="title">알림</h4>
+                <button type="button" class="btn btn-text">모두 읽음 처리</button>
+                <ul class="lists">
+                    <li>
+                        새로운 1:1 문의가 도착했습니다. 
+                        <span class="date">2023-10-31 10:30</span>
+                    </li>
+                    <li>
+                        권한이 관리자로 변경되었습니다.
+                        <span class="date">2023-10-31 10:30</span>
+                    </li>
+                    <li>
+                        가입이 승인되었습니다.
+                        <span class="date">2023-10-31 10:30</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="opt">
+        <button type="button" class="btn btn-text">로그아웃</button>
+    </div>
+</header>
+    <nav id="nav">
+  <ul class="gnb" id="gnb">
+    <li class="">
+      <a href="#">menu 1</a>
+    </li>
+    <li class="">
+      <a href="#">Depth 1</a>
+      <ul class="sub">
+        <li>
+          <a href="#">menu 1</a>
+        </li>
+        <li>
+          <a href="#">menu 2</a>
+        </li>
+        <li>
+          <a href="#">menu 3</a>
+        </li>
+        <li>
+          <a href="#">menu 4</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+    <main class="main">
+        <div class="page-title">
+    <h2>공지사항 상세</h2>
+    <p class="des"></p>
+    <ol class="breadcrumb">
+        <li></li>
+        <li></li>
+    </ol>
+</div>
+        <div class="content">
+
+            <div class="detail">
+                <ul class="lik-tb">
+                    <li class="lb lb-one">구분</li>
+                    <li>
+                        시스템
+                        <label class="badge badge-imp">중요</label>
+                    </li>
+                    <li class="lb lb-one">제목</li>
+                    <li>10월 3일 (목) 시스템 점검 안내입니다.</li>
+                    <li class="lb lb-one">내용</li>
+                    <li>
+                        <div class="pre">
+10월 3일 (목) 전체 시스템 점검으로
+서비스 이용이 잠시 중단 됩니다.
+
+불편을 드려 죄송합니다.
+                        </div>
+                    </li>
+                    <li class="lb lb-one">첨부파일</li>
+                    <li>
+                        <span>시스템_안내.pdf</span><span class="unit">(2.4MB)</span>
+                        <a href="#" class="btn btn-third small">다운로드</a>
+                    </li>
+                </ul>
+
+                <ul class="lik-tb">
+                    <li class="lb">팝업</li>
+                    <li>적용</li>
+                    <li class="lb">팝업 종류</li>
+                    <li>텍스트</li>
+                    <li class="lb lb-one">팝업 내용</li>
+                    <li>
+                        <div class="pre">
+10월 3일 (목) 전체 시스템 점검으로
+서비스 이용이 잠시 중단 됩니다.
+불편을 드려 죄송합니다.
+                        </div>
+                    </li>
+                    <li class="lb lb-one">팝업 노출 기간</li>
+                    <li>2023-10-30 ~ 2023-12-31</li>
+                    <li class="lb">등록일시</li>
+                    <li>2023-10-29 10:30</li>
+                    <li class="lb">등록자</li>
+                    <li>master_01</li>
+                </ul>
+
+                <ul class="lik-tb">
+                    <li class="lb">최종 수정일시</li>
+                    <li>2023-10-29 10:30</li>
+                    <li class="lb">최종 수정자</li>
+                    <li>master_01</li>
+                </ul>
+            </div>
+
+            <div class="btns detail">
+                <a href="./07_001_notice_mgmt.html" class="btn btn-default">목록</a>
+                <button type="button" class="btn btn-third">삭제</button>
+                <button type="button" class="btn btn-second">수정</button>
+            </div>
+
+        </div>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="../../../assets/vendor/jquery-ui/jquery-ui.min.js"></script>
+<script src="../../../assets/js/admin.js"></script>
+    <script>
+       
+    </script>
+  </body>
+</html>

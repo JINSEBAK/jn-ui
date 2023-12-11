@@ -237,7 +237,37 @@
       .icon {
         width: 1.5rem;
         height: 1.5rem;
-        background-color: #eee;
+        background-color: #fff;
+        &.menu01 {
+          background-image: url(../images/icon_menu_01.svg)
+        }
+        &.menu02 {
+          background-image: url(../images/icon_menu_02.svg)
+        }
+        &.menu03 {
+          background-image: url(../images/icon_menu_03.svg)
+        }
+        &.menu04 {
+          background-image: url(../images/icon_menu_04.svg)
+        }
+        &.menu05 {
+          background-image: url(../images/icon_menu_05.svg)
+        }
+        &.menu06 {
+          background-image: url(../images/icon_menu_06.svg)
+        }
+        &.menu07 {
+          background-image: url(../images/icon_menu_07.svg)
+        }
+        &.menu08 {
+          background-image: url(../images/icon_menu_08.svg)
+        }
+        &.menu09 {
+          background-image: url(../images/icon_menu_09.svg)
+        }
+        &.menu10 {
+          background-image: url(../images/icon_menu_10.svg)
+        }
       }
     }
     &-items {

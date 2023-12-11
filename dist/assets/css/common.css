@@ -1,0 +1,18 @@
+.common {
+  border: 1px solid red;
+}
+.common .common-child {
+  border: 1px dashed blue;
+  color: pink;
+}
+
+h1 {
+  color: salmon;
+}
+
+.btn {
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  padding: 0.5rem;
+}
+/*# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImNvbW1vbi5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0U7O0FBQ0E7RUFDRTtFQUNBOzs7QUFJSjtFQUNFOzs7QUFHRjtFQUNFO0VBQ0E7RUFDQSIsImZpbGUiOiJjb21tb24uY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmNvbW1vbiB7XG4gIGJvcmRlcjogMXB4IHNvbGlkIHJlZDtcbiAgLmNvbW1vbi1jaGlsZCB7XG4gICAgYm9yZGVyOiAxcHggZGFzaGVkIGJsdWU7XG4gICAgY29sb3I6IHBpbms7XG4gIH1cbn1cblxuaDEge1xuICBjb2xvcjogc2FsbW9uO1xufVxuXG4uYnRuIHtcbiAgYm9yZGVyOiAxcHggc29saWQgdHJhbnNwYXJlbnQ7XG4gIGJvcmRlci1yYWRpdXM6IDAuMjVyZW07XG4gIHBhZGRpbmc6IDAuNXJlbTtcbn1cbiJdfQ== */

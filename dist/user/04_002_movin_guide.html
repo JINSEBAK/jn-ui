@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="../assets/css/reset.css"></link>
+<link rel="stylesheet" href="../assets/css/style.css"></link>
+<title>종로 스마트시티 모바일 앱</title>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="../assets/css/search.css" />
+  </head>
+  <body class="search detail">
+    <header id="header" class="sub">
+  <button type="button" class="btn btn-icon" id="btnBack">
+    <img src="../assets/images/icon_back.svg" alt="" />
+    <span class="sr-only">뒤로가기</span>
+  </button>
+  <a type="button" class="btn btn-icon" id="btnHome">
+    <img src="../assets/images/icon_home.svg" alt="" />
+    <span class="sr-only">홈 바로가기</span>
+  </a>
+  <h2 class="title"><span>전입자 안내 가이드</span></h2>
+
+  <button type="button" class="btn btn-icon icon info">
+    <span class="sr-only">추가 정보 보기</span>
+  </button>
+  
+</header>
+
+    <div class="container">
+      
+        <section class="movin-banner">
+          <p class="explain">종로구 전입자를 위한</p>
+          <h2 class="title">종로구 <strong>생활 안내가이드</strong></h2>
+          <img src="../../assets/images/img_movin.svg" alt="남자와 여자가 서류를 들고 가이드를 하는 이미지">
+        </section>
+
+        <div class="inner-padd">
+          <h3 class="movin-title video">전입신고 유의사항</h3>
+          <ul class="movin-guide">
+            <li>
+              <div class="q">전입신고는 주소지 관할 주민센터에서만 가능합니다. </div>
+              <button type="button" class="btn btn-info">
+                행정동 검색하기
+              </button>
+            </li>
+            <li>
+              <div class="q">등기부등본, 건강보험자격득실확인서는 무인민원발급기 또는 정부24를 이용해주세요.</div>
+              <div class="info-usable">
+                <a href="#" role="button" class="btn btn-under">무인 민원발급기</a>
+                <p>등기부 등본 발급 가능 기기<br>종로구청 종합상황실(1대), 부동산정보과(2대)</p>
+
+                <a href="#" role="button" class="btn btn-under">정부 24</a>
+              </div>
+            </li>
+            <li>
+              <div class="q">전월세 계약을 하셨나요?<br>임대차계약신고와 확정일자를 확인해 주세요.</div>
+              <div class="q sub">임대차 보증금이 6천만원을 초과하거나 월차임이 30만원을 초과하는 임대차계약은 주택 임대차 계약 신고 대상입니다.</div>
+            </li>
+          </ul>
+          
+          <section class="movin-info">
+            <h3 class="title">임대차 계약 신고</h3>
+            <table class="tb" summary="기한, 방법, 비고로 구분되는 표">
+              <caption>기한 방법 비고</caption>
+              <tbody>
+                <tr>
+                  <th scope="row">기한</th>
+                  <td>계약체결일로부터 30일 이내</td>
+                </tr>
+                <tr>
+                  <th scope="row">방법</th>
+                  <td> 
+                    1) 주택 주소지 관할 동주민센터 (행정동) 방문<br>
+                    -신분증, 임재차계약서 지참<br>
+                    *무료<br>
+                    [삼청동 민원대기표 발권]<br>
+                    [평창동 민원대기표 발권]<br>
+
+                    2) 부동산거래시스템 온라인 신고<br>
+                    (공인인증서, 계약서 스캔 파일 필요)<br>
+                    *무료
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">비고</th>
+                  <td>*.임대차계약 신고는 전입 신고 전에도 가능합니다.</td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+
+          <section class="movin-info">
+            <h3 class="title">확정일자</h3>
+            <table class="tb" summary="방법, 비고로 구분되는 표">
+              <caption>방법 비고</caption>
+              <tbody>
+                <tr>
+                  <th scope="row">방법</th>
+                  <td>
+                    1) 주택 주소지 관할 동주민센터(행정동) 방문<br>
+                    -신분증, 임대차계약서 지참<br>
+                    *600원<br>
+                    [삼청동 민원대기표 발권]<br>
+                    [평창동 민원대기표 발권]<br><br>
+
+                    2) 부동산거래시스템에서 임대차계약 신고 시 확정일자 자동 부여<br>
+                    *무료<br><br>
+
+                    3) 대법원 인터넷 등기소에서 전자확정일자 발급<br>
+                    (공동인증서, 금융인증서 필요)<br>
+                    *.500원
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">비고</th>
+                  <td>
+                    *.확정일자는 발급 후 익일부터 효력이 발생합니다.<br>
+                    *.동주민센터 방문하여 임대차계약 신고와 함께 확정일자 발급받는 경우 수수료가 면제됩니다.
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+
+          <section class="movin-info">
+            <h3 class="title">전입신고</h3>
+            <table class="tb" summary="기한, 방법, 비고로 구분되는 표">
+              <caption>기한 방법 비고</caption>
+              <tbody>
+                <tr>
+                  <th scope="row">기한</th>
+                  <td>이사한 날로부터 14일 이내</td>
+                </tr>
+                <tr>
+                  <th scope="row">방법</th>
+                  <td>
+                    1) 주택 주소지 관할 동주민센터(행정동) 방문<br>
+                    -신분증, 임대차계약서 지참<br>
+                    *무료<br>
+                    [삼청동 민원대기표 발권]<br>
+                    [평창동 민원대기표 발권]<br><br>
+
+                    2) 정부24 온라인 전입신고<br>
+                    *무료
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">비고</th>
+                  <td>
+                    *. 전입신고 종류에 따라 구비서류가 다르니, 주소지 동주민센터로 상담 후 방문하시기 바랍니다.<br>
+                    *. 세대 편입 시 세대주 확인이 필요합니다.
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+
+          <section class="info-link">
+            <div class="info-link-grp">
+              <h5 class="info-link-tit">전입자에게 유용한 정보</h5>
+              <ul>
+                <li><a href="#">쓰레기 배출일</a></li>
+                <li><a href="#">폐기물 봉투 판매소 검색</a></li>
+                <li><a href="#">거주자우선주차장 신청 : 시설관리공단 홈페이지에 로그인 후 신청</a></li>
+                <li><a href="#">거주자우선주차장 주차구간 검색</a></li>
+              </ul>
+            </div>
+
+            <div class="info-link-grp">
+              <h5 class="info-link-tit">우리동네 제대로 활용하기</h5>
+              <ul>
+                <li><a href="#">인근 골목길 탐방 추천코스</a></li>
+                <li><a href="#">자치회관, 정보화교육 등 추천 프로그램</a></li>
+                <li><a href="#">복지서비스 찾기</a></li>
+              </ul>
+            </div>
+          </section>
+        </div>
+
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="../../assets/js/common.js"></script>
+
+  </body>
+</html>

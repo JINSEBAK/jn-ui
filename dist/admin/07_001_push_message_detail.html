@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>종로 관리자</title>
+    <link rel="stylesheet" href="../assets/vendor/jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="../assets/css/reset.css">
+    <link rel="stylesheet" href="../assets/css/admin.css">
+</head>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+  <body>
+    <header id="header">
+    <a href="00_002_dashboard.html" class="logo">
+        종로 스마트시티앱 관리자사이트
+    </a>
+    <div class="opt">
+        <button type="button" class="btn btn-text">yesman 님</button>
+    </div>
+    <div class="opt">
+        <button type="button" class="btn btn-icon icon alarm"></button>
+        <div class="dropdown">
+            <div class="dropdown-alarm">
+                <h4 class="title">알림</h4>
+                <button type="button" class="btn btn-text">모두 읽음 처리</button>
+                <ul class="lists">
+                    <li>
+                        새로운 1:1 문의가 도착했습니다. 
+                        <span class="date">2023-10-31 10:30</span>
+                    </li>
+                    <li>
+                        권한이 관리자로 변경되었습니다.
+                        <span class="date">2023-10-31 10:30</span>
+                    </li>
+                    <li>
+                        가입이 승인되었습니다.
+                        <span class="date">2023-10-31 10:30</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="opt">
+        <button type="button" class="btn btn-text">로그아웃</button>
+    </div>
+</header>
+    <nav id="nav">
+  <ul class="gnb" id="gnb">
+    <li class="">
+      <a href="#">menu 1</a>
+    </li>
+    <li class="">
+      <a href="#">Depth 1</a>
+      <ul class="sub">
+        <li>
+          <a href="#">menu 1</a>
+        </li>
+        <li>
+          <a href="#">menu 2</a>
+        </li>
+        <li>
+          <a href="#">menu 3</a>
+        </li>
+        <li>
+          <a href="#">menu 4</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+    <main class="main">
+        <div class="page-title">
+    <h2>알림 메시지</h2>
+    <p class="des"></p>
+    <ol class="breadcrumb">
+        <li></li>
+        <li></li>
+    </ol>
+</div>
+        <div class="content">
+
+          <div class="tabs" role="tablist">
+            <div class="tab" role="tab" aria-selected="true" aria-controls="tabContent1" id="tab1">
+                <span>알림 목록</span>
+            </div>
+            <div class="tab active" role="tab" aria-selected="true" aria-controls="tabContent2" id="tab2">
+              <span>메시지 관리</span>
+            </div>
+          </div>
+
+          <div class="tab-contents">
+            <div class="tab-content" role="tabpanel" aria-labelledby="tab2" id="tabContent2" tabindex="0">
+                <h3 class="tab-content_title">메시지 상세</h3>
+                <div class="detail">
+                    <ul class="lik-tb">
+                        <li class="lb lb-one">알림 유형</li>
+                        <li>시스템 공지</li>
+                        <li class="lb lb-one">제목</li>
+                        <li>[시스템] <span class="dynamic-msg">{앱 공지 제목}</span></li>
+                        <li class="lb lb-one">메시지</li>
+                        <li>
+                            <div class="pre"><span class="dynamic-msg">{앱 공지 내용 첫 줄}</span></div>
+                        </li>
+                        <li class="lb">등록일시</li>
+                        <li>yyyy-mm-dd hh:mm / admin</li>
+                        <li class="lb">최종 수정일시</li>
+                        <li>yyyy-mm-dd hh:mm / admin</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="btns detail">
+              <a href="#" class="btn btn-default">목록</a>
+              <button type="button" class="btn btn-second">수정</button>
+            </div>
+          </div>
+
+
+        </div>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="../../../assets/vendor/jquery-ui/jquery-ui.min.js"></script>
+<script src="../../../assets/js/admin.js"></script>
+  </body>
+</html>

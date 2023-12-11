@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="../assets/css/index.css">
+    <link rel="stylesheet" href="../assets/css/admin.css">
+    <title>Common Elements</title>
+</head>
+<body>
+    <div class="container">
+
+        <div class="pd-inner" id="content">
+
+            <dl class="el-items">
+                <dt>버튼</dt>
+                <dd class="d-flex">
+                    <button type="button" class="btn btn-primary">.btn-primary</button>
+                    <button type="button" class="btn btn-second">.btn-second</button>
+                    <button type="button" class="btn btn-third">.btn-third</button>
+                    <button type="button" class="btn btn-default">.btn-default</button>
+                    <button type="button" class="btn btn-text">.btn-text</button>
+                </dd>
+            </dl>
+
+            <dl class="el-items">
+                <dt>팝업</dt>
+                <dd class="d-flex">
+                    <button type="button" class="btn btn-default btn-popup" data-target="alert">메시지 알럿</button>
+                    <button type="button" class="btn btn-default btn-popup" data-target="confirm">메시지 컨펌</button>
+
+                    <button type="button" class="btn btn-default btn-popup" data-target="thumbImg">이미지 크게보기</button>
+                    <button type="button" class="btn btn-default" id="btnPopupSample">모달 팝업</button>
+                </dd>
+            </dl>
+
+            <dl class="el-items">
+                <dt>툴팁</dt>
+                <dd>
+                    <div class="tool-tip">
+                        <span class="icon info" data-role="tooltip">
+                            <span class="sr-only">도움말</span>
+                        </span>
+                        <div class="tips">등록한 정책/약관의 배포일을 지정할 수 있습니다. 배포일 전에는 내용 수정이  가능하며, 배포일 이후에는 새로운 정책/약관 버전을 등록하셔야 합니다.</div>
+                    </div>
+                </dd>
+            </dl>
+
+            <dl class="el-items">
+                <dt>Forms</dt>
+                <dd class="form-flex">
+                    <div>
+                        <input type="text" class="input input-keyword" placeholder="placeholder">
+                    </div>
+                    <div>
+                        <select class="select">
+                            <option value="">OPTION 1</option>
+                            <option value="">OPTION 2</option>
+                            <option value="">OPTION 3</option>
+                        </select>
+                    </div>
+                    <div>
+                        <textarea class="textarea" name="" id="" cols="30" rows="10" placeholder="placeholder"></textarea>
+                    </div>
+                    <div class="inline">
+                        <label class="checkbox">
+                            <input type="checkbox" name="chk" value="1">
+                            <span>checkbox 1</span>
+                        </label>
+                        <label class="checkbox">
+                            <input type="checkbox" name="chk" value="2">
+                            <span>checkbox 2</span>
+                        </label>
+                        <label class="checkbox">
+                            <input type="checkbox" name="chk" value="3">
+                            <span>checkbox 3</span>
+                        </label>
+                    </div>
+                    <div class="inline">
+                        <label class="radio">
+                            <input type="radio" name="radio" value="1" checked>
+                            <span>radio 1</span>
+                        </label>
+                        <label class="radio">
+                            <input type="radio" name="radio" value="2">
+                            <span>radio 2</span>
+                        </label>
+                        <label class="radio">
+                            <input type="radio" name="radio" value="3">
+                            <span>radio 3</span>
+                        </label>
+                    </div>
+                    <div class="checkround-box">
+                        <label class="checkround">
+                            <input type="checkbox">
+                            <span>r-checkbox 1</span>
+                        </label>
+                        <label class="checkround">
+                            <input type="checkbox">
+                            <span>r-checkbox 2</span>
+                        </label>
+                        <label class="checkround">
+                            <input type="checkbox">
+                            <span>r-checkbox 3</span>
+                        </label>
+                    </div>
+                    <div>
+                        <div class="file-box">
+                            <label class="file">
+                                <input type="file" class="input">
+                                <span>파일추가</span>
+                            </label>
+                            <div class="file-info">
+                                세종마을_B코드.mp3
+                                <button type="button" class="btn btn-icon icon close">
+                                    <span class="sr-only">파일삭제</span>
+                                </button>
+                            </div>
+                        </div>
+                        <ul class="guide">
+                            <li>30Mb 이내 WAV, MP3, OGG 파일 업로드</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <div class="frm-date">
+                            <select class="select">
+                                <option value="">선택 1</option>
+                                <option value="">선택 2</option>
+                            </select>
+                            <div class="date picker">
+                                <input type="text" class="input" placeholder="시작일">
+                            </div>
+                            <div class="date picker">
+                                <input type="text" class="input" placeholder="종료일">
+                            </div>
+                            <div class="select-date">
+                                <label>
+                                  <input type="radio" name="select-date" value="1" checked="">
+                                  <span>전체</span>
+                                </label>
+                                <label>
+                                  <input type="radio" name="select-date" value="2">
+                                  <span>오늘</span>
+                                </label>
+                                <label>
+                                  <input type="radio" name="select-date" value="3">
+                                  <span>일주일</span>
+                                </label>
+                                <label>
+                                  <input type="radio" name="select-date" value="4">
+                                  <span>1개월</span>
+                                </label>
+                                <label>
+                                  <input type="radio" name="select-date" value="5">
+                                  <span>3개월</span>
+                                </label>
+                              </div>
+                        </div>
+                    </div>
+
+                </dd>
+            </dl>
+
+            <dl class="el-items">
+                <dt>이미지 첨부 및 미리보기</dt>
+                <dd>
+                    <div>
+                        <div class="attach-img">
+                            <label>
+                                <img src="" id="previewImg" style="display:none">
+                                <input type="file" id="attachImg" accept="image/*">
+                                <span>추가</span>
+                            </label>
+                        </div>
+                        
+                        <ul class="guide">
+                            <li>5MB 이내 JPG, PNG, GIT 파일 업로드</li>
+                        </ul>
+                    </div>
+                </dd>
+            </dl>
+        </div>
+    </div>
+
+    <!-- popup -->
+    <aside class="popup-bg popup-closable">
+        <div class="popup" id="popupSample">
+            <div class="popup-head">
+                <h4 class="title">팝업 타이틀</h4>
+                <button type="button" class="btn btn-icon icon close btn-popup-close">
+                    <span class="sr-only">팝업 닫기</span>
+                </button>
+            </div>
+            <div class="popup-body">
+                body
+            </div>
+            <div class="popup-tail">
+                <button type="button" class="btn btn-primary">.primary</button>
+            </div>
+        </div>
+    </aside>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="../../../assets/vendor/jquery-ui/jquery-ui.min.js"></script>
+<script src="../../../assets/js/admin.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#btnPopupSample').on('click', function() {
+                modal.open('popupSample')
+            })
+        })
+    </script>
+</body>
+</html>

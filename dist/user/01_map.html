@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="../assets/css/reset.css"></link>
+<link rel="stylesheet" href="../assets/css/style.css"></link>
+<title>종로 스마트시티 모바일 앱</title>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="../assets/css/map.css"></link>
+    </head>
+    <body class="maps">
+        <header id="header" class="location">
+  <span class="icon map">
+    <span class="sr-only">위치</span>
+  </span>
+  <h3 class="title">서울시 종로구 익선동</h3>
+
+  <div class="weather bar">
+    <span class="temper">23</span>
+    <span class="temper-txt">맑음</span>
+  </div>
+
+  <button type="button" class="btn btn-icon">
+    <span class="icon info">
+      <span class="sr-only">정보보기</span>
+    </span>
+  </button>
+
+</header>
+
+        <div class="container">
+            <!-- search -->
+<div class="place-search">
+  <div class="input shadow">
+    <input type="text" placeholder="종로에서 찾고 싶은 곳은?" />
+    <span class="icon srch">
+      <span class="sr-only">장소검색</span>
+    </span>
+  </div>
+  <div class="place-filter">
+    <!-- <div class="radio">
+      <input type="radio" id="radio0" name="sample-radio" value="0" checked />
+      <label for="radio0" class="btn-radio radio-all">
+        <span class="icon all-menu">
+          <span class="sr-only">모두보기</span>
+        </span>
+      </label>
+    </div> -->
+
+    <div class="radio">
+      <input type="radio" id="radio" name="sample-radio" value="1" />
+      <label for="radio" class="btn-radio"><span class="marker"><img src="../../assets/images/icon_ctg_road.svg"></span><span>종로산책</span></label>
+    </div>
+    <div class="radio">
+      <input type="radio" id="radio2" name="sample-radio" value="2" />
+      <label for="radio2" class="btn-radio"><span class="marker"><img src="../../assets/images/icon_ctg_road.svg"></span><span>버스정류장</span></label>
+    </div>
+    <div class="radio">
+      <input type="radio" id="radio3" name="sample-radio" value="3" />
+      <label for="radio3" class="btn-radio"><span class="marker"><img src="../../assets/images/icon_ctg_parking.svg"></span><span>공영주차장</span></label>
+    </div>
+    <div class="radio">
+      <input type="radio" id="radio4" name="sample-radio" value="4" />
+      <label for="radio4" class="btn-radio"><span class="marker"><img src="../../assets/images/icon_ctg_cctv.svg"></span><span>CCTV</span></label>
+    </div>
+    <div class="radio">
+      <input type="radio" id="radio5" name="sample-radio" value="5" />
+      <label for="radio5" class="btn-radio"><span class="marker"><img src="../../assets/images/icon_ctg_snow.svg"></span><span>스마트제설함</span></label>
+    </div>
+    <div class="radio">
+      <input type="radio" id="radio6" name="sample-radio" value="6" />
+      <label for="radio6" class="btn-radio"><span class="marker"><img src="../../assets/images/icon_ctg_wifi.svg"></span><span>공공와이파이</span></label>
+    </div>
+    <div class="radio">
+      <input type="radio" id="radio7" name="sample-radio" value="7" />
+      <label for="radio7" class="btn-radio"><span class="marker"><img src="../../assets/images/icon_ctg_shelter.svg"></span><span>무더위쉼터</span></label>
+    </div>
+    <div class="radio">
+      <input type="radio" id="radio8" name="sample-radio" value="8" />
+      <label for="radio8" class="btn-radio"><span class="marker"><img src="../../assets/images/icon_ctg_cmm_cs.svg"></span><span>주민센터</span></label>
+    </div>
+    <div class="radio">
+      <input type="radio" id="radio9" name="sample-radio" value="9" />
+      <label for="radio9" class="btn-radio"><span class="marker"><img src="../../assets/images/icon_ctg_road.svg"></span><span>병원/약국</span></label>
+    </div>
+    <div class="radio">
+      <input type="radio" id="radio10" name="sample-radio" value="10" />
+      <label for="radio10" class="btn-radio"
+        ><span>휴일운영 병원/약국</span></label
+      >
+    </div>
+    <div class="radio">
+      <input type="radio" id="radio11" name="sample-radio" value="11" />
+      <label for="radio11" class="btn-radio"><span class="marker"><img src="../../assets/images/icon_ctg_road.svg"></span><span>체육시설</span></label>
+    </div>
+  </div>
+</div>
+
+
+            <!-- map -->
+            <div class="map-box">
+                <img src="../../assets/images/sample/sample_05.png" alt="지도샘플" class="sample">
+            </div>
+
+            <div class="map-footer course">
+                <!-- user's location -->
+                <button type="button" class="btn btn-icon my-location">
+                    <span class="icon target">
+                        <span class="sr-only">내위치조회</span>
+                    </span>
+                </button>
+
+                <!-- 추천 코스 -->
+                <button type="button" class="btn btn-recommend">
+                    종로 산책 코스 추천
+                </button>
+            </div>
+        </div>
+        <footer id="footer">
+  <nav>
+    <ul class="gnb">
+      <li class="gnb-item">
+        <a href="#" class="on">
+          <span class="icon menu1">
+            <span class="sr-only">홈화면 바로가기</span>
+          </span>
+          <span class="title">홈</span>
+        </a>
+      </li>
+      <li class="gnb-item">
+        <a href="#">
+          <span class="icon menu2">
+            <span class="sr-only">종로맵 바로가기</span>
+          </span>
+          <span class="title">종로맵</span>
+        </a>
+      </li>
+      <li class="gnb-item">
+        <a href="#">
+          <span class="icon menu3">
+            <span class="sr-only">종로소식 바로가기</span>
+          </span>
+          <span class="title">종로소식</span>
+        </a>
+      </li>
+      <li class="gnb-item">
+        <a href="#">
+          <span class="icon menu4">
+            <span class="sr-only">검색 바로가기</span>
+          </span>
+          <span class="title">검색</span>
+        </a>
+      </li>
+      <li class="gnb-item">
+        <a href="#">
+          <span class="icon menu5">
+            <span class="sr-only">더보기 바로가기</span>
+          </span>
+          <span class="title">더보기</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+</footer>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="../../assets/js/common.js"></script>
+
+    </body>
+</html>

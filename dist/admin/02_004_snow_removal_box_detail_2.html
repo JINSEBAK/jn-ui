@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>종로 관리자</title>
+    <link rel="stylesheet" href="../assets/vendor/jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="../assets/css/reset.css">
+    <link rel="stylesheet" href="../assets/css/admin.css">
+</head>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+  <body>
+    <header id="header">
+    <a href="00_002_dashboard.html" class="logo">
+        종로 스마트시티앱 관리자사이트
+    </a>
+    <div class="opt">
+        <button type="button" class="btn btn-text">yesman 님</button>
+    </div>
+    <div class="opt">
+        <button type="button" class="btn btn-icon icon alarm"></button>
+        <div class="dropdown">
+            <div class="dropdown-alarm">
+                <h4 class="title">알림</h4>
+                <button type="button" class="btn btn-text">모두 읽음 처리</button>
+                <ul class="lists">
+                    <li>
+                        새로운 1:1 문의가 도착했습니다. 
+                        <span class="date">2023-10-31 10:30</span>
+                    </li>
+                    <li>
+                        권한이 관리자로 변경되었습니다.
+                        <span class="date">2023-10-31 10:30</span>
+                    </li>
+                    <li>
+                        가입이 승인되었습니다.
+                        <span class="date">2023-10-31 10:30</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="opt">
+        <button type="button" class="btn btn-text">로그아웃</button>
+    </div>
+</header>
+    <nav id="nav">
+  <ul class="gnb" id="gnb">
+    <li class="">
+      <a href="#">menu 1</a>
+    </li>
+    <li class="">
+      <a href="#">Depth 1</a>
+      <ul class="sub">
+        <li>
+          <a href="#">menu 1</a>
+        </li>
+        <li>
+          <a href="#">menu 2</a>
+        </li>
+        <li>
+          <a href="#">menu 3</a>
+        </li>
+        <li>
+          <a href="#">menu 4</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+    <main class="main">
+        <div class="page-title">
+    <h2>스마트 제설함 민원 상세</h2>
+    <p class="des"></p>
+    <ol class="breadcrumb">
+        <li></li>
+        <li></li>
+    </ol>
+</div>
+        <div class="content">
+          <div class="detail">
+            <ul class="lik-tb">
+              <li class="lb">회원ID</li>
+              <li>
+                <span class="user-origin kakao"></span>
+                <span>Test</span>
+              </li>
+              <li class="lb">민원 등록일시</li>
+              <li>yyyy-mm-dd hh:mm:ss</li>
+              <li class="lb">민원 구분</li>
+              <li>청소</li>
+              <li class="lb">처리 상태</li>
+              <li>대기</li>
+              <li class="lb">제설함 명</li>
+              <li>종로 007</li>
+              <li class="lb">관리 코드</li>
+              <li>12</li>
+              <li class="lb lb-one">위치</li>
+              <li>서울시 종로구 공평도 70 종각역 3번 출구 앞</li>
+              <li class="lb lb-one">민원 내용</li>
+              <li>
+                <div class="pre">주변이 너무 더럽습니다. 
+누가 몰래 쓰래기를 버려요
+                </div>
+              </li>
+              <li class="lb lb-one">첨부 이미지</li>
+              <li>
+                <div class="thumb-img">
+                  <img src="../../assets/images/sample/sample_07.jpeg" alt="" >
+                  <button type="button" class="btn-viewer">보기</button>
+              </div>
+              </li>
+            </ul>
+
+            <ul class="lik-tb">
+              <li class="lb lb-one">처리 내용</li>
+              <li>
+                <div class="pre">담당 청소업체 청소 완료, 제설제 보충 완료
+담당자 : 최지우(010-3245-3455)
+                </div>
+              </li>
+              <li class="lb">등록일시</li>
+              <li>yyyy-mm-dd hh:mm / admin</li>
+              <li class="lb">최종 수정일시</li>
+              <li>yyyy-mm-dd hh:mm / admin</li>
+            </ul>
+          </div>
+
+          <div class="btns detail">
+            <a href="#" role="button" class="btn btn-default">목록</a>
+            <button type="button" class="btn btn-third">수정</button>
+          </div>
+
+        </div>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="../../../assets/vendor/jquery-ui/jquery-ui.min.js"></script>
+<script src="../../../assets/js/admin.js"></script>
+  </body>
+</html>

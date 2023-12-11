@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="../assets/css/reset.css"></link>
+<link rel="stylesheet" href="../assets/css/style.css"></link>
+<title>종로 스마트시티 모바일 앱</title>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="../assets/css/home.css"></link>
+  </head>
+
+  <body class="more no-btm">
+    <header id="header" class="sub">
+  <button type="button" class="btn btn-icon" id="btnBack">
+    <img src="../assets/images/icon_back.svg" alt="" />
+    <span class="sr-only">뒤로가기</span>
+  </button>
+  <a type="button" class="btn btn-icon" id="btnHome">
+    <img src="../assets/images/icon_home.svg" alt="" />
+    <span class="sr-only">홈 바로가기</span>
+  </a>
+  <h2 class="title"><span>스마트 번호표</span></h2>
+
+  <button type="button" class="btn btn-icon icon info">
+    <span class="sr-only">추가 정보 보기</span>
+  </button>
+  
+</header>
+
+    <div class="container inner-padd">
+
+      <div class="num-ticket_hd">
+        <h2>
+          <span>대기 없이 바로바로!!</span>
+          <em>스마트 번호표</em>를 발급 받으세요.
+        </h2>
+      </div>
+
+      <div>
+        <!-- 종합민원실 / 여권민원실 -->
+        <div class="num-ticket_leg">
+          <div class="num-ticket_info">
+            <h3 class="title">종합민원실</h3>
+            <p>등,초본/인감/가족관계증명서/전입세대열람/출생/사망/혼인/개명/등록부 정정신고 등</p>
+          </div>
+          <div class="num-ticket_issue">
+            <a href="#" class="btn">발급</a>
+          </div>
+        </div>
+
+        <div class="num-ticket_leg">
+          <div class="num-ticket_info">
+            <h3 class="title">여권민원실</h3>
+            <p>신규/여권수령/재발급/사증란 추가/ 사실증명</p>
+          </div>
+          <div class="num-ticket_issue">
+            <a href="#" class="btn">발급</a>
+          </div>
+        </div>
+
+        <!-- 부동산 정보과 -->
+        <div class="num-ticket_box">
+          <div class="num-ticket_info">
+            <h3 class="title">종로구청 부동산 정보과</h3>
+            <p class="sub-txt">부동산등기/도시재생/재개발/생활불편 신고</p>
+            <label class="label">창구 <strong>2-7</strong></label>
+            <ul class="ticket-status">
+              <li>
+                <span class="status-title">호출번호</span>
+                <span class="status-current">24</span>
+              </li>
+              <li>
+                <span class="status-title">대기인수</span>
+                <span class="status-current">8</span>
+              </li>
+            </ul>
+          </div>
+          <div class="num-ticket_issue">
+            <button type="button" class="btn btn-popup" data-target="popupBtmSheet">번호표 발급</button>
+          </div>
+        </div>
+
+        <!-- 평창동 주민센터 -->
+        <div class="num-ticket_box">
+          <div class="num-ticket_info">
+            <h3 class="title">평창동 주민센터</h3>
+            <p>등초본/인감/전입신고/가족관계증명서/전입세대열람</p>
+            <label class="label">창구 <strong>2</strong></label>
+            <ul class="ticket-status">
+              <li>
+                <span class="status-title">호출번호</span>
+                <span class="status-current">21</span>
+              </li>
+              <li>
+                <span class="status-title">대기인 수</span>
+                <span class="status-current zero">0</span>
+              </li>
+            </ul>
+          </div>
+          <div class="num-ticket_issue">
+            <button type="button" class="btn btn-popup" data-target="popupBtmSheet">번호표 발급</button>
+          </div>
+        </div>
+
+        <!-- 삼청동 주민센터 -->
+        <div class="num-ticket_box">
+          <div class="num-ticket_info">
+            <h3 class="title">삼청동 주민센터</h3>
+            <p>등초본/인감/전입신고/가족관계증명서/전입세대열람</p>
+            <label class="label">창구 <strong>3</strong></label>
+            <ul class="ticket-status">
+              <!-- 로그인 사용자 -->
+              <li class="my-ticket">
+                <span class="status-title">발권번호</span>
+                <span class="status-current">15</span>
+              </li>
+              <li>
+                <span class="status-title">호출번호</span>
+                <span class="status-current">10</span>
+              </li>
+              <li>
+                <span class="status-title">대기인 수</span>
+                <span class="status-current">5</span>
+              </li>
+            </ul>
+          </div>
+          <div class="num-ticket_issue">
+            <button type="button" class="btn btn-popup" data-target="popupBtmSheet">번호표 발급</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="ticket-issue_guide">
+        <h4 class="title">발급 안내 사항</h4>
+        <ul>
+          <li>번호표 발급 시간: 평일 오전 10시 ~ 오후 5시<br>(토.일.공휴일 휴무)</li>
+          <li>스마트 번호표는 순번 발행기에서 발급되는 종이 번호표를 대신합니다.</li>
+          <li>차례가 지나면 번호표를 새로 발급 받아야 합니다.</li>
+          <li>조회된 대기 인원 및 번호는 실제와 차이가 있을 수 있습니다.</li>
+          <li>예약 정보는 카카오톡으로 전송됩니다.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- popup -->
+    <aside id="aside" class="popup-bg popup-closable">
+
+      <div class="popup popup-slide" id="popupBtmSheet">
+        <div class="btm-sheet">
+          <div class="btm-sheet_head"></div>
+          <div class="btm-sheet_body">
+            <h3 class="section-title">스마트 번호표 발급</h3>
+            <p class="ctx">스마트 번호표 발급을 위해 휴대폰번호를 입력해주세요.</p>
+            <div class="input">
+              <input type="tel" placeholder="-없이 휴대폰번호 입력" aria-label="하이픈없이 휴대포번호를 입력해주세요." id="telNumber" maxlength="11">
+            </div>
+          </div>
+          <div class="btm-sheet_tail">
+            <button type="button" class="btn btn-second close">닫기</button>
+            <button type="button" class="btn btn-primary">확인</button>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="../../assets/js/common.js"></script>
+
+
+    <script>
+      // 동작 예시
+      const aside = document.getElementById('aside')
+      const popupBtmSheet = document.getElementById('popupBtmSheet')
+      const btns = document.querySelectorAll('.btn-primary')
+      btns.forEach((btn)=> {
+        btn.onclick=function(e) {
+          aside.classList.add('on')
+          popupBtmSheet.classList.add('show')
+        }
+      })
+      </script>
+    
+  </body>
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="../assets/css/reset.css"></link>
+<link rel="stylesheet" href="../assets/css/style.css"></link>
+<title>종로 스마트시티 모바일 앱</title>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="../assets/css/home.css"></link>
+  </head>
+  <body class="home">
+    
+    <header id="header" class="sub">
+  <button type="button" class="btn btn-icon" id="btnBack">
+    <img src="../assets/images/icon_back.svg" alt="" />
+    <span class="sr-only">뒤로가기</span>
+  </button>
+  <a type="button" class="btn btn-icon" id="btnHome">
+    <img src="../assets/images/icon_home.svg" alt="" />
+    <span class="sr-only">홈 바로가기</span>
+  </a>
+  <h2 class="title"><span>정화조 청소 예약 신청</span></h2>
+
+  <button type="button" class="btn btn-icon icon info">
+    <span class="sr-only">추가 정보 보기</span>
+  </button>
+  
+</header>
+
+
+    <div class="container inner-full-padd">
+     
+        <!-- 정보 입력 -->
+        <section class="info-input">
+            <div class="input">
+                <label for="input" class="required"><span>청소 예약 희망일</span></label>
+                <div class="input-date">
+                    <input type="date" class="" placeholder="날짜 선택">
+                    <div class="select">
+                        <button type="button" class="btn btn-select" data-target="selectBtm">오전 9:00</button>
+                    </div>
+                    <!-- <select>
+                        <option>오전 9:00</option>
+                        <option>오전 10:00</option>
+                        <option>오전 11:00</option>
+                        <option>오후 12:00</option>
+                        <option>오후 1:00</option>
+                        <option>오후 2:00</option>
+                        <option>오후 3:00</option>
+                        <option>오후 4:00</option>
+                        <option>오후 5:00</option>
+                        <option>오후 6:00</option>
+                    </select> -->
+                </div>
+            </div>
+            <div class="input">
+                <label for="input" class="required"><span>신청자명</span></label>
+                <input type="text" placeholder="이름" id="" maxlength="30">
+                <button type="button" class="btn btn-delete">
+                    <span class="sr-only">삭제 버튼</span>
+                </button>
+            </div>
+            <div class="input">
+                <label for="input" class="required"><span>휴대폰 번호</span></label>
+                <input type="tel" placeholder="휴대전화번호 입력" id="" maxlength="30" value="01012341234" disabled>
+            </div>
+
+            <!-- 법정동 별로 관리 업체가 다름 -->
+            <div class="input inline">
+                <label for="input" class="required"><span>주소</span></label>
+                <div class="d-flex">
+                    <input type="text" placeholder="우편번호" readonly>
+                    <button type="button" class="btn btn-default">주소검색</button>
+                </div>
+                <input type="text" class="block" placeholder="주소" readonly>
+                <input type="text" class="block" placeholder="상세주소">
+            </div>
+
+            <div class="input">
+                <label for="input"><span>청소업체</span></label>
+                <input type="text" value="종복환경개발(주)" disabled>
+            </div>
+
+            <div class="terms-agree">
+                <div class="checkbox">
+                    <input type="checkbox" id="checkbox" name="" value="1">
+                    <label for="checkbox"><span>[필수] 개인정보의 제 3자 제공 동의</span></label>
+                </div>
+                <a href="#" role="button" class="link-detail">자세히</a>
+            </div>
+        </section>  
+        <div class="btns under">
+            <button type="button" class="btn btn-primary" id="btnReserve">예약 신청</button>
+        </div>
+    </div>
+    <!-- time select -->
+    <div class="popup popup-slide select" id="selectBtm">
+  <ul class="select-options">
+    <li class="select-options_item">
+      <button type="button">리스트 옵션 1</button>
+    </li>
+    <li class="select-options_item">
+      <button type="button">리스트 옵션 2</button>
+    </li>
+    <li class="select-options_item">
+      <button type="button">리스트 옵션 3</button>
+    </li>
+    <li class="select-options_item">
+      <button type="button">리스트 옵션 4</button>
+    </li>
+    <li class="select-options_item">
+      <button type="button">리스트 옵션 5</button>
+    </li>
+    <li class="select-options_item">
+      <button type="button">리스트 옵션 6</button>
+    </li>
+    <li class="select-options_item">
+      <button type="button">리스트 옵션 7</button>
+    </li>
+    <li class="select-options_item">
+      <button type="button">리스트 옵션 8</button>
+    </li>
+    <li class="select-options_item">
+      <button type="button">리스트 옵션 9</button>
+    </li>
+    <li class="select-options_item">
+      <button type="button">리스트 옵션 10</button>
+    </li>
+  </ul>
+</div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="../../assets/js/common.js"></script>
+
+    <script>
+        $(document).ready(function() {
+        })
+    </script>
+  </body>
+</html>

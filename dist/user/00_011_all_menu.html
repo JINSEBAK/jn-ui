@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="../assets/css/reset.css"></link>
+<link rel="stylesheet" href="../assets/css/style.css"></link>
+<title>종로 스마트시티 모바일 앱</title>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="../assets/css/home.css"></link>
+  </head>
+  <body class="more">
+    
+    <header id="header" class="sub">
+  <button type="button" class="btn btn-icon" id="btnBack">
+    <img src="../assets/images/icon_back.svg" alt="" />
+    <span class="sr-only">뒤로가기</span>
+  </button>
+  <a type="button" class="btn btn-icon" id="btnHome">
+    <img src="../assets/images/icon_home.svg" alt="" />
+    <span class="sr-only">홈 바로가기</span>
+  </a>
+  <h2 class="title"><span>전체메뉴</span></h2>
+
+  <button type="button" class="btn btn-icon icon info">
+    <span class="sr-only">추가 정보 보기</span>
+  </button>
+  
+</header>
+
+
+    <div class="container inner-full-padd">
+        
+        <!-- tab area -->
+        <div class="categories">
+            <div class="radio">
+                <input type="radio" id="radio9" name="site-category" value="1" checked>
+                <label for="radio9" class="btn-radio"><span>행정 민원</span></label>
+            </div>
+            <div class="radio">
+                <input type="radio" id="radio8" name="site-category" value="2">
+                <label for="radio8" class="btn-radio"><span>기후환경</span></label>
+            </div>
+            <div class="radio">
+                <input type="radio" id="radio7" name="site-category" value="3">
+                <label for="radio7" class="btn-radio"><span>주차교통</span></label>
+            </div>
+            <div class="radio">
+                <input type="radio" id="radio6" name="site-category" value="4">
+                <label for="radio6" class="btn-radio"><span>문화관광</span></label>
+            </div>
+            <div class="radio">
+                <input type="radio" id="radio5" name="site-category" value="5">
+                <label for="radio5" class="btn-radio"><span>교육일자리</span></label>
+            </div>
+            <div class="radio">
+                <input type="radio" id="radio4" name="site-category" value="6">
+                <label for="radio4" class="btn-radio"><span>재난 안전</span></label>
+            </div>
+            <div class="radio">
+                <input type="radio" id="radio3" name="site-category" value="7">
+                <label for="radio3" class="btn-radio"><span>건강</span></label>
+            </div>
+            <div class="radio">
+                <input type="radio" id="radio2" name="site-category" value="8">
+                <label for="radio2" class="btn-radio"><span>청소년</span></label>
+            </div>
+            <div class="radio">
+                <input type="radio" id="radio1" name="site-category" value="9">
+                <label for="radio1" class="btn-radio"><span>생활밀착 데이터</span></label>
+            </div>
+            <div class="radio">
+                <input type="radio" id="radio0" name="site-category" value="10">
+                <label for="radio0" class="btn-radio"><span>종로소식</span></label>
+            </div>
+            <div class="radio">
+                <input type="radio" id="radio-1" name="site-category" value="11">
+                <label for="radio-1" class="btn-radio"><span>환경설정</span></label>
+            </div>
+        </div>
+        <div class="site-maps">
+            <section class="site-map" id="menu1">
+                <h3 class="map-category">
+                    <span class="icon menu09">
+                        <span class="sr-only">아이콘</span>
+                    </span> 
+                    행정 민원
+                </h3>
+                <ul class="map-items">
+                    <li class="map-item">
+                        <a href="#">스마트 번호표 발권</a>
+                    </li>
+                    <li class="map-item">
+                        <a href="#">스마트 환급 서비스</a>
+                    </li>
+                    <li class="map-item">
+                        <a href="#">직원/담당업무 검색</a>
+                    </li>
+                    <li class="map-item">
+                        <a href="#">대형생활폐기물</a>
+                    </li>
+                    <li class="map-item">
+                        <a href="#">수어상담</a>
+                    </li>
+                    <li class="map-item">
+                        <a href="#">종로 핫라인</a>
+                    </li>
+                    <li class="map-item">
+                        <a href="#">종합민원 신청접수</a>
+                    </li>
+                    <li class="map-item">
+                        <a href="#">정부24</a>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="site-map" id="menu2">
+                <h3 class="map-category">
+                    <span class="icon menu01">
+                        <span class="sr-only">아이콘</span>
+                    </span> 
+                    기후환경
+                </h3>
+                <ul class="map-items">
+                    <li class="map-item">
+                        <a href="#">미세먼지 정보</a>
+                    </li>
+                    <li class="map-item">
+                        <a href="#">1.1.1 생활실천운동</a>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="site-map" id="menu3">
+                <h3 class="map-category">
+                    <span class="icon menu08">
+                        <span class="sr-only">아이콘</span>
+                    </span> 
+                    주차교통
+                </h3>
+                <ul class="map-items">
+                    <li class="map-item">
+                        <a href="#">과태료 조회</a>
+                    </li>
+                    <li class="map-item">
+                        <a href="#">서울시 공영주차장</a>
+                    </li>
+                    <li class="map-item">
+                        <a href="#">교통현황</a>
+                    </li>
+                    <li class="map-item">
+                        <a href="#">쏘카</a>
+                    </li>
+                    <li class="map-item">
+                        <a href="#">모두의 주차장</a>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="site-map" id="menu4">
+                <h3 class="map-category">
+                    <span class="icon">
+                        <span class="sr-only">아이콘</span>
+                    </span> 
+                   문화관광
+                </h3>
+                <ul class="map-items">
+                    <li class="map-item">
+                        <a href="#">골목길 탐방 코스</a>
+                    </li>
+                    <li class="map-item">
+                        <a href="#">종로여행 예약 접수</a>
+                    </li>
+                    <li class="map-item">
+                        <a href="#">미래유산</a>
+                    </li>
+                    <li class="map-item">
+                        <a href="#">종로구 가상여행</a>
+                    </li>
+                    <li class="map-item">
+                        <a href="#">조망/사진 촬영 장소</a>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="site-map"  id="menu5">
+                <h3 class="map-category">
+                    <span class="icon">
+                        <span class="sr-only">아이콘</span>
+                    </span> 
+                    교육 일자리
+                </h3>
+                <ul class="map-items">
+                    <li class="map-item">
+                        <a href="#">정보화 교육</a>
+                    </li>
+                    <li class="map-item">
+                        <a href="#">자치회관 프로그램</a>
+                    </li>
+                    <li class="map-item">
+                        <a href="#">종로교육포털</a>
+                    </li>
+                    <li class="map-item">
+                        <a href="#">종로구립도서관</a>
+                    </li>
+                    <li class="map-item">
+                        <a href="#">서울시 일자리포털</a>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="site-map"  id="menu6">
+                <h3 class="map-category">
+                    <span class="icon">
+                        <span class="sr-only">아이콘</span>
+                    </span> 
+                    재난안전
+                </h3>
+                <ul class="map-items">
+                    <li class="map-item">
+                        <a href="#">스마트 제설함</a>
+                    </li>
+                    <li class="map-item">
+                        <a href="#">긴급 신고</a>
+                    </li>
+                    <li class="map-item">
+                        <a href="#">CCTV</a>
+                    </li>
+                    <li class="map-item">
+                        <a href="#">비상벨</a>
+                    </li>
+                    <li class="map-item">
+                        <a href="#">병원/의원, 약국</a>
+                    </li>
+                    <li class="map-item">
+                        <a href="#">응급실</a>
+                    </li>
+                    <li class="map-item">
+                        <a href="#">노인복지시설</a>
+                    </li>
+                    <li class="map-item">
+                        <a href="#">아동안전지킴이집</a>
+                    </li>
+                    <li class="map-item">
+                        <a href="#">어린이집</a>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="site-map"  id="menu7">
+                <h3 class="map-category">
+                    <span class="icon">
+                        <span class="sr-only">아이콘</span>
+                    </span> 
+                    건강
+                </h3>
+                <ul class="map-items">
+                    <li class="map-item">
+                        <a href="#">운동하는 종로</a>
+                    </li>
+                    <li class="map-item">
+                        <a href="#">실외 운동 기구</a>
+                    </li>
+                    <li class="map-item">
+                        <a href="#">공공 체육 시설</a>
+                    </li>
+                    <li class="map-item">
+                        <a href="#">동네 체육 시설</a>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="site-map"  id="menu8">
+                <h3 class="map-category">
+                    <span class="icon">
+                        <span class="sr-only">아이콘</span>
+                    </span> 
+                    청소년
+                </h3>
+                <ul class="map-items">
+                    <li class="map-item">
+                        <a href="#">온라인 청년센터</a>
+                    </li>
+                    <li class="map-item">
+                        <a href="#">종로 청년창업 센터</a>
+                    </li>
+                    <li class="map-item">
+                        <a href="#">종로 별별 멘토단</a>
+                    </li>
+                    <li class="map-item">
+                        <a href="#">청년마음건강 지원사업</a>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="site-map"  id="menu9">
+                <h3 class="map-category">
+                    <span class="icon">
+                        <span class="sr-only">아이콘</span>
+                    </span> 
+                    생활 밀착 데이터
+                </h3>
+                <ul class="map-items">
+                    <li class="map-item">
+                        <a href="#">무인민원발급기</a>
+                    </li>
+                    <li class="map-item">
+                        <a href="#">무더위쉼터</a>
+                    </li>
+                    <li class="map-item">
+                        <a href="#">서울시 건설알림이</a>
+                    </li>
+                    <li class="map-item">
+                        <a href="#">서울 실시간 도시데이터</a>
+                    </li>
+                    <li class="map-item">
+                        <a href="#">공구대여</a>
+                    </li>
+                    <li class="map-item">
+                        <a href="#">전통시장</a>
+                    </li>
+                    <li class="map-item">
+                        <a href="#">종로구 공공 와이파이</a>
+                    </li>
+                    <li class="map-item">
+                        <a href="#">쓰레기 배출 요일 안내</a>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="site-map"  id="menu9">
+                <h3 class="map-category">
+                    <span class="icon">
+                        <span class="sr-only">아이콘</span>
+                    </span> 
+                    종로소식
+                </h3>
+                <ul class="map-items">
+                    <li class="map-item">
+                        <a href="#">종로TV</a>
+                    </li>
+                    <li class="map-item">
+                        <a href="#">뉴스레터</a>
+                    </li>
+                    <li class="map-item">
+                        <a href="#">보도자료</a>
+                    </li>
+                    <li class="map-item">
+                        <a href="#">설문조사</a>
+                    </li>
+                </ul>
+            </section>
+        </div>
+
+        <!-- TOP BUTTON -->
+        <button type="button" class="btn btn-top" id="btnTop">
+            <span class="sr-only">위로가기</span>
+            <span>TOP</span>
+        </button>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="../../assets/js/common.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $('input[name="site-category"]').on('change', function() {
+
+                console.log($('#menu' + $(this).val()).offset());
+                if($(this).is(':checked')) {
+                    $('html, body').animate({
+                        scrollTop: $('#menu' + $(this).val()).offset().top - 50 // header 높이만큼, 여백 -
+                    }, 1000)
+                }
+            })
+        })
+        const screenHeight = window.screen.height;
+        const btnTop = document.getElementById('btnTop')
+        window.addEventListener('scroll', function() {
+            if (window.scrollY >= screenHeight) {
+                btnTop.classList.add('active')
+            } else {
+                btnTop.classList.remove('active')
+            }
+        })
+
+        btnTop.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            })
+        })
+    </script>
+  </body>
+</html>

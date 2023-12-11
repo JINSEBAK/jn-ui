@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="../assets/css/reset.css"></link>
+<link rel="stylesheet" href="../assets/css/style.css"></link>
+<title>종로 스마트시티 모바일 앱</title>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="../assets/css/now.css"></link>
+  </head>
+  <body class="now detail no-btm">
+    <header id="header" class="sub">
+  <button type="button" class="btn btn-icon" id="btnBack">
+    <img src="../assets/images/icon_back.svg" alt="" />
+    <span class="sr-only">뒤로가기</span>
+  </button>
+  <a type="button" class="btn btn-icon" id="btnHome">
+    <img src="../assets/images/icon_home.svg" alt="" />
+    <span class="sr-only">홈 바로가기</span>
+  </a>
+  <h2 class="title"><span>오시는 길</span></h2>
+
+  <button type="button" class="btn btn-icon icon info">
+    <span class="sr-only">추가 정보 보기</span>
+  </button>
+  
+</header>
+
+
+    <div class="container">
+
+        <div class="map-box">
+            <div id="map" style="width: 100%; height:20rem; background:#ededed; ">지도</div>
+        </div>
+
+        <!-- list -->
+        <div class="inner-full-padd">
+            <dl class="transp">
+                <dt class="subway">지하철</dt>
+                <dd>
+                    <div class="info">1호선: 종각역 1번 출구</div>
+                    <div class="info">5호선: 광화문역 2번 출구</div>
+                </dd>
+            </dl>
+            <dl class="transp">
+                <dt class="bus">버스</dt>
+                <dd>
+                    <strong>종로1가(종로1가 정류소) 경유</strong>
+                    <ul class="info">
+                        <li>지선버스(녹색):지선버스(녹색) : 1020, 7212</li>
+                        <li>간선버스(청색) : 101, 103, 109, 150, 160, 260, 270, 271, 273, 370, 470, 501, 601, 606, 720, 721</li>
+                    </ul>
+
+                    <hr class="sep">
+
+                    <strong>세종문화회관, 광화문(세종문화회관 정류소, 광화문 정류소) 경유</strong>
+                    <ul class="info">
+                        <li>지선버스(녹색) : 1711, 7016, 7018, 7019, 7022, 7212</li>
+                        <li>간선버스(청색) : 103, 150, 401, 402, 406, 470, 600, 602, 700, 704, 707, 720</li>
+                        <li>광역버스(적색) : 9401, 9701, 9703</li>
+                        <li>마을버스 : 종로09, 종로11</li>
+                    </ul>
+                    
+                    <hr class="sep">
+                    <strong>KT광화문지사(광화문·한국통신KT정류소) 경유</strong>
+                    <ul class="info">
+                        <li>지선버스(녹색) : 1020, 1711, 7016, 7018, 7212</li>
+                        <li>간선버스(청색) : 109, 606</li>
+                        <li>조계사 경유</li>
+                        <li>지선버스(녹색) : 1020, 7022</li>
+                        <li>간선버스(청색) : 109, 151, 162, 172, 401, 406, 606, 704</li>
+                        <li>마을버스 : 종로01, 종로02</li>
+                    </ul>
+                </dd>
+            </dl>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="../../assets/js/common.js"></script>
+
+    <script>
+        const aside = document.getElementById('aside')
+        const popupBtmSheet = document.getElementById('popupBtmSheet')
+        const btnFilter = document.getElementById('btnFilter')
+
+        btnFilter.onclick = function() {
+            aside.classList.add('on')
+            popupBtmSheet.classList.add('show')
+        }
+    </script>
+  </body>
+</html>
