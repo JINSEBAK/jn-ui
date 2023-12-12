@@ -1,11 +1,83 @@
 <!DOCTYPE html>
 <html lang="ko">
-  @@include('./common/head.html')
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>종로 관리자</title>
+    <link rel="stylesheet" href="../assets/vendor/jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="../assets/css/reset.css">
+    <link rel="stylesheet" href="../assets/css/admin.css">
+</head>
   <body>
-    @@include('./common/header.html')
-    @@include('./common/navigation.html')
+    <header id="header">
+    <a href="00_002_dashboard.html" class="logo">
+        종로 스마트시티앱 관리자사이트
+    </a>
+    <div class="opt">
+        <button type="button" class="btn btn-text">yesman 님</button>
+    </div>
+    <div class="opt">
+        <button type="button" class="btn btn-icon icon alarm"></button>
+        <div class="dropdown">
+            <div class="dropdown-alarm">
+                <h4 class="title">알림</h4>
+                <button type="button" class="btn btn-text">모두 읽음 처리</button>
+                <ul class="lists">
+                    <li>
+                        새로운 1:1 문의가 도착했습니다. 
+                        <span class="date">2023-10-31 10:30</span>
+                    </li>
+                    <li>
+                        권한이 관리자로 변경되었습니다.
+                        <span class="date">2023-10-31 10:30</span>
+                    </li>
+                    <li>
+                        가입이 승인되었습니다.
+                        <span class="date">2023-10-31 10:30</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="opt">
+        <button type="button" class="btn btn-text">로그아웃</button>
+    </div>
+</header>
+    <nav id="nav">
+  <ul class="gnb" id="gnb">
+    <li class="">
+      <a href="#">menu 1</a>
+    </li>
+    <li class="">
+      <a href="#">Depth 1</a>
+      <ul class="sub">
+        <li>
+          <a href="#">menu 1</a>
+        </li>
+        <li>
+          <a href="#">menu 2</a>
+        </li>
+        <li>
+          <a href="#">menu 3</a>
+        </li>
+        <li>
+          <a href="#">menu 4</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
     <main class="main">
-        @@include('./common/page_title.html', { title: '관리자 권한 그룹', path: {"p1":"사용자 관리",  "p2":"관리 권한 그룹"}, description: ''})
+        <div class="page-title">
+    <h2>관리자 권한 그룹</h2>
+    <p class="des"></p>
+    <ol class="breadcrumb">
+        <li>사용자 관리</li>
+        <li>관리 권한 그룹</li>
+    </ol>
+</div>
         <div class="content">
           
             <div class="list">
@@ -23,59 +95,6 @@
                         <th scope="col">그룹 설명</th>
                         <th scope="col">소속 인원</th>
                         <th scope="col">생성일시</th>
-                        <th scope="col">최종 수정일시</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>마스터</td>
-                            <td>
-                                <div class="ellipsis">슈퍼 어드민</div>
-                            </td>
-                            <td>1</td>
-                            <td>yyyy-mm-dd hh:mm</td>
-                            <td>yyyy-mm-dd hh:mm</td>
-                        </tr>
-                        <tr>
-                            <td>관리자</td>
-                            <td>
-                                <div class="ellipsis">일반 관리자</div>
-                            </td>
-                            <td>5</td>
-                            <td>yyyy-mm-dd hh:mm</td>
-                            <td>yyyy-mm-dd hh:mm</td>
-                        </tr>
-                        <tr>
-                            <td>청소 업체</td>
-                            <td>
-                                <div class="ellipsis">청소 업체 관리자</div>
-                            </td>
-                            <td>4</td>
-                            <td>yyyy-mm-dd hh:mm</td>
-                            <td>yyyy-mm-dd hh:mm</td>
-                        </tr>
-                        <tr>
-                            <td>기본 그룹</td>
-                            <td>
-                                <div class="ellipsis">미분류 관리자</div>
-                            </td>
-                            <td>10</td>
-                            <td>yyyy-mm-dd hh:mm</td>
-                            <td>yyyy-mm-dd hh:mm</td>
-                        </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-              
-              <div class="btns">
-                <a href="#" class="btn btn-second">그룹 추가</a>
-              </div>
-        </div>
-    </main>
-  </body>
-  </html>
-�일시</th>
                         <th scope="col">최종 수정일시</th>
                       </tr>
                     </thead>
