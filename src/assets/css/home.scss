@@ -268,6 +268,13 @@
         &.menu10 {
           background-image: url(../images/icon_menu_10.svg)
         }
+        &.menu11 {
+          background-image: url(../images/icon_menu_11.svg)
+        }
+        &.menu99 {
+          background-image: url(../images/icon_menu_default.svg)
+        }
+
       }
     }
     &-items {
@@ -1339,7 +1346,6 @@
     }
   }
 }
-
 
 @media (max-width: 320px) {
   .quick-link {

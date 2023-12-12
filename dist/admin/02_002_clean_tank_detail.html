@@ -1,84 +1,12 @@
 <!DOCTYPE html>
 <html lang="ko">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>종로 관리자</title>
-    <link rel="stylesheet" href="../assets/vendor/jquery-ui/jquery-ui.min.css">
-    <link rel="stylesheet" href="../assets/css/reset.css">
-    <link rel="stylesheet" href="../assets/css/admin.css">
-</head>
+  @@include('./common/head.html')
   <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
   <body>
-    <header id="header">
-    <a href="00_002_dashboard.html" class="logo">
-        종로 스마트시티앱 관리자사이트
-    </a>
-    <div class="opt">
-        <button type="button" class="btn btn-text">yesman 님</button>
-    </div>
-    <div class="opt">
-        <button type="button" class="btn btn-icon icon alarm"></button>
-        <div class="dropdown">
-            <div class="dropdown-alarm">
-                <h4 class="title">알림</h4>
-                <button type="button" class="btn btn-text">모두 읽음 처리</button>
-                <ul class="lists">
-                    <li>
-                        새로운 1:1 문의가 도착했습니다. 
-                        <span class="date">2023-10-31 10:30</span>
-                    </li>
-                    <li>
-                        권한이 관리자로 변경되었습니다.
-                        <span class="date">2023-10-31 10:30</span>
-                    </li>
-                    <li>
-                        가입이 승인되었습니다.
-                        <span class="date">2023-10-31 10:30</span>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <div class="opt">
-        <button type="button" class="btn btn-text">로그아웃</button>
-    </div>
-</header>
-    <nav id="nav">
-  <ul class="gnb" id="gnb">
-    <li class="">
-      <a href="#">menu 1</a>
-    </li>
-    <li class="">
-      <a href="#">Depth 1</a>
-      <ul class="sub">
-        <li>
-          <a href="#">menu 1</a>
-        </li>
-        <li>
-          <a href="#">menu 2</a>
-        </li>
-        <li>
-          <a href="#">menu 3</a>
-        </li>
-        <li>
-          <a href="#">menu 4</a>
-        </li>
-      </ul>
-    </li>
-  </ul>
-</nav>
-
-
+    @@include('./common/header.html')
+    @@include('./common/navigation.html')
     <main class="main">
-        <div class="page-title">
-    <h2>정화조 청소 신청 상세</h2>
-    <p class="des"></p>
-    <ol class="breadcrumb">
-        <li></li>
-        <li></li>
-    </ol>
-</div>
+        @@include('./common/page_title.html', { title: '정화조 청소 신청 상세', path: {"p1":"",  "p2":""}, description: ''})
         <div class="content">
 
           <div class="detail">
@@ -94,6 +22,64 @@
                 <li>[08123] 서울 종로구 혜화동 풀주소</li>
             </ul>
 
+            <div class="lik-tb_title">예약 정보</div>
+            <ul class="lik-tb">
+                <li class="lb">청소 예약일시</li>
+                <li>2023-11-30 10:40</li>
+                <li class="lb">담당 업체</li>
+                <li>종복개발환경(주) 
+                  <button type="button" class="btn btn-second small" data-role="popup" data-target="companyInfo">정보</button>
+                </li> 
+            </ul>
+          </div>
+
+          <div class="btns detail">
+            <a href="#" class="btn btn-default">목록</a>
+          </div>
+
+        </div>
+    </main>
+
+    <aside class="popup-bg popup-closable">
+      <div class="popup" id="companyInfo">
+        <div class="popup-head">
+          업체 정보
+          <button type="button" class="btn btn-icon icon close btn-popup-close">
+            <span class="sr-only">팝업 닫기</span>
+          </button>
+        </div>
+        <div class="popup-body">
+          <div class="detail">
+            <div class="lik-tb_title">업체 정보</div>
+            <ul class="lik-tb">
+              <li class="lb">업체 명</li>
+              <li>종복개발환경(주)</li>
+              <li class="lb">대표</li>
+              <li>정대만</li>
+              <li class="lb">연락처</li>
+              <li>02-1234-1234</li>
+              <li class="lb">이메일</li>
+              <li>jong@mail.com</li>
+              <li class="lb lb-one">비고</li>
+              <li>담당자 : 정대만(010-0000-9999)</li>
+            </ul>
+
+            <div class="lik-tb_title">관할 구역</div>
+            <ul class="lik-tb">
+              <li class="lb lb-one">관할 구역</li>
+              <li>*광화문, 교보문고, 가회동, 구기동, 교남동, 교복동, 궁정동</li>
+            </ul>
+          </div>
+        </div>
+        <div class="popup-tail right">
+          <button type="button" class="btn btn-second">상세 이동</button>
+        </div>
+      </div>
+    </aside>
+
+    @@include('./common/admin_scripts.html')
+  </body>
+</html>
             <div class="lik-tb_title">예약 정보</div>
             <ul class="lik-tb">
                 <li class="lb">청소 예약일시</li>

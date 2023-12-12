@@ -546,10 +546,11 @@
             <dl class="el-items">
                 <dt>팝업</dt>
                 <dd class="d-flex">
-                    <button type="button" class="btn btn-popup" data-target="messageAlert">메시지 알럿</button>
-                    <button type="button" class="btn btn-popup" data-target="messageConfirm">메시지 컨펌</button>
-                    <button type="button" class="btn btn-popup" data-target="popupBtmSheet">보텀시트 호출</button>
-                    <button type="button" class="btn btn-popup" data-target="popupPage">페이지 팝업</button>
+                    <button type="button" class="btn btn-popup small" data-target="messageAlert">메시지 알럿</button>
+                    <button type="button" class="btn btn-popup small" data-target="messageConfirm">메시지 컨펌</button>
+                    <button type="button" class="btn btn-popup small" data-target="popupBtmSheet">보텀시트 호출</button>
+                    <button type="button" class="btn btn-popup small" data-target="popupPage">페이지 팝업</button>
+                    <button type="button" class="btn btn-popup small" data-target="popupAdAlert">광고성 정보 알림 수신동의</button>
                 </dd>
             </dl>
 
@@ -632,6 +633,7 @@
         @@include("../popup/popup_message.html")
         @@include("../popup/popup_bottom_sheet.html")
         @@include("../popup/popup_page.html")
+        @@include("../popup/popup_ad_alert.html")
     </aside>
 
     @@include("../common/script.html")

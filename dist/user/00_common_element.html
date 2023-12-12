@@ -552,10 +552,11 @@
             <dl class="el-items">
                 <dt>팝업</dt>
                 <dd class="d-flex">
-                    <button type="button" class="btn btn-popup" data-target="messageAlert">메시지 알럿</button>
-                    <button type="button" class="btn btn-popup" data-target="messageConfirm">메시지 컨펌</button>
-                    <button type="button" class="btn btn-popup" data-target="popupBtmSheet">보텀시트 호출</button>
-                    <button type="button" class="btn btn-popup" data-target="popupPage">페이지 팝업</button>
+                    <button type="button" class="btn btn-popup small" data-target="messageAlert">메시지 알럿</button>
+                    <button type="button" class="btn btn-popup small" data-target="messageConfirm">메시지 컨펌</button>
+                    <button type="button" class="btn btn-popup small" data-target="popupBtmSheet">보텀시트 호출</button>
+                    <button type="button" class="btn btn-popup small" data-target="popupPage">페이지 팝업</button>
+                    <button type="button" class="btn btn-popup small" data-target="popupAdAlert">광고성 정보 알림 수신동의</button>
                 </dd>
             </dl>
 
@@ -797,6 +798,19 @@
   <div class="popup-container inner-padd">전체 화면 팝업 예시<br />콘텐츠</div>
 </div>
 
+        <div class="popup popup-cnt popup-intro" id="popupAdAlert">
+    <div class="user-agree">
+        <h3 class="user-agree_title">광고성 정보 알림 수신동의</h3>
+        <div class="user-agree_sub">
+            종로Pick에서 제공하는 이벤트/광고에 대한 알림을 받을 수 있습니다.
+        </div>
+        <p>광고성 정보 수신 동의 변경은 더보기>설정>알림설정에서 변경할 수 있습니다.</p>
+        <div class="btns">
+            <button type="button" class="btn btn-second btn-popup-close">아니오</button>
+            <button type="button" class="btn btn-primary btn-popup-close">네, 좋아요!</button>
+        </div>
+    </div>
+</div>
     </aside>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>

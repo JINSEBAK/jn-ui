@@ -559,8 +559,8 @@ strong {
   position: relative;
   overflow: hidden;
   height: $btn-height;
-  line-height: 1rem;
-  font-size: 1rem;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
   color: #000;
   text-align: center;
   &-primary {
@@ -863,7 +863,6 @@ strong {
       &.btn-radio {
         border-color: #9696a3;
         background-color: rgba(0,0,0,0.2);
-        font-weight: bold;
         &::before {
           content: none;
         }
@@ -1474,6 +1473,13 @@ select {
   &.show {
     //visibility: visible;
     animation: show_pop 0.3s forwards;
+  }
+  &.popup-intro {
+    max-width: 280px;
+    .btn {
+      padding: 10px;
+      height: auto;
+    }
   }
 }
 
@@ -2546,14 +2552,12 @@ select {
         border-color: $border-basic;
         span {
           padding: 0;
+          color: #000;
           line-height: 1.25rem;
         }
       }
       &:checked + label {
-        color: #000;
-        font-weight: bold;
-        background-color: #fff;
-        border-color: #9696A3;
+        background-color:#f1f1f9;
       }
     }
     & + .radio {
@@ -3351,6 +3355,37 @@ select {
         padding-top: 0.75rem;
       }
     }
+  }
+}
+
+.user-agree {
+  padding: 1.25rem;
+  text-align: center;
+  &::before {
+    content: '';
+    display: block;
+    min-height: 110px;
+    background: url(../images/img_noti_set.svg) center no-repeat;
+  }
+  &_title {
+    margin-top: 1.5rem;
+    font-size: 1.25rem;
+    line-height: 28px;
+    font-weight: bold;
+  }
+  &_sub {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    margin: 0.5rem 0 1.5rem;
+  }
+  p {
+    color: $guide-text;
+    font-size: 13px;
+    line-height: 18px;
+    margin: 1.5rem 0;
+  }
+  .btns {
+    margin: 0 0 0.25rem;
   }
 }
 

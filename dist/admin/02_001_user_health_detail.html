@@ -1,83 +1,11 @@
 <!DOCTYPE html>
 <html lang="ko">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>종로 관리자</title>
-    <link rel="stylesheet" href="../assets/vendor/jquery-ui/jquery-ui.min.css">
-    <link rel="stylesheet" href="../assets/css/reset.css">
-    <link rel="stylesheet" href="../assets/css/admin.css">
-</head>
+  @@include('./common/head.html')
   <body>
-    <header id="header">
-    <a href="00_002_dashboard.html" class="logo">
-        종로 스마트시티앱 관리자사이트
-    </a>
-    <div class="opt">
-        <button type="button" class="btn btn-text">yesman 님</button>
-    </div>
-    <div class="opt">
-        <button type="button" class="btn btn-icon icon alarm"></button>
-        <div class="dropdown">
-            <div class="dropdown-alarm">
-                <h4 class="title">알림</h4>
-                <button type="button" class="btn btn-text">모두 읽음 처리</button>
-                <ul class="lists">
-                    <li>
-                        새로운 1:1 문의가 도착했습니다. 
-                        <span class="date">2023-10-31 10:30</span>
-                    </li>
-                    <li>
-                        권한이 관리자로 변경되었습니다.
-                        <span class="date">2023-10-31 10:30</span>
-                    </li>
-                    <li>
-                        가입이 승인되었습니다.
-                        <span class="date">2023-10-31 10:30</span>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <div class="opt">
-        <button type="button" class="btn btn-text">로그아웃</button>
-    </div>
-</header>
-    <nav id="nav">
-  <ul class="gnb" id="gnb">
-    <li class="">
-      <a href="#">menu 1</a>
-    </li>
-    <li class="">
-      <a href="#">Depth 1</a>
-      <ul class="sub">
-        <li>
-          <a href="#">menu 1</a>
-        </li>
-        <li>
-          <a href="#">menu 2</a>
-        </li>
-        <li>
-          <a href="#">menu 3</a>
-        </li>
-        <li>
-          <a href="#">menu 4</a>
-        </li>
-      </ul>
-    </li>
-  </ul>
-</nav>
-
-
+    @@include('./common/header.html')
+    @@include('./common/navigation.html')
     <main class="main">
-        <div class="page-title">
-    <h2>건강이랑 서비스 신청 상세</h2>
-    <p class="des"></p>
-    <ol class="breadcrumb">
-        <li></li>
-        <li></li>
-    </ol>
-</div>
+        @@include('./common/page_title.html', { title: '건강이랑 서비스 신청 상세', path: { "p1": "", "p2": ""}, description: ''})
         <div class="content">
 
             <div class="detail">
@@ -157,6 +85,59 @@
                                     <td colspan="6" class="empty">아직 진행된 내용이 없습니다.</td>
                                 </tr>
                             </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="btns detail">
+                <button type="button" class="btn btn-default">목록</button>
+            </div>
+
+        </div>
+    </main>
+
+    <aside class="popup-bg popup-closable">
+        <div class="popup" id="popupStatus">
+            <div class="popup-head">
+                건강이랑 신청 진행 상태 변경
+            </div>
+            <div class="popup-body">
+                <div class="detail">
+                    <ul class="lik-tb">
+                        <li class="lb">현재 상태</li>
+                        <li>접수</li>
+                        <li class="lb">현재 상태</li>
+                        <li>
+                            <select class="select">
+                                <option value="">선택</option>
+                                <option value="">접수</option>
+                                <option value="">보류</option>
+                                <option value="">완료</option>
+                                <option value="">반려</option>
+                            </select>
+                        </li>
+                        <li class="lb lb-one">진행 내용</li>
+                        <li>
+                            <textarea class="textarea" name="" id="" cols="30" rows="10" placeholder="신청 처리 내용을 입력해주세요."></textarea>
+                        </li>
+                    </ul>
+                    <ul class="guide">
+                        <li>입력 내용은 진행 내역에 기록 됩니다.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="popup-tail">
+                <button type="button" class="btn btn-default btn-popup-close">취소</button>
+                <button type="button" class="btn btn-primary">등록</button>
+            </div>
+        </div>
+    </aside>
+
+    @@include('./common/admin_scripts.html')
+  </body>
+</html>          </tbody>
                         </table>
                     </div>
                 </div>
