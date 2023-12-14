@@ -226,6 +226,7 @@ hr {
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     position: absolute;
     right: 0;
+    top: 100%;
     display: flex;
     flex-direction: row-reverse;
     gap: 0.5rem;
@@ -358,7 +359,7 @@ strong {
   padding: 0.5rem 1rem;
   position: fixed;
   z-index: 1000;
-  top: 0;
+top: 0;
   left: 0;
   right: 0;
   height: $header;
@@ -1792,11 +1793,18 @@ select {
   align-items: flex-end;
   flex-wrap: wrap;
   gap: 0.5rem;
+  position: relative;
   .title {
     color: #5F5F67;
     font-size: 13px;
     line-height: 18px;
     width: 100%;
+  }
+  input[type="file"] {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
   }
   .file {
     background-color: #F1F1F9;
@@ -1814,12 +1822,6 @@ select {
       height: 1.5rem;
       background: url(../images/icon_plus.svg) center no-repeat;
       margin: auto;
-    }
-    input[type="file"] {
-      position: absolute;
-      width: 1px;
-      height: 1px;
-      opacity: 0;
     }
     img {
       width: 100%;
@@ -1935,6 +1937,9 @@ select {
   &.n-system {
     background-color: $badge-n2;
   }
+  &.n-event {
+    background-color: $badge-n3;
+  }
   &.w-1 {
     background-color: $badge-w1;
   }
@@ -1994,6 +1999,11 @@ select {
       gap: 1rem;
       overflow: hidden;
       padding: 1rem 1.5rem 1rem 1rem;
+    }
+    &.small {
+      a {
+        padding: 0.25rem 1rem 0.25rem 1rem;
+      }
     }
     dl {
       position: relative;
@@ -2061,6 +2071,18 @@ select {
             color: #fff;
           }
         }
+      }
+    }
+    &-photo {
+      background-color: #FFF8DE;
+      dt {
+        color: #131350
+      }
+    }
+    &-trip {
+      background-color: #D5EBF8;
+      dt {
+        color: #131350;
       }
     }
     &-data {
@@ -2996,10 +3018,14 @@ select {
 
 .snow {
   position: relative;
+  margin-top: 42px;
+  .pbl-title {
+    padding-top: 0.5rem;
+  }
   .tooltip {
     position: absolute;
     right: 1.25rem;
-    top: 3px;
+    top: 9px;
     display: flex;
     align-items: center;
     gap: 0.5rem;
@@ -3009,8 +3035,8 @@ select {
       @include textDate;
     }
     .icon {
-      width: 1rem;
-      height: 1rem;
+      width: 1.25rem;
+      height: 1.25rem;
       background-size: 100%;
     }
   }

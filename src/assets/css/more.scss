@@ -104,18 +104,18 @@
         border-bottom: 1px solid $border-light;
         padding: 1rem 0.25rem;
         a {
-          display: flex;
-          flex-direction: column;
+          display: block;
           width: 100%;
-          gap: 0.25rem;
         }
         .title {
+          display: block;
           font-size: 0.875rem;
           font-weight: bold;
           line-height: 1.25rem;
           white-space: nowrap;
           overflow: hidden;
           text-overflow: ellipsis;
+          margin: 0.25rem 0;
         }
         .type,
         .date {

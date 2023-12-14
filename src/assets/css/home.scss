@@ -11,7 +11,7 @@
 .home {
   .content {
     &-box {
-      padding: 0 1rem;
+      padding: 0 1.25rem;
       position: relative;
       margin-bottom: 2rem;
       .x-scroll {
@@ -337,6 +337,10 @@
     &-info {
       display: flex;
       align-items: center;
+      font-size: 13px;
+      line-height: 18px;
+      color: $guide-text;
+      white-space: pre-wrap;
       li {
         &:last-child {
           display: flex;
@@ -1287,9 +1291,20 @@
   box-shadow: 0 6px 8px rgba(0,0,0,0.2);
 }
 
+
+.logins {
+  height: 100vh;
+  .container {
+    height: 100%;
+    display: flex;
+  }
+}
+
 .login {
   &-wrapper {
     padding: 0 10px;
+    margin: auto;
+    width: 100%;
    > img {
       display: block;
       margin: 2rem auto;
@@ -1300,8 +1315,7 @@
       align-items: center;
       line-height: 24px;
       gap: 7px;
-      padding: 3rem 0;
-      margin: 3vh 0;
+      margin: 0 0 60px;
       em {
         color: #E45E63;
         font-size: 40px;

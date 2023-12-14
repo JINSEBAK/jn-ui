@@ -478,8 +478,12 @@
       margin-top: 0.25rem;
       counter-reset: numlist;
       li {
-        a {
+        a, button {
+          border: none;
+          background-color: transparent;
+          padding: 0;
           line-height: 30px;
+          text-align: center;
           &::before {
             counter-increment: numlist;
             content: counter(numlist) ". ";
