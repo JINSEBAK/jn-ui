@@ -3443,6 +3443,62 @@ select {
   }
 }
 
+.user-out {
+  .container {
+    padding: 0 30px;
+  }
+  h1 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    margin: 56px 0 46px;
+  }
+  .out-info {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    & + .out-info {
+      margin-top: 30px;
+    }
+    p {
+      color: #3f3f45;
+    }
+  }
+  .bye {
+    line-height: 1.5rem;
+  }
+}
+
+.emg {
+  .container {
+    position: relative;
+    margin: 0;
+    .emg-info {
+      position: fixed;
+      width: calc(100% - 40px);
+      bottom: 1.25rem;
+      background: rgba(185,41,55,0.8);
+      border-radius: 10px;
+      color: #fff;
+      padding: 20px 0;
+      margin: 0 20px;
+      text-align: center;
+      h2 {
+        font-size: 18px;
+        margin-bottom: 0.5rem;
+      }
+      dl {
+        line-height: 22px;
+        dt {
+          font-size: 12px;
+        }
+        dd {
+          font-size: 16px;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
+
 
 @media (max-width: 320px) {
   .tb {
