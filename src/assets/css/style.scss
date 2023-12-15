@@ -2535,10 +2535,10 @@ select {
   display: flex;
   flex-direction: column;
   .info {
-    padding: 1rem;
-    text-align: center;
-    line-height: 1.2;
-    @include textDate();
+    padding: 1rem 1.25rem;
+    color: #787882;
+    font-size: 13px;
+    line-height: 18px;
   }
   .map-box {
     flex: 1;
@@ -3140,9 +3140,37 @@ select {
       line-height: 1.25rem;
       margin-top: 0.25rem;
     }
+    .p-count {
+      font-weight: bold;
+      &.free {
+        color: #327AE4;
+      }
+      &.moderate {
+        color: #4FCD5C;
+      }
+      &.heavy {
+        color: #E31E30;
+      }
+    }
   }
 }
 
+.tb-fee {
+  border: 1px solid $border-light;
+  width: 100%;
+  margin-bottom: 1rem;
+  th {
+    background-color: #f1f1f9;
+  }
+  th, td {
+    border: 1px solid $border-light;
+    color: $primary-text;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    padding: 0.5rem 10px;
+    text-align: center;
+  }
+}
 
 .air-info {
   background-color: $bg-content-box;

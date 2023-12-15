@@ -35,6 +35,23 @@
       max-width: 250px;
       opacity: 0;
     }
+    .btn-shinmungo {
+      position: absolute;
+      left: 1.25rem;
+      transform: translateY(-140%);
+      font-size: 13px;
+      line-height: 18px;
+      height: 37px;
+      border-radius: 50px;
+      padding: 12px 12px 12px 40px;
+      display: flex;
+      align-items: center;
+      border: none;
+      box-shadow: 1px 4px 10px rgba(0, 0, 0, 0.3);
+      background: #fff url(../images/icon_shinmungo.svg) left 12px center no-repeat;
+      animation: fadeIn 0.5s ease forwards;
+      animation-delay: 1s;
+    }
     .my-location {
       display: flex;
       width: 2.5rem;
@@ -776,4 +793,39 @@
 	height: 24px; 
 	font-size: 0.75rem;
 	font-weight: bold;
+}
+
+
+.p-point {
+  border-radius: 50%;
+	color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  font-size: 0.75rem;
+  font-weight: bold;
+  &.cngst-1 {
+    background-color: rgba(50, 122, 228, 0.8)
+  }
+  &.cngst-2 {
+    background-color: rgba(79, 205,92,0.8);
+  }
+  &.cngst-3 {
+    background-color: rgba(239, 81,81, 0.8);
+  }
+}
+
+
+.p-count {
+  &.cngst-1 {
+    color: #327AE4
+  }
+  &.cngst-2 {
+    color: #4FCD5C;
+  }
+  &.cngst-3 {
+    color: #EF5151;
+  }
 }
