@@ -192,7 +192,7 @@ html, body {
     left: 0;
     right: 0;
     top: 0;
-    padding: 0 1rem;
+    padding: 0 1rem 0 0.75rem;
     display: flex;
     align-items: center;
     gap: 1rem;
@@ -200,6 +200,13 @@ html, body {
     z-index: 1000;
     .logo {
         margin-right: auto;
+        background: url(../images/app_logo.svg) left center no-repeat;
+        background-size: auto 36px;
+        min-width: 120px;
+        min-height: 42px;
+        display: flex;
+        align-items: center;
+        padding-left: 120px;
     }
     .opt {
         position: relative;

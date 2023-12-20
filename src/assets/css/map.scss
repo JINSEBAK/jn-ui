@@ -35,6 +35,23 @@
       max-width: 250px;
       opacity: 0;
     }
+    .btn-parking {
+      position: absolute;
+      left: 1.25rem;
+      transform: translateY(-140%);
+      font-size: 13px;
+      line-height: 18px;
+      height: 37px;
+      border-radius: 50px;
+      padding: 12px;
+      display: flex;
+      align-items: center;
+      border: none;
+      box-shadow: 1px 4px 10px rgba(0, 0, 0, 0.3);
+      background: #fff;
+      animation: fadeIn 0.5s ease forwards;
+      animation-delay: 1s;
+    }
     .btn-shinmungo {
       position: absolute;
       left: 1.25rem;
@@ -806,6 +823,9 @@
   height: 30px;
   font-size: 0.75rem;
   font-weight: bold;
+  &.cngst-0 {
+    background-color: rgba(0,0,0,0.5)
+  }
   &.cngst-1 {
     background-color: rgba(50, 122, 228, 0.8)
   }
