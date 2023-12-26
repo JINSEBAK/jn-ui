@@ -1,13 +1,12 @@
 const MENUS = [
-    { "title": "관리자 관리", subs: [ { "title": "관리자 설정" }, { "title": "권한 그룹"} ]},
-    { "title": "회원 관리", subs: [ { "title": "건강이랑 신청 관리" } ]},
-    { "title": "메뉴 관리", subs: [ {"title": "전체 메뉴 관리"}, {"title": "종로맵 메뉴"}, {"title": "페이지 관리"}, {"title": "외부 연동 메뉴"}]},
-    { "title": "스마트 제설함 관리 ", subs: [ {"title": "제설함 관리"}, {"title": "민원 관리"}]},
-    { "title": "콘텐츠 관리", subs: [ {"title": "탐방 코스"}, {"title": "코스 거점"}, {"title": "검색어"}, {"title": "배너"}]},
+    { "title": "회원 관리", subs: [ { "title": "회원 관리" } ]},
+    { "title": "민원/서비스 관리", subs: [ { "title": "건강이랑" }, {"title": "정화조 청소"}, {"title": "제설함 민원"} ]},
+    { "title": "콘텐츠 관리", subs: [ {"title": "탐방 코스 관리"}, {"title": "코스 거점 관리"}, {"title": "페이지 관리"}, {"title": "배너 관리"}, {"title": "스마트 제설함"}]},
+    { "title": "이용 통계", subs: [ {"title": "이용 통계"}] },
+    { "title": "운영 관리", subs: [ {"title": "알림 메시지 관리"}, {"title": "공지사항 관리"}, {"title": "약관 관리"}, {"title": "1:1 문의 관리"}, {"title": "FAQ 관리"}]},
+    { "title": "메뉴 관리", subs: [ {"title": "앱 메뉴 관리"}, {"title": "전체 메뉴 관리"}]},
+    { "title": "관리자 관리", subs: [ { "title": "관리자 관리" }, { "title": "권한 관리"} ]},
     { "title": "시스템 관리", subs: [ {"title": "공통코드 관리"}, {"title": "앱버전 관리"}, {"title": "공공데이터 관리"}]},
-    { "title": "서비스 관리", subs: [ {"title": "공지사항 관리"}, {"title": "1:1 문의"}, {"title": "FAQ"}, {"title": "알림 메시지"}]},
-    { "title": "운영 관리", subs: [ {"title": "약관 관리"}, {"title": "사용이력 및 통계 관리"}, {"title": "청소 업체 관리"}]},
-    { "title": "설문조사 관리", subs: []},
 ]
 const container = document.getElementById('gnb');
 
@@ -16,9 +15,12 @@ window.onload = function() {
 
     // gnb 메뉴 동적 생성
     let _html = '';
-    MENUS.forEach((menu) => {
+    MENUS.forEach((menu, index) => {
         _html += '<li class="' + (menu.subs.length > 0 ? 'has-child' : '')+ '">'
-            +       '<a href="#">' + menu.title + '</a>';
+            +       '<a href="#">'
+            +           '<span class="icon gnb-' + (index + 1) + '"></span>' 
+            +           menu.title 
+            +       '</a>';
 
         if (menu.subs.length > 0) {
             _html += '<ul class="sub">'
@@ -33,20 +35,21 @@ window.onload = function() {
     })
     if (container) {
         container.innerHTML = _html;
+
+        const items = container.querySelectorAll('.gnb > li')
         
         container.addEventListener('click', function(e) {
+
+            items.forEach((item) => {
+                item.classList.remove('open')
+                item.querySelector('.sub').classList.remove('visible')
+            })
+
             const _target = e.target;
-            const _parent = e.target.parentNode;
-            
-            if (_target.tagName === "A") {
-                if (_parent.classList.contains('open')) {
-                    _parent.classList.remove('open')
-                    _target.nextSibling.classList.remove('visible')
-                } else {
-                    _parent.classList.add('open')
-                    _target.nextSibling.classList.add('visible')
-                }
-            }
+            const _parent = e.target.closest('li');
+
+            _parent.classList.add('open')
+            _parent.querySelector('.sub').classList.add('visible')
         })
     }
 }

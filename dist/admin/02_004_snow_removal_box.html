@@ -11,9 +11,7 @@
   <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
   <body>
     <header id="header">
-    <a href="00_002_dashboard.html" class="logo">
-       관리자사이트
-    </a>
+    <a href="00_002_dashboard.html" class="logo">종로Pick 관리자 사이트</a>
     <div class="opt">
         <button type="button" class="btn btn-text">yesman 님</button>
     </div>
@@ -74,7 +72,7 @@
         <div class="page-title">
     <h2>스마트 제설함 민원</h2>
     <p class="des"></p>
-    <ol class="breadcrumb">
+    <ol class="breadcrumb" style="display:none">
         <li></li>
         <li></li>
     </ol>
@@ -133,14 +131,17 @@
     <div class="label">
       <label for="">기간 조회</label>
     </div>
-    <div class="inline">
+    <div class="frm-date">
       <select class="select">
         <option value="">옵션 1</option>
         <option value="">옵션 2</option>
       </select>
-      <input type="date" class="input" placeholder="시작일"> 
-      ~
-      <input type="date" class="input" placeholder="종료일">
+      <div class="date picker">
+        <input type="text" class="input" placeholder="시작일">
+      </div>
+      <div class="date picker">
+        <input type="text" class="input" placeholder="종료일">
+      </div>
       <div class="select-date">
         <label>
           <input type="radio" name="select-date" value="1" checked>
@@ -273,8 +274,8 @@
                   </div>
                 </div>
                 <div class="pagination">
-    <button type="button" class="btn btn-first">First</button>
-    <button type="button" class="btn btn-prev">Prev</button>
+    <button type="button" class="btn btn-first" disabled>First</button>
+    <button type="button" class="btn btn-prev" disabled>Prev</button>
     <ul class="page">
         <li class="active">1</li>
         <li>2</li>
@@ -335,14 +336,17 @@
     <div class="label">
       <label for="">기간 조회</label>
     </div>
-    <div class="inline">
+    <div class="frm-date">
       <select class="select">
         <option value="">옵션 1</option>
         <option value="">옵션 2</option>
       </select>
-      <input type="date" class="input" placeholder="시작일"> 
-      ~
-      <input type="date" class="input" placeholder="종료일">
+      <div class="date picker">
+        <input type="text" class="input" placeholder="시작일">
+      </div>
+      <div class="date picker">
+        <input type="text" class="input" placeholder="종료일">
+      </div>
       <div class="select-date">
         <label>
           <input type="radio" name="select-date" value="1" checked>
@@ -513,8 +517,8 @@
                   </div>
                 </div>
                 <div class="pagination">
-    <button type="button" class="btn btn-first">First</button>
-    <button type="button" class="btn btn-prev">Prev</button>
+    <button type="button" class="btn btn-first" disabled>First</button>
+    <button type="button" class="btn btn-prev" disabled>Prev</button>
     <ul class="page">
         <li class="active">1</li>
         <li>2</li>

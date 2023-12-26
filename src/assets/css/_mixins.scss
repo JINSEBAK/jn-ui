@@ -20,3 +20,9 @@ $breakpoint-wide: 1281px;
   font-weight: bold;
   font-size: 1.25rem;
 }
+
+@mixin under1024 {
+  @media (max-width: #{$breakpoint-desktop - 1px}) {
+    @content;
+  }
+}
