@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    @@include('../common/head.html')
+    <link rel="stylesheet" href="../assets/css/home.css"></link>
+  </head>
+  <body class="more no-btm">
+    
+    @@include('../common/header_sub.html', {title: "대형 생활 폐기물"})
+
+    <div class="container inner-padd wst">
+
+        <!-- guide text & image -->
+        <section class="pre-guide">
+            <img src="../assets/images/img_waste.svg" alt="">
+            <h3 class="pre-guide_title">대형 생활 폐기물 종류</h3>
+            <p class="pre-guide_cont">
+              장롱, 서랍장, 신발장, 문갑, 화장대, 장식장, 응접 세트, 침대, 캐비닛, 책상, 피아노, 오르간등의 생활폐기물 중 쓰레기 종량제 봉투에 담기 어려운 폐기물을 대형 생활 폐기물이라고 합니다.
+            </p>
+            <div class="wst-items">
+              <div class="wst-item">
+                  <img src="../assets/images/icon_waste_01.svg">
+                  <span>TV, 냉장고, 세탁기 등의<br>가전제품</span>
+              </div>
+              <div class="wst-item">
+                <img src="../assets/images/icon_waste_02.svg">
+                <span>침대, 옷장, 책상등의<br>가구류</span>
+              </div>
+              <div class="wst-item">
+                <img src="../assets/images/icon_waste_03.svg">
+                <span>거울, 시계, 자전거등의<br>생활용품류</span>
+              </div>
+            </div>
+            <p class="pre-guide_cont">
+              *냉장고나 세탁기등의 폐가전 문의 : <strong>1599-0903</strong>
+            </p>
+            <div class="pre-guide_cont">
+                <em class="tit">배출방법</em>
+                <div style="margin-top: 0.25rem">주민센터를 방문하거나 [여기로]앱 또는 종로구청 홈페이지에서 신청 후 배출해주세요.</div>
+            </div>
+        </section>
+
+        <section>
+          <div class="wst-guide">
+            <strong>주민센터 방문 신청</strong>
+            <p>시민이 주민센터 방문 후 배출 신고서를 작성하고 수수료를 납부하여 신고 필증을 받아 쓰레기에 신고 필증 부착하여 배출하면 수거 처리</p>
+            <ul class="dot">
+              <li>수거시간<br>
+                05:00~15:00(주말, 공휴일, 추석, 설날 제외)</li>
+              <li>수거일<br>
+                신청 후 다음날부터 2-3일 내 수거(주말 또는 금요일 신고하면 화요일~수요일 이내 수거)</li>
+            </ul>
+          </div>
+        </section>
+
+        <section>
+          <div class="wst-guide">
+            <strong>스마트폰 앱 신청</strong>
+            <p>[여기로]앱에서 신청&결제 후 배출 번호를 유성펜으로 대형 생활폐기물에 기재 후 배출</p>
+            <ul class="wst-step">
+              <li>❶ 여기로앱<br>신청&결제</li>
+              <li>❷ 필증교부</li>
+              <li>❹ 대형패기물 수거</li>
+              <li>❸ 배출 번호<br>기재 후 배출</li>
+            </ul>
+            <button type="button" class="btn btn-here">[여기로]앱에서 신청하기</button>
+          </div>
+        </section>
+
+        <section>
+          <div class="wst-guide">
+            <strong>인터넷 신청</strong>
+            <ul>
+              <li>종로구청 홈페이지에서 신청&결제 후 신고 필증을 폐기물에 부착하여 배출</li>
+              <li>(종로구청 홈페이지>메인화면 ‘방문자별 맞춤 메뉴'>대형생활폐기물)</li>
+            </ul>
+          </div>
+        </section>
+
+
+        <div class="ticket-issue_guide">
+          <h4 class="title">배출 시 유의사항</h4>
+          <ul>
+            <li>프린트가 없는 경우 빈 용지에 납부필증번호, 폐기물 명, 금액, 배출장소 등을 기재하여 폐기물에 부착 후 배출</li>
+            <li>대형 생활 폐기물을 신고없이 무단 배출할 경우 과태료 부과</li>
+            <li>신고 내역과 배출 품목이 다르거나, 금액이 부족한 경우 수거하지 않으며 무단 투기로 간주</li>
+            <li>중복인쇄 및 환불된 필증을 재사용하여 배출한 폐기물은 수거처리하지 않으며, 무단 투기로 간주하여 과태료 부과</li>
+          </ul>
+        </div>
+    </div>
+
+   
+    @@include('../common/script.html')
+    <script>
+        const btnReserve = document.getElementById('btnReserve')
+        const aside = document.getElementById('aside');
+
+        btnReserve.addEventListener('click', function() {
+          aside.classList.add('on')
+          aside.querySelector('#popupBtmSheet').classList.add('show')
+        })
+    </script>
+  </body>
+</html>
