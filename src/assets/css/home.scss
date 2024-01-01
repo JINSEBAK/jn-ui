@@ -1362,6 +1362,11 @@
         background-color: $primary3;
         background-image: url(../images/icon_login_pn.svg);
       }
+      &-apple {
+        color: #fff;
+        background-color: #000;
+        background-image: url(../images/icon_login_apple.svg);
+      }
     }
   }
 }

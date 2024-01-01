@@ -10,83 +10,70 @@
         <div class="content">
 
             <!-- search -->
-            <div class="search">
+            <div class="search-container">
+              <div class="search">
+                  <div class="item item-col-5">
+                      <div class="label">
+                          <label for="">OS</label>
+                      </div>
+                      <div class="inline">
+                          <label class="radio">
+                              <input type="radio" name="status" value="1" id="status1" checked>
+                              <span>전체</span>
+                          </label>
+                          <label class="radio">
+                              <input type="radio" name="status" value="2" id="status2">
+                              <span>안드로이드</span>
+                          </label>
+                          <label class="radio">
+                              <input type="radio" name="status" value="3" id="status3">
+                              <span>iOS</span>
+                          </label>
+                      </div>
+                  </div>
 
-                <div class="item item-col-5">
-                    <div class="label">
-                        <label for="">OS</label>
-                    </div>
-                    <div class="inline">
-                        <div class="radio">
-                            <input type="radio" name="status" value="1" id="status1">
-                            <label for="status1">전체</label>
-                        </div>
-                        <div class="radio">
-                            <input type="radio" name="status" value="2" id="status2" checked>
-                            <label for="status2">안드로이드</label>
-                        </div>
-                        <div class="radio">
-                            <input type="radio" name="status" value="3" id="status3">
-                            <label for="status3">iOS</label>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="item item-col-5">
-                    <div class="label">
-                        <label for="">플랫폼</label>
-                    </div>
-                    <div class="inline">
-                        <select class="select">
-                            <option value="">전체</option>
-                            <option value="">플레이스토어</option>
-                            <option value="">원스토어</option>
-                            <option value="">애플앱스토어</option>
-                        </select>
-                    </div>
-                </div>
-
-                <div class="item item-col-5">
+                  <div class="item item-col-5">
                     <div class="label">
                         <label for="">중요도</label>
                     </div>
                     <div class="inline">
-                        <div class="radio">
+                        <label class="radio">
                             <input type="radio" name="important" value="1" id="important1" checked>
-                            <label for="important1">전체</label>
-                        </div>
-                        <div class="radio">
+                            <span>전체</span>
+                        </label>
+                        <label class="radio">
                             <input type="radio" name="important" value="2" id="important2">
-                            <label for="important2">강제</label>
-                        </div>
-                        <div class="radio">
+                            <span>강제</span>
+                        </label>
+                        <label class="radio">
                             <input type="radio" name="important" value="3" id="important3">
-                            <label for="important3">일반</label>
-                        </div>
+                            <span>일반</span>
+                        </label>
                     </div>
-                </div>
+                  </div>
 
-                <div class="item item-col-5">
-                    <div class="label">
-                        <label for="">키워드</label>
-                    </div>
-                    <div class="inline">
-                        <select class="select">
-                            <option value="">업데이트 내용</option>
-                            <option value="">버전</option>
-                            <option value="">등록자</option>
-                            <option value="">최종수정자</option>
-                        </select>
-                        <input type="text" class="input" placeholder="입력">
-                    </div>
-                </div>
+                  <div class="item">
+                      <div class="label">
+                          <label for="">키워드</label>
+                      </div>
+                      <div class="inline">
+                          <select class="select">
+                              <option value="">업데이트 내용</option>
+                              <option value="">버전</option>
+                              <option value="">등록자</option>
+                              <option value="">최종수정자</option>
+                          </select>
+                          <input type="text" class="input" placeholder="입력">
+                      </div>
+                  </div>
 
-                @@include('./common/search_period.html')
+                  @@include('./common/search_period.html')
 
-            </div>
-            <div class="search-btn">
-                <button type="button" class="btn btn-third small">초기화</button>
-                <button type="button" class="btn btn-second small">검색</button>
+              </div>
+              <div class="search-btn">
+                  <button type="button" class="btn btn-default small">초기화</button>
+                  <button type="button" class="btn btn-second small">검색</button>
+              </div>
             </div>
             <!-- search end -->
 
@@ -95,15 +82,19 @@
             <div class="list">
                 <div class="list-head">
                   <div class="total">
-                    Total <em>100</em>
+                    Total <em>4</em>
                   </div>
+                  <div class="btns">
+                    <a href="./06_002_app_version_create.html" class="btn btn-primary">등록</a>
+                </div>
                 </div>
                 <div class="list-body">
                   <table class="tb-data" summary="번호,OS,플랫폼,버전,중요도,버전 적용일시로 구분되는 표">
                     <caption>번호 OS 플랫폼 버전 중요도 버전적용일시</caption>
                     <colgroup>
                         <col style="width:5%;">
-                        <col style="width:15%;">
+                        <col style="width:10%;">
+                        <col style="width:10%;">
                         <col style="width:15%;">
                         <col style="width:15%;">
                         <col style="width:15%;">
@@ -113,92 +104,54 @@
                       <tr>
                         <th scope="col">번호</th>
                         <th scope="col">OS</th>
-                        <th scope="col">플랫폼</th>
-                        <th scope="col">버전</th>
                         <th scope="col">중요도</th>
-                        <th scope="col">버전 적용일시</th>
+                        <th scope="col">버전</th>
+                        <th scope="col">빌드 번호</th>
+                        <th scope="col">배포일시</th>
+                        <th scope="col">최종 수정일시</th>
+                        <th scope="col">최종 수정자</th>
                       </tr>
                     </thead>
                     <tbody>
                       <tr>
-                        <td>10</td>
-                        <td>안드로이드</td>
-                        <td>플레이스토어</td>
-                        <td>1.0.6</td>
-                        <td>강제</td>
-                        <td>yyyy-mm-dd hh:mm</td>
-                      </tr>
-                      <tr>
-                        <td>9</td>
-                        <td>iOS</td>
-                        <td>애플앱스토어</td>
-                        <td>1.0.6</td>
-                        <td>강제</td>
-                        <td>yyyy-mm-dd hh:mm</td>
-                      </tr>
-                      <tr>
-                        <td>8</td>
-                        <td>안드로이드</td>
-                        <td>원스토어</td>
-                        <td>1.0.6</td>
-                        <td>강제</td>
-                        <td>yyyy-mm-dd hh:mm</td>
-                      </tr>
-                      <tr>
-                        <td>7</td>
-                        <td>안드로이드</td>
-                        <td>플레이스토어</td>
-                        <td>1.0.5</td>
-                        <td>일반</td>
-                        <td>yyyy-mm-dd hh:mm</td>
-                      </tr>
-                      <tr>
-                        <td>6</td>
-                        <td>안드로이드</td>
-                        <td>플레이스토어</td>
-                        <td>1.0.6</td>
-                        <td>강제</td>
-                        <td>yyyy-mm-dd hh:mm</td>
-                      </tr>
-                      <tr>
-                        <td>5</td>
-                        <td>안드로이드</td>
-                        <td>플레이스토어</td>
-                        <td>1.0.6</td>
-                        <td>강제</td>
-                        <td>yyyy-mm-dd hh:mm</td>
-                      </tr>
-                      <tr>
                         <td>4</td>
                         <td>안드로이드</td>
-                        <td>플레이스토어</td>
-                        <td>1.0.6</td>
                         <td>강제</td>
+                        <td>1.0.6</td>
+                        <td>5</td>
                         <td>yyyy-mm-dd hh:mm</td>
+                        <td>yyyy-mm-dd hh:mm</td>
+                        <td>admin</td>
                       </tr>
                       <tr>
                         <td>3</td>
-                        <td>안드로이드</td>
-                        <td>플레이스토어</td>
+                        <td>iOS</td>
+                        <td>일반</td>
                         <td>1.0.6</td>
-                        <td>강제</td>
+                        <td>4</td>
                         <td>yyyy-mm-dd hh:mm</td>
+                        <td>yyyy-mm-dd hh:mm</td>
+                        <td>admin</td>
                       </tr>
                       <tr>
                         <td>2</td>
-                        <td>안드로이드</td>
-                        <td>플레이스토어</td>
+                        <td>iOS</td>
+                        <td>일반</td>
                         <td>1.0.6</td>
-                        <td>강제</td>
+                        <td>4</td>
                         <td>yyyy-mm-dd hh:mm</td>
+                        <td>yyyy-mm-dd hh:mm</td>
+                        <td>admin</td>
                       </tr>
                       <tr>
                         <td>1</td>
-                        <td>안드로이드</td>
-                        <td>플레이스토어</td>
+                        <td>iOS</td>
+                        <td>일반</td>
                         <td>1.0.6</td>
-                        <td>강제</td>
+                        <td>4</td>
                         <td>yyyy-mm-dd hh:mm</td>
+                        <td>yyyy-mm-dd hh:mm</td>
+                        <td>admin</td>
                       </tr>
                     </tbody>
                   </table>
@@ -206,10 +159,6 @@
               </div>
               @@include('./common/pagination.html')
             <!-- list end -->
-
-            <div class="btns">
-                <a href="./06_002_app_version_create.html" class="btn btn-second">등록</a>
-            </div>
         </div>
     </main>
 

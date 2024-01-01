@@ -1,48 +1,40 @@
 <!DOCTYPE html>
 <html lang="ko">
-  @@include('./common/head.html')
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>종로 관리자</title>
+    <link rel="stylesheet" href="../assets/vendor/jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="../assets/css/reset.css">
+    <link rel="stylesheet" href="../assets/css/admin.css">
+</head>
   <body>
-    @@include('./common/header.html')
-    @@include('./common/navigation.html')
-    <main class="main">
-        @@include('./common/page_title.html', { title: '내 계정 정보', path: ['홈','p1','p2'], description: ''})
-        <div class="content">
-          <div class="detail">
-            <ul class="lik-tb">
-              <li class="lb">ID</li>
-              <li>yesman</li>
-              <li class="lb">비밀번호</li>
-              <li>
-                <button type="button" class="btn btn-third small">변경</button>
-              </li> 
-              <li class="lb">이름</li>
-              <li>김종로</li>
-              <li class="lb">연락처</li>
-              <li>010-****-1234</li>
-              <li class="lb">부서</li>
-              <li>사회복지과</li>
-              <li class="lb">직급</li>
-              <li>팀장</li>
-              <li class="lb">이메일</li>
-              <li>yesman@gmail.com</li>
-              <li class="lb">권한그룹</li>
-              <li>중간관리자</li>
-              <li class="lb">계정 등록일시</li>
-              <li>2023-10-31 10:23</li>
-              <li class="lb">계정 등록자</li>
-              <li>master_01</li>
-            </ul>
-          </div>
-          <div class="btns">
-            <button type="button" class="btn btn-second">수정</button>
-          </div>
-        </div>
-    </main>
-
-    @@include('./common/admin_scripts.html')
-  </body>
-</html>
-     </div>
+    <header id="header">
+    <a href="00_002_dashboard.html" class="logo">종로Pick 관리자 사이트</a>
+    <div class="opt">
+        <button type="button" class="btn btn-text">yesman 님</button>
+    </div>
+    <div class="opt">
+        <button type="button" class="btn btn-icon icon alarm"></button>
+        <div class="dropdown">
+            <div class="dropdown-alarm">
+                <h4 class="title">알림</h4>
+                <button type="button" class="btn btn-text">모두 읽음 처리</button>
+                <ul class="lists">
+                    <li>
+                        새로운 1:1 문의가 도착했습니다. 
+                        <span class="date">2023-10-31 10:30</span>
+                    </li>
+                    <li>
+                        권한이 관리자로 변경되었습니다.
+                        <span class="date">2023-10-31 10:30</span>
+                    </li>
+                    <li>
+                        가입이 승인되었습니다.
+                        <span class="date">2023-10-31 10:30</span>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
     <div class="opt">

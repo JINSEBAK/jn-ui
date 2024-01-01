@@ -9,79 +9,98 @@
         @@include('./common/page_title.html', { title: '회원 관리', path: {"p1":"",  "p2":""}, description: ''})
         <div class="content">
 
-            <!-- .search start -->
-          <div class="search">
+          <!-- .search start -->
+          <div class="search-container">
+            <div class="search">
 
-            <div class="item item-col-5">
-              <div class="label">
-                <label for="">구분</label>
-              </div>
-              <div class="inline">
-                <div class="radio">
-                  <input type="radio" name="u-type" value="1" id="utype1">
-                  <label for="utype1">전체</label>
-                </div>
-                <div class="radio">
-                  <input type="radio" name="u-type" value="2" id="utype2">
-                  <label for="utype2">카카오</label>
-                </div>
-                <div class="radio">
-                  <input type="radio" name="u-type" value="3" id="utype3">
-                  <label for="utype3">네이버</label>
-                </div>
-                <div class="radio">
-                  <input type="radio" name="u-type" value="4" id="utype4">
-                  <label for="utype4">NICE</label>
-                </div>
-              </div>
-            </div>
-
-            <div class="item item-col-5">
-              <div class="label">
-                <label for="">구분</label>
-              </div>
-              <div class="inline"></div>
-            </div>
-
-            <div class="item item-col-5">
-              <div class="label">
-                <label for="">키워드</label>
-              </div>
-              <div class="inline">
-                <select class="select">
-                  <option value="">ID</option>
-                  <option value="">이름</option>
-                  <option value="">이메일</option>
-                </select>
-                <input type="text" class="input" placeholder="입력">
-              </div>
-            </div>
-
-            <div class="item item-col-5">
+              <div class="item item-col-5">
                 <div class="label">
-                  <label for="">상태</label>
+                  <label for="">구분</label>
                 </div>
                 <div class="inline">
-                  <div class="radio">
-                    <input type="radio" name="status" value="1" id="status1">
-                    <label for="status1">전체</label>
-                  </div>
-                  <div class="radio">
-                    <input type="radio" name="status" value="2" id="status2" checked>
-                    <label for="status2">활동</label>
-                  </div>
-                  <div class="radio">
-                    <input type="radio" name="status" value="3" id="status3">
-                    <label for="status3">휴면</label>
-                  </div>
+                  <label class="radio">
+                    <input type="radio" name="u-type" value="1" id="utype1" checked>
+                    <span>전체</span>
+                  </label>
+                  <label class="radio">
+                    <input type="radio" name="u-type" value="2" id="utype2">
+                    <span>카카오</span>
+                  </label>
+                  <label class="radio">
+                    <input type="radio" name="u-type" value="3" id="utype3">
+                    <span>네이버</span>
+                  </label>
+                  <label class="radio">
+                    <input type="radio" name="u-type" value="4" id="utype4">
+                    <span>NICE</span>
+                  </label>
                 </div>
               </div>
 
-              @@include('./common/search_period.html')
-          </div>
-          <div class="search-btn">
-            <button type="button" class="btn btn-third small">초기화</button>
-            <button type="button" class="btn btn-second small">검색</button>
+              <div class="item item-col-5">
+                <div class="label">
+                  <label for="">PUSH 알림</label>
+                </div>
+                <div class="inline">
+                  <label class="radio">
+                    <input type="radio" name="alarm" value="1" id="alarm1" checked>
+                    <span>전체</label>
+                  </label>
+                  <label class="radio">
+                    <input type="radio" name="alarm" value="2" id="alarm2">
+                    <span>허용안함</label>
+                  </label>
+                  <label class="radio">
+                    <input type="radio" name="alarm" value="3" id="alarm3">
+                    <span>허용</label>
+                  </label>
+                  <label class="checkbox">
+                    <input type="checkbox" name="check">
+                    <span>광고 허용</label>
+                  </label>
+                </div>
+              </div>
+
+              <div class="item item-col-5">
+                <div class="label">
+                  <label for="">키워드</label>
+                </div>
+                <div class="inline">
+                  <select class="select">
+                    <option value="">ID</option>
+                    <option value="">이름</option>
+                    <option value="">이메일</option>
+                  </select>
+                  <input type="text" class="input" placeholder="입력">
+                </div>
+              </div>
+
+              <div class="item item-col-5">
+                  <div class="label">
+                    <label for="">상태</label>
+                  </div>
+                  <div class="inline">
+                    <label class="radio">
+                      <input type="radio" name="status" value="1" id="status1" checked>
+                      <span>전체</label>
+                    </label>
+                    <label class="radio">
+                      <input type="radio" name="status" value="2" id="status2">
+                      <span>활동</label>
+                    </label>
+                    <label class="radio">
+                      <input type="radio" name="status" value="3" id="status3">
+                      <span>휴면</label>
+                    </label>
+                  </div>
+                </div>
+
+                @@include('./common/search_period.html')
+            </div>
+            <div class="search-btn">
+              <button type="button" class="btn btn-default small">초기화</button>
+              <button type="button" class="btn btn-second small">검색</button>
+            </div>
           </div>
           <!-- .search end -->
 
@@ -102,8 +121,8 @@
                     <col style="width:10%;">
                     <col style="width:10%;">
                     <col style="width:10%;">
-                    <col style="width:10%;">
-                    <col style="width:10%;">
+                    <col style="width:15%;">
+                    <col style="width:15%;">
                 </colgroup>
                 <thead>
                   <tr>

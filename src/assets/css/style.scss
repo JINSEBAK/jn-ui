@@ -216,33 +216,33 @@ hr {
 
 .tip-box {
   position: relative;
-  .tool-tip {
-    background-color: rgba(0,0,0,0.7);
-    color: #fff;
-    font-size: 0.75rem;
-    line-height: 18px;
-    padding: 0.5rem;
-    border-radius: 0.25rem;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    position: absolute;
-    right: 0;
-    top: 100%;
-    display: flex;
-    flex-direction: row-reverse;
-    gap: 0.5rem;
-    width: 300px;
-    z-index: 500;
-    opacity: 0;
-    animation: show 0.3s 0.3s forwards;
-    .btn.close-w {
-      width: 1rem;
-      height: 1rem;
-      background-size: 100%;
-    }
-    p {
-      min-width: 120px;
-      flex: 1;
-    }
+}
+.tool-tip {
+  background-color: rgba(0,0,0,0.7);
+  color: #fff;
+  font-size: 0.75rem;
+  line-height: 18px;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  position: absolute;
+  right: 0;
+  top: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 0.5rem;
+  width: 300px;
+  z-index: 500;
+  opacity: 0;
+  animation: show 0.3s 0.3s forwards;
+  .btn.close-w {
+    width: 1rem;
+    height: 1rem;
+    background-size: 100%;
+  }
+  p {
+    min-width: 120px;
+    flex: 1;
   }
 }
 
@@ -1248,6 +1248,15 @@ select {
     &.btn-delete {
       right: 1rem;
       display: none;
+    }
+  }
+  .icon {
+    &.input-del {
+      display: none;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	right: 2.75rem;
     }
   }
   input[type="search"] {

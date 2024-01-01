@@ -9,24 +9,26 @@
         <div class="content">
 
             <!-- search -->
-            <div class="search">
-                <div class="item">
-                    <div class="label">
-                        <label for="">키워드</label>
+            <div class="search-container">
+                <div class="search">
+                    <div class="item">
+                        <div class="label">
+                            <label for="">키워드</label>
+                        </div>
+                        <div class="inline">
+                            <select class="select">
+                                <option value="">코스명</option>
+                                <option value="">거점명</option>
+                            </select>
+                            <input type="text" class="input" placeholder="입력" style="width: 50%">
+                        </div>
                     </div>
-                    <div class="inline">
-                        <select class="select">
-                            <option value="">코스명</option>
-                            <option value="">거점명</option>
-                        </select>
-                        <input type="text" class="input" placeholder="입력" style="width: 50%">
-                    </div>
+                    @@include('./common/search_period.html')
                 </div>
-                @@include('./common/search_period.html')
-            </div>
-            <div class="search-btn">
-                <button type="button" class="btn btn-third small">초기화</button>
-                <button type="button" class="btn btn-second small">검색</button>
+                <div class="search-btn">
+                    <button type="button" class="btn btn-default small">초기화</button>
+                    <button type="button" class="btn btn-second small">검색</button>
+                </div>
             </div>
             <!-- search end -->
 
@@ -34,6 +36,9 @@
                 <div class="list-head">
                     <div class="total">
                       Total <em>23</em>
+                    </div>
+                    <div class="btns">
+                        <a href="#" class="btn btn-primary">생성</a>
                     </div>
                 </div>
                 <div class="list-body">
@@ -226,10 +231,6 @@
                       </tbody>
                     </table>
                 </div>
-
-                <div class="btns">
-                    <a href="#" class="btn btn-second">생성</a>
-                  </div>
             </div>
         </div>
     </main>

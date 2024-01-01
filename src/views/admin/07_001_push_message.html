@@ -6,316 +6,123 @@
     @@include('./common/header.html')
     @@include('./common/navigation.html')
     <main class="main">
-        @@include('./common/page_title.html', { title: '알림 메시지', path: {"p1":"",  "p2":""}, description: ''})
+        @@include('./common/page_title.html', { title: '알림 메시지 관리', path: {"p1":"",  "p2":""}, description: ''})
         <div class="content">
-
-          <div class="tabs" role="tablist">
-            <div class="tab active" role="tab" aria-selected="true" aria-controls="tabContent1" id="tab1">
-                <span>알림 목록</span>
-            </div>
-            <div class="tab" role="tab" aria-selected="true" aria-controls="tabContent2" id="tab2">
-              <span>메시지 관리</span>
-            </div>
-          </div>
-
-          <div class="tab-contents">
-            <!-- tab1 -->
-            <div class="tab-content" role="tabpanel" aria-labelledby="tab1" id="tabContent1" tabindex="0">
-
-                <!-- search -->
-                <div class="search">
-                    <div class="item item-col-5">
-                        <div class="label">
-                            <label for="">알림 유형</label>
-                        </div>
-                        <div class="inline">
-                            <select class="select">
-                                <option value="">전체</option>
-                                <option value="">시스템 공지</option>
-                                <option value="">일반 공지</option>
-                            </select>
-                        </div>
+            <div class="list">
+                <div class="list-head">
+                    <div class="total">
+                        Total <em>8</em>
                     </div>
-                    <div class="item item-col-5 detail">
-                        <div class="label">
-                          <label for="">키워드</label>
-                        </div>
-                        <div class="inline">
-                          <select class="select">
-                            <option value="">제목</option>
-                            <option value="">메시지</option>
-                            <option value="">수신자</option>
-                          </select>
-                          <input type="text" class="input" placeholder="입력">
-                        </div>
-                    </div>
-                    @@include('./common/search_period.html')
                 </div>
-                <div class="search-btn">
-                    <button type="button" class="btn btn-third small">초기화</button>
-                    <button type="button" class="btn btn-second small">검색</button>
-                </div>
-
-                <!-- list -->
-                <div class="list">
-                    <div class="list-head">
-                        <div class="total">
-                          Total <em>100</em>
-                        </div>
-                    </div>
-                    <div class="list-body">
-                        <table class="tb-data" summary="번호, 카테고리, 제목, 메시지, 알림 발송일시, 수신자로 구분되는 표">
-                          <caption>번호, 카테고리, 제목, 메시지, 알림 발송일시, 수신자</caption>
-                          <colgroup>
-                            <col style="width: 5%">
+                <div class="list-body">
+                    <table class="tb-data" summary="템플릿, 제목, 메시지, 최종 수정일시, 최종 수정자로 구분되는 표">
+                        <caption>템플릿, 제목, 메시지, 최종 수정일시, 최종 수정자</caption>
+                        <colgroup>
                             <col style="width: 15%">
-                            <col style="width: 20%">
                             <col style="width: auto">
+                            <col style="width: 10%">
+                            <col style="width: 15%">
                             <col style="width: 15%">
                             <col style="width: 10%">
-                          </colgroup>
-                          <thead>
+                        </colgroup>
+                        <thead>
                             <tr>
-                                <th scope="col">번호</th>
-                                <th scope="col">카테고리</th>
+                                <th scope="col">템플릿</th>
                                 <th scope="col">제목</th>
-                                <th scope="col">메시지</th>
-                                <th scope="col">알림 발송일시</th>
-                                <th scope="col">수신자</th>
+                                <th scope="col">대상</th>
+                                <th scope="col">사용 여부</th>
+                                <th scope="col">최종 수정일시</th>
+                                <th scope="col">최종 수정자</th>
                             </tr>
-                          </thead>
-                          <tbody id="alarmList">
+                        </thead>
+                        <tbody>
                             <tr>
-                                <td>100</td>
-                                <td>정화조 청소 신청</td>
-                                <td><div class="ellipsis">정화조 청소 예약 신청 완료</div></td>
-                                <td><div class="ellipsis">청소 일정: 2023년 11월 1일 오후 2:30분 정화조 청소 신청되었습니다. 청소 일정: 2023년 11월 1일 오후 2:30분 정화조 청소 신청되었습니다.</div></td>
+                                <td>스마트 번호표 발급</td>
+                                <td>
+                                    <div class="ellipsis">스마트 번호표가 발급되었습니다.</div>
+                                </td>
+                                <td>전체</td>
+                                <td>사용 </td>
                                 <td>yyyy-mm-dd hh:mm</td>
                                 <td>admin</td>
                             </tr>
                             <tr>
-                                <td>99</td>
-                                <td>정화조 청소 신청</td>
-                                <td><div class="ellipsis">정화조 청소 예약 신청 완료</div></td>
-                                <td><div class="ellipsis">청소 일정: 2023년 11월 1일 오후 2:30분 정화조 청소 신청되었습니다. 청소 일정: 2023년 11월 1일 오후 2:30분 정화조 청소 신청되었습니다.</div></td>
+                                <td>스마트 번호표 알림</td>
+                                <td>
+                                    <div class="ellipsis">
+                                        <span class="dynamic-msg">${발권 번호}</span>번 민원인님 <span class="dynamic-msg">${창구번호}</span>로 와주세요.
+                                    </div>
+                                </td>
+                                <td>전체</td>
+                                <td>사용 </td>
                                 <td>yyyy-mm-dd hh:mm</td>
                                 <td>admin</td>
                             </tr>
                             <tr>
-                                <td>98</td>
                                 <td>정화조 청소 신청</td>
-                                <td><div class="ellipsis">정화조 청소 예약 신청 완료</div></td>
-                                <td><div class="ellipsis">청소 일정: 2023년 11월 1일 오후 2:30분 정화조 청소 신청되었습니다. 청소 일정: 2023년 11월 1일 오후 2:30분 정화조 청소 신청되었습니다.</div></td>
+                                <td>
+                                    <div class="ellipsis">정화조 청소 신청이 완료되었습니다.</div>
+                                </td>
+                                <td>전체</td>
+                                <td>사용 </td>
                                 <td>yyyy-mm-dd hh:mm</td>
                                 <td>admin</td>
                             </tr>
                             <tr>
-                                <td>97</td>
-                                <td>정화조 청소 신청</td>
-                                <td><div class="ellipsis">정화조 청소 예약 신청 완료</div></td>
-                                <td><div class="ellipsis">청소 일정: 2023년 11월 1일 오후 2:30분 정화조 청소 신청되었습니다. 청소 일정: 2023년 11월 1일 오후 2:30분 정화조 청소 신청되었습니다.</div></td>
+                                <td>건강이랑 신청</td>
+                                <td>
+                                    <div class="ellipsis">건강이랑 서비스 신청이 완료되었습니다.</div>
+                                </td>
+                                <td>전체</td>
+                                <td>사용 </td>
                                 <td>yyyy-mm-dd hh:mm</td>
                                 <td>admin</td>
                             </tr>
                             <tr>
-                                <td>96</td>
-                                <td>정화조 청소 신청</td>
-                                <td><div class="ellipsis">정화조 청소 예약 신청 완료</div></td>
-                                <td><div class="ellipsis">청소 일정: 2023년 11월 1일 오후 2:30분 정화조 청소 신청되었습니다. 청소 일정: 2023년 11월 1일 오후 2:30분 정화조 청소 신청되었습니다.</div></td>
+                                <td>1:1 문의 답변</td>
+                                <td>
+                                    <div class="ellipsis">문의하신 질문에 답변이 등록되었습니다.</div>
+                                </td>
+                                <td>회원</td>
+                                <td>사용 </td>
                                 <td>yyyy-mm-dd hh:mm</td>
                                 <td>admin</td>
                             </tr>
                             <tr>
-                                <td>95</td>
-                                <td>정화조 청소 신청</td>
-                                <td><div class="ellipsis">정화조 청소 예약 신청 완료</div></td>
-                                <td><div class="ellipsis">청소 일정: 2023년 11월 1일 오후 2:30분 정화조 청소 신청되었습니다. 청소 일정: 2023년 11월 1일 오후 2:30분 정화조 청소 신청되었습니다.</div></td>
+                                <td>일자리 관심 키워드</td>
+                                <td>
+                                    <div class="ellipsis">일자리: <span class="dynamic-msg">${관심키워드}</span>의 새 글이 등록되었습니다.</div>
+                                </td>
+                                <td>전체</td>
+                                <td>사용 </td>
                                 <td>yyyy-mm-dd hh:mm</td>
                                 <td>admin</td>
                             </tr>
                             <tr>
-                                <td>94</td>
-                                <td>정화조 청소 신청</td>
-                                <td><div class="ellipsis">정화조 청소 예약 신청 완료</div></td>
-                                <td><div class="ellipsis">청소 일정: 2023년 11월 1일 오후 2:30분 정화조 청소 신청되었습니다. 청소 일정: 2023년 11월 1일 오후 2:30분 정화조 청소 신청되었습니다.</div></td>
+                                <td>새소식 관심 키워드</td>
+                                <td>
+                                    <div class="ellipsis">새소식: <span class="dynamic-msg">${관심키워드}</span>의 새 글이 등록되었습니다.</div>
+                                </td>
+                                <td>전체</td>
+                                <td>사용 </td>
                                 <td>yyyy-mm-dd hh:mm</td>
                                 <td>admin</td>
                             </tr>
                             <tr>
-                                <td>93</td>
-                                <td>정화조 청소 신청</td>
-                                <td><div class="ellipsis">정화조 청소 예약 신청 완료</div></td>
-                                <td><div class="ellipsis">청소 일정: 2023년 11월 1일 오후 2:30분 정화조 청소 신청되었습니다. 청소 일정: 2023년 11월 1일 오후 2:30분 정화조 청소 신청되었습니다.</div></td>
+                                <td>업데이트 알림</td>
+                                <td>
+                                    <div class="ellipsis">새로운 업데이트가 있습니다.</div>
+                                </td>
+                                <td>전체</td>
+                                <td>사용 안 함</td>
                                 <td>yyyy-mm-dd hh:mm</td>
                                 <td>admin</td>
                             </tr>
-                            <tr>
-                                <td>92</td>
-                                <td>정화조 청소 신청</td>
-                                <td><div class="ellipsis">정화조 청소 예약 신청 완료</div></td>
-                                <td><div class="ellipsis">청소 일정: 2023년 11월 1일 오후 2:30분 정화조 청소 신청되었습니다. 청소 일정: 2023년 11월 1일 오후 2:30분 정화조 청소 신청되었습니다.</div></td>
-                                <td>yyyy-mm-dd hh:mm</td>
-                                <td>admin</td>
-                            </tr>
-                            <tr>
-                                <td>91</td>
-                                <td>정화조 청소 신청</td>
-                                <td><div class="ellipsis">정화조 청소 예약 신청 완료</div></td>
-                                <td><div class="ellipsis">청소 일정: 2023년 11월 1일 오후 2:30분 정화조 청소 신청되었습니다. 청소 일정: 2023년 11월 1일 오후 2:30분 정화조 청소 신청되었습니다.</div></td>
-                                <td>yyyy-mm-dd hh:mm</td>
-                                <td>admin</td>
-                            </tr>
-
-                          </tbody>
-                        </table>
-                    </div>
-
-                </div>
-                @@include('./common/pagination.html')
-            </div>
-
-
-            <!-- tab2 -->
-            <div class="tab-content" role="tabpanel" aria-labelledby="tab2" id="tabContent2" tabindex="0" hidden="true">
-                <div class="list">
-                    <div class="list-body">
-                        <table class="tb-data" summary="알림 유형, 제목, 메시지, 최종 수정일시, 최종 수정자로 구분되는 표">
-                            <caption>알림 유형, 제목, 메시지, 최종 수정일시, 최종 수정자</caption>
-                            <colgroup>
-                                <col style="width: 15%">
-                                <col style="width: auto">
-                                <col style="width: auto">
-                                <col style="width: 15%">
-                                <col style="width: 10%">
-                            </colgroup>
-                            <thead>
-                                <tr>
-                                    <th scope="col">알림 유형</th>
-                                    <th scope="col">제목</th>
-                                    <th scope="col">메시지</th>
-                                    <th scope="col">최종 수정일시</th>
-                                    <th scope="col">최종 수정자</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>시스템 공지</td>
-                                    <td>
-                                        <div class="ellipsis">
-                                            [시스템]
-                                            <span class="dynamic-msg">{앱 공지 제목}</span>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="ellipsis">
-                                            <span class="dynamic-msg">{앱 공지 내용 첫 줄}</span>
-                                        </div>
-                                    </td>
-                                    <td>yyyy-mm-dd hh:mm</td>
-                                    <td>admin</td>
-                                </tr>
-                                <tr>
-                                    <td>일반 공지</td>
-                                    <td>
-                                        <div class="ellipsis">
-                                            [일반]
-                                            <span class="dynamic-msg">{앱 공지 제목}</span>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="ellipsis">
-                                            <span class="dynamic-msg">{앱 공지 내용 첫 줄}</span>
-                                        </div>
-                                    </td>
-                                    <td>yyyy-mm-dd hh:mm</td>
-                                    <td>admin</td>
-                                </tr>
-                                <tr>
-                                    <td>스마트 번호표 발급</td>
-                                    <td>
-                                        <div class="ellipsis">스마트 번호표가 발급되었습니다.</div>
-                                    </td>
-                                    <td>
-                                        <div class="ellipsis">
-                                            발권 번호: <span class="dynamic-msg">{발권 번호}</span><br>
-                                            발권 일시: <span class="dynamic-msg">{발권 일시}</span>
-                                        </div>
-                                    </td>
-                                    <td>yyyy-mm-dd hh:mm</td>
-                                    <td>admin</td>
-                                </tr>
-                                <tr>
-                                    <td>스마트 번호표 알림</td>
-                                    <td>
-                                        <div class="ellipsis">스마트 번호표 알림</div>
-                                    </td>
-                                    <td>
-                                        <div class="ellipsis">
-                                            발권 번호: <span class="dynamic-msg">{발권 번호}</span><br>
-                                            발권 번호와 창구를 확인해 주세요.
-                                        </div>
-                                    </td>
-                                    <td>yyyy-mm-dd hh:mm</td>
-                                    <td>admin</td>
-                                </tr>
-                                <tr>
-                                    <td>정화조 청소 신청</td>
-                                    <td>
-                                        <div class="ellipsis">정화조 청소 예약 신청 완료</div>
-                                    </td>
-                                    <td>
-                                        <div class="ellipsis">
-                                            청소 일정: <span class="dynamic-msg">{예약 일시}</span>
-                                        </div>
-                                    </td>
-                                    <td>yyyy-mm-dd hh:mm</td>
-                                    <td>admin</td>
-                                </tr>
-                                <tr>
-                                    <td>건강이랑 신청</td>
-                                    <td>
-                                        <div class="ellipsis">건강이랑 예약 신청 완료</div>
-                                    </td>
-                                    <td>
-                                        <div class="ellipsis">
-                                            <span class="dynamic-msg">{권역}</span> <span class="dynamic-msg">{문의 연락처}</span>
-                                        </div>
-                                    </td>
-                                    <td>yyyy-mm-dd hh:mm</td>
-                                    <td>admin</td>
-                                </tr>
-                                <tr>
-                                    <td>1:1 문의 답변 알림</td>
-                                    <td>
-                                        <div class="ellipsis">1:1문의 답변이 등록되어습니다.</div>
-                                    </td>
-                                    <td>
-                                        <div class="ellipsis">
-                                            <span class="dynamic-msg">{1:1 문의 제목}</span>
-                                        </div>
-                                    </td>
-                                    <td>yyyy-mm-dd hh:mm</td>
-                                    <td>admin</td>
-                                </tr>
-                                <tr>
-                                    <td>관심 키워드 알림</td>
-                                    <td>
-                                        <div class="ellipsis">관심 키워드 알림</div>
-                                    </td>
-                                    <td>
-                                        <div class="ellipsis">
-                                            <span class="dynamic-msg">{관심 키워드}</span>이(가) 포함된 새글이 등록되었습니다.
-                                        </div>
-                                    </td>
-                                    <td>yyyy-mm-dd hh:mm</td>
-                                    <td>admin</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
+                        </tbody>
+                    </table>
                 </div>
             </div>
-          </div>
+            @@include('./common/pagination.html')
         </div>
     </main>
 
