@@ -38,7 +38,7 @@
     .check-park {
       position: absolute;
       left: 1.25rem;
-      transform: translateY(-400%);
+      transform: translateY(-240%);
       animation: fadeIn 0.5s ease forwards;
       border-radius: 50px;
       padding: 2px;
@@ -855,7 +855,7 @@
   font-size: 0.75rem;
   font-weight: bold;
   &.cngst-0 {
-    background-color: rgba(0,0,0,0.5)
+    background-color: rgba(0,0,0,0.7)
   }
   &.cngst-1 {
     background-color: rgba(50, 122, 228, 0.8)
@@ -878,5 +878,56 @@
   }
   &.cngst-3 {
     color: #EF5151;
+  }
+}
+
+.legend {
+  width: 2.5rem;
+  height: 2.5rem;
+  position: absolute;
+  right: 1.25rem;
+  transform: translateY(-260%);
+  opacity: 0;
+  animation: fadeIn 0.5s ease forwards;
+  animation-delay: 1s;
+  .btn {
+    background-color: #fff;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 100%;
+    border: 2px solid #fff;
+    box-shadow: 1px 4px 10px rgba(0, 0, 0, 0.3);
+    padding: 0;
+    color: #37373c;
+    font-size: 13px;
+    line-height: 14px;
+  }
+  &-items {
+    position: absolute;
+    bottom: 0;
+    padding: 12px 4px 46px 4px;
+    border-radius: 40px;
+    gap: 6px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(255,255,255,0.8);
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+    .p-point {
+      font-size: 11px;
+    }
+  }
+  &.open {
+    .btn {
+      color: #e45e63;
+      border-color: #e45e63;
+    }
+    .legend-items {
+      height: auto;
+      visibility: visible;
+    }
   }
 }

@@ -1,11 +1,81 @@
 <!DOCTYPE html>
 <html lang="ko">
-  @@include('./common/head.html')
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>종로 관리자</title>
+    <link rel="stylesheet" href="../assets/vendor/jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="../assets/css/reset.css">
+    <link rel="stylesheet" href="../assets/css/admin.css">
+</head>
   <body>
-    @@include('./common/header.html')
-    @@include('./common/navigation.html')
+    <header id="header">
+    <a href="00_002_dashboard.html" class="logo">종로Pick 관리자 사이트</a>
+    <div class="opt">
+        <button type="button" class="btn btn-text">yesman 님</button>
+    </div>
+    <div class="opt">
+        <button type="button" class="btn btn-icon icon alarm"></button>
+        <div class="dropdown">
+            <div class="dropdown-alarm">
+                <h4 class="title">알림</h4>
+                <button type="button" class="btn btn-text">모두 읽음 처리</button>
+                <ul class="lists">
+                    <li>
+                        새로운 1:1 문의가 도착했습니다. 
+                        <span class="date">2023-10-31 10:30</span>
+                    </li>
+                    <li>
+                        권한이 관리자로 변경되었습니다.
+                        <span class="date">2023-10-31 10:30</span>
+                    </li>
+                    <li>
+                        가입이 승인되었습니다.
+                        <span class="date">2023-10-31 10:30</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="opt">
+        <button type="button" class="btn btn-text">로그아웃</button>
+    </div>
+</header>
+    <nav id="nav">
+  <ul class="gnb" id="gnb">
+    <li class="">
+      <a href="#">menu 1</a>
+    </li>
+    <li class="">
+      <a href="#">Depth 1</a>
+      <ul class="sub">
+        <li>
+          <a href="#">menu 1</a>
+        </li>
+        <li>
+          <a href="#">menu 2</a>
+        </li>
+        <li>
+          <a href="#">menu 3</a>
+        </li>
+        <li>
+          <a href="#">menu 4</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
     <main class="main">
-        @@include('./common/page_title.html', { title: '거점 수정', path: {"p1":"",  "p2":""}, description: ''})
+        <div class="page-title">
+    <h2>거점 수정</h2>
+    <p class="des"></p>
+    <ol class="breadcrumb" style="display:none">
+        <li></li>
+        <li></li>
+    </ol>
+</div>
         <div class="content">
 
             <div class="detail">
@@ -36,50 +106,6 @@
                         <textarea class="textarea" name="" id="" cols="30" rows="5" placeholder="입력">
 음악을 사랑하는 사람들이라면 반드시 방문해야 하는 순례코스
 초보에서 전문가까지 모두가 찾는 국내 최대 규모의 악기 상가입니다.
-                        </textarea>
-                    </li>
-                    <li class="lb lb-one">운영 정보</li>
-                    <li>
-                        <textarea class="textarea" name="" id="" cols="30" rows="5" placeholder="거점 운영일 및 시간 입력">
-월~금요일: 오전 9:00 ~ 오후 5:00
-토요일: 오전 9:00 ~ 오후 3:00
-일요일: 휴무
-                        </textarea>
-                    </li>
-                    <li class="lb lb-one required">위치 정보</li> 
-                    <li>
-                        <div class="point-location">
-                            <div class="loc">
-                                <label for="address">주소</label>
-                                <input type="text" class="input" readonly id="address" value="서울 종로구 삼일대로 488">
-                                <button type="button" class="btn btn-default">주소검색</button>
-                            </div>
-                            <div class="loc">
-                                <label for="longitude">경도(x)</label>
-                                <input type="text" class="input" id="longitude" value="126.978909">
-                            </div>
-                            <div class="loc">
-                                <label for="latitude">위도(y)</label>
-                                <input type="text" class="input" id="latitude" value="37.573647">
-                            </div>
-                        </div>
-                        <div class="map">map</div>
-                    </li>
-                   
-                </ul>
-                
-            </div>
-
-            <div class="btns center">
-                <button type="button" class="btn btn-third">취소</button>
-                <button type="button" class="btn btn-second">저장</button>
-            </div>
-        </div>
-    </main>
-
-    @@include('./common/admin_scripts.html')
-  </body>
-</html>에서 전문가까지 모두가 찾는 국내 최대 규모의 악기 상가입니다.
                         </textarea>
                     </li>
                     <li class="lb lb-one">운영 정보</li>

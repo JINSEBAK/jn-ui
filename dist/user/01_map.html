@@ -114,6 +114,19 @@
                 <button type="button" class="btn btn-shinmungo">
                     <span>불법주정차신고</span>
                 </button>
+
+                <!-- 공영주차장 범례 -->
+                <div class="legend">
+                    <div class="legend-items">
+                        <div class="p-point cngst-1">여유</div>
+                        <div class="p-point cngst-2">보통</div>
+                        <div class="p-point cngst-3">혼잡</div>
+                        <div class="p-point cngst-0">만차</div>
+                    </div>
+                    <button type="button" class="btn">
+                        <span>범례</span>
+                    </button>
+                </div>
                 
                 <!-- user's location -->
                 <button type="button" class="btn btn-icon my-location">
@@ -178,5 +191,15 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <script src="../../assets/js/common.js"></script>
 
+        <script>
+            const btnLegend = document.querySelector('.legend')
+            btnLegend.onclick = function(e) {
+                if (this.classList.contains('open')) {
+                    this.classList.remove('open')
+                } else {
+                    this.classList.add('open')
+                }
+            }
+        </script>
     </body>
 </html>

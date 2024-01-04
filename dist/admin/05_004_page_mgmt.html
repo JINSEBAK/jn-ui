@@ -1,11 +1,81 @@
 <!DOCTYPE html>
 <html lang="ko">
-  @@include('./common/head.html')
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>종로 관리자</title>
+    <link rel="stylesheet" href="../assets/vendor/jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="../assets/css/reset.css">
+    <link rel="stylesheet" href="../assets/css/admin.css">
+</head>
   <body>
-    @@include('./common/header.html')
-    @@include('./common/navigation.html')
+    <header id="header">
+    <a href="00_002_dashboard.html" class="logo">종로Pick 관리자 사이트</a>
+    <div class="opt">
+        <button type="button" class="btn btn-text">yesman 님</button>
+    </div>
+    <div class="opt">
+        <button type="button" class="btn btn-icon icon alarm"></button>
+        <div class="dropdown">
+            <div class="dropdown-alarm">
+                <h4 class="title">알림</h4>
+                <button type="button" class="btn btn-text">모두 읽음 처리</button>
+                <ul class="lists">
+                    <li>
+                        새로운 1:1 문의가 도착했습니다. 
+                        <span class="date">2023-10-31 10:30</span>
+                    </li>
+                    <li>
+                        권한이 관리자로 변경되었습니다.
+                        <span class="date">2023-10-31 10:30</span>
+                    </li>
+                    <li>
+                        가입이 승인되었습니다.
+                        <span class="date">2023-10-31 10:30</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="opt">
+        <button type="button" class="btn btn-text">로그아웃</button>
+    </div>
+</header>
+    <nav id="nav">
+  <ul class="gnb" id="gnb">
+    <li class="">
+      <a href="#">menu 1</a>
+    </li>
+    <li class="">
+      <a href="#">Depth 1</a>
+      <ul class="sub">
+        <li>
+          <a href="#">menu 1</a>
+        </li>
+        <li>
+          <a href="#">menu 2</a>
+        </li>
+        <li>
+          <a href="#">menu 3</a>
+        </li>
+        <li>
+          <a href="#">menu 4</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
     <main class="main">
-        @@include('./common/page_title.html', { title: '페이지 관리', path: {"p1":"",  "p2":""}, description: ''})
+        <div class="page-title">
+    <h2>페이지 관리</h2>
+    <p class="des"></p>
+    <ol class="breadcrumb" style="display:none">
+        <li></li>
+        <li></li>
+    </ol>
+</div>
         <div class="content">
 
             <!-- search -->
@@ -44,7 +114,45 @@
                     </div>
                   </div>
 
-                  @@include('./common/search_period.html')
+                  <div class="item">
+    <div class="label">
+      <label for="">기간 조회</label>
+    </div>
+    <div class="frm-date">
+      <select class="select">
+        <option value="">옵션 1</option>
+        <option value="">옵션 2</option>
+      </select>
+      <div class="date picker">
+        <input type="text" class="input" placeholder="시작일">
+      </div>
+      <div class="date picker">
+        <input type="text" class="input" placeholder="종료일">
+      </div>
+      <div class="select-date">
+        <label>
+          <input type="radio" name="select-date" value="1" checked>
+          <span>전체</span>
+        </label>
+        <label>
+          <input type="radio" name="select-date" value="2">
+          <span>오늘</span>
+        </label>
+        <label>
+          <input type="radio" name="select-date" value="3">
+          <span>일주일</span>
+        </label>
+        <label>
+          <input type="radio" name="select-date" value="4">
+          <span>1개월</span>
+        </label>
+        <label>
+          <input type="radio" name="select-date" value="5">
+          <span>3개월</span>
+        </label>
+      </div>
+    </div>
+  </div>
 
               </div>
               <div class="search-btn">
@@ -129,90 +237,6 @@
                             <div class="ellipsis">종로 소개 페이지</div>
                         </td>
                         <td>사용</td>
-                        <td>yyyy-mm-dd hh:mm</td>
-                        <td>admin_id</td>
-                      </tr>
-                      <tr>
-                        <td>6</td>
-                        <td>jongnoIntro</td>
-                        <td>종로 소개</td>
-                        <td>
-                            <div class="ellipsis">종로 소개 페이지</div>
-                        </td>
-                        <td>사용</td>
-                        <td>yyyy-mm-dd hh:mm</td>
-                        <td>admin_id</td>
-                      </tr>
-                      <tr>
-                        <td>5</td>
-                        <td>jongnoIntro</td>
-                        <td>종로 소개</td>
-                        <td>
-                            <div class="ellipsis">종로 소개 페이지</div>
-                        </td>
-                        <td>사용</td>
-                        <td>yyyy-mm-dd hh:mm</td>
-                        <td>admin_id</td>
-                      </tr>
-                      <tr>
-                        <td>4</td>
-                        <td>jongnoIntro</td>
-                        <td>종로 소개</td>
-                        <td>
-                            <div class="ellipsis">종로 소개 페이지</div>
-                        </td>
-                        <td>사용</td>
-                        <td>yyyy-mm-dd hh:mm</td>
-                        <td>admin_id</td>
-                      </tr>
-                      <tr>
-                        <td>3</td>
-                        <td>jongnoIntro</td>
-                        <td>종로 소개</td>
-                        <td>
-                            <div class="ellipsis">종로 소개 페이지</div>
-                        </td>
-                        <td>사용</td>
-                        <td>yyyy-mm-dd hh:mm</td>
-                        <td>admin_id</td>
-                      </tr>
-                      <tr>
-                        <td>2</td>
-                        <td>jongnoIntro</td>
-                        <td>종로 소개</td>
-                        <td>
-                            <div class="ellipsis">종로 소개 페이지</div>
-                        </td>
-                        <td>사용</td>
-                        <td>yyyy-mm-dd hh:mm</td>
-                        <td>admin_id</td>
-                      </tr>
-                      <tr>
-                        <td>1</td>
-                        <td>jongnoIntro</td>
-                        <td>종로 소개</td>
-                        <td>
-                            <div class="ellipsis">종로 소개 페이지</div>
-                        </td>
-                        <td>사용</td>
-                        <td>yyyy-mm-dd hh:mm</td>
-                        <td>admin_id</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-              @@include('./common/pagination.html')
-            <!-- list end -->
-        </div>
-    </main>
-
-    @@include('./common/admin_scripts.html')
-    <script>
-       
-    </script>
-  </body>
-</html>                <td>사용</td>
                         <td>yyyy-mm-dd hh:mm</td>
                         <td>admin_id</td>
                       </tr>
