@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+s<!DOCTYPE html>
 <html lang="ko">
   <head>
     <meta charset="UTF-8" />
@@ -80,16 +80,17 @@
 
             <div class="detail">
                 <ul class="lik-tb">
-                    <li class="lb lb-one required">배너 종류</li>
+                    <li class="lb lb-one">배너 위치</li>
                     <li>
                         <div class="inline">
-                            <div class="radio">
-                                <input type="radio" name="type" value="1" id="type1" checked>
-                                <label for="type1">메인</label>
-                            </div>
-                            <div class="radio">
-                                <input type="radio" name="type" value="2" id="type2">
-                                <label for="type2">서브</label>
+                            <select class="select" name="" id="">
+                                <option value="">홈 메인</option>
+                                <option value="">홈 서브</option>
+                                <option value="">종로소식</option>
+                                <option value="">더보기</option>
+                            </select>
+                            <div class="count">
+                                현재 노출: <span>3</span> | 최대 노출: <span>5</span>
                             </div>
                         </div>
                     </li>
@@ -99,7 +100,7 @@
                             <input type="text" class="input" placeholder="최대 20자 입력">
                         </div>
                     </li>
-                    <li class="lb lb-one">이미지</li>
+                    <li class="lb lb-one required">이미지</li>
                     <li>
                         <div class="attach-img">
                             <label>
@@ -109,85 +110,108 @@
                             </label>
                         </div>
                     </li>
-                    <li class="lb lb-one required link-type">링크 종류</li>
+                    <li class="lb lb-one required">대체 텍스트</li>
+                    <li>
+                        <div class="inline">    
+                            <input type="text" class="input" placeholder="이미지 대체 텍스트">
+                        </div>
+                    </li>
+                    <li class="lb lb-one required link-type">링크 유형</li>
                     <li>
                         <div class="inline">
-                            <div class="radio">
-                                <input type="radio" name="link-type" value="1" id="link1" checked>
-                                <label for="link1">내부</label>
-                            </div>
-                            <div class="radio">
-                                <input type="radio" name="link-type" value="2" id="link2">
-                                <label for="link2">외부</label>
-                            </div>
+                            <label class="radio">
+                                <input type="radio" name="link-type" value="I" checked>
+                                <span>내부 웹</span>
+                            </label>
+                            <label class="radio">
+                                <input type="radio" name="link-type" value="O">
+                                <span>외부 웹</span>
+                            </label>
+                            <label class="radio">
+                                <input type="radio" name="link-type" value="D">
+                                <span>외부 앱</span>
+                            </label>
+                            <label class="radio">
+                                <input type="radio" name="link-type" value="A">
+                                <span>앱 I/F</span>
+                            </label>
+                            <label class="radio">
+                                <input type="radio" name="link-type" value="">
+                                <span>연결없음</span>
+                            </label>
                         </div>
                     </li>
-
-                    <li class="lb open-window" style="display: none">창 열림</li>
-                    <li class="open-window" style="display: none">
-                        <div class="inline">
-                            <div class="radio">
-                                <input type="radio" name="open" value="1" id="open1" checked>
-                                <label for="open1">새창 열기</label>
-                            </div>
-                            <div class="radio">
-                                <input type="radio" name="open" value="2" id="open2">
-                                <label for="open2">외부 앱 열기</label>
-                            </div>
-                        </div>
-                    </li>
-
                     <li class="lb lb-one">링크 URL</li>
                     <li>
                         <div class="inline">
                             <input type="text" class="input" placeholder="연결될 URL 주소 입력" disabled>
                             <button type="button" class="btn btn-default small">링크 검색</button>
                         </div>
-                        <div class="checkbox chk-direct">
+                        <label class="checkbox chk-direct">
                             <input type="checkbox" name="" id="btnDirect">
-                            <label for="btnDirect">직접 입력</label>
-                        </div>
-
+                            <span>직접 입력</span>
+                        </label>
                     </li>
-                    <li class="lb lb-one">노출 여부</li>
+                    <li class="lb">노출 여부</li>
                     <li>
                         <div class="inline">
-                            <div class="radio">
-                                <input type="radio" name="useYn" value="1" id="useYn1" checked>
-                                <label for="useYn1">미노출</label>
-                            </div>
-                            <div class="radio">
-                                <input type="radio" name="useYn" value="2" id="useYn2">
-                                <label for="useYn2">노출</label>
-                            </div>
+                            <label class="radio">
+                                <input type="radio" name="useYn" value="1" id="useYn1">
+                                <span>미노출</span>
+                            </label>
+                            <label class="radio">
+                                <input type="radio" name="useYn" value="2" id="useYn2" checked>
+                                <span>노출</span>
+                            </label>
                         </div>
+                    </li>
+                    <li class="lb">노출 설정</li>
+                    <li>
                         <div class="inline">
-                            <div class="radio">
-                                <input type="radio" name="useYn-type" value="1" id="useYn-t1" disabled>
-                                <label for="useYn-t1">상시 노출</label>
-                            </div>
-                            <div class="radio">
-                                <input type="radio" name="useYn-type" value="2" id="useYn-t2" disabled>
-                                <label for="useYn-t2">기간 노출</label>
-                            </div>
+                            <label class="radio">
+                                <input type="radio" name="useYn-type" value="2" id="useYn-t2" >
+                                <span>기간 노출</span>
+                            </label>
+                            <label class="radio">
+                                <input type="radio" name="useYn-type" value="1" id="useYn-t1" checked>
+                                <span>상시 노출</span>
+                            </label>
                         </div>
                     </li>
                     <li class="lb lb-one">노출 기간</li>
                     <li>
-                        <div class="inline">
-                            <input type="date" class="input"> ~ <input type="date" class="input">
+                        <div class="frm-date">
+                            <div class="date picker">
+                                <input type="text" class="input" placeholder="시작일">
+                            </div>
+                            <select class="select">
+                                <option value="">00</option>
+                            </select>시
+                            <select class="select">
+                                <option value="">00</option>
+                            </select>분  ~
+                            <div class="date picker">
+                                <input type="text" class="input" placeholder="종료일">
+                            </div>
+                            <select class="select">
+                                <option value="">00</option>
+                            </select>시
+                            <select class="select">
+                                <option value="">00</option>
+                            </select>분
                         </div>
                         <ul class="guide">
-                            <li>같은 기간에 메인 배너는 최대 5개, 서브 배너는 최대 3개 노출 설정 가능합니다.</li>
-                            <li>노출 기간 만료 시 미노출 상태로 자동 변경됩니다.</li>
+                            <li>노출 기간 만료시에는 배너가 노출되지 않습니다.</li>
                         </ul>
                     </li>
+                    <li class="lb lb-one">노출순서</li>
+                    <li>등록 후 설정가능합니다.</li>
                 </ul>
             </div>
 
             <div class="btns center">
-                <button type="button" class="btn btn-third">취소</button>
-                <button type="button" class="btn btn-second">등록</button>
+                <button type="button" class="btn btn-default">취소</button>
+                <button type="button" class="btn btn-primary">등록</button>
             </div>
 
         </div>

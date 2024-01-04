@@ -32,45 +32,47 @@
                 </ul>
            </div>
 
-           <div class="search" style="margin-top: 2rem">
-                <div class="item">
-                    <div class="label">
-                        <label for="">사용 여부</label>
+           <div class="search-container" style="margin-top: 2rem">
+                <div class="search">
+                    <div class="item">
+                        <div class="label">
+                            <label for="">사용 여부</label>
+                        </div>
+                        <div class="inline">
+                            <label class="radio">
+                                <input type="radio" name="status" value="1" id="status1" checked>
+                                <span>전체</span>
+                            </label>
+                            <label class="radio">
+                                <input type="radio" name="status" value="2" id="status2">
+                                <span>사용</span>
+                            </label>
+                            <label class="radio">
+                                <input type="radio" name="status" value="3" id="status3">
+                                <span>사용 안함</span>
+                            </label>
+                        </div>
                     </div>
-                    <div class="inline">
-                        <div class="radio">
-                            <input type="radio" name="status" value="1" id="status1" checked>
-                            <label for="status1">전체</label>
+                    <div class="item">
+                        <div class="label">
+                            <label for="">키워드</label>
                         </div>
-                        <div class="radio">
-                            <input type="radio" name="status" value="2" id="status2">
-                            <label for="status2">사용</label>
-                        </div>
-                        <div class="radio">
-                            <input type="radio" name="status" value="3" id="status3">
-                            <label for="status3">사용 안함</label>
+                        <div class="inline">
+                            <select class="select">
+                                <option value="">코드 그룹ID</option>
+                                <option value="">코드 그룹명</option>
+                                <option value="">코드 그룹 설명</option>
+                                <option value="">등록자</option>
+                                <option value="">최종 수정자</option>
+                            </select>
+                            <input type="text" class="input" placeholder="입력">
                         </div>
                     </div>
                 </div>
-                <div class="item">
-                    <div class="label">
-                        <label for="">키워드</label>
-                    </div>
-                    <div class="inline">
-                        <select class="select">
-                            <option value="">코드 그룹ID</option>
-                            <option value="">코드 그룹명</option>
-                            <option value="">코드 그룹 설명</option>
-                            <option value="">등록자</option>
-                            <option value="">최종 수정자</option>
-                        </select>
-                        <input type="text" class="input" placeholder="입력">
-                    </div>
+                <div class="search-btn">
+                    <button type="button" class="btn btn-default small">초기화</button>
+                    <button type="button" class="btn btn-second small">검색</button>
                 </div>
-            </div>
-           <div class="search-btn">
-                <button type="button" class="btn btn-third small">초기화</button>
-                <button type="button" class="btn btn-second small">검색</button>
            </div>
 
            <div class="list">
@@ -78,6 +80,10 @@
                     <div class="total">
                         Total <em>4</em>
                     </div>
+                    <div class="btns">
+                        <button type="button" class="btn btn-del">삭제</button>
+                        <button type="button" class="btn btn-primary" data-role="popup" data-target="popupCodeCrt">등록</button>
+                   </div>
                 </div>
                 <div class="list-body">
                     <table class="tb-data" summary="코드ID, 코드명, 사용여부, 표시 순서, 최종 수정일시, 최종수정자로 구분되는 표">
@@ -135,11 +141,6 @@
                 </div>
            </div>
            @@include('./common/pagination.html')
-
-           <div class="btns">
-                <button type="button" class="btn btn-default">삭제</button>
-                <button type="button" class="btn btn-second" data-role="popup" data-target="popupCodeCrt">등록</button>
-           </div>
 
         </div>
     </main>

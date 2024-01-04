@@ -80,89 +80,91 @@
 
 
             <!-- search -->
-            <div class="search">
 
-                <div class="item">
+            <div class="search-container">
+              <div class="search">
+
+                  <div class="item">
+                      <div class="label">
+                          <label for="">구분</label>
+                      </div>
+                      <div class="inline">
+                          <label class="radio">
+                            <input type="radio" name="ntcType" value="0" checked>
+                            <span>전체</span>
+                          </label>
+                          <label class="radio">
+                            <input type="radio" name="ntcType" value="1">
+                            <span>일반</span>
+                          </label>
+                          <label class="radio">
+                            <input type="radio" name="ntcType" value="2">
+                            <span>이벤트</span>
+                          </label>
+                          <label class="radio">
+                            <input type="radio" name="ntcType" value="3">
+                            <span>시스템</span>
+                          </label>
+                      </div>
+                  </div>
+
+                  <div class="item item-col-5">
+                      <div class="label">
+                          <label for="">팝업 공지</label>
+                      </div>
+                      <div class="inline">
+                          <label class="radio">
+                              <input type="radio" name="type" value="1" id="type1" checked>
+                              <span>전체</span>
+                          </label>
+                          <label class="radio">
+                              <input type="radio" name="type" value="2" id="type2">
+                              <span>사용 안 함</span>
+                          </label>
+                          <label class="radio">
+                              <input type="radio" name="type" value="3" id="type3">
+                              <span>사용</span>
+                          </label>
+                      </div>
+                  </div>
+
+                  <div class="item item-col-5">
                     <div class="label">
-                        <label for="">구분</label>
+                        <label for="">PUSH 공지</label>
                     </div>
                     <div class="inline">
                         <label class="radio">
-                          <input type="radio" name="ntcType" value="0" checked>
-                          <span>전체</span>
+                            <input type="radio" name="push" value="1" id="type1" checked>
+                            <span>전체</span>
                         </label>
                         <label class="radio">
-                          <input type="radio" name="ntcType" value="1">
-                          <span>일반</span>
+                            <input type="radio" name="push" value="2" id="type2">
+                            <span>사용 안 함</span>
                         </label>
                         <label class="radio">
-                          <input type="radio" name="ntcType" value="2">
-                          <span>이벤트</span>
-                        </label>
-                        <label class="radio">
-                          <input type="radio" name="ntcType" value="3">
-                          <span>시스템</span>
+                            <input type="radio" name="push" value="3" id="type3">
+                            <span>사용</span>
                         </label>
                     </div>
                 </div>
 
-                <div class="item item-col-5">
+                  <div class="item">
                     <div class="label">
-                        <label for="">팝업 공지</label>
+                        <label for="">키워드</label>
                     </div>
                     <div class="inline">
-                        <div class="radio">
-                            <input type="radio" name="type" value="1" id="type1" checked>
-                            <label for="type1">전체</label>
-                        </div>
-                        <div class="radio">
-                            <input type="radio" name="type" value="2" id="type2">
-                            <label for="type2">사용 안 함</label>
-                        </div>
-                        <div class="radio">
-                            <input type="radio" name="type" value="3" id="type3">
-                            <label for="type3">사용</label>
-                        </div>
+                        <select class="select">
+                            <option value="">제목</option>
+                            <option value="">내용</option>
+                            <option value="">등록자</option>
+                            <option value="">최종 수정자</option>
+                        </select>
+                        <input type="text" class="input input-keyword" placeholder="입력">
                     </div>
                 </div>
+        
 
-                <div class="item item-col-5">
-                  <div class="label">
-                      <label for="">PUSH 공지</label>
-                  </div>
-                  <div class="inline">
-                      <div class="radio">
-                          <input type="radio" name="push" value="1" id="type1" checked>
-                          <label for="type1">전체</label>
-                      </div>
-                      <div class="radio">
-                          <input type="radio" name="push" value="2" id="type2">
-                          <label for="type2">사용 안 함</label>
-                      </div>
-                      <div class="radio">
-                          <input type="radio" name="push" value="3" id="type3">
-                          <label for="type3">사용</label>
-                      </div>
-                  </div>
-              </div>
-
-                <div class="item">
-                  <div class="label">
-                      <label for="">키워드</label>
-                  </div>
-                  <div class="inline">
-                      <select class="select">
-                          <option value="">제목</option>
-                          <option value="">내용</option>
-                          <option value="">등록자</option>
-                          <option value="">최종 수정자</option>
-                      </select>
-                      <input type="text" class="input input-keyword" placeholder="입력">
-                  </div>
-               </div>
-      
-
-                <div class="item">
+                  <div class="item">
     <div class="label">
       <label for="">기간 조회</label>
     </div>
@@ -201,11 +203,12 @@
       </div>
     </div>
   </div>
-            </div>
-            <div class="search-btn">
-                <button type="button" class="btn btn-third small">초기화</button>
-                <button type="button" class="btn btn-second small">검색</button>
               </div>
+              <div class="search-btn">
+                  <button type="button" class="btn btn-default small">초기화</button>
+                  <button type="button" class="btn btn-second small">검색</button>
+                </div>
+            </div>    
             <!-- search end -->
 
             <!-- list -->
@@ -213,6 +216,10 @@
                 <div class="list-head">
                   <div class="total">
                     Total <em>100</em>
+                  </div>
+                  <div class="btns">
+                    <button type="button" class="btn btn-del">삭제</button>
+                    <a href="./07_001_notice_create.html" class="btn btn-primary">등록</a>
                   </div>
                 </div>
                 <div class="list-body">
@@ -232,10 +239,10 @@
                     <thead>
                       <tr>
                         <th scope="col">
-                            <div class="checkbox">
+                            <label class="checkbox">
                                 <input type="checkbox" id="allCheck">
-                                <label for="allCheck"></label>
-                            </div>
+                                <span></span>
+                            </label>
                         </th>
                         <th scope="col">번호</th>
                         <th scope="col">등록일</th>
@@ -249,7 +256,7 @@
                     </thead>
                     <tbody>
                       <tr>
-                        <td><input type="checkbox"></td>
+                        <td><label class="checkbox"><input type="checkbox"><span></span></label></td>
                         <td>10</td>
                         <td>yyyy-mm-dd</td>
                         <td>시스템</td>
@@ -263,7 +270,7 @@
                         <td>admin_id</td>
                       </tr>
                       <tr>
-                        <td><input type="checkbox"></td>
+                        <td><label class="checkbox"><input type="checkbox"><span></span></label></td>
                         <td>9</td>
                         <td>yyyy-mm-dd</td>
                         <td>시스템</td>
@@ -274,7 +281,7 @@
                         <td>admin_id</td>
                       </tr>
                       <tr>
-                        <td><input type="checkbox"></td>
+                        <td><label class="checkbox"><input type="checkbox"><span></span></label></td>
                         <td>8</td>
                         <td>yyyy-mm-dd</td>
                         <td>시스템</td>
@@ -285,7 +292,7 @@
                         <td>admin_id</td>
                       </tr>
                       <tr>
-                        <td><input type="checkbox"></td>
+                        <td><label class="checkbox"><input type="checkbox"><span></span></label></td>
                         <td>7</td>
                         <td>yyyy-mm-dd</td>
                         <td>시스템</td>
@@ -296,7 +303,7 @@
                         <td>admin_id</td>
                       </tr>
                       <tr>
-                        <td><input type="checkbox"></td>
+                        <td><label class="checkbox"><input type="checkbox"><span></span></label></td>
                         <td>6</td>
                         <td>yyyy-mm-dd</td>
                         <td>시스템</td>
@@ -307,7 +314,7 @@
                         <td>admin_id</td>
                       </tr>
                       <tr>
-                        <td><input type="checkbox"></td>
+                        <td><label class="checkbox"><input type="checkbox"><span></span></label></td>
                         <td>5</td>
                         <td>yyyy-mm-dd</td>
                         <td>시스템</td>
@@ -318,7 +325,7 @@
                         <td>admin_id</td>
                       </tr>
                       <tr>
-                        <td><input type="checkbox"></td>
+                        <td><label class="checkbox"><input type="checkbox"><span></span></label></td>
                         <td>4</td>
                         <td>yyyy-mm-dd</td>
                         <td>시스템</td>
@@ -329,7 +336,7 @@
                         <td>admin_id</td>
                       </tr>
                       <tr>
-                        <td><input type="checkbox"></td>
+                        <td><label class="checkbox"><input type="checkbox"><span></span></label></td>
                         <td>3</td>
                         <td>yyyy-mm-dd</td>
                         <td>시스템</td>
@@ -340,7 +347,7 @@
                         <td>admin_id</td>
                       </tr>
                       <tr>
-                        <td><input type="checkbox"></td>
+                        <td><label class="checkbox"><input type="checkbox"><span></span></label></td>
                         <td>2</td>
                         <td>yyyy-mm-dd</td>
                         <td>시스템</td>
@@ -351,7 +358,7 @@
                         <td>admin_id</td>
                       </tr>
                       <tr>
-                        <td><input type="checkbox"></td>
+                        <td><label class="checkbox"><input type="checkbox"><span></span></label></td>
                         <td>1</td>
                         <td>yyyy-mm-dd</td>
                         <td>시스템</td>
@@ -384,11 +391,6 @@
     <button type="button" class="btn btn-last">Last</button>
 </div>
     
-    
-              <div class="btns">
-                <button type="button" class="btn btn-third" disabled>삭제</button>
-                <a href="./07_001_notice_create.html" class="btn btn-second">등록</a>
-              </div>
             <!-- list end -->
         </div>
     </main>

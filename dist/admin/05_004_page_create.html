@@ -1,81 +1,11 @@
 <!DOCTYPE html>
 <html lang="ko">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>종로 관리자</title>
-    <link rel="stylesheet" href="../assets/vendor/jquery-ui/jquery-ui.min.css">
-    <link rel="stylesheet" href="../assets/css/reset.css">
-    <link rel="stylesheet" href="../assets/css/admin.css">
-</head>
+  @@include('./common/head.html')
   <body>
-    <header id="header">
-    <a href="00_002_dashboard.html" class="logo">종로Pick 관리자 사이트</a>
-    <div class="opt">
-        <button type="button" class="btn btn-text">yesman 님</button>
-    </div>
-    <div class="opt">
-        <button type="button" class="btn btn-icon icon alarm"></button>
-        <div class="dropdown">
-            <div class="dropdown-alarm">
-                <h4 class="title">알림</h4>
-                <button type="button" class="btn btn-text">모두 읽음 처리</button>
-                <ul class="lists">
-                    <li>
-                        새로운 1:1 문의가 도착했습니다. 
-                        <span class="date">2023-10-31 10:30</span>
-                    </li>
-                    <li>
-                        권한이 관리자로 변경되었습니다.
-                        <span class="date">2023-10-31 10:30</span>
-                    </li>
-                    <li>
-                        가입이 승인되었습니다.
-                        <span class="date">2023-10-31 10:30</span>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <div class="opt">
-        <button type="button" class="btn btn-text">로그아웃</button>
-    </div>
-</header>
-    <nav id="nav">
-  <ul class="gnb" id="gnb">
-    <li class="">
-      <a href="#">menu 1</a>
-    </li>
-    <li class="">
-      <a href="#">Depth 1</a>
-      <ul class="sub">
-        <li>
-          <a href="#">menu 1</a>
-        </li>
-        <li>
-          <a href="#">menu 2</a>
-        </li>
-        <li>
-          <a href="#">menu 3</a>
-        </li>
-        <li>
-          <a href="#">menu 4</a>
-        </li>
-      </ul>
-    </li>
-  </ul>
-</nav>
-
-
+    @@include('./common/header.html')
+    @@include('./common/navigation.html')
     <main class="main">
-        <div class="page-title">
-    <h2>페이지 생성</h2>
-    <p class="des"></p>
-    <ol class="breadcrumb" style="display:none">
-        <li></li>
-        <li></li>
-    </ol>
-</div>
+        @@include('./common/page_title.html', { title: '페이지 생성', path: {"p1":"",  "p2":""}, description: ''})
         <div class="content">
             
             <div class="detail">
@@ -84,6 +14,49 @@
                     <li>
                         <div class="inline">
                             <input type="text" class="input" placeholder="영어/숫자 입력 가능, 최대 20자" maxlength="20">
+                        </div>
+                        <ul class="guide">
+                            <li>페이지를 구분할 고유 ID를 입력해 주세요. (영어/숫자 입력 가능, 최대 20자, 첫글자는 영어 소문자 필수)</li>
+                        </ul>
+                    </li>
+                    <li class="lb lb-one required">페이지 명</li>
+                    <li>
+                        <div class="inline">
+                            <input type="text" class="input" placeholder="한영/숫자 입력 가능, 최대 20자" maxlength="20">
+                        </div>
+                        <ul class="guide">
+                            <li>페이지 관리를 위한 페이지 명을 입력해 주세요. 관리자 외 사용자에겐 노출되지 않습니다. (한영/숫자 입력 가능, 최대 20자)</li>
+                        </ul>
+                    </li>
+                    <li class="lb lb-one">페이지 설명</li>
+                    <li>
+                        <textarea class="textarea" name="" id="" cols="30" rows="5" placeholder="페이지 설명 입력 (최대 512자 입력)"></textarea>
+                    </li>
+                </ul>
+                <ul class="lik-tb">
+                    <li class="lb lb-one required">내용</li>
+                    <li>
+                        <div class="editor">Editor</div>
+                    </li>
+                </ul>
+                <ul class="guide">
+                    <li>페이지 생성 후 페이지 링크를 메뉴와 연결할 수 있습니다.</li>
+                </ul>
+            </div>
+
+            <div class="btns center">
+                <button type="button" class="btn btn-third">취소</button>
+                <button type="button" class="btn btn-second">생성</button>
+            </div>
+
+        </div>
+    </main>
+
+    @@include('./common/admin_scripts.html')
+    <script>
+    </script>
+  </body>
+</html>t type="text" class="input" placeholder="영어/숫자 입력 가능, 최대 20자" maxlength="20">
                         </div>
                         <ul class="guide">
                             <li>페이지를 구분할 고유 ID를 입력해 주세요. (영어/숫자 입력 가능, 최대 20자, 첫글자는 영어 소문자 필수)</li>

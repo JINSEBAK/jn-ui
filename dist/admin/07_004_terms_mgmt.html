@@ -79,30 +79,38 @@
         <div class="content">
 
             <!-- search -->
-            <div class="search">
-                <div class="item">
-                    <div class="label">
-                        <label for="">정책</label>
-                    </div>
-                    <div class="inline">
-                        <select class="select">
-                            <option value="">전체</option>
-                        </select>
-                    </div>
-                </div>
 
-                <div class="item">
-                    <div class="label">
-                        <label for="">배포일</label>
-                    </div>
-                    <div class="inline">
-                        <input type="date" class="input"> ~ <input type="date" class="input">
-                    </div>
-                </div>
-            </div>
-            <div class="search-btn">
-                <button type="button" class="btn btn-third small">초기화</button>
-                <button type="button" class="btn btn-second small">검색</button>
+            <div class="search-container">
+              <div class="search">
+                  <div class="item">
+                      <div class="label">
+                          <label for="">정책</label>
+                      </div>
+                      <div class="inline">
+                          <select class="select">
+                              <option value="">전체</option>
+                          </select>
+                      </div>
+                  </div>
+
+                  <div class="item">
+                      <div class="label">
+                          <label for="">배포일</label>
+                      </div>
+                      <div class="frm-date">
+                        <div class="date picker">
+                          <input type="text" class="input" placeholder="시작일">
+                        </div>
+                        <div class="date picker">
+                          <input type="text" class="input" placeholder="종료일">
+                        </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="search-btn">
+                  <button type="button" class="btn btn-default small">초기화</button>
+                  <button type="button" class="btn btn-second small">검색</button>
+              </div>
             </div>
             <!-- search end -->
 
@@ -110,6 +118,9 @@
                 <div class="list-head">
                   <div class="total">
                     Total <em>5</em>
+                  </div>
+                  <div class="btns">
+                    <a href="./08_001_terms_create.html" class="btn btn-primary">등록</a>
                   </div>
                 </div>
                 <div class="list-body">
@@ -183,9 +194,6 @@
     <button type="button" class="btn btn-last">Last</button>
 </div>
 
-              <div class="btns">
-                <a href="./08_001_terms_create.html" class="btn btn-second">등록</a>
-              </div>
 
         </div>
     </main>

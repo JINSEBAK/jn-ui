@@ -66,16 +66,16 @@
                     <li class="lb lb-one">팝업</li>
                     <li>
                         <div class="inline">
-                            <div class="radio">
-                                <input type="radio" name="useYn" value="1" id="useYn1" checked>
-                                <label for="useYn1">사용 안 함</label>
-                            </div>
-                            <div class="radio">
-                                <input type="radio" name="useYn" value="2" id="useYn2">
-                                <label for="useYn2">사용</label>
-                            </div>
+                            <label class="radio">
+                                <input type="radio" name="popupYn" value="1" id="useYn1" checked>
+                                <span>사용 안 함</span>
+                            </label>
+                            <label class="radio">
+                                <input type="radio" name="popupYn" value="2" id="useYn2">
+                                <span>사용</span>
+                            </label>
                         </div>
-                        <div class="guide">공지 게시 시간에 함께 노출 시작됩니다.</div>
+                        <div class="guide">* 공지 게시 시간에 함께 노출 시작됩니다.</div>
                     </li>
                     <li class="lb lb-one">팝업 이미지</li>
                     <li>
@@ -89,12 +89,9 @@
                     </li>
                     <li class="lb lb-one">팝업 종료일시</li>
                     <li>
-                        <div class="frm-date inline">
+                        <div class="frm-date">
                             <div class="date">
-                                <input type="text" class="input input-date"> 
-                                <span class="icon calendar">
-                                    <span class="sr-only">달력</span>
-                                </span>
+                                <input type="text" class="input" placeholder="날짜선택"> 
                             </div>
                             <div class="hour">
                                 <select class="select">
@@ -114,8 +111,8 @@
             </div>
 
             <div class="btns center">
-                <button type="button" class="btn btn-third">취소</button>
-                <button type="button" class="btn btn-second">등록</button>
+                <button type="button" class="btn btn-default">취소</button>
+                <button type="button" class="btn btn-primary">등록</button>
             </div>
 
         </div>

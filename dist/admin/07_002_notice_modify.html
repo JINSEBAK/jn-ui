@@ -87,10 +87,10 @@
                                 <option value="">일반</option>
                                 <option value="">시스템</option>
                             </select>
-                            <div class="checkbox">
+                            <label class="checkbox">
                                 <input type="checkbox" id="check-important" checked>
-                                <label for="check-important">중요</label>
-                            </div>
+                                <span>중요</span>
+                            </label>
                         </div>
                     </li>
                     <li class="lb lb-one required">제목</li>
@@ -100,10 +100,21 @@
                         </div>
                     </li>
                     <li class="lb lb-one required">내용</li>
-                    <li>Editor</li>
+                    <li><div class="editor"></div></li>
                     <li class="lb lb-one required">첨부파일</li>
                     <li>
-                        <input type="file" class="input">
+                        <div class="file-box">
+                            <label class="file">
+                                <input type="file" class="input">
+                                <span>첨부</span>
+                            </label>
+                            <div class="file-info">
+                                <span class="name">가을축제_안내_브로셔.pdf</span> <span class="unit size">5.4MB</span>
+                                <button type="button" class="btn btn-icon icon close">
+                                    <span class="sr-only">파일삭제</span>
+                                </button>
+                            </div>
+                        </div>
                     </li>
                 </ul>
 
@@ -111,34 +122,31 @@
                     <li class="lb">팝업</li>
                     <li>
                         <div class="inline">
-                            <div class="radio">
-                                <input type="radio" name="useYn" value="1" id="useYn1">
-                                <label for="useYn1">미적용</label>
-                            </div>
-                            <div class="radio">
-                                <input type="radio" name="useYn" value="2" id="useYn2" checked>
-                                <label for="useYn2">적용</label>
-                            </div>
+                            <label class="radio">
+                                <input type="radio" name="popupYn" value="1" id="useYn1">
+                                <span>미적용</span>
+                            </label>
+                            <label class="radio">
+                                <input type="radio" name="popupYn" value="2" id="useYn2" checked>
+                                <span>적용</span>
+                            </label>
                         </div>
                     </li>
                     <li class="lb">팝업 종류</li>
                     <li>
                         <div class="inline">
-                            <div class="radio">
+                            <label class="radio">
                                 <input type="radio" name="ptype" value="1" id="ptype1">
-                                <label for="ptype1">텍스트</label>
-                            </div>
-                            <div class="radio">
+                                <span>텍스트</span>
+                            </label>
+                            <label class="radio">
                                 <input type="radio" name="ptype" value="2" id="ptype2" checked>
-                                <label for="ptype2">이미지</label>
-                            </div>
+                                <span>이미지</span>
+                            </label>
                         </div>
                     </li>
                     <li class="lb lb-one">팝업 내용</li>
                     <li>
-                        <!-- text -->
-                        <!-- <textarea class="textarea" name="" id="" cols="30" rows="10"></textarea> -->
-                        <!-- image -->
                         <div class="thumb-img">
                             <img src="../../assets/images/sample/sample_07.jpeg">
                             <button type="button" class="btn-viewer">삭제</button>
@@ -146,17 +154,20 @@
                         </div>
                     </li>
                     <li class="lb lb-one">팝업 노출 기간</li>
-                    <li>
-                        <div class="inline">
-                            <input type="date" class="input" value="2023-01-01"> ~ <input type="date" class="input" value="2023-12-31">
+                    <li class="frm-date">
+                        <div class="date picker">
+                            <input type="text" class="input" value="2023-01-01">
+                        </div>~
+                        <div class="date picker">
+                            <input type="text" class="input" value="2023-12-31">
                         </div>
                     </li>
                 </ul>
             </div>
 
             <div class="btns center">
-                <button type="button" class="btn btn-third">취소</button>
-                <button type="button" class="btn btn-second">등록</button>
+                <button type="button" class="btn btn-default">취소</button>
+                <button type="button" class="btn btn-primary">저장</button>
             </div>
 
         </div>

@@ -82,31 +82,31 @@
                 <li class="lb lb-one required">OS</li>
                 <li>
                     <div class="inline">
-                        <div class="radio">
+                        <label class="radio">
                             <input type="radio" name="os" value="1" id="os1" checked>
-                            <label for="os1">안드로이드</label>
-                        </div>
-                        <div class="radio">
+                            <span>안드로이드</span>
+                        </label>
+                        <label class="radio">
                             <input type="radio" name="os" value="2" id="os2">
-                            <label for="os2">iOS</label>
-                        </div>
+                            <span>iOS</span>
+                        </label>
                     </div>
                 </li>
                 <li class="lb required">플랫폼</li>
                 <li>
                     <div class="inline">
-                        <div class="radio">
+                        <label class="radio">
                             <input type="radio" name="platform" value="1" id="platform1" checked>
-                            <label for="platform1">플레이스토어</label>
-                        </div>
-                        <div class="radio">
+                            <span>플레이스토어</span>
+                        </label>
+                        <label class="radio">
                             <input type="radio" name="platform" value="2" id="platform2">
-                            <label for="platform2">원스토어</label>
-                        </div>
-                        <div class="radio">
+                            <span>원스토어</span>
+                        </label>
+                        <label class="radio">
                             <input type="radio" name="platform" value="3" id="platform3">
-                            <label for="platform3">애플앱스토어</label>
-                        </div>
+                            <span>애플앱스토어</span>
+                        </label>
                     </div>
                 </li>
                 <li class="lb">현재 배포 버전 </li>
@@ -122,14 +122,14 @@
                 <li class="lb required">중요도</li>
                 <li>
                     <div class="inline">
-                        <div class="radio">
+                        <label class="radio">
                             <input type="radio" name="important" value="1" id="important1">
-                            <label for="important1">강제</label>
-                        </div>
-                        <div class="radio">
+                            <span>강제</span>
+                        </label>
+                        <label class="radio">
                             <input type="radio" name="important" value="2" id="important2" checked>
-                            <label for="important2">일반</label>
-                        </div>
+                            <span>일반</span>
+                        </label>
                     </div>
                 </li>
                 <li class="lb lb-one required">내용</li>
@@ -138,8 +138,10 @@
                 </li>
                 <li class="lb lb-one required">버전 적용일시</li>
                 <li>
-                    <div class="inline">
-                        <input type="date" class="input" placeholder="시작일"> 
+                    <div class="frm-date">
+                        <div class="date picker">
+                            <input type="text" class="input" placeholder="날짜선택  "> 
+                        </div>
                         <select class="select">
                             <option value="">00</option>
                         </select>
@@ -160,8 +162,8 @@
           </div>
 
           <div class="btns center">
-            <button type="button" class="btn btn-third">취소</button>
-            <button type="button" class="btn btn-second">등록</button>
+            <button type="button" class="btn btn-default">취소</button>
+            <button type="button" class="btn btn-primary">등록</button>
           </div>
 
         </div>

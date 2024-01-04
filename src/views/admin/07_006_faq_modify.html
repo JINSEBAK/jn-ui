@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ko">
   @@include('./common/head.html')
@@ -5,7 +6,7 @@
     @@include('./common/header.html')
     @@include('./common/navigation.html')
     <main class="main">
-        @@include('./common/page_title.html', { title: 'FAQ 등록', path: {"p1":"",  "p2":""}, description: ''})
+        @@include('./common/page_title.html', { title: 'FAQ 수정', path: {"p1":"",  "p2":""}, description: ''})
         <div class="content">
 
             <div class="detail">
@@ -24,32 +25,32 @@
                     </li>
                     <li class="lb lb-one">답변</li>
                     <li>
-                        Editor
+                        <div class="editor"></div>
                     </li>
                     <li class="lb">노출 상태</li>
                     <li>
                         <div class="inline">
-                            <div class="radio">
+                            <label class="radio">
                                 <input type="radio" name="useYn" value="1" id="useYn1">
-                                <label for="useYn1">미노출</label>
-                            </div>
-                            <div class="radio">
+                                <span>미노출</span>
+                            </label>
+                            <label class="radio">
                                 <input type="radio" name="useYn" value="2" id="useYn2" checked>
-                                <label for="useYn2">노출</label>
-                            </div>
+                                <span>노출</span>
+                            </label>
                         </div>
                     </li>
                     <li class="lb">TOP10</li>
                     <li>
                         <div class="inline">
-                            <div class="radio">
+                            <label class="radio">
                                 <input type="radio" name="top10" value="1" id="top101" >
-                                <label for="top101">미설정</label>
-                            </div>
-                            <div class="radio">
-                                <input type="radio" name="useYn" value="2" id="top102" checked>
-                                <label for="top102">설정</label>
-                            </div>
+                                <span>미설정</span>
+                            </label>
+                            <label class="radio">
+                                <input type="radio" name="top10" value="2" id="top102" checked>
+                                <span>설정</span>
+                            </label>
                         </div>
                     </li>
                     
@@ -60,8 +61,8 @@
             </div>
 
             <div class="btns center">
-                <button type="button" class="btn btn-third">취소</button>
-                <button type="button" class="btn btn-second">저장</button>
+                <button type="button" class="btn btn-default">취소</button>
+                <button type="button" class="btn btn-primary">저장</button>
             </div>
 
         </div>

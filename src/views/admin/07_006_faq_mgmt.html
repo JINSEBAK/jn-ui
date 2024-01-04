@@ -10,80 +10,76 @@
         <div class="content">
 
           <!-- search -->
-          <div class="search">
-
-            <div class="item item-col-5">
-              <div class="label">
-                  <label for="">카테고리</label>
-              </div>
-              <div class="inline">
-                  <select class="select">
-                      <option value="">전체</option>
-                  </select>
-              </div>
-           </div>
-
-           <div class="item item-col-5">
-              <div class="label">
-                  <label for="">키워드</label>
-              </div>
-              <div class="inline">
-                  <select class="select">
-                      <option value="">제목</option>
-                      <option value="">내용</option>
-                      <option value="">등록자</option>
-                      <option value="">최종 수정자</option>
-                  </select>
-                  <input type="text" class="input" placeholder="입력">
-              </div>
-            </div>
-
-            <div class="item item-col-5">
-              <div class="label">
-                  <label for="">노출 상태</label>
-              </div>
-              <div class="inline">
-                <div class="radio">
-                    <input type="radio" name="status" value="1" id="status1" checked>
-                    <label for="status1">전체</label>
+          <div class="search-container">
+            <div class="search">
+                <div class="item item-col-5">
+                  <div class="label">
+                      <label for="">카테고리</label>
+                  </div>
+                  <div class="inline">
+                      <select class="select">
+                          <option value="">전체</option>
+                      </select>
+                  </div>
                 </div>
-                <div class="radio">
-                    <input type="radio" name="status" value="2" id="status2">
-                    <label for="status2">미노출</label>
+
+                <div class="item item-col-5">
+                  <div class="label">
+                      <label for="">키워드</label>
+                  </div>
+                  <div class="inline">
+                      <select class="select">
+                          <option value="">제목</option>
+                          <option value="">내용</option>
+                          <option value="">등록자</option>
+                          <option value="">최종 수정자</option>
+                      </select>
+                      <input type="text" class="input" placeholder="입력">
+                  </div>
                 </div>
-                <div class="radio">
-                    <input type="radio" name="status" value="3" id="status3">
-                    <label for="status3">노출</label>
+
+                <div class="item item-col-5">
+                  <div class="label">
+                      <label for="">노출 상태</label>
+                  </div>
+                  <div class="inline">
+                    <label class="radio">
+                        <input type="radio" name="status" value="1" id="status1" checked>
+                        <span>전체</span>
+                    </label>
+                    <label class="radio">
+                        <input type="radio" name="status" value="2" id="status2">
+                        <span>미노출</span>
+                    </label>
+                    <label class="radio">
+                        <input type="radio" name="status" value="3" id="status3">
+                        <span>노출</span>
+                    </label>
+                  </div>
                 </div>
+
+                <div class="item item-col-5">
+                  <div class="label">
+                      <label for="">TOP 10</label>
+                  </div>
+                  <div class="inline">
+                    <label class="radio">
+                        <input type="radio" name="top10" value="1" id="top101" checked>
+                        <span>미설정</span>
+                    </label>
+                    <label class="radio">
+                        <input type="radio" name="top10" value="2" id="top102">
+                        <span>설정</span>
+                    </label>
+                  </div>
+                </div>
+
+                @@include('./common/search_period.html')
               </div>
-            </div>
-
-            <div class="item item-col-5">
-              <div class="label">
-                  <label for="">TOP 10</label>
+              <div class="search-btn">
+                <button type="button" class="btn btn-default small">초기화</button>
+                <button type="button" class="btn btn-second small">검색</button>
               </div>
-              <div class="inline">
-                <div class="radio">
-                    <input type="radio" name="top10" value="1" id="top101" checked>
-                    <label for="top101">미설정</label>
-                </div>
-                <div class="radio">
-                    <input type="radio" name="top10" value="2" id="top102">
-                    <label for="top102">설정</label>
-                </div>
-              </div>
-            </div>
-
-            @@include('./common/search_period.html')
-
-
-          </div>
-        </div>
-
-          </div>
-          <div class="search-btn">
-            <button type="button" class="btn btn-third small">초기화</button>
-            <button type="button" class="btn btn-second small">검색</button>
           </div>
           <!-- search end -->
             
@@ -91,6 +87,10 @@
             <div class="list-head">
               <div class="total">
                 Total <em>100</em>
+              </div>
+              <div class="btns">
+                <button type="button" class="btn btn-second" id="btnTop10">TOP10 관리</button>
+                <a href="./07_003_faq_create.html" class="btn btn-primary">등록</a>
               </div>
             </div>
             <div class="list-body">
@@ -254,11 +254,6 @@
             </div>
           </div>
           @@include('./common/pagination.html')
-
-          <div class="btns">
-            <button type="button" class="btn btn-third" id="btnTop10">TOP10 관리</button>
-            <a href="./07_003_faq_create.html" class="btn btn-second">등록</a>
-          </div>
         </div>
     </main>
 
