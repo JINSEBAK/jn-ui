@@ -790,6 +790,22 @@
   }
 }
 
+.alarm-guide {
+  background-color: #F8F7EC;
+  display: flex;
+  gap: 0.5rem;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: -1.25rem;
+  margin-right: -1.25rem;
+  padding: 10px 1.25rem;
+  p {
+    color: #3f3f45;
+    font-size: 13px;
+    line-height: 18px;
+  }
+}
+
 .tel-num {
   &_format {
     display: flex;

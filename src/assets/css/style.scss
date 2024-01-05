@@ -361,7 +361,7 @@ strong {
   padding: 0.5rem 1rem;
   position: fixed;
   z-index: 1000;
-top: 0;
+  top: 0;
   left: 0;
   right: 0;
   height: $header;
@@ -390,7 +390,7 @@ top: 0;
         margin-left: auto;
       }
     }
-    .info {
+    .info, .refresh {
       margin-left: auto;
     }
     .btn-ticket {
@@ -934,6 +934,9 @@ top: 0;
     position: absolute;
     left: 50%;
     top: 50%;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
     & + .btn-switch {
       width: 48px;
       height: 26px;
@@ -3000,6 +3003,9 @@ select {
   }
   &.letter {
     background-image: url(../images/icon_newsletter.svg)
+  }
+  &.refresh {
+    background-image: url(../images/icon_refresh.svg)
   }
 }
 

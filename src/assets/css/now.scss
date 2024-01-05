@@ -15,18 +15,18 @@
   }
   .content {
     &-box {
-      padding: 0 1rem;
+      padding: 0 1.25rem;
       position: relative;
       margin-bottom: 2rem;
       .x-scroll {
-        margin-left: -1rem;
-        margin-right: -1rem;
+        margin-left: -1.25rem;
+        margin-right: -1.25rem;
       }
       &.filled {
         padding: 0;
         &-a {
           background-color: $bg-content-box;
-          padding: 2rem 1rem;
+          padding: 2rem 1.25rem;
         }
       }
       &.visual {
