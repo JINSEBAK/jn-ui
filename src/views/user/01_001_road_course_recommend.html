@@ -7,115 +7,179 @@
     <body class="more">
         @@include('../common/header_sub.html', {title: '종로 산책 코스 추천'})
         <div class="container inner-full-padd">
-           <section class="card-list">
 
-            <div class="course-card_item">
-                <dl>
-                    <dt class="course-title">종로 골목길</dt>
-                    <dd>
-                        <div class="thumb-img">
-                            <img src="../assets/images/sample/sample_08.png" alt="종로 골목길 설명">
-                        </div>
-                        <div class="course-info">
-                            <img src="../assets/images/icon_coursedone.svg" class="crs-complete" alt="해당 코스를 완수하였습니다.">
-                            <div class="course-expln ellipsis-2">역사가 살아 숨쉬는 종로의 따뜻한 감성을 느낄 수 있는 코스 역사가 살아 숨쉬는 종로의 따뜻한 감성을 느낄 수 있는 코스</div>
-                            <div class="like-info">
-                                <span class="icon like-fill">
-                                    <span class="sr-only">코스 좋아요</span>
-                                </span>
-                                <span class="like-count" id="likeCount">1,000</span>
-                        </div>
-                    </dd>
-                </dl>
+
+            <!-- tabs -->
+            <div class="tab-container">
+                <ul class="tab-list" role="tablist">
+                    <li class="tab-item active">
+                        <button type="button" class="tab-button" role="tab" aria-selected="true" aria-controls="tabContent1" id="tab1">골목길 탐방 코스</button>
+                    </li>
+                    <li class="tab-item">
+                        <button type="button" class="tab-button" role="tab" tabindex="-1" aria-selected="false" aria-controls="tabContent2" id="tab2">사운드워크</button>
+                    </li>
+                </ul>
+                <div class="course-more">
+                    <label class="check-collapsed">
+                        <input type="checkbox" name="check-collapsed">
+                        <span>전체보기</span>
+                    </label>
+                </div>
             </div>
 
-            <div class="course-card_item">
-                <dl>
-                <dt class="course-title">세종마을</dt>
-                <dd>
-                    <div class="thumb-img">
-                        <img src="../assets/images/sample/sample_09.png" alt="세종마을 설명">
-                    </div>
-                    <div class="course-info">
-                        <div class="course-expln ellipsis-2">500년 선비들의 ‘삶과 사상’을 배울 수 있는 멋과 여유가 있는 세종마을</div>
-                        <div class="like-info">
-                            <span class="icon like-fill">
-                                <span class="sr-only">코스 좋아요</span>
-                            </span>
-                            <span class="like-count" id="likeCount">1,000</span>
-                        </div>
-                    </div>
-                </dd>
-                </dl>
-            </div>
+            <div class="tab-contents">
+                <div class="tab-content" role="tabpanel" aria-labelledby="tab1" id="tabContent1" tabindex="0">
 
-            <div class="course-card_item">
-                <dl>
-                <dt class="course-title">세종마을</dt>
-                <dd>
-                    <div class="thumb-img">
-                        <img src="../assets/images/sample/sample_09.png" alt="세종마을 설명">
-                    </div>
-                    <div class="course-info">
-                        <div class="course-expln ellipsis-2">500년 선비들의 ‘삶과 사상’을 배울 수 있는 멋과 여유가 있는 세종마을</div>
-                        <div class="like-info">
-                            <span class="icon like-fill">
-                                <span class="sr-only">코스 좋아요</span>
-                            </span>
-                            <span class="like-count" id="likeCount">1,000</span>
-                        </div>
-                    </div>
-                </dd>
-                </dl>
-            </div>
+                    <section class="course-titles">
+                        <button type="button" class="btn">종로골목길</button>
+                        <button type="button" class="btn">세종마을A</button>
+                        <button type="button" class="btn">진경산수화길</button>
+                        <button type="button" class="btn">인왕산자락이야기길</button>
+                        <button type="button" class="btn">인왕산자락예술가길</button>
+                        <button type="button" class="btn">문학둘레길</button>
+                        <button type="button" class="btn">사직동</button>
+                        <button type="button" class="btn">교남무악동</button>
+                        <button type="button" class="btn">평창동</button>
+                        <button type="button" class="btn">3.1운동길A</button>
+                        <button type="button" class="btn">3.1운동길B</button>
+                        <button type="button" class="btn">시전행랑</button>
+                        <button type="button" class="btn">광장시장</button>
+                        <button type="button" class="btn">부암동A</button>
+                        <button type="button" class="btn">부암동B</button>
+                        <button type="button" class="btn">혜화/명륜동</button>
+                        <button type="button" class="btn">익선동A</button>
+                        <button type="button" class="btn">익선동B</button>
+                        <button type="button" class="btn">종교문화유적의 길</button>
+                        <button type="button" class="btn">창신동</button>
+                        <button type="button" class="btn">숭인동</button>
+                        <button type="button" class="btn">종로1가~4가</button>
+                        <button type="button" class="btn">종로5가~6가</button>
+                    </section>
 
-            <div class="course-card_item">
-                <dl>
-                <dt class="course-title">세종마을</dt>
-                <dd>
-                    <div class="thumb-img">
-                        <img src="../assets/images/sample/sample_09.png" alt="세종마을 설명">
-                    </div>
-                    <div class="course-info">
-                        <div class="course-expln ellipsis-2">500년 선비들의 ‘삶과 사상’을 배울 수 있는 멋과 여유가 있는 세종마을</div>
-                        <div class="like-info">
-                            <span class="icon like-fill">
-                                <span class="sr-only">코스 좋아요</span>
-                            </span>
-                            <span class="like-count" id="likeCount">1,000</span>
+                    <section class="card-list">
+                        <div class="course-card_item">
+                            <dl>
+                                <dt class="course-title">종로 골목길</dt>
+                                <dd>
+                                    <div class="thumb-img">
+                                        <img src="../assets/images/sample/sample_08.png" alt="종로 골목길 설명">
+                                    </div>
+                                    <div class="course-info">
+                                        <img src="../assets/images/icon_coursedone.svg" class="crs-complete" alt="해당 코스를 완수하였습니다.">
+                                        <div class="course-expln ellipsis-2">역사가 살아 숨쉬는 종로의 따뜻한 감성을 느낄 수 있는 코스 역사가 살아 숨쉬는 종로의 따뜻한 감성을 느낄 수 있는 코스</div>
+                                        <div class="like-info">
+                                            <span class="icon like-fill">
+                                                <span class="sr-only">코스 좋아요</span>
+                                            </span>
+                                            <span class="like-count" id="likeCount">1,000</span>
+                                    </div>
+                                </dd>
+                            </dl>
                         </div>
-                    </div>
-                </dd>
-                </dl>
-            </div>
-
-            <div class="course-card_item">
-                <dl>
-                <dt class="course-title">세종마을</dt>
-                <dd>
-                    <div class="thumb-img">
-                        <img src="../assets/images/sample/sample_09.png" alt="세종마을 설명">
-                    </div>
-                    <div class="course-info">
-                        <div class="course-expln ellipsis-2">500년 선비들의 ‘삶과 사상’을 배울 수 있는 멋과 여유가 있는 세종마을</div>
-                        <div class="like-info">
-                            <span class="icon like-fill">
-                                <span class="sr-only">코스 좋아요</span>
-                            </span>
-                            <span class="like-count" id="likeCount">1,000</span>
-                        </div>
-                    </div>
-                </dd>
-                </dl>
-            </div>
             
-           </section>
+                        <div class="course-card_item">
+                            <dl>
+                            <dt class="course-title">세종마을</dt>
+                            <dd>
+                                <div class="thumb-img">
+                                    <img src="../assets/images/sample/sample_09.png" alt="세종마을 설명">
+                                </div>
+                                <div class="course-info">
+                                    <div class="course-expln ellipsis-2">500년 선비들의 ‘삶과 사상’을 배울 수 있는 멋과 여유가 있는 세종마을</div>
+                                    <div class="like-info">
+                                        <span class="icon like-fill">
+                                            <span class="sr-only">코스 좋아요</span>
+                                        </span>
+                                        <span class="like-count" id="likeCount">1,000</span>
+                                    </div>
+                                </div>
+                            </dd>
+                            </dl>
+                        </div>
+            
+                        <div class="course-card_item">
+                            <dl>
+                            <dt class="course-title">세종마을</dt>
+                            <dd>
+                                <div class="thumb-img">
+                                    <img src="../assets/images/sample/sample_09.png" alt="세종마을 설명">
+                                </div>
+                                <div class="course-info">
+                                    <div class="course-expln ellipsis-2">500년 선비들의 ‘삶과 사상’을 배울 수 있는 멋과 여유가 있는 세종마을</div>
+                                    <div class="like-info">
+                                        <span class="icon like-fill">
+                                            <span class="sr-only">코스 좋아요</span>
+                                        </span>
+                                        <span class="like-count" id="likeCount">1,000</span>
+                                    </div>
+                                </div>
+                            </dd>
+                            </dl>
+                        </div>
+            
+                        <div class="course-card_item">
+                            <dl>
+                            <dt class="course-title">세종마을</dt>
+                            <dd>
+                                <div class="thumb-img">
+                                    <img src="../assets/images/sample/sample_09.png" alt="세종마을 설명">
+                                </div>
+                                <div class="course-info">
+                                    <div class="course-expln ellipsis-2">500년 선비들의 ‘삶과 사상’을 배울 수 있는 멋과 여유가 있는 세종마을</div>
+                                    <div class="like-info">
+                                        <span class="icon like-fill">
+                                            <span class="sr-only">코스 좋아요</span>
+                                        </span>
+                                        <span class="like-count" id="likeCount">1,000</span>
+                                    </div>
+                                </div>
+                            </dd>
+                            </dl>
+                        </div>
+            
+                        <div class="course-card_item">
+                            <dl>
+                            <dt class="course-title">세종마을</dt>
+                            <dd>
+                                <div class="thumb-img">
+                                    <img src="../assets/images/sample/sample_09.png" alt="세종마을 설명">
+                                </div>
+                                <div class="course-info">
+                                    <div class="course-expln ellipsis-2">500년 선비들의 ‘삶과 사상’을 배울 수 있는 멋과 여유가 있는 세종마을</div>
+                                    <div class="like-info">
+                                        <span class="icon like-fill">
+                                            <span class="sr-only">코스 좋아요</span>
+                                        </span>
+                                        <span class="like-count" id="likeCount">1,000</span>
+                                    </div>
+                                </div>
+                            </dd>
+                            </dl>
+                        </div>
+                        
+                    </section>
+                </div>
+
+                <div class="tab-content" role="tabpanel" aria-labelledby="tab1" id="tabContent1" tabindex="0">
+                </div>
+            </div>
         </div>
         <!-- popup -->
         <aside id="aside" class="popup-bg popup-closable">
         </aside>
 
         @@include('../common/script.html')
+        <script>
+            const titleBox = document.querySelector('.course-titles')
+            const chk = document.querySelector('input[name="check-collapsed"]')
+            chk.onchange = function(e) {
+                if (e.target.checked) {
+                    titleBox.classList.add('open')
+                } else {
+                    titleBox.classList.remove('open')
+                }
+            }
+        </script>
 
        
     </body>
