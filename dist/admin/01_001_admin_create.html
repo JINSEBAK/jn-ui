@@ -69,92 +69,344 @@
 
     <main class="main">
         <div class="page-title">
-    <h2>관리자 계정 생성</h2>
+    <h2>관리자 관리</h2>
     <p class="des"></p>
     <ol class="breadcrumb" style="display:none">
-        <li></li>
-        <li></li>
+        <li>nullp1</li>
+        <li>nullp2</li>
     </ol>
 </div>
         <div class="content">
-          <div class="detail">
-            <ul class="lik-tb">
-              <li class="lb lb-one required">ID</li>
-              <li>
-                <div class="inline">
-                  <input type="text" class="input" placeholder="영문 또는 숫자 6~12자리 입력">
-                  <button type="button" class="btn btn-third small">중복 확인</button>
-                </div>
-                <div class="msg error">가이드 메시지</div>
-              </li>
+          
+          <!-- .search start -->
+          <div class="search-container">
+            <div class="search">
 
-              <li class="lb lb-one required">비밀번호</li>
-              <li>
-                <div class="inline">
-                  <input type="password" class="input" placeholder="영문/숫자 포함 8~10자리 입력">
+              <div class="item item-col-5">
+                <div class="label">
+                  <label for="">키워드</label>
                 </div>
-                <div class="msg error">가이드 메시지</div>
-              </li> 
-              
-              <li class="lb lb-one required">이름</li>
-              <li>
                 <div class="inline">
-                  <input type="text" class="input" placeholder="이름 입력">
-                  <!-- NOTICE: 이름엔 무슨 가이드? -->
+                  <select class="select">
+                    <option value="">ID</option>
+                    <option value="">이름</option>
+                    <option value="">이메일</option>
+                  </select>
+                  <input type="text" class="input" placeholder="입력">
                 </div>
-                <div class="msg error">가이드 메시지</div>
-              </li>
+              </div>
 
-              <li class="lb required">이메일</li>
-              <li>
-                <div class="inline">
-                  <input type="email" class="input" placeholder="이메일 주소 입력">
+              <div class="item item-col-5">
+                <div class="label">
+                  <label for="">상태</label>
                 </div>
-                <div class="msg error">가이드 메시지</div>
-              </li>
+                <div class="inline">
+                  <label class="radio">
+                    <input type="radio" name="status" value="1" id="status1" checked>
+                    <span>전체</span>
+                  </label>
+                  <label class="radio">
+                    <input type="radio" name="status" value="2" id="status2">
+                    <span>활동</span>
+                  </label>
+                  <label class="radio">
+                    <input type="radio" name="status" value="3" id="status3">
+                    <span>해지</span>
+                  </label>
+                </div>
+              </div>
 
-              <li class="lb required">연락처</li>
-              <li>
-                <div class="inline">
-                  <input type="tel" class="input" placeholder="-제외 숫자 입력">
-                  <button type="button" class="btn btn-third small">중복 확인</button>
-                </div>
-                <div class="msg error">가이드 메시지</div>
-              </li>
+              <div class="item">
+    <div class="label">
+      <label for="">기간 조회</label>
+    </div>
+    <div class="frm-date">
+      <select class="select">
+        <option value="">옵션 1</option>
+        <option value="">옵션 2</option>
+      </select>
+      <div class="date picker">
+        <input type="text" class="input" placeholder="시작일">
+      </div>
+      <div class="date picker">
+        <input type="text" class="input" placeholder="종료일">
+      </div>
+      <div class="select-date">
+        <label>
+          <input type="radio" name="select-date" value="1" checked>
+          <span>전체</span>
+        </label>
+        <label>
+          <input type="radio" name="select-date" value="2">
+          <span>오늘</span>
+        </label>
+        <label>
+          <input type="radio" name="select-date" value="3">
+          <span>일주일</span>
+        </label>
+        <label>
+          <input type="radio" name="select-date" value="4">
+          <span>1개월</span>
+        </label>
+        <label>
+          <input type="radio" name="select-date" value="5">
+          <span>3개월</span>
+        </label>
+      </div>
+    </div>
+  </div>
 
-            </ul>
-
-            <ul class="lik-tb">
-              <li class="lb">부서</li>
-              <li>
-                <div class="inline">
-                  <input type="text" class="input" placeholder="부서 입력">
-                </div>
-              </li>
-              <li class="lb">직급</li>
-              <li>
-                <div class="inline">
-                  <input type="text" class="input" placeholder="직급 입력">
-                </div>
-              </li>
-              <li class="lb lb-one">관리자 메모</li>
-              <li>
-                <div class="inline">
-                  <input type="text" class="input" placeholder="30자 이내 입력">
-                </div>
-              </li>
-            </ul>
+            </div>
+            <div class="search-btn">
+              <button type="button" class="btn btn-default small">초기화</button>
+              <button type="button" class="btn btn-second small">검색</button>
+            </div>
           </div>
+          <!-- .search end -->
 
-          <div class="btns center">
-            <button type="button" class="btn btn-third">취소</button>
-            <button type="button" class="btn btn-second">생성</button>
+          <div class="list">
+            <div class="list-head">
+              <div class="total">
+                Total <em>100</em>
+              </div>
+              <div class="btns">
+                <a href="./01_001_admin_create.html" class="btn btn-primary" id="btnPopup">계정 생성</a>
+              </div>
+            </div>
+            <div class="list-body">
+              <table class="tb-data" summary="번호,아이디,이름,이메일,권한그룹,상태,계정생성일,최근로그인으로 구분되는 표">
+                <caption>번호 아이디 이름 이메일 권한그룹 상태 계정생성일 최근로그인</caption>
+                <thead>
+                  <tr>
+                    <th scope="col">번호</th>
+                    <th scope="col">ID</th>
+                    <th scope="col">이름</th>
+                    <th scope="col">이메일</th>
+                    <th scope="col">권한그룹</th>
+                    <th scope="col">상태</th>
+                    <th scope="col">계정생성일</th>
+                    <th scope="col">최근로그인</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>10</td>
+                    <td>id</td>
+                    <td>OOO</td>
+                    <td>xxxx@xxx.co.kr</td>
+                    <td>관리자</td>
+                    <td>활동</td>
+                    <td>yyyy-mm-dd</td>
+                    <td>yyyy-mm-dd hh:mm</td>
+                  </tr>
+                  <tr>
+                    <td>9</td>
+                    <td>id</td>
+                    <td>OOO</td>
+                    <td>xxxx@xxx.co.kr</td>
+                    <td>관리자</td>
+                    <td>활동</td>
+                    <td>yyyy-mm-dd</td>
+                    <td>yyyy-mm-dd hh:mm</td>
+                  </tr>
+                  <tr>
+                    <td>8</td>
+                    <td>id</td>
+                    <td>OOO</td>
+                    <td>xxxx@xxx.co.kr</td>
+                    <td>관리자</td>
+                    <td>활동</td>
+                    <td>yyyy-mm-dd</td>
+                    <td>yyyy-mm-dd hh:mm</td>
+                  </tr>
+                  <tr>
+                    <td>7</td>
+                    <td>id</td>
+                    <td>OOO</td>
+                    <td>xxxx@xxx.co.kr</td>
+                    <td>관리자</td>
+                    <td>활동</td>
+                    <td>yyyy-mm-dd</td>
+                    <td>yyyy-mm-dd hh:mm</td>
+                  </tr>
+                  <tr>
+                    <td>6</td>
+                    <td>id</td>
+                    <td>OOO</td>
+                    <td>xxxx@xxx.co.kr</td>
+                    <td>관리자</td>
+                    <td>활동</td>
+                    <td>yyyy-mm-dd</td>
+                    <td>yyyy-mm-dd hh:mm</td>
+                  </tr>
+                  <tr>
+                    <td>5</td>
+                    <td>id</td>
+                    <td>OOO</td>
+                    <td>xxxx@xxx.co.kr</td>
+                    <td>관리자</td>
+                    <td>활동</td>
+                    <td>yyyy-mm-dd</td>
+                    <td>yyyy-mm-dd hh:mm</td>
+                  </tr>
+                  <tr>
+                    <td>4</td>
+                    <td>id</td>
+                    <td>OOO</td>
+                    <td>xxxx@xxx.co.kr</td>
+                    <td>관리자</td>
+                    <td>활동</td>
+                    <td>yyyy-mm-dd</td>
+                    <td>yyyy-mm-dd hh:mm</td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>id</td>
+                    <td>OOO</td>
+                    <td>xxxx@xxx.co.kr</td>
+                    <td>관리자</td>
+                    <td>활동</td>
+                    <td>yyyy-mm-dd</td>
+                    <td>yyyy-mm-dd hh:mm</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>id</td>
+                    <td>OOO</td>
+                    <td>xxxx@xxx.co.kr</td>
+                    <td>관리자</td>
+                    <td>활동</td>
+                    <td>yyyy-mm-dd</td>
+                    <td>yyyy-mm-dd hh:mm</td>
+                  </tr>
+                  <tr>
+                    <td>1</td>
+                    <td>id</td>
+                    <td>OOO</td>
+                    <td>xxxx@xxx.co.kr</td>
+                    <td>관리자</td>
+                    <td>활동</td>
+                    <td>yyyy-mm-dd</td>
+                    <td>yyyy-mm-dd hh:mm</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
+          <div class="pagination">
+    <button type="button" class="btn btn-first" disabled>First</button>
+    <button type="button" class="btn btn-prev" disabled>Prev</button>
+    <ul class="page">
+        <li class="active">1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+        <li>9</li>
+        <li>10</li>
+    </ul>
+    <button type="button" class="btn btn-next">Next</button>
+    <button type="button" class="btn btn-last">Last</button>
+</div>
         </div>
     </main>
+
+    <!-- popup -->
+    <aside class="popup-bg popup-closable on">
+        <div class="popup show" id="popupAddManager" style="width:680px">
+            <div class="popup-head">
+                <h3 class="title">관리자 계정 생성</h3>
+                <button type="button" class="btn btn-icon icon close">
+                    <span class="sr-only">팝업닫기</span>
+                </button>
+            </div>
+            <div class="popup-body">
+              <div class="detail">
+                <ul class="lik-tb">
+                  <li class="lb lb-one required">아이디</li>
+                  <li>
+                    <div class="inline">
+                      <input type="text" class="input" placeholder="영문 또는 숫자 6~12자리 입력">
+                      <button type="button" class="btn btn-default small" disabled>중복 확인</button>
+                    </div>
+                    <div class="msg error">가이드 메시지</div>
+                  </li>
+    
+                  <li class="lb lb-one required">비밀번호</li>
+                  <li>
+                    <div class="inline">
+                      <input type="password" class="input" placeholder="영문/숫자 포함 8~10자리 입력">
+                    </div>
+                    <div class="msg error">가이드 메시지</div>
+                  </li> 
+                  
+                  <li class="lb lb-one required">이름</li>
+                  <li>
+                    <div class="inline">
+                      <input type="text" class="input" placeholder="이름 입력">
+                      <!-- NOTICE: 이름엔 무슨 가이드? -->
+                    </div>
+                    <div class="msg error">가이드 메시지</div>
+                  </li>
+    
+                  <li class="lb lb-one required">이메일</li>
+                  <li>
+                    <div class="inline">
+                      <input type="email" class="input" placeholder="이메일 주소 입력">
+                      <button type="button" class="btn btn-default small">중복 확인</button>
+                    </div>
+                    <div class="msg error">가이드 메시지</div>
+                  </li>
+    
+                  <li class="lb lb-one required">연락처</li>
+                  <li>
+                    <div class="inline">
+                      <input type="tel" class="input" placeholder="- 제외 숫자 입력">
+                    </div>
+                    <div class="msg error">가이드 메시지</div>
+                  </li>
+                  <li class="lb">부서</li>
+                  <li>
+                    <input type="text" class="input" placeholder="부서 입력">
+                  </li>
+                  <li class="lb">직급</li>
+                  <li>
+                    <input type="text" class="input" placeholder="직급 입력">
+                  </li>
+                  <li class="lb lb-one">권한 그룹</li>
+                  <li>
+                    <select class="select">
+                      <option value="">기본그룹</option>
+                    </select>
+                  </li>
+                  <li class="lb lb-one">관리자 메모</li>
+                  <li>
+                    <div class="inline">
+                      <input type="text" class="input" placeholder="30자 이내 입력">
+                    </div>
+                  </li>
+                </ul>
+              </div>
+    
+              <div class="btns center">
+                <button type="button" class="btn btn-default">취소</button>
+                <button type="button" class="btn btn-primary">생성</button>
+              </div>
+            </div>
+        </div>
+    </aside>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <script src="../../../assets/vendor/jquery-ui/jquery-ui.min.js"></script>
 <script src="../../../assets/js/admin.js"></script>
+    <script>
+      const btnPopup = document.querySelector('#btnPopup')
+      btnPopup.onclick = function() {
+        modal.open('popupAddManager')
+      }
+    </script>
   </body>
 </html>

@@ -69,7 +69,7 @@
 
     <main class="main">
         <div class="page-title">
-    <h2>관리자 상세</h2>
+    <h2>관리자 계정 생성</h2>
     <p class="des"></p>
     <ol class="breadcrumb" style="display:none">
         <li></li>
@@ -79,45 +79,76 @@
         <div class="content">
           <div class="detail">
             <ul class="lik-tb">
-              <li class="lb">아이디</li>
-              <li>yesman</li>
-              <li class="lb">비밀번호</li>
-              <li>********</li>
-              <li class="lb lb-one">이름</li>
-              <li>박관리</li> 
-              <li class="lb">이메일</li>
-              <li>yesman@jongno.or.kr
-                <button type="button" class="btn btn-second float small">변경</button>
-              </li>
-              <li class="lb">연락처</li>
-              <li>010-****-1234</li>
-              <li class="lb">부서</li>
-              <li>사회복지과</li>
-              <li class="lb">직급</li>
-              <li>팀장</li>
-              <li class="lb">상태</li>
+              <li class="lb lb-one required">ID</li>
               <li>
-                활동
-                <button type="button" class="btn btn-second float small">변경</button>
+                <div class="inline">
+                  <input type="text" class="input" placeholder="영문 또는 숫자 6~12자리 입력">
+                  <button type="button" class="btn btn-third small">중복 확인</button>
+                </div>
+                <div class="msg error">가이드 메시지</div>
               </li>
-              <li class="lb">권한그룹</li>
-              <li>관리자</li>
-              <li class="lb">계정 생성일시</li>
-              <li>2023-10-30 10:34</li>
-              <li class="lb">최근 로그인</li>
-              <li>2023-11-06 10:23</li>
+
+              <li class="lb lb-one required">비밀번호</li>
+              <li>
+                <div class="inline">
+                  <input type="password" class="input" placeholder="영문/숫자 포함 8~10자리 입력">
+                </div>
+                <div class="msg error">가이드 메시지</div>
+              </li> 
+              
+              <li class="lb lb-one required">이름</li>
+              <li>
+                <div class="inline">
+                  <input type="text" class="input" placeholder="이름 입력">
+                  <!-- NOTICE: 이름엔 무슨 가이드? -->
+                </div>
+                <div class="msg error">가이드 메시지</div>
+              </li>
+
+              <li class="lb required">이메일</li>
+              <li>
+                <div class="inline">
+                  <input type="email" class="input" placeholder="이메일 주소 입력">
+                </div>
+                <div class="msg error">가이드 메시지</div>
+              </li>
+
+              <li class="lb required">연락처</li>
+              <li>
+                <div class="inline">
+                  <input type="tel" class="input" placeholder="-제외 숫자 입력">
+                  <button type="button" class="btn btn-third small">중복 확인</button>
+                </div>
+                <div class="msg error">가이드 메시지</div>
+              </li>
+
+            </ul>
+
+            <ul class="lik-tb">
+              <li class="lb">부서</li>
+              <li>
+                <div class="inline">
+                  <input type="text" class="input" placeholder="부서 입력">
+                </div>
+              </li>
+              <li class="lb">직급</li>
+              <li>
+                <div class="inline">
+                  <input type="text" class="input" placeholder="직급 입력">
+                </div>
+              </li>
               <li class="lb lb-one">관리자 메모</li>
-              <li></li>
-              <li class="lb">계정 생성일시</li>
-              <li>2023-10-31 10:34 / admin</li>
-              <li class="lb">최종 수정일시</li>
-              <li>2023-10-31 10:34 / admin</li>
+              <li>
+                <div class="inline">
+                  <input type="text" class="input" placeholder="30자 이내 입력">
+                </div>
+              </li>
             </ul>
           </div>
 
-          <div class="btns detail">
-            <button type="button" class="btn btn-default">목록</button>
-            <button type="button" class="btn btn-second">수정</button>
+          <div class="btns center">
+            <button type="button" class="btn btn-third">취소</button>
+            <button type="button" class="btn btn-second">생성</button>
           </div>
         </div>
     </main>

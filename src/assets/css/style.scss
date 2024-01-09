@@ -302,7 +302,8 @@ hr {
   font-size: 0.875rem;
   line-height: 1.25rem;
   img {
-    width: 100%;
+    width: 100% !important;
+    height: auto !important;
     margin: 1rem 0;
   }
 }
