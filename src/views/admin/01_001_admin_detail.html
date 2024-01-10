@@ -2,54 +2,59 @@
 <html lang="ko">
   @@include('./common/head.html')
   <body>
-    @@include('./common/header.html')
-    @@include('./common/navigation.html')
+    @@include('./common/header.html') @@include('./common/navigation.html')
     <main class="main">
-        @@include('./common/page_title.html', { title: '관리자 상세', path: { "p1": "", "p2": ""}, description: ''})
-        <div class="content">
-          <div class="detail">
-            <ul class="lik-tb">
-              <li class="lb">아이디</li>
-              <li>yesman</li>
-              <li class="lb">비밀번호</li>
-              <li>********</li>
-              <li class="lb lb-one">이름</li>
-              <li>박관리</li> 
-              <li class="lb">이메일</li>
-              <li>yesman@jongno.or.kr
-                <button type="button" class="btn btn-second float small">변경</button>
-              </li>
-              <li class="lb">연락처</li>
-              <li>010-****-1234</li>
-              <li class="lb">부서</li>
-              <li>사회복지과</li>
-              <li class="lb">직급</li>
-              <li>팀장</li>
-              <li class="lb">상태</li>
-              <li>
-                활동
-                <button type="button" class="btn btn-second float small">변경</button>
-              </li>
-              <li class="lb">권한그룹</li>
-              <li>관리자</li>
-              <li class="lb">계정 생성일시</li>
-              <li>2023-10-30 10:34</li>
-              <li class="lb">최근 로그인</li>
-              <li>2023-11-06 10:23</li>
-              <li class="lb lb-one">관리자 메모</li>
-              <li></li>
-              <li class="lb">계정 생성일시</li>
-              <li>2023-10-31 10:34 / admin</li>
-              <li class="lb">최종 수정일시</li>
-              <li>2023-10-31 10:34 / admin</li>
-            </ul>
-          </div>
-
-          <div class="btns detail">
-            <button type="button" class="btn btn-default">목록</button>
-            <button type="button" class="btn btn-second">수정</button>
-          </div>
+      @@include('./common/page_title.html', { title: '관리자 상세', path: {
+      "p1": "", "p2": ""}, description: ''})
+      <div class="content">
+        <div class="detail">
+          <ul class="lik-tb">
+            <li class="lb">아이디</li>
+            <li>yesman</li>
+            <li class="lb">비밀번호</li>
+            <li>********</li>
+            <li class="lb lb-one">이름</li>
+            <li>박관리</li>
+            <li class="lb">이메일</li>
+            <li>
+              yesman@jongno.or.kr
+              <button type="button" class="btn btn-second float small">
+                변경
+              </button>
+            </li>
+            <li class="lb">연락처</li>
+            <li>010-****-1234</li>
+            <li class="lb">부서</li>
+            <li>사회복지과</li>
+            <li class="lb">직급</li>
+            <li>팀장</li>
+            <li class="lb">상태</li>
+            <li>
+              활동
+              <button type="button" class="btn btn-second float small">
+                변경
+              </button>
+            </li>
+            <li class="lb">권한그룹</li>
+            <li>관리자</li>
+            <li class="lb">계정 생성일시</li>
+            <li>2023-10-30 10:34</li>
+            <li class="lb">최근 로그인</li>
+            <li>2023-11-06 10:23</li>
+            <li class="lb lb-one">관리자 메모</li>
+            <li></li>
+            <li class="lb">계정 생성일시</li>
+            <li>2023-10-31 10:34 / admin</li>
+            <li class="lb">최종 수정일시</li>
+            <li>2023-10-31 10:34 / admin</li>
+          </ul>
         </div>
+
+        <div class="btns detail">
+          <button type="button" class="btn btn-default">목록</button>
+          <button type="button" class="btn btn-second">수정</button>
+        </div>
+      </div>
     </main>
 
     @@include('./common/admin_scripts.html')
