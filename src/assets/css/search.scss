@@ -4,6 +4,17 @@
 // 검색
 .search {
   background-color: $bg;
+  &.search-main {
+    .container {
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      .fixed-bottom {
+        margin-top: auto;
+        margin-bottom: 50px;
+      }
+    }
+  }
   &.detail {
     .container {
       margin-top: $header;
@@ -145,7 +156,7 @@
     .not-found {
       padding: 24px 0;
       &::before {
-        background-image: url(../images/icon_not_finish.svg)
+        background-image: url(../images/icon_not_finish.svg);
       }
     }
   }
@@ -251,7 +262,6 @@
   }
 }
 
-
 .search-result {
   &_box {
     border-bottom: 1px solid $border-light;
@@ -264,7 +274,7 @@
       align-items: center;
       gap: 0.25rem;
       dt {
-        color:#787882
+        color: #787882;
       }
       dd {
         font-weight: bold;
@@ -280,7 +290,7 @@
         color: $second1;
         font-size: 0.875rem;
         &::after {
-          content: '건';
+          content: "건";
           color: #787882;
         }
       }
@@ -326,7 +336,7 @@
       line-height: 1.25rem;
       margin-bottom: 0.25rem;
       &::before {
-        content: '';
+        content: "";
         display: block;
         width: 1.25rem;
         height: 1.25rem;
@@ -363,7 +373,7 @@
 
 .movin {
   &-banner {
-    background-color: #B4DEFD;
+    background-color: #b4defd;
     background-image: url(../images/img_movin_banner.svg);
     background-repeat: no-repeat;
     background-position: right bottom;
@@ -390,13 +400,13 @@
     }
   }
   &-title {
-      font-size: 1.25rem;
-      font-weight: bold;
-      padding-left: 2rem;
-      line-height: 28px;
-      &.video {
-        background: url(../images/icon_video.svg) left center no-repeat;
-      }
+    font-size: 1.25rem;
+    font-weight: bold;
+    padding-left: 2rem;
+    line-height: 28px;
+    &.video {
+      background: url(../images/icon_video.svg) left center no-repeat;
+    }
   }
   &-info {
     .title {
@@ -479,7 +489,8 @@
       margin-top: 0.25rem;
       counter-reset: numlist;
       li {
-        a, button {
+        a,
+        button {
           border: none;
           background-color: transparent;
           padding: 0;

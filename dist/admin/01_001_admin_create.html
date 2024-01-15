@@ -1,11 +1,81 @@
 <!DOCTYPE html>
 <html lang="ko">
-  @@include('./common/head.html')
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>종로 관리자</title>
+    <link rel="stylesheet" href="../assets/vendor/jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="../assets/css/reset.css">
+    <link rel="stylesheet" href="../assets/css/admin.css">
+</head>
   <body>
-    @@include('./common/header.html')
-    @@include('./common/navigation.html')
+    <header id="header">
+    <a href="00_002_dashboard.html" class="logo">종로Pick 관리자 사이트</a>
+    <div class="opt">
+        <button type="button" class="btn btn-text">yesman 님</button>
+    </div>
+    <div class="opt">
+        <button type="button" class="btn btn-icon icon alarm"></button>
+        <div class="dropdown">
+            <div class="dropdown-alarm">
+                <h4 class="title">알림</h4>
+                <button type="button" class="btn btn-text">모두 읽음 처리</button>
+                <ul class="lists">
+                    <li>
+                        새로운 1:1 문의가 도착했습니다. 
+                        <span class="date">2023-10-31 10:30</span>
+                    </li>
+                    <li>
+                        권한이 관리자로 변경되었습니다.
+                        <span class="date">2023-10-31 10:30</span>
+                    </li>
+                    <li>
+                        가입이 승인되었습니다.
+                        <span class="date">2023-10-31 10:30</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="opt">
+        <button type="button" class="btn btn-text">로그아웃</button>
+    </div>
+</header>
+    <nav id="nav">
+  <ul class="gnb" id="gnb">
+    <li class="">
+      <a href="#">menu 1</a>
+    </li>
+    <li class="">
+      <a href="#">Depth 1</a>
+      <ul class="sub">
+        <li>
+          <a href="#">menu 1</a>
+        </li>
+        <li>
+          <a href="#">menu 2</a>
+        </li>
+        <li>
+          <a href="#">menu 3</a>
+        </li>
+        <li>
+          <a href="#">menu 4</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
     <main class="main">
-        @@include('./common/page_title.html', { title: '관리자 관리', path: {}, description: ''})
+        <div class="page-title">
+    <h2>관리자 관리</h2>
+    <p class="des"></p>
+    <ol class="breadcrumb" style="display:none">
+        <li>nullp1</li>
+        <li>nullp2</li>
+    </ol>
+</div>
         <div class="content">
           
           <!-- .search start -->
@@ -46,7 +116,45 @@
                 </div>
               </div>
 
-              @@include('./common/search_period.html')
+              <div class="item">
+    <div class="label">
+      <label for="">기간 조회</label>
+    </div>
+    <div class="frm-date">
+      <select class="select">
+        <option value="">옵션 1</option>
+        <option value="">옵션 2</option>
+      </select>
+      <div class="date picker">
+        <input type="text" class="input" placeholder="시작일">
+      </div>
+      <div class="date picker">
+        <input type="text" class="input" placeholder="종료일">
+      </div>
+      <div class="select-date">
+        <label>
+          <input type="radio" name="select-date" value="1" checked>
+          <span>전체</span>
+        </label>
+        <label>
+          <input type="radio" name="select-date" value="2">
+          <span>오늘</span>
+        </label>
+        <label>
+          <input type="radio" name="select-date" value="3">
+          <span>일주일</span>
+        </label>
+        <label>
+          <input type="radio" name="select-date" value="4">
+          <span>1개월</span>
+        </label>
+        <label>
+          <input type="radio" name="select-date" value="5">
+          <span>3개월</span>
+        </label>
+      </div>
+    </div>
+  </div>
 
             </div>
             <div class="search-btn">
@@ -185,7 +293,24 @@
               </table>
             </div>
           </div>
-          @@include('./common/pagination.html')
+          <div class="pagination">
+    <button type="button" class="btn btn-first" disabled>First</button>
+    <button type="button" class="btn btn-prev" disabled>Prev</button>
+    <ul class="page">
+        <li class="active">1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+        <li>9</li>
+        <li>10</li>
+    </ul>
+    <button type="button" class="btn btn-next">Next</button>
+    <button type="button" class="btn btn-last">Last</button>
+</div>
         </div>
     </main>
 
@@ -195,95 +320,6 @@
             <div class="popup-head">
                 <h3 class="title">관리자 계정 생성</h3>
                 <button type="button" class="btn btn-icon icon close">
-                    <span class="sr-only">팝업닫기</span>
-                </button>
-            </div>
-            <div class="popup-body">
-              <div class="detail">
-                <ul class="lik-tb">
-                  <li class="lb lb-one required">아이디</li>
-                  <li>
-                    <div class="inline">
-                      <input type="text" class="input" placeholder="영문 또는 숫자 6~12자리 입력">
-                      <button type="button" class="btn btn-default small" disabled>중복 확인</button>
-                    </div>
-                    <div class="msg error">가이드 메시지</div>
-                  </li>
-    
-                  <li class="lb lb-one required">비밀번호</li>
-                  <li>
-                    <div class="inline">
-                      <input type="password" class="input" placeholder="영문/숫자 포함 8~10자리 입력">
-                    </div>
-                    <div class="msg error">가이드 메시지</div>
-                  </li> 
-                  
-                  <li class="lb lb-one required">이름</li>
-                  <li>
-                    <div class="inline">
-                      <input type="text" class="input" placeholder="이름 입력">
-                      <!-- NOTICE: 이름엔 무슨 가이드? -->
-                    </div>
-                    <div class="msg error">가이드 메시지</div>
-                  </li>
-    
-                  <li class="lb lb-one required">이메일</li>
-                  <li>
-                    <div class="inline">
-                      <input type="email" class="input" placeholder="이메일 주소 입력">
-                      <button type="button" class="btn btn-default small">중복 확인</button>
-                    </div>
-                    <div class="msg error">가이드 메시지</div>
-                  </li>
-    
-                  <li class="lb lb-one required">연락처</li>
-                  <li>
-                    <div class="inline">
-                      <input type="tel" class="input" placeholder="- 제외 숫자 입력">
-                    </div>
-                    <div class="msg error">가이드 메시지</div>
-                  </li>
-                  <li class="lb">부서</li>
-                  <li>
-                    <input type="text" class="input" placeholder="부서 입력">
-                  </li>
-                  <li class="lb">직급</li>
-                  <li>
-                    <input type="text" class="input" placeholder="직급 입력">
-                  </li>
-                  <li class="lb lb-one">권한 그룹</li>
-                  <li>
-                    <select class="select">
-                      <option value="">기본그룹</option>
-                    </select>
-                  </li>
-                  <li class="lb lb-one">관리자 메모</li>
-                  <li>
-                    <div class="inline">
-                      <input type="text" class="input" placeholder="30자 이내 입력">
-                    </div>
-                  </li>
-                </ul>
-              </div>
-    
-              <div class="btns center">
-                <button type="button" class="btn btn-default">취소</button>
-                <button type="button" class="btn btn-primary">생성</button>
-              </div>
-            </div>
-        </div>
-    </aside>
-
-    @@include('./common/admin_scripts.html')
-    <script>
-      const btnPopup = document.querySelector('#btnPopup')
-      btnPopup.onclick = function() {
-        modal.open('popupAddManager')
-      }
-    </script>
-  </body>
-</html>
-type="button" class="btn btn-icon icon close">
                     <span class="sr-only">팝업닫기</span>
                 </button>
             </div>

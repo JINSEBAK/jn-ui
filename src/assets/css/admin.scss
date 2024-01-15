@@ -543,7 +543,9 @@ body {
     color: #787882;
     cursor: default;
     &:hover {
+      background-color: #c8c8d7 !important;
       border-color: #c8c8d7;
+      background-image: none;
       cursor: default;
       font-weight: normal;
     }
@@ -1314,7 +1316,6 @@ body {
 }
 
 .login {
-  border: 1px solid green;
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -1368,6 +1369,12 @@ body {
     em {
       color: $em-text;
       font-weight: bold;
+      &::before {
+        content: '['
+      }
+      &::after {
+        content: ']'
+      }
     }
     strong {
       font-weight: bold;
@@ -1402,6 +1409,15 @@ body {
         &::after {
           content: none;
         }
+      }
+    }
+  }
+  .auth {
+    &-num {
+      flex: 1;
+      position: relative;
+      .input {
+        width: 100%;
       }
     }
   }
