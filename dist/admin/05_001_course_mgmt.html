@@ -154,8 +154,7 @@
                       <caption>수정 코스명 이미지 거점수 좋아요 공유 최종수정일 최종수정자</caption>
                       <thead>
                         <tr>
-                          <th></th>
-                          <th scope="col">순위</th>
+                          <th scope="col">순서</th>
                           <th scope="col">코스명</th>
                           <th scope="col">이미지</th>
                           <th scope="col">거점 수</th>
@@ -167,7 +166,7 @@
                       </thead>
                       <tbody>
                         <tr>
-                            <td></td>
+                            
                             <td>1</td>
                             <td>
                                 <div class="ellipsis">코스명입니다. 코스명입니다.</div>
@@ -184,7 +183,7 @@
                             <td>admin_id</td>
                         </tr>
                         <tr>
-                            <td></td>
+                            
                             <td>1</td>
                             <td>
                                 <div class="ellipsis">코스명입니다. 코스명입니다.</div>
@@ -201,7 +200,7 @@
                             <td>admin_id</td>
                         </tr>
                         <tr>
-                            <td></td>
+                            
                             <td>1</td>
                             <td>
                                 <div class="ellipsis">코스명입니다. 코스명입니다.</div>
@@ -218,7 +217,7 @@
                             <td>admin_id</td>
                         </tr>
                         <tr>
-                            <td></td>
+                            
                             <td>1</td>
                             <td>
                                 <div class="ellipsis">코스명입니다. 코스명입니다.</div>
@@ -235,7 +234,7 @@
                             <td>admin_id</td>
                         </tr>
                         <tr>
-                            <td></td>
+                            
                             <td>1</td>
                             <td>
                                 <div class="ellipsis">코스명입니다. 코스명입니다.</div>
@@ -252,7 +251,7 @@
                             <td>admin_id</td>
                         </tr>
                         <tr>
-                            <td></td>
+                            
                             <td>1</td>
                             <td>
                                 <div class="ellipsis">코스명입니다. 코스명입니다.</div>
@@ -269,7 +268,7 @@
                             <td>admin_id</td>
                         </tr>
                         <tr>
-                            <td></td>
+                            
                             <td>1</td>
                             <td>
                                 <div class="ellipsis">코스명입니다. 코스명입니다.</div>
@@ -286,7 +285,7 @@
                             <td>admin_id</td>
                         </tr>
                         <tr>
-                            <td></td>
+                            
                             <td>1</td>
                             <td>
                                 <div class="ellipsis">코스명입니다. 코스명입니다.</div>
@@ -303,7 +302,7 @@
                             <td>admin_id</td>
                         </tr>
                         <tr>
-                            <td></td>
+                            
                             <td>1</td>
                             <td>
                                 <div class="ellipsis">코스명입니다. 코스명입니다.</div>
@@ -320,7 +319,7 @@
                             <td>admin_id</td>
                         </tr>
                         <tr>
-                            <td></td>
+                            
                             <td>1</td>
                             <td>
                                 <div class="ellipsis">코스명입니다. 코스명입니다.</div>
@@ -340,8 +339,95 @@
                     </table>
                 </div>
             </div>
+
+            <div class="sort">
+                <label>현재 노출 방식</label>
+                <input type="text" class="input" value="추천 순/내림차순" readonly>
+                <button class="btn btn-second small">설정</button>
+            </div>
         </div>
     </main>
+
+    <aside class="popup-bg popup-closable">
+    <div class="popup large" id="popupOrder">
+        <div class="popup-head">
+            탐방코스 노출 순서 설정
+            <span class="icon info">
+                <span class="sr-only">정보보기</span>
+            </span>
+
+            <button type="button" class="btn btn-icon icon close">
+                <span class="sr-only">팝업 닫기</span>
+            </button>
+        </div>
+        <div class="popup-body">
+            <div class="popup-search">
+                <div class="search">
+                    <div class="item">
+                        <div class="label"><label>노출 방식</label></div>
+                        <div class="inline">
+                            <label class="radio">
+                                <input type="radio" name="sort-type" value="1">
+                                <span>자동 정렬</span>
+                            </label>
+                            <label class="radio">
+                                <input type="radio" name="sort-type" value="2">
+                                <span>사용자 지정 + 자동 정렬</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="label"><label>자동 정렬 기준</label></div>
+                        <div class="inline">
+                            <select class="select">
+                                <option value="">option 1</option>
+                                <option value="">option 2</option>
+                            </select>
+                            <select class="select">
+                                <option value="">option 1</option>
+                                <option value="">option 2</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="list">
+                <div class="list-head">
+                    <strong>순서 지정 목록</strong>
+                    <div class="btns">
+                        <button type="button" class="btn btn-del">삭제</button>
+                        <button type="button" class="btn btn-primary">추가</button>
+                    </div>
+                </div>
+                <div class="list-body">
+                    <table class="tb-data">
+                        <thead>
+                            <tr>
+                                <th scope="col">순서</th>
+                                <th scope="col">코스 명</th>
+                                <th scope="col">거점 수</th>
+                                <th scope="col">페이지뷰</th>
+                                <th scope="col">좋아요</th>
+                                <th scope="col">공유</th>
+                                <th scope="col">완주증</th>
+                                <th scope="col">코스 구분</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                    <ul class="guide">
+                        <li>
+                            드래그앤드롭으로 노출 순서를 조정할 수 있습니다.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="popup-tail">
+            <button type="button" class="btn btn-primary">적용</button>
+        </div>
+    </div>
+</aside>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <script src="../../../assets/vendor/jquery-ui/jquery-ui.min.js"></script>

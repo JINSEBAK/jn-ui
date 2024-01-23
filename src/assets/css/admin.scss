@@ -377,6 +377,9 @@ body {
   padding: 0.5rem;
   height: 34px;
   border-radius: 6px;
+  &:read-only {
+    background-color: #f1f1f9;
+  }
 }
 
 .select {
@@ -413,6 +416,7 @@ body {
   display: flex;
   gap: 0.25rem;
   flex-wrap: wrap;
+  align-items: flex-start;
 }
 
 .checkround {
@@ -434,10 +438,18 @@ body {
       border: 1px solid $border-basic;
       border-radius: 50px;
       color: #000;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
     }
     &:checked + span {
       color: #fff;
       background-color: $clr-primary;
+      border-color: $clr-primary;
+      .icon.close {
+        cursor:pointer;
+        background-image: url(../images/icon_x_w.svg)
+      }
     }
     &:disabled + span {
       background-color: #f1f1f9;
@@ -658,6 +670,12 @@ body {
   &.calendar {
     background-image: url(../images/icon_calendar.svg);
   }
+  &.reset {
+    background-image: url(../images/icon_reset.svg);
+  }
+  &.img {
+    background-image: url(../images/icon_img.svg);
+  }
 }
 
 .page-title {
@@ -867,6 +885,15 @@ body {
         }
       }
     }
+    .inq-info {
+      font-size: 0.875rem;
+      opacity: 0.5;
+      display: block;
+      margin-top: 1rem;
+      & + .inq-info {
+        margin-top: 0;
+      }
+    }
     .path {
       color: $guide-text;
       display: inline-block;
@@ -878,6 +905,7 @@ body {
     }
     .info:not(.icon) {
       min-height: 100px;
+      line-height: 1.5;
     }
     .select {
       min-width: 130px;
@@ -886,7 +914,11 @@ body {
   & + .lik-tb {
     margin-top: $base-px;
   }
-
+  .btn-init {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+  }
   &-b {
     flex-direction: column;
     > li.lb {
@@ -1210,6 +1242,11 @@ body {
       &::after {
         content: ']'
       }
+    }
+    .ellipsis {
+      display: flex;
+      align-items: center;
+      gap: 0.25rem;
     }
     &.lf {
       text-align: left;
@@ -1693,14 +1730,23 @@ body {
   &.show {
     animation: showup 0.3s forwards;
   }
+  &.large {
+    width: 900px;
+    .search .item .label {
+      flex: 0 1 120px !important;
+    }
+  }
   &-head {
     padding: 1rem;
     border-bottom: 1px solid $border-basic;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    gap: 0.5rem;
     .title {
       font-weight: bold;
+    }
+    .btn.close {
+      margin-left: auto;
     }
   }
   &-body {
@@ -1984,6 +2030,13 @@ body {
         &:hover {
           background-color: #faeef0;
         }
+        display: flex;
+        align-items: center;
+        .float {
+          margin-left: auto;
+          font-size: 13px;
+          opacity: 0.6;
+        }
       }
     }
   }
@@ -1991,4 +2044,11 @@ body {
 
 .ui-datepicker {
   z-index: 100 !important;
+}
+
+.sort {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  font-size: 0.75rem;
 }

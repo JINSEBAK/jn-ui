@@ -46,8 +46,7 @@
                       <caption>수정 코스명 이미지 거점수 좋아요 공유 최종수정일 최종수정자</caption>
                       <thead>
                         <tr>
-                          <th></th>
-                          <th scope="col">순위</th>
+                          <th scope="col">순서</th>
                           <th scope="col">코스명</th>
                           <th scope="col">이미지</th>
                           <th scope="col">거점 수</th>
@@ -59,7 +58,7 @@
                       </thead>
                       <tbody>
                         <tr>
-                            <td></td>
+                            
                             <td>1</td>
                             <td>
                                 <div class="ellipsis">코스명입니다. 코스명입니다.</div>
@@ -76,7 +75,7 @@
                             <td>admin_id</td>
                         </tr>
                         <tr>
-                            <td></td>
+                            
                             <td>1</td>
                             <td>
                                 <div class="ellipsis">코스명입니다. 코스명입니다.</div>
@@ -93,7 +92,7 @@
                             <td>admin_id</td>
                         </tr>
                         <tr>
-                            <td></td>
+                            
                             <td>1</td>
                             <td>
                                 <div class="ellipsis">코스명입니다. 코스명입니다.</div>
@@ -110,7 +109,7 @@
                             <td>admin_id</td>
                         </tr>
                         <tr>
-                            <td></td>
+                            
                             <td>1</td>
                             <td>
                                 <div class="ellipsis">코스명입니다. 코스명입니다.</div>
@@ -127,7 +126,7 @@
                             <td>admin_id</td>
                         </tr>
                         <tr>
-                            <td></td>
+                            
                             <td>1</td>
                             <td>
                                 <div class="ellipsis">코스명입니다. 코스명입니다.</div>
@@ -144,7 +143,7 @@
                             <td>admin_id</td>
                         </tr>
                         <tr>
-                            <td></td>
+                            
                             <td>1</td>
                             <td>
                                 <div class="ellipsis">코스명입니다. 코스명입니다.</div>
@@ -161,7 +160,7 @@
                             <td>admin_id</td>
                         </tr>
                         <tr>
-                            <td></td>
+                            
                             <td>1</td>
                             <td>
                                 <div class="ellipsis">코스명입니다. 코스명입니다.</div>
@@ -178,7 +177,7 @@
                             <td>admin_id</td>
                         </tr>
                         <tr>
-                            <td></td>
+                            
                             <td>1</td>
                             <td>
                                 <div class="ellipsis">코스명입니다. 코스명입니다.</div>
@@ -195,7 +194,7 @@
                             <td>admin_id</td>
                         </tr>
                         <tr>
-                            <td></td>
+                            
                             <td>1</td>
                             <td>
                                 <div class="ellipsis">코스명입니다. 코스명입니다.</div>
@@ -212,7 +211,7 @@
                             <td>admin_id</td>
                         </tr>
                         <tr>
-                            <td></td>
+                            
                             <td>1</td>
                             <td>
                                 <div class="ellipsis">코스명입니다. 코스명입니다.</div>
@@ -232,8 +231,16 @@
                     </table>
                 </div>
             </div>
+
+            <div class="sort">
+                <label>현재 노출 방식</label>
+                <input type="text" class="input" value="추천 순/내림차순" readonly>
+                <button class="btn btn-second small">설정</button>
+            </div>
         </div>
     </main>
+
+    @@include('./common/course_order_popup.html')
 
     @@include('./common/admin_scripts.html')
   </body>

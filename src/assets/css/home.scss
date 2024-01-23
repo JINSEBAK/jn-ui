@@ -1551,3 +1551,29 @@
     padding: 0 6%;
   }
 }
+
+
+.top-banner {
+  &_mini {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 6px 20px;
+    .speaker {
+      width: 2rem;
+      height: 2rem;
+      background: url(../images/icon_notice_top.svg) center no-repeat;
+    }
+    .title {
+      color: #773147;
+      font-size: 12px;
+      line-height: 16px;
+    }
+    .close {
+      margin-left: auto;
+      width: 1rem;
+      height: 1rem;
+      opacity: 0.7;
+    }
+  }
+}
