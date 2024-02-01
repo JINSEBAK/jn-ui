@@ -9,14 +9,43 @@
         <div class="content">
 
             <div class="d-flex">
-                <div class="area lf">
+                <div class="area lf tree">
                     <div class="area-title">
                         <h3 class="title">목록</h3>
                         <button type="buton" class="btn btn-default small">삭제</button>
                         <button type="buton" class="btn btn-second small">메뉴 추가</button>
                     </div>
                     <div class="area-cont">
-                        menu tree
+                        <div>   
+                            <ul class="menu-tree">
+                                <li class="tree-node open">    
+                                    <div class="tree-title">
+                                        <span class="icon tree"></span>
+                                        <span>행정 민원</span>
+                                    </div>
+                                    <ul class="menu-tree_group">
+                                        <li class="tree-leaf"><span>스마트 번호표 발권</span></li>
+                                        <li class="tree-leaf quick"><span>스마트 환급 서비스</span></li>
+                                        <li class="tree-leaf"><span>직원/담당 업무 검색</span></li>
+                                        <li class="tree-leaf disabled"><span>대형 생활 폐기물</span></li>
+                                        <li class="tree-leaf"><span>수어 상담</span></li>
+                                        <li class="tree-leaf"><span>종로 핫라인</span></li>
+                                        <li class="tree-leaf"><span>종합 민원 신청접수</span></li>
+                                        <li class="tree-leaf"><span>정부24</span></li>
+                                    </ul>
+                                </li>
+                                <li class="tree-node">    
+                                    <div class="tree-title">
+                                        <span class="icon tree"></span>
+                                        <span>행정 민원</span>
+                                    </div>
+                                    <ul class="menu-tree_group">
+                                        <li class="tree-leaf"><span>미세먼지 정보</span></li>
+                                        <li class="tree-leaf"><span>1.1.1 생활실천운동</span></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
 
@@ -69,5 +98,28 @@
     </main>
 
     @@include('./common/admin_scripts.html')
+    <script>
+        const leaves = document.querySelectorAll('.tree-leaf')
+        leaves.forEach(function(leaf) {
+            leaf.onclick = function(e) {
+                leaves.forEach(function(l) {
+                    l.classList.remove('selected')
+                })
+                e.currentTarget.classList.add('selected')
+            }
+        })
+
+        const toggles = document.querySelectorAll('.icon.tree')
+        toggles.forEach(function(toggle) {
+            toggle.onclick = function(e) {
+                const target = e.currentTarget.closest('.tree-node')
+                if (target.classList.contains('open')) {
+                    target.classList.remove('open')
+                } else {
+                    target.classList.add('open')
+                }
+            }
+        })
+    </script>
   </body>
 </html>
