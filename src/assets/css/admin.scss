@@ -2144,9 +2144,6 @@ body {
 .menu-tree {
   font-size: 0.875rem;
   line-height: 1.25rem;
-  &_group {
-    margin-bottom: 1rem;
-  }
 }
 
 .tree {
@@ -2206,7 +2203,7 @@ body {
       border-right: none;
     }
     &:hover {
-      background-color: #eeeeee;
+      background-color: #f2f3f9;
     }
     &.selected {
       font-weight: bold;
