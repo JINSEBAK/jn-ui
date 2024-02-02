@@ -238,11 +238,16 @@
         </div>
     </aside>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-<script src="../../../assets/vendor/jquery-ui/jquery-ui.min.js"></script>
-<script src="../../../assets/js/admin.js"></script>
+    @@include('./common/admin_scripts.html')
     <script>
         $(document).ready(function() {
+            $('#btnPopupSample').on('click', function() {
+                modal.open('popupSample')
+            })
+        })
+    </script>
+</body>
+</html>.ready(function() {
             $('#btnPopupSample').on('click', function() {
                 modal.open('popupSample')
             })
