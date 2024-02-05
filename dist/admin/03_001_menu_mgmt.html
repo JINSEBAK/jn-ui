@@ -99,7 +99,7 @@
                                         <li class="tree-leaf"><span class="tree-line"></span><span>스마트 번호표 발권</span></li>
                                         <li class="tree-leaf quick"><span class="tree-line"></span><span>스마트 환급 서비스</span></li>
                                         <li class="tree-leaf"><span class="tree-line"></span><span>직원/담당 업무 검색</span></li>
-                                        <li class="tree-leaf disabled"><span class="tree-line"></span><span>대형 생활 폐기물</span></li>
+                                        <li class="tree-leaf tree-disabled"><span class="tree-line"></span><span>대형 생활 폐기물</span></li>
                                         <li class="tree-leaf"><span class="tree-line"></span><span>수어 상담</span></li>
                                         <li class="tree-leaf"><span class="tree-line"></span><span>종로 핫라인</span></li>
                                         <li class="tree-leaf"><span class="tree-line"></span><span>종합 민원 신청접수</span></li>
@@ -107,7 +107,7 @@
                                     </ul>
                                 </li>
                                 <li class="tree-node">    
-                                    <div class="tree-title disabled">
+                                    <div class="tree-title tree-disabled">
                                         <div class="tree-line">
                                             <span class="icon tree"></span>
                                         </div>
@@ -141,56 +141,86 @@
                     <div class="area-cont">
 
                         <div class="menu-info">
-                            <div class="menu-info_lb">
-                                <span class="title">메뉴 이름</span>
-                            </div>
-                            <div class="menu-info_ct">
-                                <input type="text" class="input" value="메인>행정 민원>스마트번호표 발권" disabled>
-                                <input type="text" class="input" value="스마트 번호표 발권">
-                            </div>
 
-                            <div class="menu-info_lb">
-                                <span class="title">링크 연결</span>
-                            </div>
-                            <div class="menu-info_ct col-flex">
-                                <div class="inline">
-                                    <select class="select">
-                                        <option>선택</option>
-                                        <option>내부 페이지</option>
-                                        <option>앱 기능 연동</option>
-                                        <option>웹 주소</option>
-                                        <option>다른 앱</option>
-                                    </select>
-                                    <button type="button" class="btn btn-second small">링크 검색기</button>
+                            <div class="menu-inner">
+                                <div class="menu-info_lb">
+                                    <span class="title">메뉴 이름</span>
                                 </div>
-                                <input type="text" class="input" value="링크 검색기를 이용해 링크를 연결해 주세요." disabled>
-                                <div class="guide">
-                                    연결할 페이지를 생성하고 싶다면 <a href="#"> 페이지 관리 &gt;</a>
+                                <div class="menu-info_ct col-flex">
+                                    <div class="inline">
+                                        <select class="select">
+                                            <option>대분류</option>
+                                            <option>대분류</option>
+                                            <option>대분류</option>
+                                        </select>
+                                        <button type="button" class="btn btn-default small">메뉴 이동</button>
+                                    </div>
+                                    <input type="text" class="input" value="스마트 번호표 발권">
                                 </div>
                             </div>
 
-
-                            <div class="menu-info_lb half">
-                                <span class="title">메뉴 노출</span>
-                                <span>설정 해제할 경우 사용자에게 노출되지 않습니다.</span>
-                            </div>
-                            <div class="menu-info_ct">
-                                <div class="switch">
-                                    <input type="checkbox" id="switch" name="switch" value="" class="sr-only">
-                                    <label for="switch" class="btn-switch"></label>
+                            <div class="menu-inner">
+                                <div class="menu-info_lb">
+                                    <span class="title">아이콘</span>
+                                </div>
+                                <div class="menu-info_ct">
+                                    <div class="attach-img menu-icon">
+                                        <label>
+                                            <img src="" id="previewImg" style="display:none">
+                                            <input type="file" id="" accept="image/*">
+                                        </label>
+                                    </div>
                                 </div>
                             </div>
 
-                            <div class="menu-info_lb half">
-                                <span class="title">빠른 민원 검색 설정</span>
-                                <span>검색창 바로가기 메뉴로 설정 합니다. (최대 4개)</span>
-                            </div>
-                            <div class="menu-info_ct">
-                                <div class="switch">
-                                    <input type="checkbox" id="switch" name="switch-2" value="" class="sr-only">
-                                    <label for="switch" class="btn-switch"></label>
+                            <div class="menu-inner">
+                                <div class="menu-info_lb">
+                                    <span class="title">링크 연결</span>
+                                </div>
+                                <div class="menu-info_ct col-flex">
+                                    <div class="inline">
+                                        <select class="select">
+                                            <option>선택</option>
+                                            <option>내부 페이지</option>
+                                            <option>앱 기능 연동</option>
+                                            <option>웹 주소</option>
+                                            <option>다른 앱</option>
+                                        </select>
+                                        <button type="button" class="btn btn-second small">링크 검색기</button>
+                                    </div>
+                                    <input type="text" class="input" value="링크 검색기를 이용해 링크를 연결해 주세요." disabled>
+                                    <div class="guide">
+                                        연결할 페이지를 생성하고 싶다면 <a href="#"> 페이지 관리 &gt;</a>
+                                    </div>
                                 </div>
                             </div>
+
+                            <div class="menu-inner d-flex">
+                                <div class="menu-info_lb">
+                                    <span class="title">메뉴 노출</span>
+                                    <span>설정 해제할 경우 사용자에게 노출되지 않습니다.</span>
+                                </div>
+                                <div class="menu-info_ct">
+                                    <div class="switch">
+                                        <input type="checkbox" id="switch" name="switch" value="" class="sr-only">
+                                        <label for="switch" class="btn-switch"></label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="menu-inner d-flex">
+                                <div class="menu-info_lb">
+                                    <span class="title">빠른 민원 검색 설정</span>
+                                    <span>검색창 바로가기 메뉴로 설정 합니다. (최대 4개)</span>
+                                </div>
+                                <div class="menu-info_ct">
+                                    <div class="switch">
+                                        <input type="checkbox" id="switch" name="switch-2" value="" class="sr-only">
+                                        <label for="switch" class="btn-switch"></label>
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
 
                     </div>

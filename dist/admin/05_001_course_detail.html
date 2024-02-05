@@ -1,11 +1,81 @@
 <!DOCTYPE html>
 <html lang="ko">
-  @@include('./common/head.html')
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>종로 관리자</title>
+    <link rel="stylesheet" href="../assets/vendor/jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="../assets/css/reset.css">
+    <link rel="stylesheet" href="../assets/css/admin.css">
+</head>
   <body>
-    @@include('./common/header.html')
-    @@include('./common/navigation.html')
+    <header id="header">
+    <a href="00_002_dashboard.html" class="logo">종로Pick 관리자 사이트</a>
+    <div class="opt">
+        <button type="button" class="btn btn-text">yesman 님</button>
+    </div>
+    <div class="opt">
+        <button type="button" class="btn btn-icon icon alarm"></button>
+        <div class="dropdown">
+            <div class="dropdown-alarm">
+                <h4 class="title">알림</h4>
+                <button type="button" class="btn btn-text">모두 읽음 처리</button>
+                <ul class="lists">
+                    <li>
+                        새로운 1:1 문의가 도착했습니다. 
+                        <span class="date">2023-10-31 10:30</span>
+                    </li>
+                    <li>
+                        권한이 관리자로 변경되었습니다.
+                        <span class="date">2023-10-31 10:30</span>
+                    </li>
+                    <li>
+                        가입이 승인되었습니다.
+                        <span class="date">2023-10-31 10:30</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="opt">
+        <button type="button" class="btn btn-text">로그아웃</button>
+    </div>
+</header>
+    <nav id="nav">
+  <ul class="gnb" id="gnb">
+    <li class="">
+      <a href="#">menu 1</a>
+    </li>
+    <li class="">
+      <a href="#">Depth 1</a>
+      <ul class="sub">
+        <li>
+          <a href="#">menu 1</a>
+        </li>
+        <li>
+          <a href="#">menu 2</a>
+        </li>
+        <li>
+          <a href="#">menu 3</a>
+        </li>
+        <li>
+          <a href="#">menu 4</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
     <main class="main">
-        @@include('./common/page_title.html', { title: '산책 코스', path: {"p1":"",  "p2":""}, description: ''})
+        <div class="page-title">
+    <h2>산책 코스</h2>
+    <p class="des"></p>
+    <ol class="breadcrumb" style="display:none">
+        <li></li>
+        <li></li>
+    </ol>
+</div>
         <div class="content">
 
             <div class="detail">
@@ -95,52 +165,6 @@
                                         <td>3</td>
                                         <td>
                                             <div class="ellipsis">익선동 골목길</div>
-                                        </td>
-                                        <td>
-                                            <div class="thumb-img">
-                                                <img src="../../assets/images/sample/sample_07.jpeg" alt="대체 텍스트">
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>4</td>
-                                        <td>
-                                            <div class="ellipsis">익선동 맛집거리</div>
-                                        </td>
-                                        <td>
-                                            <div class="thumb-img">
-                                                <img src="../../assets/images/sample/sample_07.jpeg" alt="대체 텍스트">
-                                            </div>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-        
-                <ul class="lik-tb">
-                    <li class="lb">등록일시</li>
-                    <li>2023-10-30 10:30</li>
-                    <li class="lb">등록자</li>
-                    <li>admin_id</li>
-                    <li class="lb">최종 수정일시</li>
-                    <li>2023-10-30 10:30</li>
-                    <li class="lb">최종 수정자</li>
-                    <li>admin_id</li>
-                </ul>
-            </div>
-
-            <div class="btns detail">
-                <a href="./05_001_course_mgmt.html" class="btn btn-default">목록</a>
-                <button type="button" class="btn btn-second">수정</button>
-            </div>
-        </div>
-    </main>
-
-    @@include('./common/admin_scripts.html')
-  </body>
-</html>��선동 골목길</div>
                                         </td>
                                         <td>
                                             <div class="thumb-img">

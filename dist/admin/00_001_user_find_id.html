@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html lang="ko">
-  @@include('./common/head.html')
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>종로 관리자</title>
+    <link rel="stylesheet" href="../assets/vendor/jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="../assets/css/reset.css">
+    <link rel="stylesheet" href="../assets/css/admin.css">
+</head>
 <body>
     <div class="container login">
         <div class="login-form">
@@ -28,18 +35,7 @@
 
     <!-- popup -->
 
-    @@include('./common/admin_scripts.html')
-    <script>
-        const btnLogin = document.getElementById('btnLogin')
-        btnLogin.addEventListener('click', function() {
-            message.alert({
-                title: '로그인에 실패했습니다.',
-                message: '문제가 계속될 경우 관리자에게 문의해주세요.'
-            })
-        })
-    </script>
-</body>
-</html></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <script src="../../../assets/vendor/jquery-ui/jquery-ui.min.js"></script>
 <script src="../../../assets/js/admin.js"></script>
     <script>

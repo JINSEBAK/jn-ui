@@ -1621,9 +1621,21 @@ body {
 
 .menu-info {
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
+  flex-direction: column;
+  gap: 2rem;
+  .menu-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &.d-flex {
+      flex-direction: row;
+      justify-content: space-between;
+      .menu-info_ct {
+        width: auto;
+        margin-left: auto;
+      }
+    }
+  }
   &_lb {
     margin-bottom: 0.5rem;
     width: 100%;
@@ -1636,22 +1648,11 @@ body {
       line-height: 1.5;
       font-size: 0.875rem;
     }
-    &.half {
-      width: 70%;
-      margin-bottom: 1.5rem;
-      & + .menu-info_ct {
-        width: 30%;
-        .switch {
-          margin-left: auto;
-        }
-      }
-    }
   }
   &_ct {
     width: 100%;
     display: flex;
     gap: 0.5rem;
-    margin-bottom: 1.5rem;
     .input {
       flex: 1;
     }
@@ -1763,6 +1764,12 @@ body {
       color: #fff;
       font-size: 0.875rem;
       padding: 0.5rem;
+    }
+  }
+  &.menu-icon {
+    label {
+      width: 64px;
+      min-height: 64px;
     }
   }
 }
@@ -2177,7 +2184,7 @@ body {
     background-size: 17px;
     background-image: url(../images/icon_tree_close.png);
   }
-  .disabled {
+  .tree-disabled {
     .icon.tree {
       background-image: url(../images/icon_tree_disabled.png)
     }
@@ -2229,7 +2236,7 @@ body {
       &:hover {
         background-color: #f2f3f9;
       }
-      &.disabled {
+      &.tree-disabled {
         color: #9696A3;
       }
       &.tree-selected {
@@ -2315,7 +2322,7 @@ body {
     &:hover {
       background-color: #f2f3f9;
     }
-    &.disabled {
+    &.tree-disabled {
       color: #9696A3;
     }
     &.tree-selected {

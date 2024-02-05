@@ -3046,6 +3046,9 @@ select {
   &.refresh {
     background-image: url(../images/icon_refresh.svg);
   }
+  &.audio-guide {
+    background-image: url(../images/btn_audio_guide.svg)
+  }
 }
 
 @keyframes show_pop {
