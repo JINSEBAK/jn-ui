@@ -409,7 +409,7 @@
     }
   }
   &-points {
-    padding: 1.5rem 1.25rem;
+    padding: 1.5rem 1.25rem 4.5rem 1.25rem;
     background-color: $bg-content-box2;
     position: relative;
     z-index: 49;
@@ -514,7 +514,7 @@
           .btn-aug {
             border: none;
             background-color: transparent;
-            font-size: 0.75rem;
+            font-size: 0.875rem;
             line-height: 1rem;
             color:#3f3f45;
             display: inline-flex;
@@ -522,9 +522,17 @@
             gap: 2px;
             padding: 0;
             margin-top: auto;
+            position: absolute;
+            bottom: 10px;
             .icon {
               width: 20px;
               height: 20px;
+            }
+            &.on {
+              color: #2742A3;
+              .icon.audio-guide {
+                background-image: url(../images/btn_audio_guide_on.svg)
+              }
             }
           }
         }

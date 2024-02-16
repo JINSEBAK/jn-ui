@@ -250,6 +250,7 @@ body {
   background-color: $bg-gnb;
   transition: 0.3s all;
   z-index: 1000;
+  overflow-y: auto;
   a {
     text-decoration: none;
     display: flex;
@@ -323,7 +324,7 @@ body {
     height: 0;
     overflow: hidden;
     opacity: 0;
-    transition: 0.3s all;
+    transition: 0.3s height;
     > li {
       a {
         color: #f3ccd9;
@@ -2346,4 +2347,89 @@ body {
       }
     }
   }
+}
+
+
+.counter-sum {
+  display: flex;
+  align-items: center;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  li {
+    gap: 0.25rem;
+    padding: 0.5rem;
+    a, div {
+      font-weight: bold;
+      &::after {
+        content: '건'
+      }
+    }
+    &:nth-of-type(odd) {
+      flex: 1 0 15%;
+      background-color: #f2f3f6;
+    }
+    &:nth-of-type(even) {
+      flex: 1 0 18%;
+    }
+  }
+}
+
+.req-detailbox {
+  text-align: left;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 0.5rem;
+  .thumb-img {
+    margin: 0;
+    max-width: 200px;
+    max-height: 100% !important;
+  }
+  &.ans {
+    gap: 0.25rem;
+    padding: 0.5rem 1rem;
+    margin-top: 1rem;
+    border-left: 3px solid #eee;
+    strong {
+      font-weight: bold;
+    }
+    .date {
+      @include textDate;
+    }
+  }
+
+}
+
+.progress-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  progress {
+    -webkit-appearance: none;
+    border: 1px solid transparent;
+    margin-bottom: 4px;
+    &::-webkit-progress-bar {
+      background: #d9d9d9;
+      border-radius: 2px;
+      height: 14px;
+      width: 100%;
+      overflow: hidden;
+    }
+    &::-webkit-progress-value {
+      background: #e1593a;
+      border-radius: 0;
+      height: 14px;
+    }
+  }
+  .per {
+    line-height: 0;
+    &::after {
+      content: '%';
+    }
+  }
+}
+
+
+.download-area {
+  padding: 1rem 0.5rem;
 }
