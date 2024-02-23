@@ -2435,3 +2435,36 @@ body {
 .download-area {
   padding: 1rem 0.5rem;
 }
+
+.chart {
+  border: 1px dashed red;
+  position: relative;
+  &-title {
+    font-size: 1rem;
+    line-height: 1.25;
+    font-weight: bold;
+    small {
+      display: block;
+      font-size: 0.75rem;
+      font-weight: normal;
+      opacity: 0.6;
+    }
+  }
+  &-type {
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: flex;
+  }
+  &-switch {
+    position: relative;
+    input[type="radio"] {
+      position: absolute;
+      + span {
+        display: block;
+        border: 1px solid red;
+
+      }
+    }
+  }
+}

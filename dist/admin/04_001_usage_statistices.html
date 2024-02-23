@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ko">
+  @@include('./common/head.html')
+  <body>
+    @@include('./common/header.html')
+    @@include('./common/navigation.html')
+    <main class="main">
+        @@include('./common/page_title.html', { title: '이용 통계', path: {"p1":"",  "p2":""}, description: ''})     
+        <div class="content">
+
+            <!-- search -->
+            <div class="search-container">
+                <div class="search">
+                    <div class="item">
+                        <div class="label">
+                            <label for="">기간 조회</label>
+                        </div>
+                        <div class="frm-date">
+                            <div class="select-date">
+                                <label>
+                                    <input type="radio" name="abc" value="1" checked>
+                                    <span>일</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="abc" value="2">
+                                    <span>주</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="abc" value="3">
+                                    <span>월</span>
+                                </label>
+                            </div>
+                            <div class="date picker">
+                                <input type="text" class="input" placeholder="시작일">
+                              </div>
+                              <div class="date picker">
+                                <input type="text" class="input" placeholder="종료일">
+                              </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="search-btn">
+                    <button type="button" class="btn btn-default small">초기화</button>
+                    <button type="button" class="btn btn-second small">검색</button>
+                </div>
+            </div>
+
+
+            <div class="chart">
+                <h3 class="chart-title">시간대별 이용 통계
+                    <small>조회 기간의 평균 수치입니다.</small>
+                </h3>
+                <div class="chart-type">
+                    <label class="chart-switch">
+                        <input type="radio" name="chart-type" value="1" checked>
+                        <span>그래프 형</span>
+                    </label>
+                    <label class="chart-switch">
+                        <input type="radio" name="chart-type" value="2">
+                        <span>목록 형</span>
+                    </label>
+                </div>
+                <div class="chart-container">
+                    <div id="chart"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+    @@include('./common/admin_scripts.html')
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script>
+        const options = {
+            chart: {
+                type: 'line'
+            },
+            series: [
+                {
+                data: [1.4, 2, 2.5, 1.5, 2.5, 2.8, 3.8, 4.6]
+                },
+                {
+                data: [20, 29, 37, 36, 44, 45, 50, 58]
+                }
+            ],
+            yaxis: [
+                {
+                title: {
+                    text: "Series A"
+                },
+                },
+                {
+                opposite: true,
+                title: {
+                    text: "Series B"
+                }
+                }
+            ],
+        }
+
+        const chart = new ApexCharts(document.querySelector('#chart'), options)
+        chart.render();
+    </script>
+  </body>
+</html>         </div>
+                    </div>
+                </div>
+                <div class="search-btn">
+                    <button type="button" class="btn btn-default small">초기화</button>
+                    <button type="button" class="btn btn-second small">검색</button>
+                </div>
+            </div>
+
+
+            <div class="chart">
+                <h3 class="chart-title">시간대별 이용 통계
+                    <small>조회 기간의 평균 수치입니다.</small>
+                </h3>
+                <div class="chart-type">
+                    <label class="chart-switch">
+                        <input type="radio" name="chart-type" value="1" checked>
+                        <span>그래프 형</span>
+                    </label>
+                    <label class="chart-switch">
+                        <input type="radio" name="chart-type" value="2">
+                        <span>목록 형</span>
+                    </label>
+                </div>
+                <div class="chart-container">
+                    <div id="chart"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="../../../assets/vendor/jquery-ui/jquery-ui.min.js"></script>
+<script src="../../../assets/js/admin.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script>
+        const options = {
+            chart: {
+                type: 'line'
+            },
+            series: [
+                {
+                data: [1.4, 2, 2.5, 1.5, 2.5, 2.8, 3.8, 4.6]
+                },
+                {
+                data: [20, 29, 37, 36, 44, 45, 50, 58]
+                }
+            ],
+            yaxis: [
+                {
+                title: {
+                    text: "Series A"
+                },
+                },
+                {
+                opposite: true,
+                title: {
+                    text: "Series B"
+                }
+                }
+            ],
+        }
+
+        const chart = new ApexCharts(document.querySelector('#chart'), options)
+        chart.render();
+    </script>
+  </body>
+</html>

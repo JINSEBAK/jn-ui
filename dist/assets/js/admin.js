@@ -2,7 +2,7 @@ const MENUS = [
     { "title": "회원 관리", subs: [ { "title": "회원 관리" } ]},
     { "title": "민원/서비스 관리", subs: [ { "title": "건강이랑" }, {"title": "정화조 청소"}, {"title": "제설함 민원"} ]},
     { "title": "콘텐츠 관리", subs: [ {"title": "탐방 코스 관리"}, {"title": "코스 거점 관리"}, {"title": "페이지 관리"}, {"title": "배너 관리"}, {"title": "스마트 제설함"}]},
-    { "title": "이용 통계", subs: [ {"title": "이용 통계"}] },
+    { "title": "이용 통계", subs: [ {"title": "이용 통계"}, {"title": "콘텐츠 통계"}] },
     { "title": "운영 관리", subs: [ {"title": "알림 메시지 관리"}, {"title": "공지사항 관리"}, {"title": "약관 관리"}, {"title": "1:1 문의 관리"}, {"title": "FAQ 관리"}]},
     { "title": "메뉴 관리", subs: [ {"title": "앱 메뉴 관리"}, {"title": "전체 메뉴 관리"}]},
     { "title": "관리자 관리", subs: [ { "title": "관리자 관리" }, { "title": "권한 관리"} ]},
