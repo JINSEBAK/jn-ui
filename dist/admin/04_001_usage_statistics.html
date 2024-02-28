@@ -116,8 +116,8 @@
             </div>
 
             <div class="chart">
-                <h3 class="chart-title">서비스 이용 통계
-                    <small>조회 기간의 평균 수치입니다.</small>
+                <h3 class="chart-title">이용 현황
+                    <small>데이터는 1시간 단위로 누적됩니다. (총 24시간)</small>
                 </h3>
                 <div class="chart-container">
                     <!-- chart -->
@@ -412,15 +412,23 @@
             // },
             yaxis: [
                 {
-                title: {
-                    text: "페이지 뷰"
-                },
+                    seriesName: "페이지 뷰",
+                    title: {
+                        text: "페이지 뷰"
+                    },
                 },
                 {
-                opposite: true,
-                title: {
-                    text: "Series B"
-                }
+                    opposite: true,
+                    seriesName: "코스 완주증",
+                    title: {
+                        text: ""
+                    }
+                },
+                {
+                    seriesName: "거점 스탬프",
+                    title: {
+                        text: ""
+                    }
                 }
             ],
         }

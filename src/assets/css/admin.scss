@@ -95,13 +95,13 @@ body {
 
 .align {
   &-left {
-    text-align: left;
+    text-align: left !important;
   }
   &-center {
-    text-align: center;
+    text-align: center !important;
   }
   &-right {
-    text-align: right;
+    text-align: right !important;
   }
 }
 
@@ -1243,6 +1243,19 @@ body {
   width: 100%;
   font-size: 0.875rem;
   line-height: 1.5rem;
+  &.clr-b {
+    th {
+      background-color: #585858;
+      border-color: #4a4a4a;
+    }
+    tr {
+      &:last-child {
+        td {
+          border-bottom-color: #4a4a4a;
+        }
+      }
+    }
+  }
   caption {
     position: absolute;
     width: 0px;
@@ -1341,6 +1354,13 @@ body {
     display: block;
     max-height: 500px;
     overflow-y: auto;
+    padding-bottom: 5px;
+  }
+}
+
+.tb-nocursor {
+  tr {
+    cursor: default;
   }
 }
 
@@ -1356,6 +1376,26 @@ body {
       width: 10%;
     }
     &:last-of-type(9) {
+      width: 25%;
+    }
+  }
+}
+
+#statisticsList {
+  th, td {
+    width: 12.1%;
+    &:nth-of-type(1) {
+      width: 15%;
+    }
+  }
+}
+
+#viewList, #viewList2 {
+  th, td {
+    &:nth-of-type(1) {
+      width: 10%;
+    }
+    &:nth-of-type(3) {
       width: 25%;
     }
   }
@@ -1978,6 +2018,12 @@ body {
       border: 10px solid #30303f;
       border-color: transparent #30303f transparent transparent;
     }
+    &.high {
+      transform: translateY(-22%);
+      &::before {
+        top: 22% !important;
+      }
+    }
     .icon.close, .icon.close-w {
       position: absolute;
       right: 1rem;
@@ -2437,8 +2483,12 @@ body {
 }
 
 .chart {
-  border: 1px dashed red;
   position: relative;
+  border: 1px solid #eee;
+  padding: 1rem;
+  border-radius: 4px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.08);
+  margin-bottom: 1rem;
   &-title {
     font-size: 1rem;
     line-height: 1.25;
@@ -2452,19 +2502,47 @@ body {
   }
   &-type {
     position: absolute;
-    right: 0;
-    top: 0;
+    right: 1rem;
+    top: 1rem;
     display: flex;
   }
   &-switch {
     position: relative;
     input[type="radio"] {
       position: absolute;
+      width: 1px;
+      height: 1px;
+      opacity: 0;
       + span {
+        font-size: 0.875rem;
         display: block;
-        border: 1px solid red;
-
+        min-width: 5rem;
+        text-align: center;
+        border: 1px solid $border-basic;
+        padding: 0.5rem 0.25rem;
       }
+      &:checked + span {
+        color: #fff;
+        background-color: $clr-third;
+        border-color: $clr-third;
+      }
+    }
+  }
+  &-container {
+    margin-top: 0.5rem;
+  }
+}
+
+
+.stts {
+  display: flex;
+  gap: 1rem;
+  &-box {
+    flex: 1;
+    h4 {
+      font-weight: bold;
+      font-size: 0.875rem;
+      margin-bottom: 0.5rem;
     }
   }
 }

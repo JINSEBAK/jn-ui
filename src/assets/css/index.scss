@@ -317,3 +317,23 @@ input[type="text"]:focus {
     padding: 0.5rem;
   }
 }
+
+.ui-links {
+  list-style: none;
+  display: flex;
+  font-size: 0.875rem;
+  li {
+    &::after {
+      content: '|';
+      display: inline-block;
+      font-size: 0.75rem;
+      opacity: 0.5;
+      margin: 0 0.5rem;
+    }
+    &:last-child {
+      &::after {
+        content: none;
+      }
+    }
+  }
+}

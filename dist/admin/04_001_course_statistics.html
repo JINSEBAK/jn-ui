@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="../assets/css/reset.css">
     <link rel="stylesheet" href="../assets/css/admin.css">
 </head>
-  <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
   <body>
     <header id="header">
     <a href="00_002_dashboard.html" class="logo">종로Pick 관리자 사이트</a>
@@ -70,67 +69,79 @@
 
     <main class="main">
         <div class="page-title">
-    <h2>스마트 제설함 민원 상세</h2>
+    <h2>코스 통계</h2>
     <p class="des"></p>
     <ol class="breadcrumb" style="display:none">
         <li></li>
         <li></li>
     </ol>
-</div>
+</div>     
         <div class="content">
-          <div class="detail">
-            <ul class="lik-tb">
-              <li class="lb">회원ID</li>
-              <li>
-                <span class="user-origin kakao"></span>
-                <span>Test</span>
-              </li>
-              <li class="lb">민원 등록일시</li>
-              <li>yyyy-mm-dd hh:mm:ss</li>
-              <li class="lb">민원 구분</li>
-              <li>청소</li>
-              <li class="lb">처리 상태</li>
-              <li>대기</li>
-              <li class="lb">제설함 명</li>
-              <li>종로 007</li>
-              <li class="lb">관리 코드</li>
-              <li>12</li>
-              <li class="lb lb-one">위치</li>
-              <li>서울시 종로구 공평도 70 종각역 3번 출구 앞</li>
-              <li class="lb lb-one">민원 내용</li>
-              <li>
-                <div class="pre">주변이 너무 더럽습니다. 
-누가 몰래 쓰래기를 버려요
+
+            <!-- search -->
+
+            <div class="chart">
+                <h3 class="chart-title">
+                    코스 이용 현황
+                    <small>데이터는 1시간 단위로 누적됩니다.</small>
+                </h3>
+                <div class="chart-container">
+                    <!-- chart -->
+                    <div id="chart"></div>
                 </div>
-              </li>
-              <li class="lb lb-one">첨부 이미지</li>
-              <li>
-                <div class="thumb-img">
-                  <img src="../../assets/images/sample/sample_07.jpeg" alt="" >
-                  <button type="button" class="btn-viewer">보기</button>
-              </div>
-              </li>
-            </ul>
+            </div>
 
-            <!-- 미답변 시 -->
-            <ul class="lik-tb">
-              <li class="lb lb-one">처리 내용</li>
-              <li>
-                <textarea class="textarea" cols="30" rows="10" placeholder="민원 처리 내용 입력"></textarea>
-              </li>
-            </ul>
-          </div>
-
-          <div class="btns center">
-            <button type="button" class="btn btn-default">취소</button>
-            <button type="button" class="btn btn-second">등록</button>
-          </div>
-
+            <!-- 목록 -->
+            <div class="list">
+            </div>
         </div>
     </main>
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <script src="../../../assets/vendor/jquery-ui/jquery-ui.min.js"></script>
 <script src="../../../assets/js/admin.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script>
+        const options = {
+            chart: {
+                type: 'bar',
+                height: '300px',
+                stacked: true,
+                toolbar: {
+                    show: false
+                }
+            },
+            plotOptions: {
+                bar: {
+                    horizontal: true
+                }
+            },
+            series: [
+                {
+                    name: '페이지 뷰',
+                    data: [44, 55, 41, 37, 22, 43, 21]
+                }, {
+                    name: '완주증 발급',
+                    data: [53, 32, 33, 52, 13, 43, 32]
+                }, {
+                    name: '공유하기',
+                    data: [12, 17, 11, 9, 15, 11, 20]
+                }
+            ],
+            stroke: {
+                width: 1,
+                colors: ['#fff']
+            },
+            fill: {
+                opacity: 1
+            },
+            xaxis: {
+                categories: ['진경산수화길', '인왕자락예술가길', '인왕산자락 이야기길', '문학둘레길', '교남무악동', '종교문화유적의 길', '이화동 코스']
+            }
+        }
+
+        const chart = new ApexCharts(document.querySelector('#chart'), options)
+        chart.render();
+
+    </script>
   </body>
 </html>
