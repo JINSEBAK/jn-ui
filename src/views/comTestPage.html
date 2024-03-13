@@ -1,0 +1,69 @@
+<html>
+<head>
+  <title>COM 테스트</title>
+</head>
+<body>
+  <p>테스트 페이지</p>
+  <button onclick="searchInfo()">COM 조회</button>
+  <button onclick="viewInfo()">COM 정보</button>
+  <hr>
+  <p>참고1: 크롬 기기 로그 페이지(chrome://device-log/)</p>
+  <p>참고2: <a href="https://velog.io/@hyemin916/Web-Serial-API-%EC%8B%9C%EB%A6%AC%EC%96%BC-%ED%8F%AC%ED%8A%B8%EB%A1%9C-%EC%9D%BD%EA%B3%A0-%EC%93%B0%EA%B8%B0%EB%B2%88%EC%97%AD" target="_blank">Web Serial API: 시리얼 포트로 읽고 쓰기(번역)</a></p>
+</body>
+
+<script>
+  let readData = "Read Data:";
+
+  async function searchInfo(){
+    if ("serial" in navigator) {
+      // Web Serial API가 지원된다.
+      //alert("Serial in Navigator");
+
+      // 사용자가 시리얼 포트를 선택할 수 있도록 프롬프트를 띄운다.
+      const port = await navigator.serial.requestPort();
+      console.log(port);
+      // 이전에 사용자가 웹 사이트에 접근 권한을 부여했던 모든 시리얼 포트를 가져온다.
+      //ports = await navigator.serial.getPorts();
+
+      console.log(port);
+      // 시리얼 포트가 오픈되길 기다린다.
+      await port.open({ baudRate: 9600 });
+
+      const writer = port.writable.getWriter();
+      const data = new Uint8Array([104, 101, 108, 108, 111]); // hello
+      await writer.write(data);
+      // 나중에 시리얼 포트가 닫힐 수 있도록 해준다.
+      writer.releaseLock();
+      
+      const reader = port.readable.getReader();
+      console.log(reader);
+
+      while (true) {
+        console.log("Reading..");
+        const { value, done } = await reader.read();
+        if (done) {
+          // 나중에 시리얼 포트가 클로즈될 수 있도록 해준다.
+          reader.releaseLock();
+          break;
+        }
+        // value는 Uint8Array이다.
+        console.log(value);
+        readData = readData + value;
+      }
+      console.log("End of Data!");
+
+    } else {
+      alert("Serial Not in Navigator");
+    }
+  }
+
+  function viewInfo() {
+    alert(readData);
+  }  
+
+
+
+
+</script>
+
+</html>

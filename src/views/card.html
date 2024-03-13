@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>카드관리시스템</title>
+  </head>
+  <body>
+    <div class="container">
+      <!-- <input type="text" /> -->
+
+      <div>
+        <button type="button" id="btnConnect">연결</button>
+        <button type="button" id="btnDisconnect">연결 해제</button>
+      </div>
+    </div>
+  </body>
+
+  <script>
+    const navigator = window.navigator;
+    console.log(navigator);
+    console.log(navigator.serial);
+    navigator.serial.addEventListener("connect", (event) => {
+      console.log(event);
+    });
+
+    const btnConnect = document.querySelector("#btnConnect");
+    btnConnect.addEventListener("click", connectSerialPort);
+
+    async function connectSerialPort() {
+      console.log("click---");
+      try {
+        const port = await navigator.serial.requestPort(); // 사용자가 직접 선택, 프롬프트 오픈
+        //const ports = await navigator.serial.getPorts(); // 웹 사이트가 접근 권을 가진 시리얼 포트 목록 리턴
+        console.log(port);
+        await port.open({ baudRate: 9600 }); // 연결 시 속도 설정
+
+        while (port.readable) {
+          const reader = port.readable.getReader();
+
+          console.log(port.read());
+        }
+
+        //const textDecoder = new TextDecoderStream();
+        //const readableStreamClosed = port.readable.pipeTo(textDecoder.writable);
+        //const reader = port.readable.getReader();
+      } catch (err) {
+        console.log("Serial connection error: ", err);
+      }
+    }
+  </script>
+</html>

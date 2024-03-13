@@ -1,13 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>종로 관리자</title>
-    <link rel="stylesheet" href="../assets/vendor/jquery-ui/jquery-ui.min.css">
-    <link rel="stylesheet" href="../assets/css/reset.css">
-    <link rel="stylesheet" href="../assets/css/admin.css">
-</head>
+  @@include('./common/head.html')
 <body>
     <div class="container login">
         <div class="login-form">
@@ -35,9 +28,7 @@
 
     <!-- popup -->
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-<script src="../../../assets/vendor/jquery-ui/jquery-ui.min.js"></script>
-<script src="../../../assets/js/admin.js"></script>
+    @@include('./common/admin_scripts.html')
     <script>
         const btnLogin = document.getElementById('btnLogin')
         btnLogin.addEventListener('click', function() {
